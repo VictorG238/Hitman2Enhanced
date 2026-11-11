@@ -1,0 +1,580 @@
+== config.exe ==
+  size        53248 bytes
+  sha256      8ad654db7c608bf523103a03fae408384af66f600beba0e85564e28cd19ccd67
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2002-12-03T18:40:04Z (0x3decfa84)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x400000  entry_rva=0x264d  size_of_image=0x4f000
+  flags       RELOCS_STRIPPED, EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x0001cbdf not set
+  rich        8 entries, checksum_valid=True
+    prod_id= 12 build= 7291 count=1
+    prod_id= 11 build= 8047 count=1
+    prod_id= 14 build= 7299 count=15
+    prod_id= 10 build= 8047 count=48
+    prod_id= 19 build= 8034 count=7
+    prod_id=  1 build=    0 count=64
+    prod_id= 49 build= 9044 count=3
+    prod_id=  6 build= 1735 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x00005be8 raw=0x00001000+0x00006000 H=6.47 CODE|EXECUTE|READ
+    .rdata   va=0x00007000 vsize=0x00000ace raw=0x00007000+0x00001000 H=4.11 INITIALIZED_DATA|READ
+    .data    va=0x00008000 vsize=0x000440dc raw=0x00008000+0x00003000 H=0.78 INITIALIZED_DATA|READ|WRITE
+    .rsrc    va=0x0004d000 vsize=0x00001b80 raw=0x0000b000+0x00002000 H=3.56 INITIALIZED_DATA|READ
+  data directories:
+    IMPORT          rva=0x00007510 size=0x50
+    RESOURCE        rva=0x0004d000 size=0x1b80
+    IAT             rva=0x00007000 size=0x108
+  imports: 3 DLLs, 63 functions
+    KERNEL32.dll (50)
+    USER32.dll (10)
+    ADVAPI32.dll (3)
+  resources:  TEXTx2, ICONx1, DIALOGx5, GROUP_ICONx1
+
+== hitman2.exe ==
+  size        873984 bytes
+  sha256      f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2003-06-24T14:01:57Z (0x3ef859d5)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x400000  entry_rva=0x1000  size_of_image=0x2ec000
+  flags       RELOCS_STRIPPED, EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE
+  dll_flags   (none)
+  checksum    stored=0x000da146 computed=0x000da146 OK
+  version     file=1.0.0.277 product=1.0.0.277
+    [000004b0] Comments = 
+    [000004b0] CompanyName = IO Interactive
+    [000004b0] FileDescription = 
+    [000004b0] FileVersion = 1, 0, 0, 277
+    [000004b0] InternalName = 
+    [000004b0] LegalCopyright = Copyright © 2002
+    [000004b0] LegalTrademarks = 
+    [000004b0] OriginalFilename = Hitman2.exe
+    [000004b0] PrivateBuild = 
+    [000004b0] ProductName = Hitman 2: Silent Assassin
+    [000004b0] ProductVersion = 1, 0, 0, 277
+    [000004b0] SpecialBuild = 
+  rich        14 entries, checksum_valid=True
+    prod_id= 11 build= 8966 count=1
+    prod_id= 12 build= 7291 count=5
+    prod_id= 48 build= 9044 count=36
+    prod_id= 28 build= 8830 count=3
+    prod_id= 37 build= 8755 count=6
+    prod_id= 29 build= 8830 count=1
+    prod_id= 19 build= 8034 count=11
+    prod_id=  1 build=    0 count=161
+    prod_id= 11 build= 8047 count=11
+    prod_id= 14 build= 7299 count=36
+    prod_id= 10 build= 8047 count=127
+    prod_id= 49 build= 9044 count=368
+    prod_id=  6 build= 1735 count=1
+    prod_id=  4 build= 8447 count=3
+  sections:
+    .text    va=0x00001000 vsize=0x002db000 raw=0x00000400+0x000c5800 H=8.00 CODE|INITIALIZED_DATA|EXECUTE|READ|WRITE
+    .rsrc    va=0x002dc000 vsize=0x00010000 raw=0x000c5c00+0x0000fa00 H=3.76 CODE|EXECUTE|READ|WRITE
+  data directories:
+    EXPORT          rva=0x00274760 size=0x976e
+    IMPORT          rva=0x002ea994 size=0x8f
+    RESOURCE        rva=0x002dc000 size=0xe814
+  imports: 1 DLLs, 4 functions
+    kernel32.dll (4)
+  resources:  ICONx9, GROUP_ICONx1, VERSIONx1
+  WARNING     exports: export directory: RVA 0x274760 not mapped to file data
+
+== runme.exe ==
+  size        40960 bytes
+  sha256      e07f112452240049472ced6c4487b5d9b53ad567b3e7cc7603b2e2740a22bafd
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2005-11-05T02:50:09Z (0x436c1de1)
+  linker      7.10  os=4.0  subsystem_ver=4.0
+  image_base  0x400000  entry_rva=0x14a4  size_of_image=0xb000
+  flags       RELOCS_STRIPPED, EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x00016e11 not set
+  pdb         u:\valve_main\src\utils\runme\Release\runme.pdb (RSDS)
+  rich        6 entries, checksum_valid=True
+    prod_id= 95 build= 3077 count=62
+    prod_id= 15 build= 3077 count=11
+    prod_id= 93 build= 2179 count=3
+    prod_id=  1 build=    0 count=58
+    prod_id= 96 build= 3077 count=3
+    prod_id= 90 build= 3077 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x00005138 raw=0x00001000+0x00006000 H=5.98 CODE|EXECUTE|READ
+    .rdata   va=0x00007000 vsize=0x000012b4 raw=0x00007000+0x00002000 H=3.28 INITIALIZED_DATA|READ
+    .data    va=0x00009000 vsize=0x00001c58 raw=0x00009000+0x00001000 H=0.94 INITIALIZED_DATA|READ|WRITE
+  data directories:
+    IMPORT          rva=0x00007da8 size=0x28
+    DEBUG           rva=0x000070f0 size=0x1c
+    LOAD_CONFIG     rva=0x00007cf8 size=0x48
+    IAT             rva=0x00007000 size=0xe8
+  imports: 1 DLLs, 57 functions
+    KERNEL32.dll (57)
+
+== testapp.exe ==
+  size        873984 bytes
+  sha256      f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2003-06-24T14:01:57Z (0x3ef859d5)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x400000  entry_rva=0x1000  size_of_image=0x2ec000
+  flags       RELOCS_STRIPPED, EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE
+  dll_flags   (none)
+  checksum    stored=0x000da146 computed=0x000da146 OK
+  version     file=1.0.0.277 product=1.0.0.277
+    [000004b0] Comments = 
+    [000004b0] CompanyName = IO Interactive
+    [000004b0] FileDescription = 
+    [000004b0] FileVersion = 1, 0, 0, 277
+    [000004b0] InternalName = 
+    [000004b0] LegalCopyright = Copyright © 2002
+    [000004b0] LegalTrademarks = 
+    [000004b0] OriginalFilename = Hitman2.exe
+    [000004b0] PrivateBuild = 
+    [000004b0] ProductName = Hitman 2: Silent Assassin
+    [000004b0] ProductVersion = 1, 0, 0, 277
+    [000004b0] SpecialBuild = 
+  rich        14 entries, checksum_valid=True
+    prod_id= 11 build= 8966 count=1
+    prod_id= 12 build= 7291 count=5
+    prod_id= 48 build= 9044 count=36
+    prod_id= 28 build= 8830 count=3
+    prod_id= 37 build= 8755 count=6
+    prod_id= 29 build= 8830 count=1
+    prod_id= 19 build= 8034 count=11
+    prod_id=  1 build=    0 count=161
+    prod_id= 11 build= 8047 count=11
+    prod_id= 14 build= 7299 count=36
+    prod_id= 10 build= 8047 count=127
+    prod_id= 49 build= 9044 count=368
+    prod_id=  6 build= 1735 count=1
+    prod_id=  4 build= 8447 count=3
+  sections:
+    .text    va=0x00001000 vsize=0x002db000 raw=0x00000400+0x000c5800 H=8.00 CODE|INITIALIZED_DATA|EXECUTE|READ|WRITE
+    .rsrc    va=0x002dc000 vsize=0x00010000 raw=0x000c5c00+0x0000fa00 H=3.76 CODE|EXECUTE|READ|WRITE
+  data directories:
+    EXPORT          rva=0x00274760 size=0x976e
+    IMPORT          rva=0x002ea994 size=0x8f
+    RESOURCE        rva=0x002dc000 size=0xe814
+  imports: 1 DLLs, 4 functions
+    kernel32.dll (4)
+  resources:  ICONx9, GROUP_ICONx1, VERSIONx1
+  WARNING     exports: export directory: RVA 0x274760 not mapped to file data
+
+== uninstall.exe ==
+  size        167936 bytes
+  sha256      0775004a2160595ebe92f9b4f208cb1939c78c0decdb5c722cb31d83d30fc7f6
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2002-12-03T18:40:10Z (0x3decfa8a)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x400000  entry_rva=0x1632  size_of_image=0x29000
+  flags       RELOCS_STRIPPED, EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x00033561 not set
+  rich        7 entries, checksum_valid=True
+    prod_id= 11 build= 8047 count=1
+    prod_id= 10 build= 8047 count=26
+    prod_id= 14 build= 7299 count=12
+    prod_id= 19 build= 8034 count=7
+    prod_id=  1 build=    0 count=56
+    prod_id= 49 build= 9044 count=1
+    prod_id=  6 build= 1735 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x00003ade raw=0x00001000+0x00004000 H=6.31 CODE|EXECUTE|READ
+    .rdata   va=0x00005000 vsize=0x00000988 raw=0x00005000+0x00001000 H=3.73 INITIALIZED_DATA|READ
+    .data    va=0x00006000 vsize=0x00002fdc raw=0x00006000+0x00003000 H=1.39 INITIALIZED_DATA|READ|WRITE
+    .rsrc    va=0x00009000 vsize=0x0001f600 raw=0x00009000+0x00020000 H=5.89 INITIALIZED_DATA|READ
+  data directories:
+    IMPORT          rva=0x0000547c size=0x50
+    RESOURCE        rva=0x00009000 size=0x1f600
+    IAT             rva=0x00005000 size=0xe8
+  imports: 3 DLLs, 55 functions
+    KERNEL32.dll (51)
+    USER32.dll (1)
+    ADVAPI32.dll (3)
+  resources:  BINx1, ICONx1, GROUP_ICONx1
+
+== Msvcp60.dll ==
+  size        401462 bytes
+  sha256      f1fd0f1a54f196b19a6f21044092c89c02353dad173c236d80f6474cb8a7ea7f
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2000-08-29T10:19:12Z (0x39ab8e20)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x780c0000  entry_rva=0x1000  size_of_image=0x61000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00071093 computed=0x00071093 OK
+  version     file=6.0.8972.0 product=6.0.8972.0
+    [040904B0] CompanyName = Microsoft Corporation
+    [040904B0] FileDescription = Microsoft (R) C++ Runtime Library
+    [040904B0] FileVersion = 6.00.8972.0
+    [040904B0] InternalName = MSVCP60.DLL
+    [040904B0] LegalCopyright = Copyright (C) Microsoft Corp. 1981-1998
+    [040904B0] OriginalFilename = MSVCP60.DLL
+    [040904B0] ProductName = Microsoft (R) Visual C++
+    [040904B0] ProductVersion = 6.00.8972.0
+  pdb         E:\8972\vc98\self\bin\x86\msvcp60.pdb (NB10)
+  rich        7 entries, checksum_valid=True
+    prod_id= 19 build= 8034 count=2
+    prod_id= 14 build= 7299 count=2
+    prod_id=  1 build=    0 count=87
+    prod_id= 11 build= 8047 count=18
+    prod_id= 10 build= 8047 count=36
+    prod_id=  6 build= 1720 count=1
+    prod_id=  4 build= 8047 count=4
+  sections:
+    .text    va=0x00001000 vsize=0x00029bbc raw=0x00002000+0x0002a000 H=6.65 CODE|EXECUTE|READ
+    .rdata   va=0x0002b000 vsize=0x0002f030 raw=0x0002c000+0x00030000 H=5.47 INITIALIZED_DATA|READ
+    .data    va=0x0005b000 vsize=0x00001788 raw=0x0005c000+0x00002000 H=3.19 INITIALIZED_DATA|READ|WRITE
+    .rsrc    va=0x0005d000 vsize=0x000003a8 raw=0x0005e000+0x00001000 H=1.01 INITIALIZED_DATA|READ
+    .reloc   va=0x0005e000 vsize=0x00002cf0 raw=0x0005f000+0x00003000 H=6.47 INITIALIZED_DATA|DISCARDABLE|READ
+  overlay     offset=0x62000 size=54
+  data directories:
+    EXPORT          rva=0x00033890 size=0x26044
+    IMPORT          rva=0x00059980 size=0x56
+    RESOURCE        rva=0x0005d000 size=0x3a8
+    BASERELOC       rva=0x0005e000 size=0x2cf0
+    DEBUG           rva=0x00059900 size=0x54
+    IAT             rva=0x0002b000 size=0x164
+  imports: 2 DLLs, 87 functions
+    MSVCRT.dll (76)
+    KERNEL32.dll (11)
+  exports: MSVCP60.dll (2104 functions, base=1)
+  resources:  VERSIONx1
+
+== RenderD3D.dll ==
+  size        339968 bytes
+  sha256      e9aff44931aa6c361fdcc49d1f5969d19777923c8f6c2c2e18e439bfd53c871d
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2003-06-24T14:03:52Z (0x3ef85a48)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x10000000  entry_rva=0x37a36  size_of_image=0x1d2000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x0005e289 not set
+  rich        10 entries, checksum_valid=True
+    prod_id= 12 build= 7291 count=3
+    prod_id= 11 build= 8047 count=11
+    prod_id= 14 build= 7299 count=28
+    prod_id= 10 build= 8047 count=93
+    prod_id= 29 build= 8830 count=2
+    prod_id= 37 build= 8755 count=3
+    prod_id= 19 build= 8034 count=7
+    prod_id=  1 build=    0 count=131
+    prod_id= 49 build= 9044 count=31
+    prod_id=  4 build= 8447 count=3
+  sections:
+    .text    va=0x00001000 vsize=0x00040225 raw=0x00001000+0x00041000 H=6.47 CODE|EXECUTE|READ
+    .rdata   va=0x00042000 vsize=0x00003877 raw=0x00042000+0x00004000 H=5.22 INITIALIZED_DATA|READ
+    .data    va=0x00046000 vsize=0x001851a0 raw=0x00046000+0x00007000 H=3.05 INITIALIZED_DATA|READ|WRITE
+    .reloc   va=0x001cc000 vsize=0x0000583c raw=0x0004d000+0x00006000 H=4.18 INITIALIZED_DATA|DISCARDABLE|READ
+  data directories:
+    EXPORT          rva=0x00045830 size=0x47
+    IMPORT          rva=0x00044b80 size=0x78
+    BASERELOC       rva=0x001cc000 size=0x2f5c
+    IAT             rva=0x00042000 size=0x1dc
+  imports: 5 DLLs, 114 functions
+    USER32.dll (31)
+    d3d8.dll (1)
+    hitman2.exe (28)
+    KERNEL32.dll (50)
+    GDI32.dll (4)
+  exports: RenderD3D.dll (1 functions, base=1)
+
+== RenderOpenGL.dll ==
+  size        319488 bytes
+  sha256      d81d5bc9802ca9252d0ca93d080179bdfc0a1058306eeb3524082837e9c65688
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2003-06-24T14:03:59Z (0x3ef85a4f)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x10000000  entry_rva=0x34c56  size_of_image=0x13f000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x0005531a not set
+  rich        8 entries, checksum_valid=True
+    prod_id= 12 build= 7291 count=3
+    prod_id= 11 build= 8047 count=11
+    prod_id= 14 build= 7299 count=27
+    prod_id= 10 build= 8047 count=89
+    prod_id= 19 build= 8034 count=9
+    prod_id=  1 build=    0 count=199
+    prod_id= 49 build= 9044 count=33
+    prod_id=  4 build= 8447 count=3
+  sections:
+    .text    va=0x00001000 vsize=0x0003d365 raw=0x00001000+0x0003e000 H=6.50 CODE|EXECUTE|READ
+    .rdata   va=0x0003f000 vsize=0x000040ca raw=0x0003f000+0x00005000 H=4.95 INITIALIZED_DATA|READ
+    .data    va=0x00044000 vsize=0x000f5680 raw=0x00044000+0x00005000 H=2.41 INITIALIZED_DATA|READ|WRITE
+    .reloc   va=0x0013a000 vsize=0x000048d2 raw=0x00049000+0x00005000 H=4.79 INITIALIZED_DATA|DISCARDABLE|READ
+  data directories:
+    EXPORT          rva=0x00043080 size=0x4a
+    IMPORT          rva=0x00041e6c size=0x78
+    BASERELOC       rva=0x0013a000 size=0x2f14
+    IAT             rva=0x0003f000 size=0x2f8
+  imports: 5 DLLs, 185 functions
+    USER32.dll (34)
+    GDI32.dll (7)
+    OPENGL32.dll (64)
+    hitman2.exe (28)
+    KERNEL32.dll (52)
+  exports: RenderOpenGL.dll (1 functions, base=1)
+
+== eax.dll ==
+  size        135168 bytes
+  sha256      e56ee2d67bfeebbbcaa154b61e0ef248b0a25d6a1e65450f0ed86231d1768e1c
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2001-12-11T20:52:23Z (0x3c167207)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x10000000  entry_rva=0xe5fb  size_of_image=0x21000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x0002f13d not set
+  version     file=3.0.1.0 product=3.0.1.0
+    [040904b0] Comments =  
+    [040904b0] CompanyName = Creative Technology Ltd
+    [040904b0] FileDescription = EAX Unified
+    [040904b0] FileVersion = 3.01
+    [040904b0] InternalName = EAX Unified
+    [040904b0] LegalCopyright = Copyright © 2001
+    [040904b0] LegalTrademarks =  
+    [040904b0] OriginalFilename = eax.dll
+    [040904b0] PrivateBuild =  
+    [040904b0] ProductName = EAX Unified
+    [040904b0] ProductVersion = 3.01
+    [040904b0] SpecialBuild =  
+  rich        9 entries, checksum_valid=True
+    prod_id= 11 build= 8047 count=8
+    prod_id= 14 build= 7299 count=28
+    prod_id= 10 build= 8047 count=85
+    prod_id=  0 build=    0 count=2
+    prod_id= 19 build= 8034 count=9
+    prod_id=  1 build=    0 count=82
+    prod_id= 49 build= 9044 count=11
+    prod_id=  6 build= 1735 count=1
+    prod_id=  4 build= 8447 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x000155f5 raw=0x00001000+0x00016000 H=6.43 CODE|EXECUTE|READ
+    .rdata   va=0x00017000 vsize=0x00001a1b raw=0x00017000+0x00002000 H=5.41 INITIALIZED_DATA|READ
+    .data    va=0x00019000 vsize=0x00004744 raw=0x00019000+0x00005000 H=1.89 INITIALIZED_DATA|READ|WRITE
+    .rsrc    va=0x0001e000 vsize=0x000003a8 raw=0x0001e000+0x00001000 H=0.97 INITIALIZED_DATA|READ
+    .reloc   va=0x0001f000 vsize=0x0000164e raw=0x0001f000+0x00002000 H=3.86 INITIALIZED_DATA|DISCARDABLE|READ
+  data directories:
+    EXPORT          rva=0x00018920 size=0xfb
+    IMPORT          rva=0x000182c4 size=0x64
+    RESOURCE        rva=0x0001e000 size=0x3a8
+    BASERELOC       rva=0x0001f000 size=0xe90
+    IAT             rva=0x00017000 size=0x11c
+  imports: 4 DLLs, 67 functions
+    KERNEL32.dll (55)
+    USER32.dll (1)
+    ADVAPI32.dll (6)
+    ole32.dll (5)
+  exports: EAX.DLL (7 functions, base=1)
+  resources:  VERSIONx1
+
+== jpegdll.dll ==
+  size        159744 bytes
+  sha256      8f4047c1a47e485161064eb7d3a9275b61b0de9be156d9d613bfc2d03f0ad51f
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2002-10-17T12:11:00Z (0x3daea8d4)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x10000000  entry_rva=0x14468  size_of_image=0x28000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x000283ec not set
+  rich        7 entries, checksum_valid=True
+    prod_id= 11 build= 8047 count=1
+    prod_id= 14 build= 7299 count=22
+    prod_id= 10 build= 8047 count=100
+    prod_id=  1 build=    0 count=71
+    prod_id= 19 build= 8034 count=3
+    prod_id= 48 build= 9044 count=47
+    prod_id=  4 build= 8447 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x0001b608 raw=0x00001000+0x0001c000 H=6.56 CODE|EXECUTE|READ
+    .rdata   va=0x0001d000 vsize=0x000024b5 raw=0x0001d000+0x00003000 H=4.96 INITIALIZED_DATA|READ
+    .data    va=0x00020000 vsize=0x00005a14 raw=0x00020000+0x00005000 H=2.67 INITIALIZED_DATA|READ|WRITE
+    .reloc   va=0x00026000 vsize=0x000012fc raw=0x00025000+0x00002000 H=3.21 INITIALIZED_DATA|DISCARDABLE|READ
+  data directories:
+    EXPORT          rva=0x0001e740 size=0xd75
+    IMPORT          rva=0x0001e20c size=0x28
+    BASERELOC       rva=0x00026000 size=0xbd4
+    IAT             rva=0x0001d000 size=0xec
+  imports: 1 DLLs, 58 functions
+    KERNEL32.dll (58)
+  exports: jpegdll.dll (103 functions, base=1)
+
+== msvcrt.dll ==
+  size        290869 bytes
+  sha256      11b2e109ba8012d8ddcee1dd8b6ca060aedccbb60663f964d34d4ae50449d105
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2001-09-20T21:52:56Z (0x3baa6538)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x78000000  entry_rva=0x1378  size_of_image=0x46000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00048405 computed=0x00048405 OK
+  version     file=6.1.9359.0 product=6.1.9359.0
+    [040904B0] CompanyName = Microsoft Corporation
+    [040904B0] FileDescription = Microsoft (R) C Runtime Library
+    [040904B0] FileVersion = 6.10.9359.0
+    [040904B0] InternalName = MSVCRT.DLL
+    [040904B0] LegalCopyright = Copyright (C) Microsoft Corp. 1981-1999
+    [040904B0] OriginalFilename = MSVCRT.DLL
+    [040904B0] ProductName = Microsoft (R) Visual C++
+    [040904B0] ProductVersion = 6.10.9359.0
+  pdb         e:\9359\vc61\boot\bin\x86\msvcrt.pdb (NB10)
+  rich        7 entries, checksum_valid=True
+    prod_id= 19 build= 8034 count=3
+    prod_id=  1 build=    0 count=141
+    prod_id= 11 build= 8168 count=19
+    prod_id=  6 build= 1720 count=1
+    prod_id= 14 build= 7299 count=67
+    prod_id= 10 build= 8168 count=501
+    prod_id=  4 build= 8168 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x00031913 raw=0x00002000+0x00032000 H=6.68 CODE|EXECUTE|READ
+    .rdata   va=0x00033000 vsize=0x000075b4 raw=0x00034000+0x00008000 H=5.54 INITIALIZED_DATA|READ
+    .data    va=0x0003b000 vsize=0x00006d8c raw=0x0003c000+0x00007000 H=2.64 INITIALIZED_DATA|READ|WRITE
+    .rsrc    va=0x00042000 vsize=0x000003a8 raw=0x00043000+0x00001000 H=1.00 INITIALIZED_DATA|READ
+    .reloc   va=0x00043000 vsize=0x000025f8 raw=0x00044000+0x00003000 H=5.93 INITIALIZED_DATA|DISCARDABLE|READ
+  overlay     offset=0x47000 size=53
+  data directories:
+    EXPORT          rva=0x00035aa0 size=0x3df0
+    IMPORT          rva=0x00039920 size=0x36
+    RESOURCE        rva=0x00042000 size=0x3a8
+    BASERELOC       rva=0x00043000 size=0x25f8
+    DEBUG           rva=0x000398c0 size=0x54
+    BOUND_IMPORT    rva=0x00000298 size=0x30
+    IAT             rva=0x00033000 size=0x234
+  imports: 1 DLLs, 140 functions
+    KERNEL32.dll (140)
+  exports: MSVCRT.dll (779 functions, base=1)
+  resources:  VERSIONx1
+
+== p5dll.dll ==
+  size        90112 bytes
+  sha256      2b4720e74e4d7c61e67f1fc13d44e33b3954e2369236b3d3caa86dc0a4312d0a
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2002-05-09T02:19:51Z (0x3cd9dcc7)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x10000000  entry_rva=0x52c4  size_of_image=0x17000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x00025d28 not set
+  version     file=4.6.25.7 product=4.6.25.7
+    [040904b0] Comments = New Lenses
+    [040904b0] CompanyName = VRYAD Development Group
+    [040904b0] FileDescription = Interface to P5Device
+    [040904b0] FileVersion = 1, 0, 24, 7
+    [040904b0] InternalName = P5DLL.dll
+    [040904b0] LegalCopyright = Copyright © Essential Reality 2002
+    [040904b0] LegalTrademarks = 
+    [040904b0] OriginalFilename = P5DLL.dll
+    [040904b0] PrivateBuild = 
+    [040904b0] ProductName = Virtual Glove P5
+    [040904b0] ProductVersion = 1, 0, 24, 7
+    [040904b0] SpecialBuild = 
+  rich        9 entries, checksum_valid=True
+    prod_id= 11 build= 8047 count=1
+    prod_id= 14 build= 7299 count=25
+    prod_id= 10 build= 8047 count=111
+    prod_id=  0 build=    0 count=26
+    prod_id=  1 build=    0 count=85
+    prod_id= 19 build= 8034 count=7
+    prod_id= 11 build= 8966 count=8
+    prod_id=  6 build= 1735 count=1
+    prod_id=  4 build= 8447 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x0000bd9a raw=0x00001000+0x0000c000 H=6.71 CODE|EXECUTE|READ
+    .rdata   va=0x0000d000 vsize=0x0000171c raw=0x0000d000+0x00002000 H=4.60 INITIALIZED_DATA|READ
+    .data    va=0x0000f000 vsize=0x00004a10 raw=0x0000f000+0x00004000 H=1.20 INITIALIZED_DATA|READ|WRITE
+    .rsrc    va=0x00014000 vsize=0x00000410 raw=0x00013000+0x00001000 H=1.09 INITIALIZED_DATA|READ
+    .reloc   va=0x00015000 vsize=0x000011c0 raw=0x00014000+0x00002000 H=2.89 INITIALIZED_DATA|DISCARDABLE|READ
+  data directories:
+    EXPORT          rva=0x0000e2e0 size=0x43c
+    IMPORT          rva=0x0000da5c size=0x64
+    RESOURCE        rva=0x00014000 size=0x410
+    BASERELOC       rva=0x00015000 size=0xa04
+    IAT             rva=0x0000d000 size=0x16c
+  imports: 4 DLLs, 87 functions
+    KERNEL32.dll (68)
+    USER32.dll (1)
+    SETUPAPI.dll (4)
+    HID.DLL (14)
+  exports: P5DLL.dll (21 functions, base=1)
+  resources:  VERSIONx1
+
+== xmlparse.dll ==
+  size        131072 bytes
+  sha256      d48c3494dc1f1f876c363225ece3927513f8980addbdee82f261fbd27cf7ffb9
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2002-10-17T12:11:11Z (0x3daea8df)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x10000000  entry_rva=0x1462d  size_of_image=0x20000
+  flags       EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE, DLL
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x0002015d not set
+  rich        7 entries, checksum_valid=True
+    prod_id= 11 build= 8047 count=1
+    prod_id= 10 build= 8047 count=24
+    prod_id= 14 build= 7299 count=12
+    prod_id=  1 build=    0 count=38
+    prod_id= 19 build= 8034 count=3
+    prod_id= 48 build= 9044 count=3
+    prod_id=  4 build= 8447 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x0001694e raw=0x00001000+0x00017000 H=6.45 CODE|EXECUTE|READ
+    .rdata   va=0x00018000 vsize=0x00002c10 raw=0x00018000+0x00003000 H=5.02 INITIALIZED_DATA|READ
+    .data    va=0x0001b000 vsize=0x00002e44 raw=0x0001b000+0x00003000 H=1.25 INITIALIZED_DATA|READ|WRITE
+    .reloc   va=0x0001e000 vsize=0x000015fc raw=0x0001e000+0x00002000 H=5.05 INITIALIZED_DATA|DISCARDABLE|READ
+  data directories:
+    EXPORT          rva=0x0001a400 size=0x810
+    IMPORT          rva=0x0001a0b4 size=0x28
+    BASERELOC       rva=0x0001e000 size=0x150c
+    IAT             rva=0x00018000 size=0x98
+  imports: 1 DLLs, 37 functions
+    KERNEL32.dll (37)
+  exports: xmlparse.dll (54 functions, base=1)
+
+== UNWISE.EXE ==
+  size        162304 bytes
+  sha256      4751a3547f3b482bb4a2440d4e91e3dcba9b4b0f5b1bb50416a32fb47ae75c5e
+  format      PE32 i386  subsystem=WINDOWS_GUI
+  timestamp   2000-12-26T21:47:59Z (0x3a49120f)
+  linker      6.0  os=4.0  subsystem_ver=4.0
+  image_base  0x400000  entry_rva=0xcc01  size_of_image=0x2a000
+  flags       RELOCS_STRIPPED, EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE
+  dll_flags   (none)
+  checksum    stored=0x00000000 computed=0x00027dbe not set
+  rich        10 entries, checksum_valid=True
+    prod_id= 12 build= 7291 count=2
+    prod_id= 11 build= 8797 count=1
+    prod_id= 14 build= 7299 count=15
+    prod_id= 10 build= 8797 count=42
+    prod_id=  0 build=    0 count=1
+    prod_id= 19 build= 8034 count=13
+    prod_id=  1 build=    0 count=214
+    prod_id= 10 build= 8799 count=1
+    prod_id=  6 build= 1735 count=1
+    prod_id=  4 build= 8447 count=1
+  sections:
+    .text    va=0x00001000 vsize=0x0000f757 raw=0x00000400+0x0000f800 H=6.39 CODE|EXECUTE|READ
+    .rdata   va=0x00011000 vsize=0x00001e15 raw=0x0000fc00+0x00002000 H=5.45 INITIALIZED_DATA|READ
+    .data    va=0x00013000 vsize=0x00003fdc raw=0x00011c00+0x00003600 H=2.52 INITIALIZED_DATA|READ|WRITE
+    .rsrc    va=0x00017000 vsize=0x00012640 raw=0x00015200+0x00012800 H=4.29 INITIALIZED_DATA|READ
+  data directories:
+    EXPORT          rva=0x00012d80 size=0x95
+    IMPORT          rva=0x00011b80 size=0x8c
+    RESOURCE        rva=0x00017000 size=0x12640
+    IAT             rva=0x00011000 size=0x36c
+  imports: 6 DLLs, 213 functions
+    KERNEL32.dll (100)
+    USER32.dll (65)
+    GDI32.dll (27)
+    comdlg32.dll (1)
+    ADVAPI32.dll (17)
+    ole32.dll (3)
+  exports: UNWISE32.EXE (4 functions, base=1)
+  resources:  BITMAPx2, ICONx25, DIALOGx3, STRINGx6, GROUP_ICONx25, 300x2
+

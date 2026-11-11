@@ -1,0 +1,23 @@
+# Never commit game files (copyrighted, and large).
+samples/local/
+*.exe
+*.dll
+*.ZIP
+*.WAV
+*.WHD
+
+# Python
+__pycache__/
+*.pyc
+
+# Personal AI-assistant settings (the project skills in .claude/skills and .agents/skills are published)
+.claude/settings.local.json
+
+# Files the proxy writes into a game folder
+h2e.log
+h2e_settings.ini
+
+# Build output
+build/
+out/
+dist/

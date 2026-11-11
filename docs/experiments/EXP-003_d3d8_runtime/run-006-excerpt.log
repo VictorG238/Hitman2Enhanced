@@ -1,0 +1,60 @@
+[     469 ms] CreateDevice adapter=0 devType=1 hFocusWindow=000711DA BehaviorFlags=0x00000040 caller=RenderD3D.dll+0x1DB6 (va 0x07881DB6, base 0x07880000)
+[     469 ms] CreateDevice (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=1 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x0
+[     469 ms]   window 000711DA rect=(-2,-2)-(1922,1082) client=1920x1080 style=0x96000000
+[     594 ms] CreateDevice -> hr=0x00000000 device=06DD29D0
+[     594 ms] CreateDevice (out) BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=1 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x0
+[     594 ms]   window 000711DA rect=(-2,-2)-(1922,1082) client=1920x1080 style=0x96000000
+[    2407 ms] SetViewport x=0 y=0 w=1920 h=1080 minZ=0.000 maxZ=1.000 aspect(w/h)=1.77778 caller=RenderD3D.dll+0x3322 (va 0x07883322, base 0x07880000)
+[    2422 ms] SetRenderTarget rt=03FBC2FC zs=03FBC67C caller=RenderD3D.dll+0xE951 (va 0x0788E951, base 0x07880000)
+[    5625 ms] Present: 8899 frames in 5.00s = 1779.8 fps (total 8899); projection calls 17783; viewport now 1920x1080+0+0; distinct proj=2 vp=1
+[    5625 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[    6875 ms] SetViewport x=671 y=351 w=310 h=156 minZ=0.000 maxZ=1.000 aspect(w/h)=1.98718 caller=RenderD3D.dll+0x3322 (va 0x07883322, base 0x07880000)
+[   10625 ms] Present: 7066 frames in 5.00s = 1413.2 fps (total 15965); projection calls 17967; viewport now 1920x1080+0+0; distinct proj=3 vp=2
+[   10625 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   15625 ms] Present: 1273 frames in 5.00s = 254.6 fps (total 17238); projection calls 3819; viewport now 1920x1080+0+0; distinct proj=3 vp=2
+[   15625 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   20625 ms] Present: 6667 frames in 5.00s = 1333.4 fps (total 23905); projection calls 20001; viewport now 1920x1080+0+0; distinct proj=3 vp=2
+[   20625 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   25625 ms] Present: 6375 frames in 5.00s = 1275.0 fps (total 30280); projection calls 24131; viewport now 1920x1080+0+0; distinct proj=5 vp=2
+[   25625 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   30625 ms] Present: 7286 frames in 5.00s = 1457.2 fps (total 37566); projection calls 18407; viewport now 1920x1080+0+0; distinct proj=5 vp=2
+[   30625 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   32938 ms] SetViewport x=0 y=135 w=1920 h=810 minZ=0.000 maxZ=1.000 aspect(w/h)=2.37037 caller=RenderD3D.dll+0x3322 (va 0x07883322, base 0x07880000)
+[   32938 ms] SetViewport x=0 y=945 w=1920 h=135 minZ=0.000 maxZ=1.000 aspect(w/h)=14.22222 caller=RenderD3D.dll+0x3322 (va 0x07883322, base 0x07880000)
+[   32938 ms] SetViewport x=0 y=0 w=1920 h=135 minZ=0.000 maxZ=1.000 aspect(w/h)=14.22222 caller=RenderD3D.dll+0x3322 (va 0x07883322, base 0x07880000)
+[   36172 ms] Present: 6068 frames in 5.55s = 1093.9 fps (total 43634); projection calls 16008; viewport now 1920x1080+0+0; distinct proj=9 vp=5
+[   36172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   41172 ms] Present: 3389 frames in 5.00s = 677.8 fps (total 47023); projection calls 11838; viewport now 1920x1080+0+0; distinct proj=141 vp=5
+[   41172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   46172 ms] Present: 4548 frames in 5.00s = 909.6 fps (total 51571); projection calls 14751; viewport now 1920x1080+0+0; distinct proj=144 vp=5
+[   46172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   46188 ms] SetRenderTarget rt=0C36D3E0 zs=00000000 caller=RenderD3D.dll+0xD86A (va 0x0788D86A, base 0x07880000)
+[   46188 ms] SetViewport x=0 y=0 w=128 h=128 minZ=0.000 maxZ=0.000 aspect(w/h)=1.00000 caller=RenderD3D.dll+0xD8C2 (va 0x0788D8C2, base 0x07880000)
+[   51172 ms] Present: 2513 frames in 5.00s = 502.6 fps (total 54084); projection calls 11136; viewport now 1920x1080+0+0; distinct proj=1228 vp=6
+[   51172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   51172 ms] ProjSample[5s] caller=RenderD3D.dll+0xDBCE (va 0x0788DBCE, base 0x07880000) fovX=8.556 fovY=14.479 aspect(x/y)=0.58890 viewport=128x128+0+0
+[   56172 ms] Present: 1183 frames in 5.00s = 236.6 fps (total 55267); projection calls 5708; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[   56172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   56172 ms] ProjSample[5s] caller=RenderD3D.dll+0xDBCE (va 0x0788DBCE, base 0x07880000) fovX=7.414 fovY=15.712 aspect(x/y)=0.46958 viewport=128x128+0+0
+[   61172 ms] Present: 1363 frames in 5.00s = 272.6 fps (total 56630); projection calls 10904; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[   61172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   61172 ms] ProjSample[5s] caller=RenderD3D.dll+0xDBCE (va 0x0788DBCE, base 0x07880000) fovX=7.414 fovY=15.712 aspect(x/y)=0.46958 viewport=128x128+0+0
+[   66172 ms] Present: 1749 frames in 5.00s = 349.8 fps (total 58379); projection calls 9952; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[   66172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   66172 ms] ProjSample[5s] caller=RenderD3D.dll+0xDBCE (va 0x0788DBCE, base 0x07880000) fovX=7.356 fovY=15.787 aspect(x/y)=0.46366 viewport=128x128+0+0
+[   71172 ms] Present: 5428 frames in 5.00s = 1085.6 fps (total 63807); projection calls 27140; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[   71172 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   89188 ms] Present: 3936 frames in 18.02s = 218.5 fps (total 67743); projection calls 19680; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[   89188 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   94188 ms] Present: 2840 frames in 5.00s = 568.0 fps (total 70583); projection calls 11790; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[   94188 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[   99188 ms] Present: 4314 frames in 5.00s = 862.8 fps (total 74897); projection calls 19820; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[   99188 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[  104188 ms] Present: 4295 frames in 5.00s = 859.0 fps (total 79192); projection calls 17412; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[  104188 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[  109188 ms] Present: 2856 frames in 5.00s = 571.2 fps (total 82048); projection calls 11424; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[  109188 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[  114188 ms] Present: 2549 frames in 5.00s = 509.8 fps (total 84597); projection calls 10196; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[  114188 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0
+[  119204 ms] Present: 2773 frames in 5.02s = 552.8 fps (total 87370); projection calls 12331; viewport now 1920x1080+0+0; distinct proj=1646 vp=6
+[  119204 ms] ProjSample[5s] caller=RenderD3D.dll+0x33DD (va 0x078833DD, base 0x07880000) fovX=45.000 fovY=26.231 aspect(x/y)=1.77778 viewport=1920x1080+0+0

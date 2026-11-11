@@ -1,0 +1,48 @@
+[       0 ms]   fix timer        ON   (EXPERIMENTAL frame-rate independent game clock (fraction-carrying tick accumulator, EXP-004))
+[     469 ms] Direct3DCreate8(SDKVersion=120) -> 03FBC908 caller=RenderD3D.dll+0x19F1 (va 0x078319F1, base 0x07830000)
+[     500 ms] timer: 8 other threads were suspended during the write (0 executing hitman2.exe code, 0 inside the timer function 0x4179F0)
+[     500 ms] timer: call at 0x00417B40 redirected to the accumulator stub 0x711F6220 (applied; sha256 f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136)
+[     641 ms] CreateDevice -> hr=0x00000000 device=06E51268
+[    5656 ms] Present: 6181 frames in 5.00s = 1236.2 fps (total 6181); projection calls 6179; viewport now 1920x1080+0+0; distinct proj=2 vp=2
+[   10656 ms] Present: 10065 frames in 5.00s = 2013.0 fps (total 16246); projection calls 20104; viewport now 1920x1080+0+0; distinct proj=671 vp=5
+[   15656 ms] Present: 8855 frames in 5.00s = 1771.0 fps (total 25101); projection calls 39470; viewport now 1920x1080+0+0; distinct proj=676 vp=6
+[   20656 ms] Present: 2500 frames in 5.00s = 500.0 fps (total 27601); projection calls 12283; viewport now 1920x1080+0+0; distinct proj=2181 vp=7
+[   25656 ms] Present: 3139 frames in 5.00s = 627.8 fps (total 30740); projection calls 17222; viewport now 1920x1080+0+0; distinct proj=2182 vp=7
+[   30656 ms] Present: 4253 frames in 5.00s = 850.6 fps (total 34993); projection calls 21265; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   35656 ms] Present: 3357 frames in 5.00s = 671.4 fps (total 38350); projection calls 16784; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   40656 ms] Present: 4022 frames in 5.00s = 804.4 fps (total 42372); projection calls 20110; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   45656 ms] Present: 4211 frames in 5.00s = 842.2 fps (total 46583); projection calls 21055; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   50656 ms] Present: 3504 frames in 5.00s = 700.8 fps (total 50087); projection calls 17520; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   55656 ms] Present: 3377 frames in 5.00s = 675.4 fps (total 53464); projection calls 16885; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   60656 ms] Present: 3414 frames in 5.00s = 682.8 fps (total 56878); projection calls 17070; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   65656 ms] Present: 3470 frames in 5.00s = 694.0 fps (total 60348); projection calls 17350; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   70656 ms] Present: 3380 frames in 5.00s = 676.0 fps (total 63728); projection calls 16900; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   75656 ms] Present: 3420 frames in 5.00s = 684.0 fps (total 67148); projection calls 17100; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   80656 ms] Present: 3404 frames in 5.00s = 680.8 fps (total 70552); projection calls 17020; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   88687 ms] Present: 3109 frames in 8.03s = 387.1 fps (total 73661); projection calls 16205; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[   97078 ms] Present: 249 frames in 8.39s = 29.7 fps (total 73910); projection calls 1743; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  102078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 74210); projection calls 1756; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  107078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 74510); projection calls 1863; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  112078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 74810); projection calls 1520; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  117078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 75110); projection calls 1500; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  122078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 75410); projection calls 1500; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  127078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 75710); projection calls 1500; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  132078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 76010); projection calls 1500; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  137078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 76310); projection calls 1595; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  142078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 76610); projection calls 1500; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  147078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 76910); projection calls 1500; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  152078 ms] Present: 300 frames in 5.00s = 60.0 fps (total 77210); projection calls 1536; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  157094 ms] Present: 53 frames in 5.02s = 10.6 fps (total 77263); projection calls 355; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  162094 ms] Present: 150 frames in 5.00s = 30.0 fps (total 77413); projection calls 770; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  167094 ms] Present: 150 frames in 5.00s = 30.0 fps (total 77563); projection calls 858; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  172125 ms] Present: 151 frames in 5.03s = 30.0 fps (total 77714); projection calls 844; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  177125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 77864); projection calls 875; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  182125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 78014); projection calls 900; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  187125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 78164); projection calls 852; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  192125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 78314); projection calls 750; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  197125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 78464); projection calls 750; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  202125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 78614); projection calls 750; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  207125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 78764); projection calls 750; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  212125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 78914); projection calls 750; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  217125 ms] Present: 150 frames in 5.00s = 30.0 fps (total 79064); projection calls 750; viewport now 1920x1080+0+0; distinct proj=2184 vp=7
+[  222000 ms] === detach: 79209 frames presented, 340190 projection SetTransform calls ===

@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.json text eol=lf
+# Inno Setup scripts, message files and info pages: Windows line endings (UTF-8 with BOM kept as is).
+installer/*.iss text eol=crlf
+installer/*.txt text eol=crlf
+installer/lang/*.iss text eol=crlf
+installer/languages/*.isl text eol=crlf
+installer/languages/*.islu text eol=crlf
+installer/*.ps1 text eol=crlf
+*.bmp binary

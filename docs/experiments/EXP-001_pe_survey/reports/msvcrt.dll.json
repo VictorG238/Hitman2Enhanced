@@ -1,0 +1,7361 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\msvcrt.dll",
+  "file_name": "msvcrt.dll",
+  "file_size": 290869,
+  "sha256": "11b2e109ba8012d8ddcee1dd8b6ca060aedccbb60663f964d34d4ae50449d105",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 5,
+    "timestamp": 1001022776,
+    "timestamp_utc": "2001-09-20T21:52:56Z",
+    "characteristics": 8462,
+    "flags": [
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE",
+      "DLL"
+    ]
+  },
+  "optional": {
+    "linker_version": "6.0",
+    "size_of_code": 204800,
+    "size_of_initialized_data": 77824,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 4984,
+    "entry_point_va": 2013270904,
+    "base_of_code": 4096,
+    "base_of_data": 204800,
+    "image_base": 2013265920,
+    "section_alignment": 4096,
+    "file_alignment": 4096,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 286720,
+    "size_of_headers": 4096,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 295941,
+    "computed": 295941,
+    "matches": true
+  },
+  "data_directories": [
+    {
+      "index": 0,
+      "name": "EXPORT",
+      "rva": 219808,
+      "size": 15856
+    },
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 235808,
+      "size": 54
+    },
+    {
+      "index": 2,
+      "name": "RESOURCE",
+      "rva": 270336,
+      "size": 936
+    },
+    {
+      "index": 5,
+      "name": "BASERELOC",
+      "rva": 274432,
+      "size": 9720
+    },
+    {
+      "index": 6,
+      "name": "DEBUG",
+      "rva": 235712,
+      "size": 84
+    },
+    {
+      "index": 11,
+      "name": "BOUND_IMPORT",
+      "rva": 664,
+      "size": 48
+    },
+    {
+      "index": 12,
+      "name": "IAT",
+      "rva": 208896,
+      "size": 564
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 203027,
+      "raw_pointer": 8192,
+      "raw_size": 204800,
+      "characteristics": 1610612768,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ"
+      ],
+      "entropy": 6.6812
+    },
+    {
+      "name": ".rdata",
+      "virtual_address": 208896,
+      "virtual_size": 30132,
+      "raw_pointer": 212992,
+      "raw_size": 32768,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 5.5387
+    },
+    {
+      "name": ".data",
+      "virtual_address": 241664,
+      "virtual_size": 28044,
+      "raw_pointer": 245760,
+      "raw_size": 28672,
+      "characteristics": 3221225536,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 2.6394
+    },
+    {
+      "name": ".rsrc",
+      "virtual_address": 270336,
+      "virtual_size": 936,
+      "raw_pointer": 274432,
+      "raw_size": 4096,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 0.9991
+    },
+    {
+      "name": ".reloc",
+      "virtual_address": 274432,
+      "virtual_size": 9720,
+      "raw_pointer": 278528,
+      "raw_size": 12288,
+      "characteristics": 1107296320,
+      "flags": [
+        "INITIALIZED_DATA",
+        "DISCARDABLE",
+        "READ"
+      ],
+      "entropy": 5.934
+    }
+  ],
+  "overlay": {
+    "offset": 290816,
+    "size": 53
+  },
+  "rich_header": {
+    "offset": 128,
+    "key": "0xa5ad6224",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 19,
+        "build": 8034,
+        "count": 3
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 141
+      },
+      {
+        "prod_id": 11,
+        "build": 8168,
+        "count": 19
+      },
+      {
+        "prod_id": 6,
+        "build": 1720,
+        "count": 1
+      },
+      {
+        "prod_id": 14,
+        "build": 7299,
+        "count": 67
+      },
+      {
+        "prod_id": 10,
+        "build": 8168,
+        "count": 501
+      },
+      {
+        "prod_id": 4,
+        "build": 8168,
+        "count": 1
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "bound": true,
+      "functions": [
+        {
+          "iat_rva": 208896,
+          "iat_va": 2013474816,
+          "hint": 119,
+          "name": "EnumSystemLocalesA"
+        },
+        {
+          "iat_rva": 208900,
+          "iat_va": 2013474820,
+          "hint": 559,
+          "name": "RtlUnwind"
+        },
+        {
+          "iat_rva": 208904,
+          "iat_va": 2013474824,
+          "hint": 437,
+          "name": "IsBadReadPtr"
+        },
+        {
+          "iat_rva": 208908,
+          "iat_va": 2013474828,
+          "hint": 440,
+          "name": "IsBadWritePtr"
+        },
+        {
+          "iat_rva": 208912,
+          "iat_va": 2013474832,
+          "hint": 434,
+          "name": "IsBadCodePtr"
+        },
+        {
+          "iat_rva": 208916,
+          "iat_va": 2013474836,
+          "hint": 651,
+          "name": "SetUnhandledExceptionFilter"
+        },
+        {
+          "iat_rva": 208920,
+          "iat_va": 2013474840,
+          "hint": 292,
+          "name": "GetModuleFileNameA"
+        },
+        {
+          "iat_rva": 208924,
+          "iat_va": 2013474844,
+          "hint": 293,
+          "name": "GetModuleFileNameW"
+        },
+        {
+          "iat_rva": 208928,
+          "iat_va": 2013474848,
+          "hint": 125,
+          "name": "ExitProcess"
+        },
+        {
+          "iat_rva": 208932,
+          "iat_va": 2013474852,
+          "hint": 670,
+          "name": "TerminateProcess"
+        },
+        {
+          "iat_rva": 208936,
+          "iat_va": 2013474856,
+          "hint": 247,
+          "name": "GetCurrentProcess"
+        },
+        {
+          "iat_rva": 208940,
+          "iat_va": 2013474860,
+          "hint": 735,
+          "name": "WriteFile"
+        },
+        {
+          "iat_rva": 208944,
+          "iat_va": 2013474864,
+          "hint": 338,
+          "name": "GetStdHandle"
+        },
+        {
+          "iat_rva": 208948,
+          "iat_va": 2013474868,
+          "hint": 202,
+          "name": "GetCommandLineA"
+        },
+        {
+          "iat_rva": 208952,
+          "iat_va": 2013474872,
+          "hint": 373,
+          "name": "GetVersionExA"
+        },
+        {
+          "iat_rva": 208956,
+          "iat_va": 2013474876,
+          "hint": 426,
+          "name": "InitializeCriticalSection"
+        },
+        {
+          "iat_rva": 208960,
+          "iat_va": 2013474880,
+          "hint": 85,
+          "name": "DeleteCriticalSection"
+        },
+        {
+          "iat_rva": 208964,
+          "iat_va": 2013474884,
+          "hint": 102,
+          "name": "EnterCriticalSection"
+        },
+        {
+          "iat_rva": 208968,
+          "iat_va": 2013474888,
+          "hint": 449,
+          "name": "LeaveCriticalSection"
+        },
+        {
+          "iat_rva": 208972,
+          "iat_va": 2013474892,
+          "hint": 282,
+          "name": "GetLastError"
+        },
+        {
+          "iat_rva": 208976,
+          "iat_va": 2013474896,
+          "hint": 556,
+          "name": "ResumeThread"
+        },
+        {
+          "iat_rva": 208980,
+          "iat_va": 2013474900,
+          "hint": 74,
+          "name": "CreateThread"
+        },
+        {
+          "iat_rva": 208984,
+          "iat_va": 2013474904,
+          "hint": 677,
+          "name": "TlsSetValue"
+        },
+        {
+          "iat_rva": 208988,
+          "iat_va": 2013474908,
+          "hint": 126,
+          "name": "ExitThread"
+        },
+        {
+          "iat_rva": 208992,
+          "iat_va": 2013474912,
+          "hint": 27,
+          "name": "CloseHandle"
+        },
+        {
+          "iat_rva": 208996,
+          "iat_va": 2013474916,
+          "hint": 250,
+          "name": "GetCurrentThreadId"
+        },
+        {
+          "iat_rva": 209000,
+          "iat_va": 2013474920,
+          "hint": 674,
+          "name": "TlsAlloc"
+        },
+        {
+          "iat_rva": 209004,
+          "iat_va": 2013474924,
+          "hint": 675,
+          "name": "TlsFree"
+        },
+        {
+          "iat_rva": 209008,
+          "iat_va": 2013474928,
+          "hint": 625,
+          "name": "SetLastError"
+        },
+        {
+          "iat_rva": 209012,
+          "iat_va": 2013474932,
+          "hint": 676,
+          "name": "TlsGetValue"
+        },
+        {
+          "iat_rva": 209016,
+          "iat_va": 2013474936,
+          "hint": 249,
+          "name": "GetCurrentThread"
+        },
+        {
+          "iat_rva": 209020,
+          "iat_va": 2013474940,
+          "hint": 157,
+          "name": "FindNextFileA"
+        },
+        {
+          "iat_rva": 209024,
+          "iat_va": 2013474944,
+          "hint": 148,
+          "name": "FindFirstFileA"
+        },
+        {
+          "iat_rva": 209028,
+          "iat_va": 2013474948,
+          "hint": 144,
+          "name": "FindClose"
+        },
+        {
+          "iat_rva": 209032,
+          "iat_va": 2013474952,
+          "hint": 158,
+          "name": "FindNextFileW"
+        },
+        {
+          "iat_rva": 209036,
+          "iat_va": 2013474956,
+          "hint": 151,
+          "name": "FindFirstFileW"
+        },
+        {
+          "iat_rva": 209040,
+          "iat_va": 2013474960,
+          "hint": 415,
+          "name": "HeapFree"
+        },
+        {
+          "iat_rva": 209044,
+          "iat_va": 2013474964,
+          "hint": 409,
+          "name": "HeapAlloc"
+        },
+        {
+          "iat_rva": 209048,
+          "iat_va": 2013474968,
+          "hint": 294,
+          "name": "GetModuleHandleA"
+        },
+        {
+          "iat_rva": 209052,
+          "iat_va": 2013474972,
+          "hint": 265,
+          "name": "GetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 209056,
+          "iat_va": 2013474976,
+          "hint": 413,
+          "name": "HeapDestroy"
+        },
+        {
+          "iat_rva": 209060,
+          "iat_va": 2013474980,
+          "hint": 411,
+          "name": "HeapCreate"
+        },
+        {
+          "iat_rva": 209064,
+          "iat_va": 2013474984,
+          "hint": 703,
+          "name": "VirtualFree"
+        },
+        {
+          "iat_rva": 209068,
+          "iat_va": 2013474988,
+          "hint": 699,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 209072,
+          "iat_va": 2013474992,
+          "hint": 418,
+          "name": "HeapReAlloc"
+        },
+        {
+          "iat_rva": 209076,
+          "iat_va": 2013474996,
+          "hint": 621,
+          "name": "SetHandleCount"
+        },
+        {
+          "iat_rva": 209080,
+          "iat_va": 2013475000,
+          "hint": 277,
+          "name": "GetFileType"
+        },
+        {
+          "iat_rva": 209084,
+          "iat_va": 2013475004,
+          "hint": 336,
+          "name": "GetStartupInfoA"
+        },
+        {
+          "iat_rva": 209088,
+          "iat_va": 2013475008,
+          "hint": 185,
+          "name": "GetACP"
+        },
+        {
+          "iat_rva": 209092,
+          "iat_va": 2013475012,
+          "hint": 305,
+          "name": "GetOEMCP"
+        },
+        {
+          "iat_rva": 209096,
+          "iat_va": 2013475016,
+          "hint": 191,
+          "name": "GetCPInfo"
+        },
+        {
+          "iat_rva": 209100,
+          "iat_va": 2013475020,
+          "hint": 318,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 209104,
+          "iat_va": 2013475024,
+          "hint": 450,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 209108,
+          "iat_va": 2013475028,
+          "hint": 484,
+          "name": "MultiByteToWideChar"
+        },
+        {
+          "iat_rva": 209112,
+          "iat_va": 2013475032,
+          "hint": 203,
+          "name": "GetCommandLineW"
+        },
+        {
+          "iat_rva": 209116,
+          "iat_va": 2013475036,
+          "hint": 178,
+          "name": "FreeEnvironmentStringsA"
+        },
+        {
+          "iat_rva": 209120,
+          "iat_va": 2013475040,
+          "hint": 179,
+          "name": "FreeEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 209124,
+          "iat_va": 2013475044,
+          "hint": 722,
+          "name": "WideCharToMultiByte"
+        },
+        {
+          "iat_rva": 209128,
+          "iat_va": 2013475048,
+          "hint": 262,
+          "name": "GetEnvironmentStrings"
+        },
+        {
+          "iat_rva": 209132,
+          "iat_va": 2013475052,
+          "hint": 264,
+          "name": "GetEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 209136,
+          "iat_va": 2013475056,
+          "hint": 685,
+          "name": "UnhandledExceptionFilter"
+        },
+        {
+          "iat_rva": 209140,
+          "iat_va": 2013475060,
+          "hint": 339,
+          "name": "GetStringTypeA"
+        },
+        {
+          "iat_rva": 209144,
+          "iat_va": 2013475064,
+          "hint": 342,
+          "name": "GetStringTypeW"
+        },
+        {
+          "iat_rva": 209148,
+          "iat_va": 2013475068,
+          "hint": 447,
+          "name": "LCMapStringA"
+        },
+        {
+          "iat_rva": 209152,
+          "iat_va": 2013475072,
+          "hint": 448,
+          "name": "LCMapStringW"
+        },
+        {
+          "iat_rva": 209156,
+          "iat_va": 2013475076,
+          "hint": 577,
+          "name": "SetConsoleCtrlHandler"
+        },
+        {
+          "iat_rva": 209160,
+          "iat_va": 2013475080,
+          "hint": 611,
+          "name": "SetEnvironmentVariableW"
+        },
+        {
+          "iat_rva": 209164,
+          "iat_va": 2013475084,
+          "hint": 446,
+          "name": "IsValidLocale"
+        },
+        {
+          "iat_rva": 209168,
+          "iat_va": 2013475088,
+          "hint": 445,
+          "name": "IsValidCodePage"
+        },
+        {
+          "iat_rva": 209172,
+          "iat_va": 2013475092,
+          "hint": 284,
+          "name": "GetLocaleInfoA"
+        },
+        {
+          "iat_rva": 209176,
+          "iat_va": 2013475096,
+          "hint": 523,
+          "name": "RaiseException"
+        },
+        {
+          "iat_rva": 209180,
+          "iat_va": 2013475100,
+          "hint": 369,
+          "name": "GetUserDefaultLCID"
+        },
+        {
+          "iat_rva": 209184,
+          "iat_va": 2013475104,
+          "hint": 285,
+          "name": "GetLocaleInfoW"
+        },
+        {
+          "iat_rva": 209188,
+          "iat_va": 2013475108,
+          "hint": 368,
+          "name": "GetTimeZoneInformation"
+        },
+        {
+          "iat_rva": 209192,
+          "iat_va": 2013475112,
+          "hint": 170,
+          "name": "FlushFileBuffers"
+        },
+        {
+          "iat_rva": 209196,
+          "iat_va": 2013475116,
+          "hint": 618,
+          "name": "SetFilePointer"
+        },
+        {
+          "iat_rva": 209200,
+          "iat_va": 2013475120,
+          "hint": 636,
+          "name": "SetStdHandle"
+        },
+        {
+          "iat_rva": 209204,
+          "iat_va": 2013475124,
+          "hint": 33,
+          "name": "CompareStringA"
+        },
+        {
+          "iat_rva": 209208,
+          "iat_va": 2013475128,
+          "hint": 34,
+          "name": "CompareStringW"
+        },
+        {
+          "iat_rva": 209212,
+          "iat_va": 2013475132,
+          "hint": 610,
+          "name": "SetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 209216,
+          "iat_va": 2013475136,
+          "hint": 662,
+          "name": "Sleep"
+        },
+        {
+          "iat_rva": 209220,
+          "iat_va": 2013475140,
+          "hint": 11,
+          "name": "Beep"
+        },
+        {
+          "iat_rva": 209224,
+          "iat_va": 2013475144,
+          "hint": 138,
+          "name": "FileTimeToSystemTime"
+        },
+        {
+          "iat_rva": 209228,
+          "iat_va": 2013475148,
+          "hint": 137,
+          "name": "FileTimeToLocalFileTime"
+        },
+        {
+          "iat_rva": 209232,
+          "iat_va": 2013475152,
+          "hint": 256,
+          "name": "GetDiskFreeSpaceA"
+        },
+        {
+          "iat_rva": 209236,
+          "iat_va": 2013475156,
+          "hint": 288,
+          "name": "GetLogicalDrives"
+        },
+        {
+          "iat_rva": 209240,
+          "iat_va": 2013475160,
+          "hint": 612,
+          "name": "SetErrorMode"
+        },
+        {
+          "iat_rva": 209244,
+          "iat_va": 2013475164,
+          "hint": 269,
+          "name": "GetFileAttributesA"
+        },
+        {
+          "iat_rva": 209248,
+          "iat_va": 2013475168,
+          "hint": 245,
+          "name": "GetCurrentDirectoryA"
+        },
+        {
+          "iat_rva": 209252,
+          "iat_va": 2013475172,
+          "hint": 605,
+          "name": "SetCurrentDirectoryA"
+        },
+        {
+          "iat_rva": 209256,
+          "iat_va": 2013475176,
+          "hint": 616,
+          "name": "SetFileAttributesA"
+        },
+        {
+          "iat_rva": 209260,
+          "iat_va": 2013475180,
+          "hint": 278,
+          "name": "GetFullPathNameA"
+        },
+        {
+          "iat_rva": 209264,
+          "iat_va": 2013475184,
+          "hint": 260,
+          "name": "GetDriveTypeA"
+        },
+        {
+          "iat_rva": 209268,
+          "iat_va": 2013475188,
+          "hint": 248,
+          "name": "GetCurrentProcessId"
+        },
+        {
+          "iat_rva": 209272,
+          "iat_va": 2013475192,
+          "hint": 45,
+          "name": "CreateDirectoryA"
+        },
+        {
+          "iat_rva": 209276,
+          "iat_va": 2013475196,
+          "hint": 551,
+          "name": "RemoveDirectoryA"
+        },
+        {
+          "iat_rva": 209280,
+          "iat_va": 2013475200,
+          "hint": 87,
+          "name": "DeleteFileA"
+        },
+        {
+          "iat_rva": 209284,
+          "iat_va": 2013475204,
+          "hint": 272,
+          "name": "GetFileAttributesW"
+        },
+        {
+          "iat_rva": 209288,
+          "iat_va": 2013475208,
+          "hint": 246,
+          "name": "GetCurrentDirectoryW"
+        },
+        {
+          "iat_rva": 209292,
+          "iat_va": 2013475212,
+          "hint": 606,
+          "name": "SetCurrentDirectoryW"
+        },
+        {
+          "iat_rva": 209296,
+          "iat_va": 2013475216,
+          "hint": 617,
+          "name": "SetFileAttributesW"
+        },
+        {
+          "iat_rva": 209300,
+          "iat_va": 2013475220,
+          "hint": 279,
+          "name": "GetFullPathNameW"
+        },
+        {
+          "iat_rva": 209304,
+          "iat_va": 2013475224,
+          "hint": 48,
+          "name": "CreateDirectoryW"
+        },
+        {
+          "iat_rva": 209308,
+          "iat_va": 2013475228,
+          "hint": 88,
+          "name": "DeleteFileW"
+        },
+        {
+          "iat_rva": 209312,
+          "iat_va": 2013475232,
+          "hint": 480,
+          "name": "MoveFileW"
+        },
+        {
+          "iat_rva": 209316,
+          "iat_va": 2013475236,
+          "hint": 552,
+          "name": "RemoveDirectoryW"
+        },
+        {
+          "iat_rva": 209320,
+          "iat_va": 2013475240,
+          "hint": 261,
+          "name": "GetDriveTypeW"
+        },
+        {
+          "iat_rva": 209324,
+          "iat_va": 2013475244,
+          "hint": 477,
+          "name": "MoveFileA"
+        },
+        {
+          "iat_rva": 209328,
+          "iat_va": 2013475248,
+          "hint": 267,
+          "name": "GetExitCodeProcess"
+        },
+        {
+          "iat_rva": 209332,
+          "iat_va": 2013475252,
+          "hint": 718,
+          "name": "WaitForSingleObject"
+        },
+        {
+          "iat_rva": 209336,
+          "iat_va": 2013475256,
+          "hint": 180,
+          "name": "FreeLibrary"
+        },
+        {
+          "iat_rva": 209340,
+          "iat_va": 2013475260,
+          "hint": 68,
+          "name": "CreateProcessA"
+        },
+        {
+          "iat_rva": 209344,
+          "iat_va": 2013475264,
+          "hint": 69,
+          "name": "CreateProcessW"
+        },
+        {
+          "iat_rva": 209348,
+          "iat_va": 2013475268,
+          "hint": 423,
+          "name": "HeapValidate"
+        },
+        {
+          "iat_rva": 209352,
+          "iat_va": 2013475272,
+          "hint": 410,
+          "name": "HeapCompact"
+        },
+        {
+          "iat_rva": 209356,
+          "iat_va": 2013475276,
+          "hint": 424,
+          "name": "HeapWalk"
+        },
+        {
+          "iat_rva": 209360,
+          "iat_va": 2013475280,
+          "hint": 419,
+          "name": "HeapSize"
+        },
+        {
+          "iat_rva": 209364,
+          "iat_va": 2013475284,
+          "hint": 524,
+          "name": "ReadConsoleA"
+        },
+        {
+          "iat_rva": 209368,
+          "iat_va": 2013475288,
+          "hint": 592,
+          "name": "SetConsoleMode"
+        },
+        {
+          "iat_rva": 209372,
+          "iat_va": 2013475292,
+          "hint": 235,
+          "name": "GetConsoleMode"
+        },
+        {
+          "iat_rva": 209376,
+          "iat_va": 2013475296,
+          "hint": 609,
+          "name": "SetEndOfFile"
+        },
+        {
+          "iat_rva": 209380,
+          "iat_va": 2013475300,
+          "hint": 724,
+          "name": "WriteConsoleA"
+        },
+        {
+          "iat_rva": 209384,
+          "iat_va": 2013475304,
+          "hint": 99,
+          "name": "DuplicateHandle"
+        },
+        {
+          "iat_rva": 209388,
+          "iat_va": 2013475308,
+          "hint": 273,
+          "name": "GetFileInformationByHandle"
+        },
+        {
+          "iat_rva": 209392,
+          "iat_va": 2013475312,
+          "hint": 505,
+          "name": "PeekNamedPipe"
+        },
+        {
+          "iat_rva": 209396,
+          "iat_va": 2013475316,
+          "hint": 525,
+          "name": "ReadConsoleInputA"
+        },
+        {
+          "iat_rva": 209400,
+          "iat_va": 2013475320,
+          "hint": 503,
+          "name": "PeekConsoleInputA"
+        },
+        {
+          "iat_rva": 209404,
+          "iat_va": 2013475324,
+          "hint": 303,
+          "name": "GetNumberOfConsoleInputEvents"
+        },
+        {
+          "iat_rva": 209408,
+          "iat_va": 2013475328,
+          "hint": 467,
+          "name": "LockFile"
+        },
+        {
+          "iat_rva": 209412,
+          "iat_va": 2013475332,
+          "hint": 686,
+          "name": "UnlockFile"
+        },
+        {
+          "iat_rva": 209416,
+          "iat_va": 2013475336,
+          "hint": 52,
+          "name": "CreateFileA"
+        },
+        {
+          "iat_rva": 209420,
+          "iat_va": 2013475340,
+          "hint": 67,
+          "name": "CreatePipe"
+        },
+        {
+          "iat_rva": 209424,
+          "iat_va": 2013475344,
+          "hint": 536,
+          "name": "ReadFile"
+        },
+        {
+          "iat_rva": 209428,
+          "iat_va": 2013475348,
+          "hint": 55,
+          "name": "CreateFileW"
+        },
+        {
+          "iat_rva": 209432,
+          "iat_va": 2013475352,
+          "hint": 351,
+          "name": "GetSystemTimeAsFileTime"
+        },
+        {
+          "iat_rva": 209436,
+          "iat_va": 2013475356,
+          "hint": 620,
+          "name": "SetFileTime"
+        },
+        {
+          "iat_rva": 209440,
+          "iat_va": 2013475360,
+          "hint": 458,
+          "name": "LocalFileTimeToFileTime"
+        },
+        {
+          "iat_rva": 209444,
+          "iat_va": 2013475364,
+          "hint": 667,
+          "name": "SystemTimeToFileTime"
+        },
+        {
+          "iat_rva": 209448,
+          "iat_va": 2013475368,
+          "hint": 283,
+          "name": "GetLocalTime"
+        },
+        {
+          "iat_rva": 209452,
+          "iat_va": 2013475372,
+          "hint": 626,
+          "name": "SetLocalTime"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": {
+    "dll_name": "MSVCRT.dll",
+    "timestamp": 1001021811,
+    "timestamp_utc": "2001-09-20T21:36:51Z",
+    "version": "0.0",
+    "ordinal_base": 1,
+    "functions": [
+      {
+        "ordinal": 1,
+        "names": [
+          "??0__non_rtti_object@@QAE@ABV0@@Z"
+        ],
+        "rva": 47996,
+        "va": 2013313916
+      },
+      {
+        "ordinal": 2,
+        "names": [
+          "??0__non_rtti_object@@QAE@PBD@Z"
+        ],
+        "rva": 47962,
+        "va": 2013313882
+      },
+      {
+        "ordinal": 3,
+        "names": [
+          "??0bad_cast@@QAE@ABQBD@Z"
+        ],
+        "rva": 47744,
+        "va": 2013313664
+      },
+      {
+        "ordinal": 4,
+        "names": [
+          "??0bad_cast@@QAE@ABV0@@Z"
+        ],
+        "rva": 47768,
+        "va": 2013313688
+      },
+      {
+        "ordinal": 5,
+        "names": [
+          "??0bad_typeid@@QAE@ABV0@@Z"
+        ],
+        "rva": 47938,
+        "va": 2013313858
+      },
+      {
+        "ordinal": 6,
+        "names": [
+          "??0bad_typeid@@QAE@PBD@Z"
+        ],
+        "rva": 47913,
+        "va": 2013313833
+      },
+      {
+        "ordinal": 7,
+        "names": [
+          "??0exception@@QAE@ABQBD@Z"
+        ],
+        "rva": 54764,
+        "va": 2013320684
+      },
+      {
+        "ordinal": 8,
+        "names": [
+          "??0exception@@QAE@ABV0@@Z"
+        ],
+        "rva": 54825,
+        "va": 2013320745
+      },
+      {
+        "ordinal": 9,
+        "names": [
+          "??0exception@@QAE@XZ"
+        ],
+        "rva": 54644,
+        "va": 2013320564
+      },
+      {
+        "ordinal": 10,
+        "names": [
+          "??1__non_rtti_object@@UAE@XZ"
+        ],
+        "rva": 48020,
+        "va": 2013313940
+      },
+      {
+        "ordinal": 11,
+        "names": [
+          "??1bad_cast@@UAE@XZ"
+        ],
+        "rva": 48020,
+        "va": 2013313940
+      },
+      {
+        "ordinal": 12,
+        "names": [
+          "??1bad_typeid@@UAE@XZ"
+        ],
+        "rva": 48020,
+        "va": 2013313940
+      },
+      {
+        "ordinal": 13,
+        "names": [
+          "??1exception@@UAE@XZ"
+        ],
+        "rva": 48020,
+        "va": 2013313940
+      },
+      {
+        "ordinal": 14,
+        "names": [
+          "??1type_info@@UAE@XZ"
+        ],
+        "rva": 48042,
+        "va": 2013313962
+      },
+      {
+        "ordinal": 15,
+        "names": [
+          "??2@YAPAXI@Z"
+        ],
+        "rva": 9940,
+        "va": 2013275860
+      },
+      {
+        "ordinal": 16,
+        "names": [
+          "??3@YAXPAX@Z"
+        ],
+        "rva": 8315,
+        "va": 2013274235
+      },
+      {
+        "ordinal": 17,
+        "names": [
+          "??4__non_rtti_object@@QAEAAV0@ABV0@@Z"
+        ],
+        "rva": 47792,
+        "va": 2013313712
+      },
+      {
+        "ordinal": 18,
+        "names": [
+          "??4bad_cast@@QAEAAV0@ABV0@@Z"
+        ],
+        "rva": 47792,
+        "va": 2013313712
+      },
+      {
+        "ordinal": 19,
+        "names": [
+          "??4bad_typeid@@QAEAAV0@ABV0@@Z"
+        ],
+        "rva": 47792,
+        "va": 2013313712
+      },
+      {
+        "ordinal": 20,
+        "names": [
+          "??4exception@@QAEAAV0@ABV0@@Z"
+        ],
+        "rva": 54899,
+        "va": 2013320819
+      },
+      {
+        "ordinal": 21,
+        "names": [
+          "??8type_info@@QBEHABV0@@Z"
+        ],
+        "rva": 48111,
+        "va": 2013314031
+      },
+      {
+        "ordinal": 22,
+        "names": [
+          "??9type_info@@QBEHABV0@@Z"
+        ],
+        "rva": 48138,
+        "va": 2013314058
+      },
+      {
+        "ordinal": 23,
+        "names": [
+          "??_7__non_rtti_object@@6B@"
+        ],
+        "rva": 212620,
+        "va": 2013478540
+      },
+      {
+        "ordinal": 24,
+        "names": [
+          "??_7bad_cast@@6B@"
+        ],
+        "rva": 212596,
+        "va": 2013478516
+      },
+      {
+        "ordinal": 25,
+        "names": [
+          "??_7bad_typeid@@6B@"
+        ],
+        "rva": 212608,
+        "va": 2013478528
+      },
+      {
+        "ordinal": 26,
+        "names": [
+          "??_7exception@@6B@"
+        ],
+        "rva": 213492,
+        "va": 2013479412
+      },
+      {
+        "ordinal": 27,
+        "names": [
+          "??_E__non_rtti_object@@UAEPAXI@Z"
+        ],
+        "rva": 47838,
+        "va": 2013313758
+      },
+      {
+        "ordinal": 28,
+        "names": [
+          "??_Ebad_cast@@UAEPAXI@Z"
+        ],
+        "rva": 47838,
+        "va": 2013313758
+      },
+      {
+        "ordinal": 29,
+        "names": [
+          "??_Ebad_typeid@@UAEPAXI@Z"
+        ],
+        "rva": 47838,
+        "va": 2013313758
+      },
+      {
+        "ordinal": 30,
+        "names": [
+          "??_Eexception@@UAEPAXI@Z"
+        ],
+        "rva": 54689,
+        "va": 2013320609
+      },
+      {
+        "ordinal": 31,
+        "names": [
+          "??_G__non_rtti_object@@UAEPAXI@Z"
+        ],
+        "rva": 47810,
+        "va": 2013313730
+      },
+      {
+        "ordinal": 32,
+        "names": [
+          "??_Gbad_cast@@UAEPAXI@Z"
+        ],
+        "rva": 47810,
+        "va": 2013313730
+      },
+      {
+        "ordinal": 33,
+        "names": [
+          "??_Gbad_typeid@@UAEPAXI@Z"
+        ],
+        "rva": 47810,
+        "va": 2013313730
+      },
+      {
+        "ordinal": 34,
+        "names": [
+          "??_Gexception@@UAEPAXI@Z"
+        ],
+        "rva": 54661,
+        "va": 2013320581
+      },
+      {
+        "ordinal": 35,
+        "names": [
+          "??_U@YAPAXI@Z"
+        ],
+        "rva": 112748,
+        "va": 2013378668
+      },
+      {
+        "ordinal": 36,
+        "names": [
+          "??_V@YAXPAX@Z"
+        ],
+        "rva": 55165,
+        "va": 2013321085
+      },
+      {
+        "ordinal": 37,
+        "names": [
+          "?_query_new_handler@@YAP6AHI@ZXZ"
+        ],
+        "rva": 25233,
+        "va": 2013291153
+      },
+      {
+        "ordinal": 38,
+        "names": [
+          "?_query_new_mode@@YAHXZ"
+        ],
+        "rva": 25333,
+        "va": 2013291253
+      },
+      {
+        "ordinal": 39,
+        "names": [
+          "?_set_new_handler@@YAP6AHI@ZP6AHI@Z@Z"
+        ],
+        "rva": 25197,
+        "va": 2013291117
+      },
+      {
+        "ordinal": 40,
+        "names": [
+          "?_set_new_mode@@YAHH@Z"
+        ],
+        "rva": 25304,
+        "va": 2013291224
+      },
+      {
+        "ordinal": 41,
+        "names": [
+          "?_set_se_translator@@YAP6AXIPAU_EXCEPTION_POINTERS@@@ZP6AXI0@Z@Z"
+        ],
+        "rva": 48366,
+        "va": 2013314286
+      },
+      {
+        "ordinal": 42,
+        "names": [
+          "?before@type_info@@QBEHABV1@@Z"
+        ],
+        "rva": 48166,
+        "va": 2013314086
+      },
+      {
+        "ordinal": 43,
+        "names": [
+          "?name@type_info@@QBEPBDXZ"
+        ],
+        "rva": 48201,
+        "va": 2013314121
+      },
+      {
+        "ordinal": 44,
+        "names": [
+          "?raw_name@type_info@@QBEPBDXZ"
+        ],
+        "rva": 48197,
+        "va": 2013314117
+      },
+      {
+        "ordinal": 45,
+        "names": [
+          "?set_new_handler@@YAP6AXXZP6AXXZ@Z"
+        ],
+        "rva": 25266,
+        "va": 2013291186
+      },
+      {
+        "ordinal": 46,
+        "names": [
+          "?set_terminate@@YAP6AXXZP6AXXZ@Z"
+        ],
+        "rva": 48316,
+        "va": 2013314236
+      },
+      {
+        "ordinal": 47,
+        "names": [
+          "?set_unexpected@@YAP6AXXZP6AXXZ@Z"
+        ],
+        "rva": 48341,
+        "va": 2013314261
+      },
+      {
+        "ordinal": 48,
+        "names": [
+          "?terminate@@YAXXZ"
+        ],
+        "rva": 46557,
+        "va": 2013312477
+      },
+      {
+        "ordinal": 49,
+        "names": [
+          "?unexpected@@YAXXZ"
+        ],
+        "rva": 46818,
+        "va": 2013312738
+      },
+      {
+        "ordinal": 50,
+        "names": [
+          "?what@exception@@UBEPBDXZ"
+        ],
+        "rva": 54930,
+        "va": 2013320850
+      },
+      {
+        "ordinal": 51,
+        "names": [
+          "$I10_OUTPUT"
+        ],
+        "rva": 175672,
+        "va": 2013441592
+      },
+      {
+        "ordinal": 52,
+        "names": [
+          "_CIacos"
+        ],
+        "rva": 179562,
+        "va": 2013445482
+      },
+      {
+        "ordinal": 53,
+        "names": [
+          "_CIasin"
+        ],
+        "rva": 179813,
+        "va": 2013445733
+      },
+      {
+        "ordinal": 54,
+        "names": [
+          "_CIatan"
+        ],
+        "rva": 180020,
+        "va": 2013445940
+      },
+      {
+        "ordinal": 55,
+        "names": [
+          "_CIatan2"
+        ],
+        "rva": 180249,
+        "va": 2013446169
+      },
+      {
+        "ordinal": 56,
+        "names": [
+          "_CIcos"
+        ],
+        "rva": 180305,
+        "va": 2013446225
+      },
+      {
+        "ordinal": 57,
+        "names": [
+          "_CIcosh"
+        ],
+        "rva": 180611,
+        "va": 2013446531
+      },
+      {
+        "ordinal": 58,
+        "names": [
+          "_CIexp"
+        ],
+        "rva": 180635,
+        "va": 2013446555
+      },
+      {
+        "ordinal": 59,
+        "names": [
+          "_CIfmod"
+        ],
+        "rva": 180652,
+        "va": 2013446572
+      },
+      {
+        "ordinal": 60,
+        "names": [
+          "_CIlog"
+        ],
+        "rva": 180692,
+        "va": 2013446612
+      },
+      {
+        "ordinal": 61,
+        "names": [
+          "_CIlog10"
+        ],
+        "rva": 180896,
+        "va": 2013446816
+      },
+      {
+        "ordinal": 62,
+        "names": [
+          "_CIpow"
+        ],
+        "rva": 181100,
+        "va": 2013447020
+      },
+      {
+        "ordinal": 63,
+        "names": [
+          "_CIsin"
+        ],
+        "rva": 181732,
+        "va": 2013447652
+      },
+      {
+        "ordinal": 64,
+        "names": [
+          "_CIsinh"
+        ],
+        "rva": 180549,
+        "va": 2013446469
+      },
+      {
+        "ordinal": 65,
+        "names": [
+          "_CIsqrt"
+        ],
+        "rva": 181906,
+        "va": 2013447826
+      },
+      {
+        "ordinal": 66,
+        "names": [
+          "_CItan"
+        ],
+        "rva": 182092,
+        "va": 2013448012
+      },
+      {
+        "ordinal": 67,
+        "names": [
+          "_CItanh"
+        ],
+        "rva": 180618,
+        "va": 2013446538
+      },
+      {
+        "ordinal": 68,
+        "names": [
+          "_CxxThrowException"
+        ],
+        "rva": 46937,
+        "va": 2013312857
+      },
+      {
+        "ordinal": 69,
+        "names": [
+          "_EH_prolog"
+        ],
+        "rva": 4096,
+        "va": 2013270016
+      },
+      {
+        "ordinal": 70,
+        "names": [
+          "_Getdays"
+        ],
+        "rva": 79311,
+        "va": 2013345231
+      },
+      {
+        "ordinal": 71,
+        "names": [
+          "_Getmonths"
+        ],
+        "rva": 79454,
+        "va": 2013345374
+      },
+      {
+        "ordinal": 72,
+        "names": [
+          "_Gettnames"
+        ],
+        "rva": 79603,
+        "va": 2013345523
+      },
+      {
+        "ordinal": 73,
+        "names": [
+          "_HUGE"
+        ],
+        "rva": 264076,
+        "va": 2013529996
+      },
+      {
+        "ordinal": 74,
+        "names": [
+          "_Strftime"
+        ],
+        "rva": 80199,
+        "va": 2013346119
+      },
+      {
+        "ordinal": 75,
+        "names": [
+          "_XcptFilter"
+        ],
+        "rva": 66090,
+        "va": 2013332010
+      },
+      {
+        "ordinal": 76,
+        "names": [
+          "__CxxFrameHandler"
+        ],
+        "rva": 47126,
+        "va": 2013313046
+      },
+      {
+        "ordinal": 77,
+        "names": [
+          "__CxxLongjmpUnwind"
+        ],
+        "rva": 47180,
+        "va": 2013313100
+      },
+      {
+        "ordinal": 78,
+        "names": [
+          "__RTCastToVoid"
+        ],
+        "rva": 105125,
+        "va": 2013371045
+      },
+      {
+        "ordinal": 79,
+        "names": [
+          "__RTDynamicCast"
+        ],
+        "rva": 105453,
+        "va": 2013371373
+      },
+      {
+        "ordinal": 80,
+        "names": [
+          "__RTtypeid"
+        ],
+        "rva": 105255,
+        "va": 2013371175
+      },
+      {
+        "ordinal": 81,
+        "names": [
+          "__STRINGTOLD"
+        ],
+        "rva": 177066,
+        "va": 2013442986
+      },
+      {
+        "ordinal": 82,
+        "names": [
+          "__argc"
+        ],
+        "rva": 249872,
+        "va": 2013515792
+      },
+      {
+        "ordinal": 83,
+        "names": [
+          "__argv"
+        ],
+        "rva": 268768,
+        "va": 2013534688
+      },
+      {
+        "ordinal": 84,
+        "names": [
+          "__badioinfo"
+        ],
+        "rva": 259360,
+        "va": 2013525280
+      },
+      {
+        "ordinal": 85,
+        "names": [
+          "__crtCompareStringA"
+        ],
+        "rva": 90369,
+        "va": 2013356289
+      },
+      {
+        "ordinal": 86,
+        "names": [
+          "__crtGetLocaleInfoW"
+        ],
+        "rva": 23106,
+        "va": 2013289026
+      },
+      {
+        "ordinal": 87,
+        "names": [
+          "__crtLCMapStringA"
+        ],
+        "rva": 9329,
+        "va": 2013275249
+      },
+      {
+        "ordinal": 88,
+        "names": [
+          "__dllonexit"
+        ],
+        "rva": 9109,
+        "va": 2013275029
+      },
+      {
+        "ordinal": 89,
+        "names": [
+          "__doserrno"
+        ],
+        "rva": 54559,
+        "va": 2013320479
+      },
+      {
+        "ordinal": 90,
+        "names": [
+          "__fpecode"
+        ],
+        "rva": 68741,
+        "va": 2013334661
+      },
+      {
+        "ordinal": 91,
+        "names": [
+          "__getmainargs"
+        ],
+        "rva": 50408,
+        "va": 2013316328
+      },
+      {
+        "ordinal": 92,
+        "names": [
+          "__initenv"
+        ],
+        "rva": 268772,
+        "va": 2013534692
+      },
+      {
+        "ordinal": 93,
+        "names": [
+          "__isascii"
+        ],
+        "rva": 85010,
+        "va": 2013350930
+      },
+      {
+        "ordinal": 94,
+        "names": [
+          "__iscsym"
+        ],
+        "rva": 85057,
+        "va": 2013350977
+      },
+      {
+        "ordinal": 95,
+        "names": [
+          "__iscsymf"
+        ],
+        "rva": 85031,
+        "va": 2013350951
+      },
+      {
+        "ordinal": 96,
+        "names": [
+          "__lc_codepage"
+        ],
+        "rva": 243372,
+        "va": 2013509292
+      },
+      {
+        "ordinal": 97,
+        "names": [
+          "__lc_collate_cp"
+        ],
+        "rva": 249368,
+        "va": 2013515288
+      },
+      {
+        "ordinal": 98,
+        "names": [
+          "__lc_handle"
+        ],
+        "rva": 249344,
+        "va": 2013515264
+      },
+      {
+        "ordinal": 99,
+        "names": [
+          "__lconv_init"
+        ],
+        "rva": 132396,
+        "va": 2013398316
+      },
+      {
+        "ordinal": 100,
+        "names": [
+          "__mb_cur_max"
+        ],
+        "rva": 243368,
+        "va": 2013509288
+      },
+      {
+        "ordinal": 101,
+        "names": [
+          "__p___argc"
+        ],
+        "rva": 24598,
+        "va": 2013290518
+      },
+      {
+        "ordinal": 102,
+        "names": [
+          "__p___argv"
+        ],
+        "rva": 50613,
+        "va": 2013316533
+      },
+      {
+        "ordinal": 103,
+        "names": [
+          "__p___initenv"
+        ],
+        "rva": 50655,
+        "va": 2013316575
+      },
+      {
+        "ordinal": 104,
+        "names": [
+          "__p___mb_cur_max"
+        ],
+        "rva": 50685,
+        "va": 2013316605
+      },
+      {
+        "ordinal": 105,
+        "names": [
+          "__p___wargv"
+        ],
+        "rva": 50619,
+        "va": 2013316539
+      },
+      {
+        "ordinal": 106,
+        "names": [
+          "__p___winitenv"
+        ],
+        "rva": 50661,
+        "va": 2013316581
+      },
+      {
+        "ordinal": 107,
+        "names": [
+          "__p__acmdln"
+        ],
+        "rva": 50595,
+        "va": 2013316515
+      },
+      {
+        "ordinal": 108,
+        "names": [
+          "__p__amblksiz"
+        ],
+        "rva": 50607,
+        "va": 2013316527
+      },
+      {
+        "ordinal": 109,
+        "names": [
+          "__p__commode"
+        ],
+        "rva": 20810,
+        "va": 2013286730
+      },
+      {
+        "ordinal": 110,
+        "names": [
+          "__p__daylight"
+        ],
+        "rva": 50625,
+        "va": 2013316545
+      },
+      {
+        "ordinal": 111,
+        "names": [
+          "__p__dstbias"
+        ],
+        "rva": 50631,
+        "va": 2013316551
+      },
+      {
+        "ordinal": 112,
+        "names": [
+          "__p__environ"
+        ],
+        "rva": 50637,
+        "va": 2013316557
+      },
+      {
+        "ordinal": 113,
+        "names": [
+          "__p__fileinfo"
+        ],
+        "rva": 50649,
+        "va": 2013316569
+      },
+      {
+        "ordinal": 114,
+        "names": [
+          "__p__fmode"
+        ],
+        "rva": 20804,
+        "va": 2013286724
+      },
+      {
+        "ordinal": 115,
+        "names": [
+          "__p__iob"
+        ],
+        "rva": 50667,
+        "va": 2013316587
+      },
+      {
+        "ordinal": 116,
+        "names": [
+          "__p__mbcasemap"
+        ],
+        "rva": 50679,
+        "va": 2013316599
+      },
+      {
+        "ordinal": 117,
+        "names": [
+          "__p__mbctype"
+        ],
+        "rva": 50673,
+        "va": 2013316593
+      },
+      {
+        "ordinal": 118,
+        "names": [
+          "__p__osver"
+        ],
+        "rva": 50691,
+        "va": 2013316611
+      },
+      {
+        "ordinal": 119,
+        "names": [
+          "__p__pctype"
+        ],
+        "rva": 50697,
+        "va": 2013316617
+      },
+      {
+        "ordinal": 120,
+        "names": [
+          "__p__pgmptr"
+        ],
+        "rva": 50709,
+        "va": 2013316629
+      },
+      {
+        "ordinal": 121,
+        "names": [
+          "__p__pwctype"
+        ],
+        "rva": 50703,
+        "va": 2013316623
+      },
+      {
+        "ordinal": 122,
+        "names": [
+          "__p__timezone"
+        ],
+        "rva": 50721,
+        "va": 2013316641
+      },
+      {
+        "ordinal": 123,
+        "names": [
+          "__p__tzname"
+        ],
+        "rva": 50727,
+        "va": 2013316647
+      },
+      {
+        "ordinal": 124,
+        "names": [
+          "__p__wcmdln"
+        ],
+        "rva": 50601,
+        "va": 2013316521
+      },
+      {
+        "ordinal": 125,
+        "names": [
+          "__p__wenviron"
+        ],
+        "rva": 50643,
+        "va": 2013316563
+      },
+      {
+        "ordinal": 126,
+        "names": [
+          "__p__winmajor"
+        ],
+        "rva": 50733,
+        "va": 2013316653
+      },
+      {
+        "ordinal": 127,
+        "names": [
+          "__p__winminor"
+        ],
+        "rva": 50739,
+        "va": 2013316659
+      },
+      {
+        "ordinal": 128,
+        "names": [
+          "__p__winver"
+        ],
+        "rva": 50745,
+        "va": 2013316665
+      },
+      {
+        "ordinal": 129,
+        "names": [
+          "__p__wpgmptr"
+        ],
+        "rva": 50715,
+        "va": 2013316635
+      },
+      {
+        "ordinal": 130,
+        "names": [
+          "__pioinfo"
+        ],
+        "rva": 243392,
+        "va": 2013509312
+      },
+      {
+        "ordinal": 131,
+        "names": [
+          "__pxcptinfoptrs"
+        ],
+        "rva": 68750,
+        "va": 2013334670
+      },
+      {
+        "ordinal": 132,
+        "names": [
+          "__set_app_type"
+        ],
+        "rva": 20794,
+        "va": 2013286714
+      },
+      {
+        "ordinal": 133,
+        "names": [
+          "__setlc_active"
+        ],
+        "rva": 269700,
+        "va": 2013535620
+      },
+      {
+        "ordinal": 134,
+        "names": [
+          "__setusermatherr"
+        ],
+        "rva": 48580,
+        "va": 2013314500
+      },
+      {
+        "ordinal": 135,
+        "names": [
+          "__threadhandle"
+        ],
+        "rva": 52211,
+        "va": 2013318131
+      },
+      {
+        "ordinal": 136,
+        "names": [
+          "__threadid"
+        ],
+        "rva": 52205,
+        "va": 2013318125
+      },
+      {
+        "ordinal": 137,
+        "names": [
+          "__toascii"
+        ],
+        "rva": 85023,
+        "va": 2013350943
+      },
+      {
+        "ordinal": 138,
+        "names": [
+          "__unDName"
+        ],
+        "rva": 25339,
+        "va": 2013291259
+      },
+      {
+        "ordinal": 139,
+        "names": [
+          "__unDNameEx"
+        ],
+        "rva": 25549,
+        "va": 2013291469
+      },
+      {
+        "ordinal": 140,
+        "names": [
+          "__unguarded_readlc_active"
+        ],
+        "rva": 269704,
+        "va": 2013535624
+      },
+      {
+        "ordinal": 141,
+        "names": [
+          "__wargv"
+        ],
+        "rva": 249876,
+        "va": 2013515796
+      },
+      {
+        "ordinal": 142,
+        "names": [
+          "__wgetmainargs"
+        ],
+        "rva": 20816,
+        "va": 2013286736
+      },
+      {
+        "ordinal": 143,
+        "names": [
+          "__winitenv"
+        ],
+        "rva": 250408,
+        "va": 2013516328
+      },
+      {
+        "ordinal": 144,
+        "names": [
+          "_abnormal_termination"
+        ],
+        "rva": 12290,
+        "va": 2013278210
+      },
+      {
+        "ordinal": 145,
+        "names": [
+          "_access"
+        ],
+        "rva": 98009,
+        "va": 2013363929
+      },
+      {
+        "ordinal": 146,
+        "names": [
+          "_acmdln"
+        ],
+        "rva": 242564,
+        "va": 2013508484
+      },
+      {
+        "ordinal": 147,
+        "names": [
+          "_adj_fdiv_m16i"
+        ],
+        "rva": 183920,
+        "va": 2013449840
+      },
+      {
+        "ordinal": 148,
+        "names": [
+          "_adj_fdiv_m32"
+        ],
+        "rva": 183768,
+        "va": 2013449688
+      },
+      {
+        "ordinal": 149,
+        "names": [
+          "_adj_fdiv_m32i"
+        ],
+        "rva": 183972,
+        "va": 2013449892
+      },
+      {
+        "ordinal": 150,
+        "names": [
+          "_adj_fdiv_m64"
+        ],
+        "rva": 183844,
+        "va": 2013449764
+      },
+      {
+        "ordinal": 151,
+        "names": [
+          "_adj_fdiv_r"
+        ],
+        "rva": 182547,
+        "va": 2013448467
+      },
+      {
+        "ordinal": 152,
+        "names": [
+          "_adj_fdivr_m16i"
+        ],
+        "rva": 184176,
+        "va": 2013450096
+      },
+      {
+        "ordinal": 153,
+        "names": [
+          "_adj_fdivr_m32"
+        ],
+        "rva": 184024,
+        "va": 2013449944
+      },
+      {
+        "ordinal": 154,
+        "names": [
+          "_adj_fdivr_m32i"
+        ],
+        "rva": 184228,
+        "va": 2013450148
+      },
+      {
+        "ordinal": 155,
+        "names": [
+          "_adj_fdivr_m64"
+        ],
+        "rva": 184100,
+        "va": 2013450020
+      },
+      {
+        "ordinal": 156,
+        "names": [
+          "_adj_fpatan"
+        ],
+        "rva": 185729,
+        "va": 2013451649
+      },
+      {
+        "ordinal": 157,
+        "names": [
+          "_adj_fprem"
+        ],
+        "rva": 184840,
+        "va": 2013450760
+      },
+      {
+        "ordinal": 158,
+        "names": [
+          "_adj_fprem1"
+        ],
+        "rva": 185536,
+        "va": 2013451456
+      },
+      {
+        "ordinal": 159,
+        "names": [
+          "_adj_fptan"
+        ],
+        "rva": 185732,
+        "va": 2013451652
+      },
+      {
+        "ordinal": 160,
+        "names": [
+          "_adjust_fdiv"
+        ],
+        "rva": 244524,
+        "va": 2013510444
+      },
+      {
+        "ordinal": 161,
+        "names": [
+          "_aexit_rtn"
+        ],
+        "rva": 250752,
+        "va": 2013516672
+      },
+      {
+        "ordinal": 162,
+        "names": [
+          "_amsg_exit"
+        ],
+        "rva": 50544,
+        "va": 2013316464
+      },
+      {
+        "ordinal": 163,
+        "names": [
+          "_assert"
+        ],
+        "rva": 64464,
+        "va": 2013330384
+      },
+      {
+        "ordinal": 164,
+        "names": [
+          "_atodbl"
+        ],
+        "rva": 177689,
+        "va": 2013443609
+      },
+      {
+        "ordinal": 165,
+        "names": [
+          "_atoi64"
+        ],
+        "rva": 54085,
+        "va": 2013320005
+      },
+      {
+        "ordinal": 166,
+        "names": [
+          "_atoldbl"
+        ],
+        "rva": 177734,
+        "va": 2013443654
+      },
+      {
+        "ordinal": 167,
+        "names": [
+          "_beep"
+        ],
+        "rva": 94924,
+        "va": 2013360844
+      },
+      {
+        "ordinal": 168,
+        "names": [
+          "_beginthread"
+        ],
+        "rva": 51485,
+        "va": 2013317405
+      },
+      {
+        "ordinal": 169,
+        "names": [
+          "_beginthreadex"
+        ],
+        "rva": 24604,
+        "va": 2013290524
+      },
+      {
+        "ordinal": 170,
+        "names": [
+          "_c_exit"
+        ],
+        "rva": 18650,
+        "va": 2013284570
+      },
+      {
+        "ordinal": 171,
+        "names": [
+          "_cabs"
+        ],
+        "rva": 185764,
+        "va": 2013451684
+      },
+      {
+        "ordinal": 172,
+        "names": [
+          "_callnewh"
+        ],
+        "rva": 25239,
+        "va": 2013291159
+      },
+      {
+        "ordinal": 173,
+        "names": [
+          "_cexit"
+        ],
+        "rva": 49860,
+        "va": 2013315780
+      },
+      {
+        "ordinal": 174,
+        "names": [
+          "_cgets"
+        ],
+        "rva": 114040,
+        "va": 2013379960
+      },
+      {
+        "ordinal": 175,
+        "names": [
+          "_chdir"
+        ],
+        "rva": 98079,
+        "va": 2013363999
+      },
+      {
+        "ordinal": 176,
+        "names": [
+          "_chdrive"
+        ],
+        "rva": 98280,
+        "va": 2013364200
+      },
+      {
+        "ordinal": 177,
+        "names": [
+          "_chgsign"
+        ],
+        "rva": 186477,
+        "va": 2013452397
+      },
+      {
+        "ordinal": 178,
+        "names": [
+          "_chkesp"
+        ],
+        "rva": 132439,
+        "va": 2013398359
+      },
+      {
+        "ordinal": 179,
+        "names": [
+          "_chmod"
+        ],
+        "rva": 98454,
+        "va": 2013364374
+      },
+      {
+        "ordinal": 180,
+        "names": [
+          "_chsize"
+        ],
+        "rva": 114255,
+        "va": 2013380175
+      },
+      {
+        "ordinal": 181,
+        "names": [
+          "_clearfp"
+        ],
+        "rva": 83855,
+        "va": 2013349775
+      },
+      {
+        "ordinal": 182,
+        "names": [
+          "_close"
+        ],
+        "rva": 86759,
+        "va": 2013352679
+      },
+      {
+        "ordinal": 183,
+        "names": [
+          "_commit"
+        ],
+        "rva": 86291,
+        "va": 2013352211
+      },
+      {
+        "ordinal": 184,
+        "names": [
+          "_commode"
+        ],
+        "rva": 249868,
+        "va": 2013515788
+      },
+      {
+        "ordinal": 185,
+        "names": [
+          "_control87"
+        ],
+        "rva": 15448,
+        "va": 2013281368
+      },
+      {
+        "ordinal": 186,
+        "names": [
+          "_controlfp"
+        ],
+        "rva": 15426,
+        "va": 2013281346
+      },
+      {
+        "ordinal": 187,
+        "names": [
+          "_copysign"
+        ],
+        "rva": 186444,
+        "va": 2013452364
+      },
+      {
+        "ordinal": 188,
+        "names": [
+          "_cprintf"
+        ],
+        "rva": 137462,
+        "va": 2013403382
+      },
+      {
+        "ordinal": 189,
+        "names": [
+          "_cputs"
+        ],
+        "rva": 114735,
+        "va": 2013380655
+      },
+      {
+        "ordinal": 190,
+        "names": [
+          "_creat"
+        ],
+        "rva": 114823,
+        "va": 2013380743
+      },
+      {
+        "ordinal": 191,
+        "names": [
+          "_cscanf"
+        ],
+        "rva": 139680,
+        "va": 2013405600
+      },
+      {
+        "ordinal": 192,
+        "names": [
+          "_ctime64"
+        ],
+        "rva": 168934,
+        "va": 2013434854
+      },
+      {
+        "ordinal": 193,
+        "names": [
+          "_ctype"
+        ],
+        "rva": 241680,
+        "va": 2013507600
+      },
+      {
+        "ordinal": 194,
+        "names": [
+          "_cwait"
+        ],
+        "rva": 106441,
+        "va": 2013372361
+      },
+      {
+        "ordinal": 195,
+        "names": [
+          "_daylight"
+        ],
+        "rva": 261420,
+        "va": 2013527340
+      },
+      {
+        "ordinal": 196,
+        "names": [
+          "_dstbias"
+        ],
+        "rva": 261424,
+        "va": 2013527344
+      },
+      {
+        "ordinal": 197,
+        "names": [
+          "_dup"
+        ],
+        "rva": 114845,
+        "va": 2013380765
+      },
+      {
+        "ordinal": 198,
+        "names": [
+          "_dup2"
+        ],
+        "rva": 115254,
+        "va": 2013381174
+      },
+      {
+        "ordinal": 199,
+        "names": [
+          "_ecvt"
+        ],
+        "rva": 91163,
+        "va": 2013357083
+      },
+      {
+        "ordinal": 200,
+        "names": [
+          "_endthread"
+        ],
+        "rva": 51751,
+        "va": 2013317671
+      },
+      {
+        "ordinal": 201,
+        "names": [
+          "_endthreadex"
+        ],
+        "rva": 24984,
+        "va": 2013290904
+      },
+      {
+        "ordinal": 202,
+        "names": [
+          "_environ"
+        ],
+        "rva": 244484,
+        "va": 2013510404
+      },
+      {
+        "ordinal": 203,
+        "names": [
+          "_eof"
+        ],
+        "rva": 115826,
+        "va": 2013381746
+      },
+      {
+        "ordinal": 204,
+        "names": [
+          "_errno"
+        ],
+        "rva": 54550,
+        "va": 2013320470
+      },
+      {
+        "ordinal": 205,
+        "names": [
+          "_except_handler2"
+        ],
+        "rva": 132463,
+        "va": 2013398383
+      },
+      {
+        "ordinal": 206,
+        "names": [
+          "_except_handler3"
+        ],
+        "rva": 65464,
+        "va": 2013331384
+      },
+      {
+        "ordinal": 207,
+        "names": [
+          "_execl"
+        ],
+        "rva": 106584,
+        "va": 2013372504
+      },
+      {
+        "ordinal": 208,
+        "names": [
+          "_execle"
+        ],
+        "rva": 106604,
+        "va": 2013372524
+      },
+      {
+        "ordinal": 209,
+        "names": [
+          "_execlp"
+        ],
+        "rva": 106644,
+        "va": 2013372564
+      },
+      {
+        "ordinal": 210,
+        "names": [
+          "_execlpe"
+        ],
+        "rva": 106661,
+        "va": 2013372581
+      },
+      {
+        "ordinal": 211,
+        "names": [
+          "_execv"
+        ],
+        "rva": 106701,
+        "va": 2013372621
+      },
+      {
+        "ordinal": 212,
+        "names": [
+          "_execve"
+        ],
+        "rva": 106720,
+        "va": 2013372640
+      },
+      {
+        "ordinal": 213,
+        "names": [
+          "_execvp"
+        ],
+        "rva": 107127,
+        "va": 2013373047
+      },
+      {
+        "ordinal": 214,
+        "names": [
+          "_execvpe"
+        ],
+        "rva": 107146,
+        "va": 2013373066
+      },
+      {
+        "ordinal": 215,
+        "names": [
+          "_exit"
+        ],
+        "rva": 49843,
+        "va": 2013315763
+      },
+      {
+        "ordinal": 216,
+        "names": [
+          "_expand"
+        ],
+        "rva": 112759,
+        "va": 2013378679
+      },
+      {
+        "ordinal": 217,
+        "names": [
+          "_fcloseall"
+        ],
+        "rva": 73219,
+        "va": 2013339139
+      },
+      {
+        "ordinal": 218,
+        "names": [
+          "_fcvt"
+        ],
+        "rva": 91112,
+        "va": 2013357032
+      },
+      {
+        "ordinal": 219,
+        "names": [
+          "_fdopen"
+        ],
+        "rva": 142185,
+        "va": 2013408105
+      },
+      {
+        "ordinal": 220,
+        "names": [
+          "_fgetchar"
+        ],
+        "rva": 142502,
+        "va": 2013408422
+      },
+      {
+        "ordinal": 221,
+        "names": [
+          "_fgetwchar"
+        ],
+        "rva": 142514,
+        "va": 2013408434
+      },
+      {
+        "ordinal": 222,
+        "names": [
+          "_filbuf"
+        ],
+        "rva": 142526,
+        "va": 2013408446
+      },
+      {
+        "ordinal": 223,
+        "names": [
+          "_fileinfo"
+        ],
+        "rva": 251120,
+        "va": 2013517040
+      },
+      {
+        "ordinal": 224,
+        "names": [
+          "_filelength"
+        ],
+        "rva": 116114,
+        "va": 2013382034
+      },
+      {
+        "ordinal": 225,
+        "names": [
+          "_filelengthi64"
+        ],
+        "rva": 116362,
+        "va": 2013382282
+      },
+      {
+        "ordinal": 226,
+        "names": [
+          "_fileno"
+        ],
+        "rva": 142745,
+        "va": 2013408665
+      },
+      {
+        "ordinal": 227,
+        "names": [
+          "_findclose"
+        ],
+        "rva": 95347,
+        "va": 2013361267
+      },
+      {
+        "ordinal": 228,
+        "names": [
+          "_findfirst"
+        ],
+        "rva": 94939,
+        "va": 2013360859
+      },
+      {
+        "ordinal": 229,
+        "names": [
+          "_findfirst64"
+        ],
+        "rva": 95479,
+        "va": 2013361399
+      },
+      {
+        "ordinal": 230,
+        "names": [
+          "_findfirsti64"
+        ],
+        "rva": 96070,
+        "va": 2013361990
+      },
+      {
+        "ordinal": 231,
+        "names": [
+          "_findnext"
+        ],
+        "rva": 95147,
+        "va": 2013361067
+      },
+      {
+        "ordinal": 232,
+        "names": [
+          "_findnext64"
+        ],
+        "rva": 95726,
+        "va": 2013361646
+      },
+      {
+        "ordinal": 233,
+        "names": [
+          "_findnexti64"
+        ],
+        "rva": 96308,
+        "va": 2013362228
+      },
+      {
+        "ordinal": 234,
+        "names": [
+          "_finite"
+        ],
+        "rva": 187467,
+        "va": 2013453387
+      },
+      {
+        "ordinal": 235,
+        "names": [
+          "_flsbuf"
+        ],
+        "rva": 76348,
+        "va": 2013342268
+      },
+      {
+        "ordinal": 236,
+        "names": [
+          "_flushall"
+        ],
+        "rva": 73679,
+        "va": 2013339599
+      },
+      {
+        "ordinal": 237,
+        "names": [
+          "_fmode"
+        ],
+        "rva": 249864,
+        "va": 2013515784
+      },
+      {
+        "ordinal": 238,
+        "names": [
+          "_fpclass"
+        ],
+        "rva": 187533,
+        "va": 2013453453
+      },
+      {
+        "ordinal": 239,
+        "names": [
+          "_fpieee_flt"
+        ],
+        "rva": 187679,
+        "va": 2013453599
+      },
+      {
+        "ordinal": 240,
+        "names": [
+          "_fpreset"
+        ],
+        "rva": 83875,
+        "va": 2013349795
+      },
+      {
+        "ordinal": 241,
+        "names": [
+          "_fputchar"
+        ],
+        "rva": 142753,
+        "va": 2013408673
+      },
+      {
+        "ordinal": 242,
+        "names": [
+          "_fputwchar"
+        ],
+        "rva": 142781,
+        "va": 2013408701
+      },
+      {
+        "ordinal": 243,
+        "names": [
+          "_fsopen"
+        ],
+        "rva": 142809,
+        "va": 2013408729
+      },
+      {
+        "ordinal": 244,
+        "names": [
+          "_fstat"
+        ],
+        "rva": 116638,
+        "va": 2013382558
+      },
+      {
+        "ordinal": 245,
+        "names": [
+          "_fstat64"
+        ],
+        "rva": 117366,
+        "va": 2013383286
+      },
+      {
+        "ordinal": 246,
+        "names": [
+          "_fstati64"
+        ],
+        "rva": 118007,
+        "va": 2013383927
+      },
+      {
+        "ordinal": 247,
+        "names": [
+          "_ftime"
+        ],
+        "rva": 168959,
+        "va": 2013434879
+      },
+      {
+        "ordinal": 248,
+        "names": [
+          "_ftime64"
+        ],
+        "rva": 169188,
+        "va": 2013435108
+      },
+      {
+        "ordinal": 249,
+        "names": [
+          "_ftol"
+        ],
+        "rva": 7694,
+        "va": 2013273614
+      },
+      {
+        "ordinal": 250,
+        "names": [
+          "_fullpath"
+        ],
+        "rva": 98517,
+        "va": 2013364437
+      },
+      {
+        "ordinal": 251,
+        "names": [
+          "_futime"
+        ],
+        "rva": 169498,
+        "va": 2013435418
+      },
+      {
+        "ordinal": 252,
+        "names": [
+          "_futime64"
+        ],
+        "rva": 169868,
+        "va": 2013435788
+      },
+      {
+        "ordinal": 253,
+        "names": [
+          "_gcvt"
+        ],
+        "rva": 91317,
+        "va": 2013357237
+      },
+      {
+        "ordinal": 254,
+        "names": [
+          "_get_osfhandle"
+        ],
+        "rva": 87941,
+        "va": 2013353861
+      },
+      {
+        "ordinal": 255,
+        "names": [
+          "_get_sbh_threshold"
+        ],
+        "rva": 56295,
+        "va": 2013322215
+      },
+      {
+        "ordinal": 256,
+        "names": [
+          "_getch"
+        ],
+        "rva": 118766,
+        "va": 2013384686
+      },
+      {
+        "ordinal": 257,
+        "names": [
+          "_getche"
+        ],
+        "rva": 118794,
+        "va": 2013384714
+      },
+      {
+        "ordinal": 258,
+        "names": [
+          "_getcwd"
+        ],
+        "rva": 98686,
+        "va": 2013364606
+      },
+      {
+        "ordinal": 259,
+        "names": [
+          "_getdcwd"
+        ],
+        "rva": 98788,
+        "va": 2013364708
+      },
+      {
+        "ordinal": 260,
+        "names": [
+          "_getdiskfree"
+        ],
+        "rva": 96541,
+        "va": 2013362461
+      },
+      {
+        "ordinal": 261,
+        "names": [
+          "_getdllprocaddr"
+        ],
+        "rva": 107520,
+        "va": 2013373440
+      },
+      {
+        "ordinal": 262,
+        "names": [
+          "_getdrive"
+        ],
+        "rva": 98213,
+        "va": 2013364133
+      },
+      {
+        "ordinal": 263,
+        "names": [
+          "_getdrives"
+        ],
+        "rva": 96624,
+        "va": 2013362544
+      },
+      {
+        "ordinal": 264,
+        "names": [
+          "_getmaxstdio"
+        ],
+        "rva": 143220,
+        "va": 2013409140
+      },
+      {
+        "ordinal": 265,
+        "names": [
+          "_getmbcp"
+        ],
+        "rva": 18760,
+        "va": 2013284680
+      },
+      {
+        "ordinal": 266,
+        "names": [
+          "_getpid"
+        ],
+        "rva": 99163,
+        "va": 2013365083
+      },
+      {
+        "ordinal": 267,
+        "names": [
+          "_getsystime"
+        ],
+        "rva": 170189,
+        "va": 2013436109
+      },
+      {
+        "ordinal": 268,
+        "names": [
+          "_getw"
+        ],
+        "rva": 143226,
+        "va": 2013409146
+      },
+      {
+        "ordinal": 269,
+        "names": [
+          "_getws"
+        ],
+        "rva": 143383,
+        "va": 2013409303
+      },
+      {
+        "ordinal": 270,
+        "names": [
+          "_global_unwind2"
+        ],
+        "rva": 65236,
+        "va": 2013331156
+      },
+      {
+        "ordinal": 271,
+        "names": [
+          "_gmtime64"
+        ],
+        "rva": 170385,
+        "va": 2013436305
+      },
+      {
+        "ordinal": 272,
+        "names": [
+          "_heapadd"
+        ],
+        "rva": 113109,
+        "va": 2013379029
+      },
+      {
+        "ordinal": 273,
+        "names": [
+          "_heapchk"
+        ],
+        "rva": 113196,
+        "va": 2013379116
+      },
+      {
+        "ordinal": 274,
+        "names": [
+          "_heapmin"
+        ],
+        "rva": 113358,
+        "va": 2013379278
+      },
+      {
+        "ordinal": 275,
+        "names": [
+          "_heapset"
+        ],
+        "rva": 113196,
+        "va": 2013379116
+      },
+      {
+        "ordinal": 276,
+        "names": [
+          "_heapused"
+        ],
+        "rva": 113547,
+        "va": 2013379467
+      },
+      {
+        "ordinal": 277,
+        "names": [
+          "_heapwalk"
+        ],
+        "rva": 113561,
+        "va": 2013379481
+      },
+      {
+        "ordinal": 278,
+        "names": [
+          "_hypot"
+        ],
+        "rva": 185735,
+        "va": 2013451655
+      },
+      {
+        "ordinal": 279,
+        "names": [
+          "_i64toa"
+        ],
+        "rva": 84175,
+        "va": 2013350095
+      },
+      {
+        "ordinal": 280,
+        "names": [
+          "_i64tow"
+        ],
+        "rva": 91600,
+        "va": 2013357520
+      },
+      {
+        "ordinal": 281,
+        "names": [
+          "_initterm"
+        ],
+        "rva": 9081,
+        "va": 2013275001
+      },
+      {
+        "ordinal": 282,
+        "names": [
+          "_inp"
+        ],
+        "rva": 119560,
+        "va": 2013385480
+      },
+      {
+        "ordinal": 283,
+        "names": [
+          "_inpd"
+        ],
+        "rva": 119577,
+        "va": 2013385497
+      },
+      {
+        "ordinal": 284,
+        "names": [
+          "_inpw"
+        ],
+        "rva": 119569,
+        "va": 2013385489
+      },
+      {
+        "ordinal": 285,
+        "names": [
+          "_iob"
+        ],
+        "rva": 244552,
+        "va": 2013510472
+      },
+      {
+        "ordinal": 286,
+        "names": [
+          "_isatty"
+        ],
+        "rva": 19382,
+        "va": 2013285302
+      },
+      {
+        "ordinal": 287,
+        "names": [
+          "_isctype"
+        ],
+        "rva": 54276,
+        "va": 2013320196
+      },
+      {
+        "ordinal": 288,
+        "names": [
+          "_ismbbalnum"
+        ],
+        "rva": 124669,
+        "va": 2013390589
+      },
+      {
+        "ordinal": 289,
+        "names": [
+          "_ismbbalpha"
+        ],
+        "rva": 124689,
+        "va": 2013390609
+      },
+      {
+        "ordinal": 290,
+        "names": [
+          "_ismbbgraph"
+        ],
+        "rva": 124709,
+        "va": 2013390629
+      },
+      {
+        "ordinal": 291,
+        "names": [
+          "_ismbbkalnum"
+        ],
+        "rva": 124618,
+        "va": 2013390538
+      },
+      {
+        "ordinal": 292,
+        "names": [
+          "_ismbbkana"
+        ],
+        "rva": 124800,
+        "va": 2013390720
+      },
+      {
+        "ordinal": 293,
+        "names": [
+          "_ismbbkprint"
+        ],
+        "rva": 124635,
+        "va": 2013390555
+      },
+      {
+        "ordinal": 294,
+        "names": [
+          "_ismbbkpunct"
+        ],
+        "rva": 124652,
+        "va": 2013390572
+      },
+      {
+        "ordinal": 295,
+        "names": [
+          "_ismbblead"
+        ],
+        "rva": 124766,
+        "va": 2013390686
+      },
+      {
+        "ordinal": 296,
+        "names": [
+          "_ismbbprint"
+        ],
+        "rva": 124729,
+        "va": 2013390649
+      },
+      {
+        "ordinal": 297,
+        "names": [
+          "_ismbbpunct"
+        ],
+        "rva": 124749,
+        "va": 2013390669
+      },
+      {
+        "ordinal": 298,
+        "names": [
+          "_ismbbtrail"
+        ],
+        "rva": 124783,
+        "va": 2013390703
+      },
+      {
+        "ordinal": 299,
+        "names": [
+          "_ismbcalnum"
+        ],
+        "rva": 124888,
+        "va": 2013390808
+      },
+      {
+        "ordinal": 300,
+        "names": [
+          "_ismbcalpha"
+        ],
+        "rva": 125035,
+        "va": 2013390955
+      },
+      {
+        "ordinal": 301,
+        "names": [
+          "_ismbcdigit"
+        ],
+        "rva": 125182,
+        "va": 2013391102
+      },
+      {
+        "ordinal": 302,
+        "names": [
+          "_ismbcgraph"
+        ],
+        "rva": 125314,
+        "va": 2013391234
+      },
+      {
+        "ordinal": 303,
+        "names": [
+          "_ismbchira"
+        ],
+        "rva": 125461,
+        "va": 2013391381
+      },
+      {
+        "ordinal": 304,
+        "names": [
+          "_ismbckata"
+        ],
+        "rva": 125500,
+        "va": 2013391420
+      },
+      {
+        "ordinal": 305,
+        "names": [
+          "_ismbcl0"
+        ],
+        "rva": 125588,
+        "va": 2013391508
+      },
+      {
+        "ordinal": 306,
+        "names": [
+          "_ismbcl1"
+        ],
+        "rva": 125662,
+        "va": 2013391582
+      },
+      {
+        "ordinal": 307,
+        "names": [
+          "_ismbcl2"
+        ],
+        "rva": 125744,
+        "va": 2013391664
+      },
+      {
+        "ordinal": 308,
+        "names": [
+          "_ismbclegal"
+        ],
+        "rva": 125826,
+        "va": 2013391746
+      },
+      {
+        "ordinal": 309,
+        "names": [
+          "_ismbclower"
+        ],
+        "rva": 125883,
+        "va": 2013391803
+      },
+      {
+        "ordinal": 310,
+        "names": [
+          "_ismbcprint"
+        ],
+        "rva": 126021,
+        "va": 2013391941
+      },
+      {
+        "ordinal": 311,
+        "names": [
+          "_ismbcpunct"
+        ],
+        "rva": 126168,
+        "va": 2013392088
+      },
+      {
+        "ordinal": 312,
+        "names": [
+          "_ismbcspace"
+        ],
+        "rva": 126311,
+        "va": 2013392231
+      },
+      {
+        "ordinal": 313,
+        "names": [
+          "_ismbcsymbol"
+        ],
+        "rva": 125544,
+        "va": 2013391464
+      },
+      {
+        "ordinal": 314,
+        "names": [
+          "_ismbcupper"
+        ],
+        "rva": 126443,
+        "va": 2013392363
+      },
+      {
+        "ordinal": 315,
+        "names": [
+          "_ismbslead"
+        ],
+        "rva": 126581,
+        "va": 2013392501
+      },
+      {
+        "ordinal": 316,
+        "names": [
+          "_ismbstrail"
+        ],
+        "rva": 126681,
+        "va": 2013392601
+      },
+      {
+        "ordinal": 317,
+        "names": [
+          "_isnan"
+        ],
+        "rva": 187487,
+        "va": 2013453407
+      },
+      {
+        "ordinal": 318,
+        "names": [
+          "_itoa"
+        ],
+        "rva": 17678,
+        "va": 2013283598
+      },
+      {
+        "ordinal": 319,
+        "names": [
+          "_itow"
+        ],
+        "rva": 91471,
+        "va": 2013357391
+      },
+      {
+        "ordinal": 320,
+        "names": [
+          "_j0"
+        ],
+        "rva": 190299,
+        "va": 2013456219
+      },
+      {
+        "ordinal": 321,
+        "names": [
+          "_j1"
+        ],
+        "rva": 190655,
+        "va": 2013456575
+      },
+      {
+        "ordinal": 322,
+        "names": [
+          "_jn"
+        ],
+        "rva": 191567,
+        "va": 2013457487
+      },
+      {
+        "ordinal": 323,
+        "names": [
+          "_kbhit"
+        ],
+        "rva": 119087,
+        "va": 2013385007
+      },
+      {
+        "ordinal": 324,
+        "names": [
+          "_lfind"
+        ],
+        "rva": 132637,
+        "va": 2013398557
+      },
+      {
+        "ordinal": 325,
+        "names": [
+          "_loaddll"
+        ],
+        "rva": 107567,
+        "va": 2013373487
+      },
+      {
+        "ordinal": 326,
+        "names": [
+          "_local_unwind2"
+        ],
+        "rva": 65302,
+        "va": 2013331222
+      },
+      {
+        "ordinal": 327,
+        "names": [
+          "_localtime64"
+        ],
+        "rva": 170939,
+        "va": 2013436859
+      },
+      {
+        "ordinal": 328,
+        "names": [
+          "_lock"
+        ],
+        "rva": 8848,
+        "va": 2013274768
+      },
+      {
+        "ordinal": 329,
+        "names": [
+          "_locking"
+        ],
+        "rva": 119584,
+        "va": 2013385504
+      },
+      {
+        "ordinal": 330,
+        "names": [
+          "_logb"
+        ],
+        "rva": 186536,
+        "va": 2013452456
+      },
+      {
+        "ordinal": 331,
+        "names": [
+          "_longjmpex"
+        ],
+        "rva": 132687,
+        "va": 2013398607
+      },
+      {
+        "ordinal": 332,
+        "names": [
+          "_lrotl"
+        ],
+        "rva": 132800,
+        "va": 2013398720
+      },
+      {
+        "ordinal": 333,
+        "names": [
+          "_lrotr"
+        ],
+        "rva": 132857,
+        "va": 2013398777
+      },
+      {
+        "ordinal": 334,
+        "names": [
+          "_lsearch"
+        ],
+        "rva": 132914,
+        "va": 2013398834
+      },
+      {
+        "ordinal": 335,
+        "names": [
+          "_lseek"
+        ],
+        "rva": 87077,
+        "va": 2013352997
+      },
+      {
+        "ordinal": 336,
+        "names": [
+          "_lseeki64"
+        ],
+        "rva": 119992,
+        "va": 2013385912
+      },
+      {
+        "ordinal": 337,
+        "names": [
+          "_ltoa"
+        ],
+        "rva": 84133,
+        "va": 2013350053
+      },
+      {
+        "ordinal": 338,
+        "names": [
+          "_ltow"
+        ],
+        "rva": 91514,
+        "va": 2013357434
+      },
+      {
+        "ordinal": 339,
+        "names": [
+          "_makepath"
+        ],
+        "rva": 132977,
+        "va": 2013398897
+      },
+      {
+        "ordinal": 340,
+        "names": [
+          "_mbbtombc"
+        ],
+        "rva": 126756,
+        "va": 2013392676
+      },
+      {
+        "ordinal": 341,
+        "names": [
+          "_mbbtype"
+        ],
+        "rva": 126994,
+        "va": 2013392914
+      },
+      {
+        "ordinal": 342,
+        "names": [
+          "_mbcasemap"
+        ],
+        "rva": 243712,
+        "va": 2013509632
+      },
+      {
+        "ordinal": 343,
+        "names": [
+          "_mbccpy"
+        ],
+        "rva": 127105,
+        "va": 2013393025
+      },
+      {
+        "ordinal": 344,
+        "names": [
+          "_mbcjistojms"
+        ],
+        "rva": 127136,
+        "va": 2013393056
+      },
+      {
+        "ordinal": 345,
+        "names": [
+          "_mbcjmstojis"
+        ],
+        "rva": 127240,
+        "va": 2013393160
+      },
+      {
+        "ordinal": 346,
+        "names": [
+          "_mbclen"
+        ],
+        "rva": 127411,
+        "va": 2013393331
+      },
+      {
+        "ordinal": 347,
+        "names": [
+          "_mbctohira"
+        ],
+        "rva": 127433,
+        "va": 2013393353
+      },
+      {
+        "ordinal": 348,
+        "names": [
+          "_mbctokata"
+        ],
+        "rva": 127483,
+        "va": 2013393403
+      },
+      {
+        "ordinal": 349,
+        "names": [
+          "_mbctolower"
+        ],
+        "rva": 18776,
+        "va": 2013284696
+      },
+      {
+        "ordinal": 350,
+        "names": [
+          "_mbctombb"
+        ],
+        "rva": 126866,
+        "va": 2013392786
+      },
+      {
+        "ordinal": 351,
+        "names": [
+          "_mbctoupper"
+        ],
+        "rva": 127602,
+        "va": 2013393522
+      },
+      {
+        "ordinal": 352,
+        "names": [
+          "_mbctype"
+        ],
+        "rva": 243968,
+        "va": 2013509888
+      },
+      {
+        "ordinal": 353,
+        "names": [
+          "_mbsbtype"
+        ],
+        "rva": 127741,
+        "va": 2013393661
+      },
+      {
+        "ordinal": 354,
+        "names": [
+          "_mbscat"
+        ],
+        "rva": 127949,
+        "va": 2013393869
+      },
+      {
+        "ordinal": 355,
+        "names": [
+          "_mbschr"
+        ],
+        "rva": 90236,
+        "va": 2013356156
+      },
+      {
+        "ordinal": 356,
+        "names": [
+          "_mbscmp"
+        ],
+        "rva": 63796,
+        "va": 2013329716
+      },
+      {
+        "ordinal": 357,
+        "names": [
+          "_mbscoll"
+        ],
+        "rva": 128096,
+        "va": 2013394016
+      },
+      {
+        "ordinal": 358,
+        "names": [
+          "_mbscpy"
+        ],
+        "rva": 127841,
+        "va": 2013393761
+      },
+      {
+        "ordinal": 359,
+        "names": [
+          "_mbscspn"
+        ],
+        "rva": 128159,
+        "va": 2013394079
+      },
+      {
+        "ordinal": 360,
+        "names": [
+          "_mbsdec"
+        ],
+        "rva": 63952,
+        "va": 2013329872
+      },
+      {
+        "ordinal": 361,
+        "names": [
+          "_mbsdup"
+        ],
+        "rva": 77481,
+        "va": 2013343401
+      },
+      {
+        "ordinal": 362,
+        "names": [
+          "_mbsicmp"
+        ],
+        "rva": 64049,
+        "va": 2013329969
+      },
+      {
+        "ordinal": 363,
+        "names": [
+          "_mbsicoll"
+        ],
+        "rva": 128316,
+        "va": 2013394236
+      },
+      {
+        "ordinal": 364,
+        "names": [
+          "_mbsinc"
+        ],
+        "rva": 128379,
+        "va": 2013394299
+      },
+      {
+        "ordinal": 365,
+        "names": [
+          "_mbslen"
+        ],
+        "rva": 128402,
+        "va": 2013394322
+      },
+      {
+        "ordinal": 366,
+        "names": [
+          "_mbslwr"
+        ],
+        "rva": 128477,
+        "va": 2013394397
+      },
+      {
+        "ordinal": 367,
+        "names": [
+          "_mbsnbcat"
+        ],
+        "rva": 128614,
+        "va": 2013394534
+      },
+      {
+        "ordinal": 368,
+        "names": [
+          "_mbsnbcmp"
+        ],
+        "rva": 128825,
+        "va": 2013394745
+      },
+      {
+        "ordinal": 369,
+        "names": [
+          "_mbsnbcnt"
+        ],
+        "rva": 129037,
+        "va": 2013394957
+      },
+      {
+        "ordinal": 370,
+        "names": [
+          "_mbsnbcoll"
+        ],
+        "rva": 129128,
+        "va": 2013395048
+      },
+      {
+        "ordinal": 371,
+        "names": [
+          "_mbsnbcpy"
+        ],
+        "rva": 63640,
+        "va": 2013329560
+      },
+      {
+        "ordinal": 372,
+        "names": [
+          "_mbsnbicmp"
+        ],
+        "rva": 129206,
+        "va": 2013395126
+      },
+      {
+        "ordinal": 373,
+        "names": [
+          "_mbsnbicoll"
+        ],
+        "rva": 90158,
+        "va": 2013356078
+      },
+      {
+        "ordinal": 374,
+        "names": [
+          "_mbsnbset"
+        ],
+        "rva": 129586,
+        "va": 2013395506
+      },
+      {
+        "ordinal": 375,
+        "names": [
+          "_mbsncat"
+        ],
+        "rva": 129705,
+        "va": 2013395625
+      },
+      {
+        "ordinal": 376,
+        "names": [
+          "_mbsnccnt"
+        ],
+        "rva": 129900,
+        "va": 2013395820
+      },
+      {
+        "ordinal": 377,
+        "names": [
+          "_mbsncmp"
+        ],
+        "rva": 129983,
+        "va": 2013395903
+      },
+      {
+        "ordinal": 378,
+        "names": [
+          "_mbsncoll"
+        ],
+        "rva": 130162,
+        "va": 2013396082
+      },
+      {
+        "ordinal": 379,
+        "names": [
+          "_mbsncpy"
+        ],
+        "rva": 130268,
+        "va": 2013396188
+      },
+      {
+        "ordinal": 380,
+        "names": [
+          "_mbsnextc"
+        ],
+        "rva": 130414,
+        "va": 2013396334
+      },
+      {
+        "ordinal": 381,
+        "names": [
+          "_mbsnicmp"
+        ],
+        "rva": 130444,
+        "va": 2013396364
+      },
+      {
+        "ordinal": 382,
+        "names": [
+          "_mbsnicoll"
+        ],
+        "rva": 130794,
+        "va": 2013396714
+      },
+      {
+        "ordinal": 383,
+        "names": [
+          "_mbsninc"
+        ],
+        "rva": 130900,
+        "va": 2013396820
+      },
+      {
+        "ordinal": 384,
+        "names": [
+          "_mbsnset"
+        ],
+        "rva": 130930,
+        "va": 2013396850
+      },
+      {
+        "ordinal": 385,
+        "names": [
+          "_mbspbrk"
+        ],
+        "rva": 63480,
+        "va": 2013329400
+      },
+      {
+        "ordinal": 386,
+        "names": [
+          "_mbsrchr"
+        ],
+        "rva": 131155,
+        "va": 2013397075
+      },
+      {
+        "ordinal": 387,
+        "names": [
+          "_mbsrev"
+        ],
+        "rva": 131271,
+        "va": 2013397191
+      },
+      {
+        "ordinal": 388,
+        "names": [
+          "_mbsset"
+        ],
+        "rva": 131378,
+        "va": 2013397298
+      },
+      {
+        "ordinal": 389,
+        "names": [
+          "_mbsspn"
+        ],
+        "rva": 131459,
+        "va": 2013397379
+      },
+      {
+        "ordinal": 390,
+        "names": [
+          "_mbsspnp"
+        ],
+        "rva": 131616,
+        "va": 2013397536
+      },
+      {
+        "ordinal": 391,
+        "names": [
+          "_mbsstr"
+        ],
+        "rva": 131787,
+        "va": 2013397707
+      },
+      {
+        "ordinal": 392,
+        "names": [
+          "_mbstok"
+        ],
+        "rva": 131943,
+        "va": 2013397863
+      },
+      {
+        "ordinal": 393,
+        "names": [
+          "_mbstrlen"
+        ],
+        "rva": 91692,
+        "va": 2013357612
+      },
+      {
+        "ordinal": 394,
+        "names": [
+          "_mbsupr"
+        ],
+        "rva": 132114,
+        "va": 2013398034
+      },
+      {
+        "ordinal": 395,
+        "names": [
+          "_memccpy"
+        ],
+        "rva": 164749,
+        "va": 2013430669
+      },
+      {
+        "ordinal": 396,
+        "names": [
+          "_memicmp"
+        ],
+        "rva": 164832,
+        "va": 2013430752
+      },
+      {
+        "ordinal": 397,
+        "names": [
+          "_mkdir"
+        ],
+        "rva": 99169,
+        "va": 2013365089
+      },
+      {
+        "ordinal": 398,
+        "names": [
+          "_mktemp"
+        ],
+        "rva": 120347,
+        "va": 2013386267
+      },
+      {
+        "ordinal": 399,
+        "names": [
+          "_mktime64"
+        ],
+        "rva": 171467,
+        "va": 2013437387
+      },
+      {
+        "ordinal": 400,
+        "names": [
+          "_msize"
+        ],
+        "rva": 4459,
+        "va": 2013270379
+      },
+      {
+        "ordinal": 401,
+        "names": [
+          "_nextafter"
+        ],
+        "rva": 186767,
+        "va": 2013452687
+      },
+      {
+        "ordinal": 402,
+        "names": [
+          "_onexit"
+        ],
+        "rva": 21829,
+        "va": 2013287749
+      },
+      {
+        "ordinal": 403,
+        "names": [
+          "_open"
+        ],
+        "rva": 120549,
+        "va": 2013386469
+      },
+      {
+        "ordinal": 404,
+        "names": [
+          "_open_osfhandle"
+        ],
+        "rva": 88007,
+        "va": 2013353927
+      },
+      {
+        "ordinal": 405,
+        "names": [
+          "_osplatform"
+        ],
+        "rva": 242532,
+        "va": 2013508452
+      },
+      {
+        "ordinal": 406,
+        "names": [
+          "_osver"
+        ],
+        "rva": 242536,
+        "va": 2013508456
+      },
+      {
+        "ordinal": 407,
+        "names": [
+          "_outp"
+        ],
+        "rva": 121599,
+        "va": 2013387519
+      },
+      {
+        "ordinal": 408,
+        "names": [
+          "_outpd"
+        ],
+        "rva": 121625,
+        "va": 2013387545
+      },
+      {
+        "ordinal": 409,
+        "names": [
+          "_outpw"
+        ],
+        "rva": 121612,
+        "va": 2013387532
+      },
+      {
+        "ordinal": 410,
+        "names": [
+          "_pclose"
+        ],
+        "rva": 144570,
+        "va": 2013410490
+      },
+      {
+        "ordinal": 411,
+        "names": [
+          "_pctype"
+        ],
+        "rva": 243380,
+        "va": 2013509300
+      },
+      {
+        "ordinal": 412,
+        "names": [
+          "_pgmptr"
+        ],
+        "rva": 268776,
+        "va": 2013534696
+      },
+      {
+        "ordinal": 413,
+        "names": [
+          "_pipe"
+        ],
+        "rva": 121636,
+        "va": 2013387556
+      },
+      {
+        "ordinal": 414,
+        "names": [
+          "_popen"
+        ],
+        "rva": 143537,
+        "va": 2013409457
+      },
+      {
+        "ordinal": 415,
+        "names": [
+          "_purecall"
+        ],
+        "rva": 65227,
+        "va": 2013331147
+      },
+      {
+        "ordinal": 416,
+        "names": [
+          "_putch"
+        ],
+        "rva": 122165,
+        "va": 2013388085
+      },
+      {
+        "ordinal": 417,
+        "names": [
+          "_putenv"
+        ],
+        "rva": 133122,
+        "va": 2013399042
+      },
+      {
+        "ordinal": 418,
+        "names": [
+          "_putw"
+        ],
+        "rva": 144825,
+        "va": 2013410745
+      },
+      {
+        "ordinal": 419,
+        "names": [
+          "_putws"
+        ],
+        "rva": 144985,
+        "va": 2013410905
+      },
+      {
+        "ordinal": 420,
+        "names": [
+          "_pwctype"
+        ],
+        "rva": 249332,
+        "va": 2013515252
+      },
+      {
+        "ordinal": 421,
+        "names": [
+          "_read"
+        ],
+        "rva": 122266,
+        "va": 2013388186
+      },
+      {
+        "ordinal": 422,
+        "names": [
+          "_rmdir"
+        ],
+        "rva": 99213,
+        "va": 2013365133
+      },
+      {
+        "ordinal": 423,
+        "names": [
+          "_rmtmp"
+        ],
+        "rva": 145161,
+        "va": 2013411081
+      },
+      {
+        "ordinal": 424,
+        "names": [
+          "_rotl"
+        ],
+        "rva": 132816,
+        "va": 2013398736
+      },
+      {
+        "ordinal": 425,
+        "names": [
+          "_rotr"
+        ],
+        "rva": 132873,
+        "va": 2013398793
+      },
+      {
+        "ordinal": 426,
+        "names": [
+          "_safe_fdiv"
+        ],
+        "rva": 184280,
+        "va": 2013450200
+      },
+      {
+        "ordinal": 427,
+        "names": [
+          "_safe_fdivr"
+        ],
+        "rva": 184301,
+        "va": 2013450221
+      },
+      {
+        "ordinal": 428,
+        "names": [
+          "_safe_fprem"
+        ],
+        "rva": 185717,
+        "va": 2013451637
+      },
+      {
+        "ordinal": 429,
+        "names": [
+          "_safe_fprem1"
+        ],
+        "rva": 185723,
+        "va": 2013451643
+      },
+      {
+        "ordinal": 430,
+        "names": [
+          "_scalb"
+        ],
+        "rva": 186514,
+        "va": 2013452434
+      },
+      {
+        "ordinal": 431,
+        "names": [
+          "_searchenv"
+        ],
+        "rva": 133366,
+        "va": 2013399286
+      },
+      {
+        "ordinal": 432,
+        "names": [
+          "_seh_longjmp_unwind"
+        ],
+        "rva": 65653,
+        "va": 2013331573
+      },
+      {
+        "ordinal": 433,
+        "names": [
+          "_set_error_mode"
+        ],
+        "rva": 48540,
+        "va": 2013314460
+      },
+      {
+        "ordinal": 434,
+        "names": [
+          "_set_sbh_threshold"
+        ],
+        "rva": 56326,
+        "va": 2013322246
+      },
+      {
+        "ordinal": 435,
+        "names": [
+          "_seterrormode"
+        ],
+        "rva": 96630,
+        "va": 2013362550
+      },
+      {
+        "ordinal": 436,
+        "names": [
+          "_setjmp"
+        ],
+        "rva": 133632,
+        "va": 2013399552
+      },
+      {
+        "ordinal": 437,
+        "names": [
+          "_setjmp3"
+        ],
+        "rva": 133688,
+        "va": 2013399608
+      },
+      {
+        "ordinal": 438,
+        "names": [
+          "_setmaxstdio"
+        ],
+        "rva": 142937,
+        "va": 2013408857
+      },
+      {
+        "ordinal": 439,
+        "names": [
+          "_setmbcp"
+        ],
+        "rva": 14038,
+        "va": 2013279958
+      },
+      {
+        "ordinal": 440,
+        "names": [
+          "_setmode"
+        ],
+        "rva": 122946,
+        "va": 2013388866
+      },
+      {
+        "ordinal": 441,
+        "names": [
+          "_setsystime"
+        ],
+        "rva": 170280,
+        "va": 2013436200
+      },
+      {
+        "ordinal": 442,
+        "names": [
+          "_sleep"
+        ],
+        "rva": 94905,
+        "va": 2013360825
+      },
+      {
+        "ordinal": 443,
+        "names": [
+          "_snprintf"
+        ],
+        "rva": 145349,
+        "va": 2013411269
+      },
+      {
+        "ordinal": 444,
+        "names": [
+          "_snwprintf"
+        ],
+        "rva": 12184,
+        "va": 2013278104
+      },
+      {
+        "ordinal": 445,
+        "names": [
+          "_sopen"
+        ],
+        "rva": 120665,
+        "va": 2013386585
+      },
+      {
+        "ordinal": 446,
+        "names": [
+          "_spawnl"
+        ],
+        "rva": 107601,
+        "va": 2013373521
+      },
+      {
+        "ordinal": 447,
+        "names": [
+          "_spawnle"
+        ],
+        "rva": 107625,
+        "va": 2013373545
+      },
+      {
+        "ordinal": 448,
+        "names": [
+          "_spawnlp"
+        ],
+        "rva": 107668,
+        "va": 2013373588
+      },
+      {
+        "ordinal": 449,
+        "names": [
+          "_spawnlpe"
+        ],
+        "rva": 107690,
+        "va": 2013373610
+      },
+      {
+        "ordinal": 450,
+        "names": [
+          "_spawnv"
+        ],
+        "rva": 107733,
+        "va": 2013373653
+      },
+      {
+        "ordinal": 451,
+        "names": [
+          "_spawnve"
+        ],
+        "rva": 107756,
+        "va": 2013373676
+      },
+      {
+        "ordinal": 452,
+        "names": [
+          "_spawnvp"
+        ],
+        "rva": 108170,
+        "va": 2013374090
+      },
+      {
+        "ordinal": 453,
+        "names": [
+          "_spawnvpe"
+        ],
+        "rva": 108193,
+        "va": 2013374113
+      },
+      {
+        "ordinal": 454,
+        "names": [
+          "_splitpath"
+        ],
+        "rva": 133811,
+        "va": 2013399731
+      },
+      {
+        "ordinal": 455,
+        "names": [
+          "_stat"
+        ],
+        "rva": 99439,
+        "va": 2013365359
+      },
+      {
+        "ordinal": 456,
+        "names": [
+          "_stat64"
+        ],
+        "rva": 100156,
+        "va": 2013366076
+      },
+      {
+        "ordinal": 457,
+        "names": [
+          "_stati64"
+        ],
+        "rva": 100844,
+        "va": 2013366764
+      },
+      {
+        "ordinal": 458,
+        "names": [
+          "_statusfp"
+        ],
+        "rva": 83836,
+        "va": 2013349756
+      },
+      {
+        "ordinal": 459,
+        "names": [
+          "_strcmpi"
+        ],
+        "rva": 12425,
+        "va": 2013278345
+      },
+      {
+        "ordinal": 460,
+        "names": [
+          "_strdate"
+        ],
+        "rva": 172061,
+        "va": 2013437981
+      },
+      {
+        "ordinal": 461,
+        "names": [
+          "_strdup"
+        ],
+        "rva": 77481,
+        "va": 2013343401
+      },
+      {
+        "ordinal": 462,
+        "names": [
+          "_strerror"
+        ],
+        "rva": 134190,
+        "va": 2013400110
+      },
+      {
+        "ordinal": 463,
+        "names": [
+          "_stricmp"
+        ],
+        "rva": 12425,
+        "va": 2013278345
+      },
+      {
+        "ordinal": 464,
+        "names": [
+          "_stricoll"
+        ],
+        "rva": 164974,
+        "va": 2013430894
+      },
+      {
+        "ordinal": 465,
+        "names": [
+          "_strlwr"
+        ],
+        "rva": 165072,
+        "va": 2013430992
+      },
+      {
+        "ordinal": 466,
+        "names": [
+          "_strncoll"
+        ],
+        "rva": 165347,
+        "va": 2013431267
+      },
+      {
+        "ordinal": 467,
+        "names": [
+          "_strnicmp"
+        ],
+        "rva": 79020,
+        "va": 2013344940
+      },
+      {
+        "ordinal": 468,
+        "names": [
+          "_strnicoll"
+        ],
+        "rva": 165468,
+        "va": 2013431388
+      },
+      {
+        "ordinal": 469,
+        "names": [
+          "_strnset"
+        ],
+        "rva": 165589,
+        "va": 2013431509
+      },
+      {
+        "ordinal": 470,
+        "names": [
+          "_strrev"
+        ],
+        "rva": 165630,
+        "va": 2013431550
+      },
+      {
+        "ordinal": 471,
+        "names": [
+          "_strset"
+        ],
+        "rva": 165678,
+        "va": 2013431598
+      },
+      {
+        "ordinal": 472,
+        "names": [
+          "_strtime"
+        ],
+        "rva": 172193,
+        "va": 2013438113
+      },
+      {
+        "ordinal": 473,
+        "names": [
+          "_strupr"
+        ],
+        "rva": 165710,
+        "va": 2013431630
+      },
+      {
+        "ordinal": 474,
+        "names": [
+          "_swab"
+        ],
+        "rva": 91805,
+        "va": 2013357725
+      },
+      {
+        "ordinal": 475,
+        "names": [
+          "_sys_errlist"
+        ],
+        "rva": 263312,
+        "va": 2013529232
+      },
+      {
+        "ordinal": 476,
+        "names": [
+          "_sys_nerr"
+        ],
+        "rva": 263488,
+        "va": 2013529408
+      },
+      {
+        "ordinal": 477,
+        "names": [
+          "_tell"
+        ],
+        "rva": 123226,
+        "va": 2013389146
+      },
+      {
+        "ordinal": 478,
+        "names": [
+          "_telli64"
+        ],
+        "rva": 123243,
+        "va": 2013389163
+      },
+      {
+        "ordinal": 479,
+        "names": [
+          "_tempnam"
+        ],
+        "rva": 145466,
+        "va": 2013411386
+      },
+      {
+        "ordinal": 480,
+        "names": [
+          "_time64"
+        ],
+        "rva": 172314,
+        "va": 2013438234
+      },
+      {
+        "ordinal": 481,
+        "names": [
+          "_timezone"
+        ],
+        "rva": 261416,
+        "va": 2013527336
+      },
+      {
+        "ordinal": 482,
+        "names": [
+          "_tolower"
+        ],
+        "rva": 85214,
+        "va": 2013351134
+      },
+      {
+        "ordinal": 483,
+        "names": [
+          "_toupper"
+        ],
+        "rva": 91847,
+        "va": 2013357767
+      },
+      {
+        "ordinal": 484,
+        "names": [
+          "_tzname"
+        ],
+        "rva": 261556,
+        "va": 2013527476
+      },
+      {
+        "ordinal": 485,
+        "names": [
+          "_tzset"
+        ],
+        "rva": 82192,
+        "va": 2013348112
+      },
+      {
+        "ordinal": 486,
+        "names": [
+          "_ui64toa"
+        ],
+        "rva": 84358,
+        "va": 2013350278
+      },
+      {
+        "ordinal": 487,
+        "names": [
+          "_ui64tow"
+        ],
+        "rva": 91646,
+        "va": 2013357566
+      },
+      {
+        "ordinal": 488,
+        "names": [
+          "_ultoa"
+        ],
+        "rva": 13127,
+        "va": 2013279047
+      },
+      {
+        "ordinal": 489,
+        "names": [
+          "_ultow"
+        ],
+        "rva": 91557,
+        "va": 2013357477
+      },
+      {
+        "ordinal": 490,
+        "names": [
+          "_umask"
+        ],
+        "rva": 134332,
+        "va": 2013400252
+      },
+      {
+        "ordinal": 491,
+        "names": [
+          "_ungetch"
+        ],
+        "rva": 119305,
+        "va": 2013385225
+      },
+      {
+        "ordinal": 492,
+        "names": [
+          "_unlink"
+        ],
+        "rva": 101627,
+        "va": 2013367547
+      },
+      {
+        "ordinal": 493,
+        "names": [
+          "_unloaddll"
+        ],
+        "rva": 107578,
+        "va": 2013373498
+      },
+      {
+        "ordinal": 494,
+        "names": [
+          "_unlock"
+        ],
+        "rva": 8939,
+        "va": 2013274859
+      },
+      {
+        "ordinal": 495,
+        "names": [
+          "_utime"
+        ],
+        "rva": 169443,
+        "va": 2013435363
+      },
+      {
+        "ordinal": 496,
+        "names": [
+          "_utime64"
+        ],
+        "rva": 169813,
+        "va": 2013435733
+      },
+      {
+        "ordinal": 497,
+        "names": [
+          "_vsnprintf"
+        ],
+        "rva": 146076,
+        "va": 2013411996
+      },
+      {
+        "ordinal": 498,
+        "names": [
+          "_vsnwprintf"
+        ],
+        "rva": 146156,
+        "va": 2013412076
+      },
+      {
+        "ordinal": 499,
+        "names": [
+          "_waccess"
+        ],
+        "rva": 101638,
+        "va": 2013367558
+      },
+      {
+        "ordinal": 500,
+        "names": [
+          "_wasctime"
+        ],
+        "rva": 172374,
+        "va": 2013438294
+      },
+      {
+        "ordinal": 501,
+        "names": [
+          "_wchdir"
+        ],
+        "rva": 101708,
+        "va": 2013367628
+      },
+      {
+        "ordinal": 502,
+        "names": [
+          "_wchmod"
+        ],
+        "rva": 101850,
+        "va": 2013367770
+      },
+      {
+        "ordinal": 503,
+        "names": [
+          "_wcmdln"
+        ],
+        "rva": 242560,
+        "va": 2013508480
+      },
+      {
+        "ordinal": 504,
+        "names": [
+          "_wcreat"
+        ],
+        "rva": 123262,
+        "va": 2013389182
+      },
+      {
+        "ordinal": 505,
+        "names": [
+          "_wcsdup"
+        ],
+        "rva": 20744,
+        "va": 2013286664
+      },
+      {
+        "ordinal": 506,
+        "names": [
+          "_wcsicmp"
+        ],
+        "rva": 7845,
+        "va": 2013273765
+      },
+      {
+        "ordinal": 507,
+        "names": [
+          "_wcsicoll"
+        ],
+        "rva": 166005,
+        "va": 2013431925
+      },
+      {
+        "ordinal": 508,
+        "names": [
+          "_wcslwr"
+        ],
+        "rva": 166158,
+        "va": 2013432078
+      },
+      {
+        "ordinal": 509,
+        "names": [
+          "_wcsncoll"
+        ],
+        "rva": 166464,
+        "va": 2013432384
+      },
+      {
+        "ordinal": 510,
+        "names": [
+          "_wcsnicmp"
+        ],
+        "rva": 12313,
+        "va": 2013278233
+      },
+      {
+        "ordinal": 511,
+        "names": [
+          "_wcsnicoll"
+        ],
+        "rva": 21687,
+        "va": 2013287607
+      },
+      {
+        "ordinal": 512,
+        "names": [
+          "_wcsnset"
+        ],
+        "rva": 166677,
+        "va": 2013432597
+      },
+      {
+        "ordinal": 513,
+        "names": [
+          "_wcsrev"
+        ],
+        "rva": 166715,
+        "va": 2013432635
+      },
+      {
+        "ordinal": 514,
+        "names": [
+          "_wcsset"
+        ],
+        "rva": 166765,
+        "va": 2013432685
+      },
+      {
+        "ordinal": 515,
+        "names": [
+          "_wcsupr"
+        ],
+        "rva": 166790,
+        "va": 2013432710
+      },
+      {
+        "ordinal": 516,
+        "names": [
+          "_wctime"
+        ],
+        "rva": 172647,
+        "va": 2013438567
+      },
+      {
+        "ordinal": 517,
+        "names": [
+          "_wctime64"
+        ],
+        "rva": 172672,
+        "va": 2013438592
+      },
+      {
+        "ordinal": 518,
+        "names": [
+          "_wenviron"
+        ],
+        "rva": 249880,
+        "va": 2013515800
+      },
+      {
+        "ordinal": 519,
+        "names": [
+          "_wexecl"
+        ],
+        "rva": 108557,
+        "va": 2013374477
+      },
+      {
+        "ordinal": 520,
+        "names": [
+          "_wexecle"
+        ],
+        "rva": 108577,
+        "va": 2013374497
+      },
+      {
+        "ordinal": 521,
+        "names": [
+          "_wexeclp"
+        ],
+        "rva": 108617,
+        "va": 2013374537
+      },
+      {
+        "ordinal": 522,
+        "names": [
+          "_wexeclpe"
+        ],
+        "rva": 108634,
+        "va": 2013374554
+      },
+      {
+        "ordinal": 523,
+        "names": [
+          "_wexecv"
+        ],
+        "rva": 108674,
+        "va": 2013374594
+      },
+      {
+        "ordinal": 524,
+        "names": [
+          "_wexecve"
+        ],
+        "rva": 108693,
+        "va": 2013374613
+      },
+      {
+        "ordinal": 525,
+        "names": [
+          "_wexecvp"
+        ],
+        "rva": 109097,
+        "va": 2013375017
+      },
+      {
+        "ordinal": 526,
+        "names": [
+          "_wexecvpe"
+        ],
+        "rva": 109116,
+        "va": 2013375036
+      },
+      {
+        "ordinal": 527,
+        "names": [
+          "_wfdopen"
+        ],
+        "rva": 146267,
+        "va": 2013412187
+      },
+      {
+        "ordinal": 528,
+        "names": [
+          "_wfindfirst"
+        ],
+        "rva": 96641,
+        "va": 2013362561
+      },
+      {
+        "ordinal": 529,
+        "names": [
+          "_wfindfirst64"
+        ],
+        "rva": 97049,
+        "va": 2013362969
+      },
+      {
+        "ordinal": 530,
+        "names": [
+          "_wfindfirsti64"
+        ],
+        "rva": 97538,
+        "va": 2013363458
+      },
+      {
+        "ordinal": 531,
+        "names": [
+          "_wfindnext"
+        ],
+        "rva": 96849,
+        "va": 2013362769
+      },
+      {
+        "ordinal": 532,
+        "names": [
+          "_wfindnext64"
+        ],
+        "rva": 97296,
+        "va": 2013363216
+      },
+      {
+        "ordinal": 533,
+        "names": [
+          "_wfindnexti64"
+        ],
+        "rva": 97776,
+        "va": 2013363696
+      },
+      {
+        "ordinal": 534,
+        "names": [
+          "_wfopen"
+        ],
+        "rva": 146700,
+        "va": 2013412620
+      },
+      {
+        "ordinal": 535,
+        "names": [
+          "_wfreopen"
+        ],
+        "rva": 146719,
+        "va": 2013412639
+      },
+      {
+        "ordinal": 536,
+        "names": [
+          "_wfsopen"
+        ],
+        "rva": 146591,
+        "va": 2013412511
+      },
+      {
+        "ordinal": 537,
+        "names": [
+          "_wfullpath"
+        ],
+        "rva": 101913,
+        "va": 2013367833
+      },
+      {
+        "ordinal": 538,
+        "names": [
+          "_wgetcwd"
+        ],
+        "rva": 102086,
+        "va": 2013368006
+      },
+      {
+        "ordinal": 539,
+        "names": [
+          "_wgetdcwd"
+        ],
+        "rva": 102188,
+        "va": 2013368108
+      },
+      {
+        "ordinal": 540,
+        "names": [
+          "_wgetenv"
+        ],
+        "rva": 134354,
+        "va": 2013400274
+      },
+      {
+        "ordinal": 541,
+        "names": [
+          "_winmajor"
+        ],
+        "rva": 242544,
+        "va": 2013508464
+      },
+      {
+        "ordinal": 542,
+        "names": [
+          "_winminor"
+        ],
+        "rva": 242548,
+        "va": 2013508468
+      },
+      {
+        "ordinal": 543,
+        "names": [
+          "_winver"
+        ],
+        "rva": 242540,
+        "va": 2013508460
+      },
+      {
+        "ordinal": 544,
+        "names": [
+          "_wmakepath"
+        ],
+        "rva": 134566,
+        "va": 2013400486
+      },
+      {
+        "ordinal": 545,
+        "names": [
+          "_wmkdir"
+        ],
+        "rva": 102515,
+        "va": 2013368435
+      },
+      {
+        "ordinal": 546,
+        "names": [
+          "_wmktemp"
+        ],
+        "rva": 123284,
+        "va": 2013389204
+      },
+      {
+        "ordinal": 547,
+        "names": [
+          "_wopen"
+        ],
+        "rva": 123460,
+        "va": 2013389380
+      },
+      {
+        "ordinal": 548,
+        "names": [
+          "_wperror"
+        ],
+        "rva": 134748,
+        "va": 2013400668
+      },
+      {
+        "ordinal": 549,
+        "names": [
+          "_wpgmptr"
+        ],
+        "rva": 249884,
+        "va": 2013515804
+      },
+      {
+        "ordinal": 550,
+        "names": [
+          "_wpopen"
+        ],
+        "rva": 146853,
+        "va": 2013412773
+      },
+      {
+        "ordinal": 551,
+        "names": [
+          "_wputenv"
+        ],
+        "rva": 135020,
+        "va": 2013400940
+      },
+      {
+        "ordinal": 552,
+        "names": [
+          "_wremove"
+        ],
+        "rva": 102559,
+        "va": 2013368479
+      },
+      {
+        "ordinal": 553,
+        "names": [
+          "_wrename"
+        ],
+        "rva": 102612,
+        "va": 2013368532
+      },
+      {
+        "ordinal": 554,
+        "names": [
+          "_write"
+        ],
+        "rva": 20152,
+        "va": 2013286072
+      },
+      {
+        "ordinal": 555,
+        "names": [
+          "_wrmdir"
+        ],
+        "rva": 102658,
+        "va": 2013368578
+      },
+      {
+        "ordinal": 556,
+        "names": [
+          "_wsearchenv"
+        ],
+        "rva": 135268,
+        "va": 2013401188
+      },
+      {
+        "ordinal": 557,
+        "names": [
+          "_wsetlocale"
+        ],
+        "rva": 135559,
+        "va": 2013401479
+      },
+      {
+        "ordinal": 558,
+        "names": [
+          "_wsopen"
+        ],
+        "rva": 123576,
+        "va": 2013389496
+      },
+      {
+        "ordinal": 559,
+        "names": [
+          "_wspawnl"
+        ],
+        "rva": 109459,
+        "va": 2013375379
+      },
+      {
+        "ordinal": 560,
+        "names": [
+          "_wspawnle"
+        ],
+        "rva": 109483,
+        "va": 2013375403
+      },
+      {
+        "ordinal": 561,
+        "names": [
+          "_wspawnlp"
+        ],
+        "rva": 109526,
+        "va": 2013375446
+      },
+      {
+        "ordinal": 562,
+        "names": [
+          "_wspawnlpe"
+        ],
+        "rva": 109548,
+        "va": 2013375468
+      },
+      {
+        "ordinal": 563,
+        "names": [
+          "_wspawnv"
+        ],
+        "rva": 109591,
+        "va": 2013375511
+      },
+      {
+        "ordinal": 564,
+        "names": [
+          "_wspawnve"
+        ],
+        "rva": 109614,
+        "va": 2013375534
+      },
+      {
+        "ordinal": 565,
+        "names": [
+          "_wspawnvp"
+        ],
+        "rva": 110025,
+        "va": 2013375945
+      },
+      {
+        "ordinal": 566,
+        "names": [
+          "_wspawnvpe"
+        ],
+        "rva": 110048,
+        "va": 2013375968
+      },
+      {
+        "ordinal": 567,
+        "names": [
+          "_wsplitpath"
+        ],
+        "rva": 135735,
+        "va": 2013401655
+      },
+      {
+        "ordinal": 568,
+        "names": [
+          "_wstat"
+        ],
+        "rva": 102890,
+        "va": 2013368810
+      },
+      {
+        "ordinal": 569,
+        "names": [
+          "_wstat64"
+        ],
+        "rva": 103612,
+        "va": 2013369532
+      },
+      {
+        "ordinal": 570,
+        "names": [
+          "_wstati64"
+        ],
+        "rva": 104333,
+        "va": 2013370253
+      },
+      {
+        "ordinal": 571,
+        "names": [
+          "_wstrdate"
+        ],
+        "rva": 172697,
+        "va": 2013438617
+      },
+      {
+        "ordinal": 572,
+        "names": [
+          "_wstrtime"
+        ],
+        "rva": 172841,
+        "va": 2013438761
+      },
+      {
+        "ordinal": 573,
+        "names": [
+          "_wsystem"
+        ],
+        "rva": 110369,
+        "va": 2013376289
+      },
+      {
+        "ordinal": 574,
+        "names": [
+          "_wtempnam"
+        ],
+        "rva": 147897,
+        "va": 2013413817
+      },
+      {
+        "ordinal": 575,
+        "names": [
+          "_wtmpnam"
+        ],
+        "rva": 148503,
+        "va": 2013414423
+      },
+      {
+        "ordinal": 576,
+        "names": [
+          "_wtoi"
+        ],
+        "rva": 12143,
+        "va": 2013278063
+      },
+      {
+        "ordinal": 577,
+        "names": [
+          "_wtoi64"
+        ],
+        "rva": 92075,
+        "va": 2013357995
+      },
+      {
+        "ordinal": 578,
+        "names": [
+          "_wtol"
+        ],
+        "rva": 12143,
+        "va": 2013278063
+      },
+      {
+        "ordinal": 579,
+        "names": [
+          "_wunlink"
+        ],
+        "rva": 102601,
+        "va": 2013368521
+      },
+      {
+        "ordinal": 580,
+        "names": [
+          "_wutime"
+        ],
+        "rva": 172974,
+        "va": 2013438894
+      },
+      {
+        "ordinal": 581,
+        "names": [
+          "_wutime64"
+        ],
+        "rva": 173029,
+        "va": 2013438949
+      },
+      {
+        "ordinal": 582,
+        "names": [
+          "_y0"
+        ],
+        "rva": 190933,
+        "va": 2013456853
+      },
+      {
+        "ordinal": 583,
+        "names": [
+          "_y1"
+        ],
+        "rva": 191244,
+        "va": 2013457164
+      },
+      {
+        "ordinal": 584,
+        "names": [
+          "_yn"
+        ],
+        "rva": 191965,
+        "va": 2013457885
+      },
+      {
+        "ordinal": 585,
+        "names": [
+          "abort"
+        ],
+        "rva": 46636,
+        "va": 2013312556
+      },
+      {
+        "ordinal": 586,
+        "names": [
+          "abs"
+        ],
+        "rva": 136366,
+        "va": 2013402286
+      },
+      {
+        "ordinal": 587,
+        "names": [
+          "acos"
+        ],
+        "rva": 179582,
+        "va": 2013445502
+      },
+      {
+        "ordinal": 588,
+        "names": [
+          "asctime"
+        ],
+        "rva": 173084,
+        "va": 2013439004
+      },
+      {
+        "ordinal": 589,
+        "names": [
+          "asin"
+        ],
+        "rva": 179833,
+        "va": 2013445753
+      },
+      {
+        "ordinal": 590,
+        "names": [
+          "atan"
+        ],
+        "rva": 180040,
+        "va": 2013445960
+      },
+      {
+        "ordinal": 591,
+        "names": [
+          "atan2"
+        ],
+        "rva": 180172,
+        "va": 2013446092
+      },
+      {
+        "ordinal": 592,
+        "names": [
+          "atexit"
+        ],
+        "rva": 132334,
+        "va": 2013398254
+      },
+      {
+        "ordinal": 593,
+        "names": [
+          "atof"
+        ],
+        "rva": 92116,
+        "va": 2013358036
+      },
+      {
+        "ordinal": 594,
+        "names": [
+          "atoi"
+        ],
+        "rva": 54074,
+        "va": 2013319994
+      },
+      {
+        "ordinal": 595,
+        "names": [
+          "atol"
+        ],
+        "rva": 9816,
+        "va": 2013275736
+      },
+      {
+        "ordinal": 596,
+        "names": [
+          "bsearch"
+        ],
+        "rva": 136189,
+        "va": 2013402109
+      },
+      {
+        "ordinal": 597,
+        "names": [
+          "calloc"
+        ],
+        "rva": 13401,
+        "va": 2013279321
+      },
+      {
+        "ordinal": 598,
+        "names": [
+          "ceil"
+        ],
+        "rva": 192256,
+        "va": 2013458176
+      },
+      {
+        "ordinal": 599,
+        "names": [
+          "clearerr"
+        ],
+        "rva": 148885,
+        "va": 2013414805
+      },
+      {
+        "ordinal": 600,
+        "names": [
+          "clock"
+        ],
+        "rva": 173326,
+        "va": 2013439246
+      },
+      {
+        "ordinal": 601,
+        "names": [
+          "cos"
+        ],
+        "rva": 180325,
+        "va": 2013446245
+      },
+      {
+        "ordinal": 602,
+        "names": [
+          "cosh"
+        ],
+        "rva": 180535,
+        "va": 2013446455
+      },
+      {
+        "ordinal": 603,
+        "names": [
+          "ctime"
+        ],
+        "rva": 173393,
+        "va": 2013439313
+      },
+      {
+        "ordinal": 604,
+        "names": [
+          "difftime"
+        ],
+        "rva": 173418,
+        "va": 2013439338
+      },
+      {
+        "ordinal": 605,
+        "names": [
+          "div"
+        ],
+        "rva": 136329,
+        "va": 2013402249
+      },
+      {
+        "ordinal": 606,
+        "names": [
+          "exit"
+        ],
+        "rva": 49826,
+        "va": 2013315746
+      },
+      {
+        "ordinal": 607,
+        "names": [
+          "exp"
+        ],
+        "rva": 180625,
+        "va": 2013446545
+      },
+      {
+        "ordinal": 608,
+        "names": [
+          "fabs"
+        ],
+        "rva": 192463,
+        "va": 2013458383
+      },
+      {
+        "ordinal": 609,
+        "names": [
+          "fclose"
+        ],
+        "rva": 76159,
+        "va": 2013342079
+      },
+      {
+        "ordinal": 610,
+        "names": [
+          "feof"
+        ],
+        "rva": 149012,
+        "va": 2013414932
+      },
+      {
+        "ordinal": 611,
+        "names": [
+          "ferror"
+        ],
+        "rva": 149023,
+        "va": 2013414943
+      },
+      {
+        "ordinal": 612,
+        "names": [
+          "fflush"
+        ],
+        "rva": 73499,
+        "va": 2013339419
+      },
+      {
+        "ordinal": 613,
+        "names": [
+          "fgetc"
+        ],
+        "rva": 149034,
+        "va": 2013414954
+      },
+      {
+        "ordinal": 614,
+        "names": [
+          "fgetpos"
+        ],
+        "rva": 149258,
+        "va": 2013415178
+      },
+      {
+        "ordinal": 615,
+        "names": [
+          "fgets"
+        ],
+        "rva": 149292,
+        "va": 2013415212
+      },
+      {
+        "ordinal": 616,
+        "names": [
+          "fgetwc"
+        ],
+        "rva": 149458,
+        "va": 2013415378
+      },
+      {
+        "ordinal": 617,
+        "names": [
+          "fgetws"
+        ],
+        "rva": 149811,
+        "va": 2013415731
+      },
+      {
+        "ordinal": 618,
+        "names": [
+          "floor"
+        ],
+        "rva": 192644,
+        "va": 2013458564
+      },
+      {
+        "ordinal": 619,
+        "names": [
+          "fmod"
+        ],
+        "rva": 180642,
+        "va": 2013446562
+      },
+      {
+        "ordinal": 620,
+        "names": [
+          "fopen"
+        ],
+        "rva": 142918,
+        "va": 2013408838
+      },
+      {
+        "ordinal": 621,
+        "names": [
+          "fprintf"
+        ],
+        "rva": 73933,
+        "va": 2013339853
+      },
+      {
+        "ordinal": 622,
+        "names": [
+          "fputc"
+        ],
+        "rva": 149971,
+        "va": 2013415891
+      },
+      {
+        "ordinal": 623,
+        "names": [
+          "fputs"
+        ],
+        "rva": 150211,
+        "va": 2013416131
+      },
+      {
+        "ordinal": 624,
+        "names": [
+          "fputwc"
+        ],
+        "rva": 150356,
+        "va": 2013416276
+      },
+      {
+        "ordinal": 625,
+        "names": [
+          "fputws"
+        ],
+        "rva": 150694,
+        "va": 2013416614
+      },
+      {
+        "ordinal": 626,
+        "names": [
+          "fread"
+        ],
+        "rva": 150836,
+        "va": 2013416756
+      },
+      {
+        "ordinal": 627,
+        "names": [
+          "free"
+        ],
+        "rva": 4364,
+        "va": 2013270284
+      },
+      {
+        "ordinal": 628,
+        "names": [
+          "freopen"
+        ],
+        "rva": 151172,
+        "va": 2013417092
+      },
+      {
+        "ordinal": 629,
+        "names": [
+          "frexp"
+        ],
+        "rva": 192851,
+        "va": 2013458771
+      },
+      {
+        "ordinal": 630,
+        "names": [
+          "fscanf"
+        ],
+        "rva": 151306,
+        "va": 2013417226
+      },
+      {
+        "ordinal": 631,
+        "names": [
+          "fseek"
+        ],
+        "rva": 151412,
+        "va": 2013417332
+      },
+      {
+        "ordinal": 632,
+        "names": [
+          "fsetpos"
+        ],
+        "rva": 151658,
+        "va": 2013417578
+      },
+      {
+        "ordinal": 633,
+        "names": [
+          "ftell"
+        ],
+        "rva": 151682,
+        "va": 2013417602
+      },
+      {
+        "ordinal": 634,
+        "names": [
+          "fwprintf"
+        ],
+        "rva": 152116,
+        "va": 2013418036
+      },
+      {
+        "ordinal": 635,
+        "names": [
+          "fwrite"
+        ],
+        "rva": 152242,
+        "va": 2013418162
+      },
+      {
+        "ordinal": 636,
+        "names": [
+          "fwscanf"
+        ],
+        "rva": 152617,
+        "va": 2013418537
+      },
+      {
+        "ordinal": 637,
+        "names": [
+          "getc"
+        ],
+        "rva": 149146,
+        "va": 2013415066
+      },
+      {
+        "ordinal": 638,
+        "names": [
+          "getchar"
+        ],
+        "rva": 142502,
+        "va": 2013408422
+      },
+      {
+        "ordinal": 639,
+        "names": [
+          "getenv"
+        ],
+        "rva": 88775,
+        "va": 2013354695
+      },
+      {
+        "ordinal": 640,
+        "names": [
+          "gets"
+        ],
+        "rva": 152723,
+        "va": 2013418643
+      },
+      {
+        "ordinal": 641,
+        "names": [
+          "getwc"
+        ],
+        "rva": 149800,
+        "va": 2013415720
+      },
+      {
+        "ordinal": 642,
+        "names": [
+          "getwchar"
+        ],
+        "rva": 142514,
+        "va": 2013408434
+      },
+      {
+        "ordinal": 643,
+        "names": [
+          "gmtime"
+        ],
+        "rva": 173435,
+        "va": 2013439355
+      },
+      {
+        "ordinal": 644,
+        "names": [
+          "is_wctype"
+        ],
+        "rva": 85387,
+        "va": 2013351307
+      },
+      {
+        "ordinal": 645,
+        "names": [
+          "isalnum"
+        ],
+        "rva": 84764,
+        "va": 2013350684
+      },
+      {
+        "ordinal": 646,
+        "names": [
+          "isalpha"
+        ],
+        "rva": 84385,
+        "va": 2013350305
+      },
+      {
+        "ordinal": 647,
+        "names": [
+          "iscntrl"
+        ],
+        "rva": 84953,
+        "va": 2013350873
+      },
+      {
+        "ordinal": 648,
+        "names": [
+          "isdigit"
+        ],
+        "rva": 5702,
+        "va": 2013271622
+      },
+      {
+        "ordinal": 649,
+        "names": [
+          "isgraph"
+        ],
+        "rva": 84890,
+        "va": 2013350810
+      },
+      {
+        "ordinal": 650,
+        "names": [
+          "isleadbyte"
+        ],
+        "rva": 92174,
+        "va": 2013358094
+      },
+      {
+        "ordinal": 651,
+        "names": [
+          "islower"
+        ],
+        "rva": 84505,
+        "va": 2013350425
+      },
+      {
+        "ordinal": 652,
+        "names": [
+          "isprint"
+        ],
+        "rva": 84827,
+        "va": 2013350747
+      },
+      {
+        "ordinal": 653,
+        "names": [
+          "ispunct"
+        ],
+        "rva": 84707,
+        "va": 2013350627
+      },
+      {
+        "ordinal": 654,
+        "names": [
+          "isspace"
+        ],
+        "rva": 84650,
+        "va": 2013350570
+      },
+      {
+        "ordinal": 655,
+        "names": [
+          "isupper"
+        ],
+        "rva": 84448,
+        "va": 2013350368
+      },
+      {
+        "ordinal": 656,
+        "names": [
+          "iswalnum"
+        ],
+        "rva": 92299,
+        "va": 2013358219
+      },
+      {
+        "ordinal": 657,
+        "names": [
+          "iswalpha"
+        ],
+        "rva": 92195,
+        "va": 2013358115
+      },
+      {
+        "ordinal": 658,
+        "names": [
+          "iswascii"
+        ],
+        "rva": 92364,
+        "va": 2013358284
+      },
+      {
+        "ordinal": 659,
+        "names": [
+          "iswcntrl"
+        ],
+        "rva": 92350,
+        "va": 2013358270
+      },
+      {
+        "ordinal": 660,
+        "names": [
+          "iswctype"
+        ],
+        "rva": 5998,
+        "va": 2013271918
+      },
+      {
+        "ordinal": 661,
+        "names": [
+          "iswdigit"
+        ],
+        "rva": 92240,
+        "va": 2013358160
+      },
+      {
+        "ordinal": 662,
+        "names": [
+          "iswgraph"
+        ],
+        "rva": 92333,
+        "va": 2013358253
+      },
+      {
+        "ordinal": 663,
+        "names": [
+          "iswlower"
+        ],
+        "rva": 92226,
+        "va": 2013358146
+      },
+      {
+        "ordinal": 664,
+        "names": [
+          "iswprint"
+        ],
+        "rva": 92316,
+        "va": 2013358236
+      },
+      {
+        "ordinal": 665,
+        "names": [
+          "iswpunct"
+        ],
+        "rva": 92285,
+        "va": 2013358205
+      },
+      {
+        "ordinal": 666,
+        "names": [
+          "iswspace"
+        ],
+        "rva": 92271,
+        "va": 2013358191
+      },
+      {
+        "ordinal": 667,
+        "names": [
+          "iswupper"
+        ],
+        "rva": 92212,
+        "va": 2013358132
+      },
+      {
+        "ordinal": 668,
+        "names": [
+          "iswxdigit"
+        ],
+        "rva": 92254,
+        "va": 2013358174
+      },
+      {
+        "ordinal": 669,
+        "names": [
+          "isxdigit"
+        ],
+        "rva": 84588,
+        "va": 2013350508
+      },
+      {
+        "ordinal": 670,
+        "names": [
+          "labs"
+        ],
+        "rva": 136366,
+        "va": 2013402286
+      },
+      {
+        "ordinal": 671,
+        "names": [
+          "ldexp"
+        ],
+        "rva": 193027,
+        "va": 2013458947
+      },
+      {
+        "ordinal": 672,
+        "names": [
+          "ldiv"
+        ],
+        "rva": 136329,
+        "va": 2013402249
+      },
+      {
+        "ordinal": 673,
+        "names": [
+          "localeconv"
+        ],
+        "rva": 69121,
+        "va": 2013335041
+      },
+      {
+        "ordinal": 674,
+        "names": [
+          "localtime"
+        ],
+        "rva": 173701,
+        "va": 2013439621
+      },
+      {
+        "ordinal": 675,
+        "names": [
+          "log"
+        ],
+        "rva": 180712,
+        "va": 2013446632
+      },
+      {
+        "ordinal": 676,
+        "names": [
+          "log10"
+        ],
+        "rva": 180916,
+        "va": 2013446836
+      },
+      {
+        "ordinal": 677,
+        "names": [
+          "longjmp"
+        ],
+        "rva": 132687,
+        "va": 2013398607
+      },
+      {
+        "ordinal": 678,
+        "names": [
+          "malloc"
+        ],
+        "rva": 4127,
+        "va": 2013270047
+      },
+      {
+        "ordinal": 679,
+        "names": [
+          "mblen"
+        ],
+        "rva": 92376,
+        "va": 2013358296
+      },
+      {
+        "ordinal": 680,
+        "names": [
+          "mbstowcs"
+        ],
+        "rva": 92513,
+        "va": 2013358433
+      },
+      {
+        "ordinal": 681,
+        "names": [
+          "mbtowc"
+        ],
+        "rva": 11887,
+        "va": 2013277807
+      },
+      {
+        "ordinal": 682,
+        "names": [
+          "memchr"
+        ],
+        "rva": 167096,
+        "va": 2013433016
+      },
+      {
+        "ordinal": 683,
+        "names": [
+          "memcmp"
+        ],
+        "rva": 10426,
+        "va": 2013276346
+      },
+      {
+        "ordinal": 684,
+        "names": [
+          "memcpy"
+        ],
+        "rva": 4626,
+        "va": 2013270546
+      },
+      {
+        "ordinal": 685,
+        "names": [
+          "memmove"
+        ],
+        "rva": 24788,
+        "va": 2013290708
+      },
+      {
+        "ordinal": 686,
+        "names": [
+          "memset"
+        ],
+        "rva": 4279,
+        "va": 2013270199
+      },
+      {
+        "ordinal": 687,
+        "names": [
+          "mktime"
+        ],
+        "rva": 174092,
+        "va": 2013440012
+      },
+      {
+        "ordinal": 688,
+        "names": [
+          "modf"
+        ],
+        "rva": 193510,
+        "va": 2013459430
+      },
+      {
+        "ordinal": 689,
+        "names": [
+          "perror"
+        ],
+        "rva": 136395,
+        "va": 2013402315
+      },
+      {
+        "ordinal": 690,
+        "names": [
+          "pow"
+        ],
+        "rva": 181125,
+        "va": 2013447045
+      },
+      {
+        "ordinal": 691,
+        "names": [
+          "printf"
+        ],
+        "rva": 19114,
+        "va": 2013285034
+      },
+      {
+        "ordinal": 692,
+        "names": [
+          "putc"
+        ],
+        "rva": 150091,
+        "va": 2013416011
+      },
+      {
+        "ordinal": 693,
+        "names": [
+          "putchar"
+        ],
+        "rva": 142770,
+        "va": 2013408690
+      },
+      {
+        "ordinal": 694,
+        "names": [
+          "puts"
+        ],
+        "rva": 152903,
+        "va": 2013418823
+      },
+      {
+        "ordinal": 695,
+        "names": [
+          "putwc"
+        ],
+        "rva": 150678,
+        "va": 2013416598
+      },
+      {
+        "ordinal": 696,
+        "names": [
+          "putwchar"
+        ],
+        "rva": 142798,
+        "va": 2013408718
+      },
+      {
+        "ordinal": 697,
+        "names": [
+          "qsort"
+        ],
+        "rva": 8382,
+        "va": 2013274302
+      },
+      {
+        "ordinal": 698,
+        "names": [
+          "raise"
+        ],
+        "rva": 68263,
+        "va": 2013334183
+      },
+      {
+        "ordinal": 699,
+        "names": [
+          "rand"
+        ],
+        "rva": 136613,
+        "va": 2013402533
+      },
+      {
+        "ordinal": 700,
+        "names": [
+          "realloc"
+        ],
+        "rva": 10030,
+        "va": 2013275950
+      },
+      {
+        "ordinal": 701,
+        "names": [
+          "remove"
+        ],
+        "rva": 101585,
+        "va": 2013367505
+      },
+      {
+        "ordinal": 702,
+        "names": [
+          "rename"
+        ],
+        "rva": 105079,
+        "va": 2013370999
+      },
+      {
+        "ordinal": 703,
+        "names": [
+          "rewind"
+        ],
+        "rva": 153096,
+        "va": 2013419016
+      },
+      {
+        "ordinal": 704,
+        "names": [
+          "scanf"
+        ],
+        "rva": 153259,
+        "va": 2013419179
+      },
+      {
+        "ordinal": 705,
+        "names": [
+          "setbuf"
+        ],
+        "rva": 153375,
+        "va": 2013419295
+      },
+      {
+        "ordinal": 706,
+        "names": [
+          "setlocale"
+        ],
+        "rva": 16303,
+        "va": 2013282223
+      },
+      {
+        "ordinal": 707,
+        "names": [
+          "setvbuf"
+        ],
+        "rva": 74059,
+        "va": 2013339979
+      },
+      {
+        "ordinal": 708,
+        "names": [
+          "signal"
+        ],
+        "rva": 67629,
+        "va": 2013333549
+      },
+      {
+        "ordinal": 709,
+        "names": [
+          "sin"
+        ],
+        "rva": 181752,
+        "va": 2013447672
+      },
+      {
+        "ordinal": 710,
+        "names": [
+          "sinh"
+        ],
+        "rva": 180479,
+        "va": 2013446399
+      },
+      {
+        "ordinal": 711,
+        "names": [
+          "sprintf"
+        ],
+        "rva": 153412,
+        "va": 2013419332
+      },
+      {
+        "ordinal": 712,
+        "names": [
+          "sqrt"
+        ],
+        "rva": 181926,
+        "va": 2013447846
+      },
+      {
+        "ordinal": 713,
+        "names": [
+          "srand"
+        ],
+        "rva": 136600,
+        "va": 2013402520
+      },
+      {
+        "ordinal": 714,
+        "names": [
+          "sscanf"
+        ],
+        "rva": 153494,
+        "va": 2013419414
+      },
+      {
+        "ordinal": 715,
+        "names": [
+          "strcat"
+        ],
+        "rva": 10262,
+        "va": 2013276182
+      },
+      {
+        "ordinal": 716,
+        "names": [
+          "strchr"
+        ],
+        "rva": 77677,
+        "va": 2013343597
+      },
+      {
+        "ordinal": 717,
+        "names": [
+          "strcmp"
+        ],
+        "rva": 17158,
+        "va": 2013283078
+      },
+      {
+        "ordinal": 718,
+        "names": [
+          "strcoll"
+        ],
+        "rva": 167397,
+        "va": 2013433317
+      },
+      {
+        "ordinal": 719,
+        "names": [
+          "strcpy"
+        ],
+        "rva": 9954,
+        "va": 2013275874
+      },
+      {
+        "ordinal": 720,
+        "names": [
+          "strcspn"
+        ],
+        "rva": 78896,
+        "va": 2013344816
+      },
+      {
+        "ordinal": 721,
+        "names": [
+          "strerror"
+        ],
+        "rva": 136647,
+        "va": 2013402567
+      },
+      {
+        "ordinal": 722,
+        "names": [
+          "strftime"
+        ],
+        "rva": 80172,
+        "va": 2013346092
+      },
+      {
+        "ordinal": 723,
+        "names": [
+          "strlen"
+        ],
+        "rva": 8960,
+        "va": 2013274880
+      },
+      {
+        "ordinal": 724,
+        "names": [
+          "strncat"
+        ],
+        "rva": 78100,
+        "va": 2013344020
+      },
+      {
+        "ordinal": 725,
+        "names": [
+          "strncmp"
+        ],
+        "rva": 8257,
+        "va": 2013274177
+      },
+      {
+        "ordinal": 726,
+        "names": [
+          "strncpy"
+        ],
+        "rva": 22868,
+        "va": 2013288788
+      },
+      {
+        "ordinal": 727,
+        "names": [
+          "strpbrk"
+        ],
+        "rva": 78012,
+        "va": 2013343932
+      },
+      {
+        "ordinal": 728,
+        "names": [
+          "strrchr"
+        ],
+        "rva": 167503,
+        "va": 2013433423
+      },
+      {
+        "ordinal": 729,
+        "names": [
+          "strspn"
+        ],
+        "rva": 167542,
+        "va": 2013433462
+      },
+      {
+        "ordinal": 730,
+        "names": [
+          "strstr"
+        ],
+        "rva": 77865,
+        "va": 2013343785
+      },
+      {
+        "ordinal": 731,
+        "names": [
+          "strtod"
+        ],
+        "rva": 92926,
+        "va": 2013358846
+      },
+      {
+        "ordinal": 732,
+        "names": [
+          "strtok"
+        ],
+        "rva": 167604,
+        "va": 2013433524
+      },
+      {
+        "ordinal": 733,
+        "names": [
+          "strtol"
+        ],
+        "rva": 93071,
+        "va": 2013358991
+      },
+      {
+        "ordinal": 734,
+        "names": [
+          "strtoul"
+        ],
+        "rva": 93533,
+        "va": 2013359453
+      },
+      {
+        "ordinal": 735,
+        "names": [
+          "strxfrm"
+        ],
+        "rva": 167768,
+        "va": 2013433688
+      },
+      {
+        "ordinal": 736,
+        "names": [
+          "swprintf"
+        ],
+        "rva": 12661,
+        "va": 2013278581
+      },
+      {
+        "ordinal": 737,
+        "names": [
+          "swscanf"
+        ],
+        "rva": 153582,
+        "va": 2013419502
+      },
+      {
+        "ordinal": 738,
+        "names": [
+          "system"
+        ],
+        "rva": 110531,
+        "va": 2013376451
+      },
+      {
+        "ordinal": 739,
+        "names": [
+          "tan"
+        ],
+        "rva": 182112,
+        "va": 2013448032
+      },
+      {
+        "ordinal": 740,
+        "names": [
+          "tanh"
+        ],
+        "rva": 180542,
+        "va": 2013446462
+      },
+      {
+        "ordinal": 741,
+        "names": [
+          "time"
+        ],
+        "rva": 174651,
+        "va": 2013440571
+      },
+      {
+        "ordinal": 742,
+        "names": [
+          "tmpfile"
+        ],
+        "rva": 153836,
+        "va": 2013419756
+      },
+      {
+        "ordinal": 743,
+        "names": [
+          "tmpnam"
+        ],
+        "rva": 153636,
+        "va": 2013419556
+      },
+      {
+        "ordinal": 744,
+        "names": [
+          "tolower"
+        ],
+        "rva": 85222,
+        "va": 2013351142
+      },
+      {
+        "ordinal": 745,
+        "names": [
+          "toupper"
+        ],
+        "rva": 91855,
+        "va": 2013357775
+      },
+      {
+        "ordinal": 746,
+        "names": [
+          "towlower"
+        ],
+        "rva": 85139,
+        "va": 2013351059
+      },
+      {
+        "ordinal": 747,
+        "names": [
+          "towupper"
+        ],
+        "rva": 93556,
+        "va": 2013359476
+      },
+      {
+        "ordinal": 748,
+        "names": [
+          "ungetc"
+        ],
+        "rva": 154286,
+        "va": 2013420206
+      },
+      {
+        "ordinal": 749,
+        "names": [
+          "ungetwc"
+        ],
+        "rva": 154497,
+        "va": 2013420417
+      },
+      {
+        "ordinal": 750,
+        "names": [
+          "vfprintf"
+        ],
+        "rva": 154846,
+        "va": 2013420766
+      },
+      {
+        "ordinal": 751,
+        "names": [
+          "vfwprintf"
+        ],
+        "rva": 154971,
+        "va": 2013420891
+      },
+      {
+        "ordinal": 752,
+        "names": [
+          "vprintf"
+        ],
+        "rva": 155096,
+        "va": 2013421016
+      },
+      {
+        "ordinal": 753,
+        "names": [
+          "vsprintf"
+        ],
+        "rva": 155223,
+        "va": 2013421143
+      },
+      {
+        "ordinal": 754,
+        "names": [
+          "vswprintf"
+        ],
+        "rva": 155304,
+        "va": 2013421224
+      },
+      {
+        "ordinal": 755,
+        "names": [
+          "vwprintf"
+        ],
+        "rva": 155414,
+        "va": 2013421334
+      },
+      {
+        "ordinal": 756,
+        "names": [
+          "wcscat"
+        ],
+        "rva": 5325,
+        "va": 2013271245
+      },
+      {
+        "ordinal": 757,
+        "names": [
+          "wcschr"
+        ],
+        "rva": 10515,
+        "va": 2013276435
+      },
+      {
+        "ordinal": 758,
+        "names": [
+          "wcscmp"
+        ],
+        "rva": 5746,
+        "va": 2013271666
+      },
+      {
+        "ordinal": 759,
+        "names": [
+          "wcscoll"
+        ],
+        "rva": 167936,
+        "va": 2013433856
+      },
+      {
+        "ordinal": 760,
+        "names": [
+          "wcscpy"
+        ],
+        "rva": 5288,
+        "va": 2013271208
+      },
+      {
+        "ordinal": 761,
+        "names": [
+          "wcscspn"
+        ],
+        "rva": 168034,
+        "va": 2013433954
+      },
+      {
+        "ordinal": 762,
+        "names": [
+          "wcsftime"
+        ],
+        "rva": 174708,
+        "va": 2013440628
+      },
+      {
+        "ordinal": 763,
+        "names": [
+          "wcslen"
+        ],
+        "rva": 4553,
+        "va": 2013270473
+      },
+      {
+        "ordinal": 764,
+        "names": [
+          "wcsncat"
+        ],
+        "rva": 168099,
+        "va": 2013434019
+      },
+      {
+        "ordinal": 765,
+        "names": [
+          "wcsncmp"
+        ],
+        "rva": 168163,
+        "va": 2013434083
+      },
+      {
+        "ordinal": 766,
+        "names": [
+          "wcsncpy"
+        ],
+        "rva": 8326,
+        "va": 2013274246
+      },
+      {
+        "ordinal": 767,
+        "names": [
+          "wcspbrk"
+        ],
+        "rva": 77524,
+        "va": 2013343444
+      },
+      {
+        "ordinal": 768,
+        "names": [
+          "wcsrchr"
+        ],
+        "rva": 7781,
+        "va": 2013273701
+      },
+      {
+        "ordinal": 769,
+        "names": [
+          "wcsspn"
+        ],
+        "rva": 168219,
+        "va": 2013434139
+      },
+      {
+        "ordinal": 770,
+        "names": [
+          "wcsstr"
+        ],
+        "rva": 168285,
+        "va": 2013434205
+      },
+      {
+        "ordinal": 771,
+        "names": [
+          "wcstod"
+        ],
+        "rva": 5799,
+        "va": 2013271719
+      },
+      {
+        "ordinal": 772,
+        "names": [
+          "wcstok"
+        ],
+        "rva": 168350,
+        "va": 2013434270
+      },
+      {
+        "ordinal": 773,
+        "names": [
+          "wcstol"
+        ],
+        "rva": 93788,
+        "va": 2013359708
+      },
+      {
+        "ordinal": 774,
+        "names": [
+          "wcstombs"
+        ],
+        "rva": 94299,
+        "va": 2013360219
+      },
+      {
+        "ordinal": 775,
+        "names": [
+          "wcstoul"
+        ],
+        "rva": 94276,
+        "va": 2013360196
+      },
+      {
+        "ordinal": 776,
+        "names": [
+          "wcsxfrm"
+        ],
+        "rva": 168517,
+        "va": 2013434437
+      },
+      {
+        "ordinal": 777,
+        "names": [
+          "wctomb"
+        ],
+        "rva": 6036,
+        "va": 2013271956
+      },
+      {
+        "ordinal": 778,
+        "names": [
+          "wprintf"
+        ],
+        "rva": 155541,
+        "va": 2013421461
+      },
+      {
+        "ordinal": 779,
+        "names": [
+          "wscanf"
+        ],
+        "rva": 155675,
+        "va": 2013421595
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "VERSION",
+      "type_id": 16,
+      "name": 1,
+      "language": 1033,
+      "rva": 270432,
+      "size": 836,
+      "codepage": 0
+    }
+  ],
+  "version_info": {
+    "fixed": {
+      "file_version": "6.1.9359.0",
+      "product_version": "6.1.9359.0",
+      "file_flags": 0,
+      "file_os": "0x40004",
+      "file_type": 2
+    },
+    "strings": {
+      "040904B0": {
+        "CompanyName": "Microsoft Corporation",
+        "FileDescription": "Microsoft (R) C Runtime Library",
+        "FileVersion": "6.10.9359.0",
+        "InternalName": "MSVCRT.DLL",
+        "LegalCopyright": "Copyright (C) Microsoft Corp. 1981-1999",
+        "OriginalFilename": "MSVCRT.DLL",
+        "ProductName": "Microsoft (R) Visual C++",
+        "ProductVersion": "6.10.9359.0"
+      }
+    }
+  },
+  "debug": [
+    {
+      "type": "CODEVIEW",
+      "timestamp": 1001021811,
+      "timestamp_utc": "2001-09-20T21:36:51Z",
+      "size": 53,
+      "codeview": {
+        "format": "NB10",
+        "signature": "0x3baa6538",
+        "age": 2,
+        "pdb_path": "e:\\9359\\vc61\\boot\\bin\\x86\\msvcrt.pdb"
+      }
+    },
+    {
+      "type": 10,
+      "timestamp": 0,
+      "timestamp_utc": null,
+      "size": 0
+    },
+    {
+      "type": "UNKNOWN",
+      "timestamp": 0,
+      "timestamp_utc": null,
+      "size": 0
+    }
+  ],
+  "warnings": []
+}

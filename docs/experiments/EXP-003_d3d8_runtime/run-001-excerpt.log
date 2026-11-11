@@ -1,0 +1,96 @@
+[       0 ms] === h2e d3d8_logger 0.1.0 attached, process 32708 (E:\Steam\steamapps\common\Hitman 2 Silent Assassin\hitman2.exe) ===
+[     484 ms] Direct3DCreate8(SDKVersion=120) -> 03EB8890 caller=RenderD3D.dll+0x19F1 (va 0x079519F1, base 0x07950000)
+[     484 ms] GetAdapterDisplayMode(adapter=0) -> 1920x1080 @144Hz fmt=22(X8R8G8B8)
+[     484 ms] CreateDevice adapter=0 devType=1 hFocusWindow=00040E5A BehaviorFlags=0x00000040 caller=RenderD3D.dll+0x1DB6 (va 0x07951DB6, base 0x07950000)
+[     484 ms] CreateDevice (in)  BackBuffer=800x600 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[     484 ms]   window 00040E5A rect=(0,0)-(800,600) client=800x600 style=0x96000000
+[    1203 ms] CreateDevice -> hr=0x00000000 device=0C322660
+[    1203 ms] CreateDevice (out) BackBuffer=800x600 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[    1203 ms]   window 00040E5A rect=(0,0)-(800,600) client=800x600 style=0x16000000
+[    3515 ms] SetViewport x=0 y=0 w=800 h=600 minZ=0.000 maxZ=1.000 aspect(w/h)=1.33333 caller=RenderD3D.dll+0x3322 (va 0x07953322, base 0x07950000)
+[    3515 ms] SetTransform(PROJECTION) #1 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[    3515 ms]   [ 1.000000  0.000000  0.000000  0.000000]
+[    3515 ms]   [ 0.000000  1.000000  0.000000  0.000000]
+[    3515 ms]   [ 0.000000  0.000000  1.052632  1.000000]
+[    3515 ms]   [ 0.000000  0.000000 -0.526316  0.000000]
+[    3515 ms]   as LH perspective: fovY=90.000 deg fovX=90.000 deg aspect(x/y)=1.00000 zn=0.5000 zf=10.00 offcenter=(0.0000,0.0000)
+[    3515 ms] SetTransform(PROJECTION) #1 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[    3515 ms]   [ 1.000000  0.000000  0.000000  0.000000]
+[    3515 ms]   [ 0.000000  1.000000  0.000000  0.000000]
+[    3515 ms]   [ 0.000000  0.000000  1.052632  1.000000]
+[    3515 ms]   [ 0.000000  0.000000 -0.526316  0.000000]
+[    3515 ms]   as LH perspective: fovY=90.000 deg fovX=90.000 deg aspect(x/y)=1.00000 zn=0.5000 zf=10.00 offcenter=(0.0000,0.0000)
+[    3578 ms] SetTransform(PROJECTION) #12 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[    3578 ms]   [ 1.000000  0.000000  0.000000  0.000000]
+[    3578 ms]   [ 0.000000  1.777778  0.000000  0.000000]
+[    3578 ms]   [ 0.000000  0.000000  1.000017  1.000000]
+[    3578 ms]   [ 0.000000  0.000000 -5.000083  0.000000]
+[    3578 ms]   as LH perspective: fovY=58.716 deg fovX=90.000 deg aspect(x/y)=1.77778 zn=5.0000 zf=299598.14 offcenter=(0.0000,0.0000)
+[   14343 ms] SetTransform(PROJECTION) #24176 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   14343 ms]   [ 1.428148  0.000000  0.000000  0.000000]
+[   14343 ms]   [ 0.000000  1.904197  0.000000  0.000000]
+[   14343 ms]   [ 0.000000  0.000000  1.000250  1.000000]
+[   14343 ms]   [ 0.000000  0.000000 -5.001250  0.000000]
+[   14343 ms]   as LH perspective: fovY=55.413 deg fovX=70.000 deg aspect(x/y)=1.33333 zn=5.0000 zf=19996.92 offcenter=(0.0000,0.0000)
+[   25296 ms] SetTransform(PROJECTION) #81914 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25296 ms]   [ 2.414214  0.000000  0.000000  0.000000]
+[   25296 ms]   [ 0.000000  4.291935  0.000000  0.000000]
+[   25296 ms]   [ 0.000000  0.000000  1.001669  1.000000]
+[   25296 ms]   [ 0.000000  0.000000 -5.008347  0.000000]
+[   25296 ms]   as LH perspective: fovY=26.231 deg fovX=45.000 deg aspect(x/y)=1.77778 zn=5.0000 zf=3000.08 offcenter=(0.0000,0.0000)
+[   25296 ms] SetTransform(PROJECTION) #81915 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25296 ms]   [ 2.414214  0.000000  0.000000  0.000000]
+[   25296 ms]   [ 0.000000  3.218951  0.000000  0.000000]
+[   25296 ms]   [ 0.000000  0.000000  1.001669  1.000000]
+[   25296 ms]   [ 0.000000  0.000000 -5.008347  0.000000]
+[   25296 ms]   as LH perspective: fovY=34.516 deg fovX=45.000 deg aspect(x/y)=1.33333 zn=5.0000 zf=3000.08 offcenter=(0.0000,0.0000)
+[   25296 ms] SetTransform(PROJECTION) #81916 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25296 ms]   [ 2.531779  0.000000  0.000000  0.000000]
+[   25296 ms]   [ 0.000000  4.500940  0.000000  0.000000]
+[   25296 ms]   [ 0.000000  0.000000  1.000500  1.000000]
+[   25296 ms]   [ 0.000000  0.000000 -5.002501  0.000000]
+[   25296 ms]   as LH perspective: fovY=25.053 deg fovX=43.106 deg aspect(x/y)=1.77778 zn=5.0000 zf=10000.96 offcenter=(0.0000,0.0000)
+[   25312 ms] SetTransform(PROJECTION) #81918 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25312 ms]   [ 2.531609  0.000000  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  4.500638  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  0.000000  1.000500  1.000000]
+[   25312 ms]   [ 0.000000  0.000000 -5.002501  0.000000]
+[   25312 ms]   as LH perspective: fovY=25.054 deg fovX=43.109 deg aspect(x/y)=1.77778 zn=5.0000 zf=10000.96 offcenter=(0.0000,0.0000)
+[   25312 ms] SetTransform(PROJECTION) #81919 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25312 ms]   [ 2.531482  0.000000  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  4.500412  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  0.000000  1.000500  1.000000]
+[   25312 ms]   [ 0.000000  0.000000 -5.002501  0.000000]
+[   25312 ms]   as LH perspective: fovY=25.055 deg fovX=43.111 deg aspect(x/y)=1.77778 zn=5.0000 zf=10000.96 offcenter=(0.0000,0.0000)
+[   25312 ms] SetTransform(PROJECTION) #81920 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25312 ms]   [ 2.531397  0.000000  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  4.500261  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  0.000000  1.000500  1.000000]
+[   25312 ms]   [ 0.000000  0.000000 -5.002501  0.000000]
+[   25312 ms]   as LH perspective: fovY=25.056 deg fovX=43.112 deg aspect(x/y)=1.77778 zn=5.0000 zf=10000.96 offcenter=(0.0000,0.0000)
+[   25312 ms] SetTransform(PROJECTION) #81921 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25312 ms]   [ 2.531355  0.000000  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  4.500186  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  0.000000  1.000500  1.000000]
+[   25312 ms]   [ 0.000000  0.000000 -5.002501  0.000000]
+[   25312 ms]   as LH perspective: fovY=25.057 deg fovX=43.113 deg aspect(x/y)=1.77778 zn=5.0000 zf=10000.96 offcenter=(0.0000,0.0000)
+[   25312 ms] SetTransform(PROJECTION) #81923 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25312 ms]   [ 2.531270  0.000000  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  4.500035  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  0.000000  1.000500  1.000000]
+[   25312 ms]   [ 0.000000  0.000000 -5.002501  0.000000]
+[   25312 ms]   as LH perspective: fovY=25.057 deg fovX=43.114 deg aspect(x/y)=1.77778 zn=5.0000 zf=10000.96 offcenter=(0.0000,0.0000)
+[   25312 ms] SetTransform(PROJECTION) #81924 caller=RenderD3D.dll+0x33DD (va 0x079533DD, base 0x07950000)
+[   25312 ms]   [ 2.531227  0.000000  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  4.499960  0.000000  0.000000]
+[   25312 ms]   [ 0.000000  0.000000  1.000500  1.000000]
+[   25312 ms]   [ 0.000000  0.000000 -5.002501  0.000000]
+[   25312 ms]   as LH perspective: fovY=25.058 deg fovX=43.115 deg aspect(x/y)=1.77778 zn=5.0000 zf=10000.96 offcenter=(0.0000,0.0000)
+[    6234 ms] Present: 5969 frames in 5.00s = 1193.8 fps (total 5969)
+[   11234 ms] Present: 11143 frames in 5.00s = 2228.6 fps (total 17112)
+[   16234 ms] Present: 16870 frames in 5.00s = 3374.0 fps (total 33982)
+[   21234 ms] Present: 26412 frames in 5.00s = 5282.4 fps (total 60394)
+[   26234 ms] Present: 23157 frames in 5.00s = 4631.4 fps (total 83551)
+[   31234 ms] Present: 9053 frames in 5.00s = 1810.6 fps (total 92604)
+[   36234 ms] Present: 10071 frames in 5.00s = 2014.2 fps (total 102675)
+[   71640 ms] === detach: 111713 frames presented, 150883 projection SetTransform calls ===

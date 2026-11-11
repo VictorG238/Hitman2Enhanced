@@ -1,0 +1,2 @@
+# watch_values  exe=E:\Steam\steamapps\common\Hitman 2 Silent Assassin\hitman2.exe sha256=f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136 start=2026-11-11T00:49:53.246231-03:00
+# chains: clock=0x6A6C5C>+0x28, dt:f=0x6A6C5C>+0x2C

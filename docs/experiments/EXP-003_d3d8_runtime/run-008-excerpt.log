@@ -1,0 +1,30 @@
+[       0 ms] config E:\Steam\steamapps\common\Hitman 2 Silent Assassin\h2e_d3d8.ini: Resolution=1 HorPlusFov=1
+[       0 ms] resolution fix: applied at RenderD3D+0x197F7 (base 0x07910000, sha256 e9aff44931aa6c361fdcc49d1f5969d19777923c8f6c2c2e18e439bfd53c871d)
+[     485 ms] CreateDevice adapter=0 devType=1 hFocusWindow=00151204 BehaviorFlags=0x00000040 caller=RenderD3D.dll+0x1DB6 (va 0x07911DB6, base 0x07910000)
+[     485 ms] CreateDevice (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[     485 ms]   window 00151204 rect=(0,0)-(1920,1080) client=1920x1080 style=0x96000000
+[     625 ms] CreateDevice -> hr=0x00000000 device=0C01D1C8
+[     625 ms] CreateDevice (out) BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[     625 ms]   window 00151204 rect=(0,0)-(1920,1080) client=1920x1080 style=0x16000000
+[    2438 ms] SetViewport x=0 y=0 w=1920 h=1080 minZ=0.000 maxZ=1.000 aspect(w/h)=1.77778 caller=RenderD3D.dll+0x3322 (va 0x07913322, base 0x07910000)
+[    6907 ms] Present: 6242 frames in 6.25s = 998.7 fps (total 6242); projection calls 12467; viewport now 1920x1080+0+0; distinct proj=2 vp=1
+[    6907 ms] HorPlus: 0 scene projections adjusted so far
+[    7875 ms] SetViewport x=671 y=351 w=310 h=156 minZ=0.000 maxZ=1.000 aspect(w/h)=1.98718 caller=RenderD3D.dll+0x3322 (va 0x07913322, base 0x07910000)
+[   11907 ms] Present: 5240 frames in 5.00s = 1048.0 fps (total 11482); projection calls 13695; viewport now 1920x1080+0+0; distinct proj=3 vp=2
+[   11907 ms] HorPlus: 0 scene projections adjusted so far
+[   13375 ms] SetViewport x=0 y=0 w=128 h=128 minZ=0.000 maxZ=0.000 aspect(w/h)=1.00000 caller=RenderD3D.dll+0xD8C2 (va 0x0791D8C2, base 0x07910000)
+[   16907 ms] Present: 4215 frames in 5.00s = 843.0 fps (total 15697); projection calls 18129; viewport now 1920x1080+0+0; distinct proj=1167 vp=3
+[   16907 ms] HorPlus: 7566 scene projections adjusted so far
+[   21907 ms] Present: 4940 frames in 5.00s = 988.0 fps (total 20637); projection calls 24700; viewport now 1920x1080+0+0; distinct proj=1167 vp=3
+[   21907 ms] HorPlus: 22386 scene projections adjusted so far
+[   26907 ms] Present: 1131 frames in 5.00s = 226.2 fps (total 21768); projection calls 5644; viewport now 1920x1080+0+0; distinct proj=1508 vp=3
+[   26907 ms] HorPlus: 25773 scene projections adjusted so far
+[   31907 ms] Present: 2020 frames in 5.00s = 404.0 fps (total 23788); projection calls 11318; viewport now 1920x1080+0+0; distinct proj=1510 vp=3
+[   31907 ms] HorPlus: 32239 scene projections adjusted so far
+[   36516 ms] SetViewport x=640 y=300 w=640 h=480 minZ=0.000 maxZ=1.000 aspect(w/h)=1.33333 caller=RenderD3D.dll+0x3322 (va 0x07913322, base 0x07910000)
+[   36907 ms] Present: 1582 frames in 5.00s = 316.4 fps (total 25370); projection calls 7714; viewport now 1920x1080+0+0; distinct proj=1511 vp=4
+[   36907 ms] HorPlus: 34126 scene projections adjusted so far
+[   37032 ms] SetViewport x=719 y=516 w=550 h=169 minZ=0.000 maxZ=1.000 aspect(w/h)=3.25444 caller=RenderD3D.dll+0x3322 (va 0x07913322, base 0x07910000)
+[   41907 ms] Present: 11163 frames in 5.00s = 2232.6 fps (total 36533); projection calls 54979; viewport now 1920x1080+0+0; distinct proj=1512 vp=5
+[   41907 ms] HorPlus: 34126 scene projections adjusted so far
+[   43282 ms] === detach: 39620 frames presented, 160994 projection SetTransform calls ===

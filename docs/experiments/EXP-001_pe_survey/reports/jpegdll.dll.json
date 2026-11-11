@@ -1,0 +1,1372 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\jpegdll.dll",
+  "file_name": "jpegdll.dll",
+  "file_size": 159744,
+  "sha256": "8f4047c1a47e485161064eb7d3a9275b61b0de9be156d9d613bfc2d03f0ad51f",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 4,
+    "timestamp": 1034856660,
+    "timestamp_utc": "2002-10-17T12:11:00Z",
+    "characteristics": 8462,
+    "flags": [
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE",
+      "DLL"
+    ]
+  },
+  "optional": {
+    "linker_version": "6.0",
+    "size_of_code": 114688,
+    "size_of_initialized_data": 45056,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 83048,
+    "entry_point_va": 268518504,
+    "base_of_code": 4096,
+    "base_of_data": 118784,
+    "image_base": 268435456,
+    "section_alignment": 4096,
+    "file_alignment": 4096,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 163840,
+    "size_of_headers": 4096,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 0,
+    "computed": 164844,
+    "matches": null
+  },
+  "data_directories": [
+    {
+      "index": 0,
+      "name": "EXPORT",
+      "rva": 124736,
+      "size": 3445
+    },
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 123404,
+      "size": 40
+    },
+    {
+      "index": 5,
+      "name": "BASERELOC",
+      "rva": 155648,
+      "size": 3028
+    },
+    {
+      "index": 12,
+      "name": "IAT",
+      "rva": 118784,
+      "size": 236
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 112136,
+      "raw_pointer": 4096,
+      "raw_size": 114688,
+      "characteristics": 1610612768,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ"
+      ],
+      "entropy": 6.5597
+    },
+    {
+      "name": ".rdata",
+      "virtual_address": 118784,
+      "virtual_size": 9397,
+      "raw_pointer": 118784,
+      "raw_size": 12288,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 4.9561
+    },
+    {
+      "name": ".data",
+      "virtual_address": 131072,
+      "virtual_size": 23060,
+      "raw_pointer": 131072,
+      "raw_size": 20480,
+      "characteristics": 3221225536,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 2.665
+    },
+    {
+      "name": ".reloc",
+      "virtual_address": 155648,
+      "virtual_size": 4860,
+      "raw_pointer": 151552,
+      "raw_size": 8192,
+      "characteristics": 1107296320,
+      "flags": [
+        "INITIALIZED_DATA",
+        "DISCARDABLE",
+        "READ"
+      ],
+      "entropy": 3.2126
+    }
+  ],
+  "overlay": null,
+  "rich_header": {
+    "offset": 128,
+    "key": "0xbc92aa9c",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 11,
+        "build": 8047,
+        "count": 1
+      },
+      {
+        "prod_id": 14,
+        "build": 7299,
+        "count": 22
+      },
+      {
+        "prod_id": 10,
+        "build": 8047,
+        "count": 100
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 71
+      },
+      {
+        "prod_id": 19,
+        "build": 8034,
+        "count": 3
+      },
+      {
+        "prod_id": 48,
+        "build": 9044,
+        "count": 47
+      },
+      {
+        "prod_id": 4,
+        "build": 8447,
+        "count": 1
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 118784,
+          "iat_va": 268554240,
+          "hint": 675,
+          "name": "TlsFree"
+        },
+        {
+          "iat_rva": 118788,
+          "iat_va": 268554244,
+          "hint": 670,
+          "name": "TerminateProcess"
+        },
+        {
+          "iat_rva": 118792,
+          "iat_va": 268554248,
+          "hint": 247,
+          "name": "GetCurrentProcess"
+        },
+        {
+          "iat_rva": 118796,
+          "iat_va": 268554252,
+          "hint": 102,
+          "name": "EnterCriticalSection"
+        },
+        {
+          "iat_rva": 118800,
+          "iat_va": 268554256,
+          "hint": 449,
+          "name": "LeaveCriticalSection"
+        },
+        {
+          "iat_rva": 118804,
+          "iat_va": 268554260,
+          "hint": 409,
+          "name": "HeapAlloc"
+        },
+        {
+          "iat_rva": 118808,
+          "iat_va": 268554264,
+          "hint": 415,
+          "name": "HeapFree"
+        },
+        {
+          "iat_rva": 118812,
+          "iat_va": 268554268,
+          "hint": 202,
+          "name": "GetCommandLineA"
+        },
+        {
+          "iat_rva": 118816,
+          "iat_va": 268554272,
+          "hint": 372,
+          "name": "GetVersion"
+        },
+        {
+          "iat_rva": 118820,
+          "iat_va": 268554276,
+          "hint": 318,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 118824,
+          "iat_va": 268554280,
+          "hint": 294,
+          "name": "GetModuleHandleA"
+        },
+        {
+          "iat_rva": 118828,
+          "iat_va": 268554284,
+          "hint": 282,
+          "name": "GetLastError"
+        },
+        {
+          "iat_rva": 118832,
+          "iat_va": 268554288,
+          "hint": 735,
+          "name": "WriteFile"
+        },
+        {
+          "iat_rva": 118836,
+          "iat_va": 268554292,
+          "hint": 170,
+          "name": "FlushFileBuffers"
+        },
+        {
+          "iat_rva": 118840,
+          "iat_va": 268554296,
+          "hint": 426,
+          "name": "InitializeCriticalSection"
+        },
+        {
+          "iat_rva": 118844,
+          "iat_va": 268554300,
+          "hint": 85,
+          "name": "DeleteCriticalSection"
+        },
+        {
+          "iat_rva": 118848,
+          "iat_va": 268554304,
+          "hint": 536,
+          "name": "ReadFile"
+        },
+        {
+          "iat_rva": 118852,
+          "iat_va": 268554308,
+          "hint": 621,
+          "name": "SetHandleCount"
+        },
+        {
+          "iat_rva": 118856,
+          "iat_va": 268554312,
+          "hint": 338,
+          "name": "GetStdHandle"
+        },
+        {
+          "iat_rva": 118860,
+          "iat_va": 268554316,
+          "hint": 277,
+          "name": "GetFileType"
+        },
+        {
+          "iat_rva": 118864,
+          "iat_va": 268554320,
+          "hint": 336,
+          "name": "GetStartupInfoA"
+        },
+        {
+          "iat_rva": 118868,
+          "iat_va": 268554324,
+          "hint": 722,
+          "name": "WideCharToMultiByte"
+        },
+        {
+          "iat_rva": 118872,
+          "iat_va": 268554328,
+          "hint": 292,
+          "name": "GetModuleFileNameA"
+        },
+        {
+          "iat_rva": 118876,
+          "iat_va": 268554332,
+          "hint": 265,
+          "name": "GetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 118880,
+          "iat_va": 268554336,
+          "hint": 373,
+          "name": "GetVersionExA"
+        },
+        {
+          "iat_rva": 118884,
+          "iat_va": 268554340,
+          "hint": 413,
+          "name": "HeapDestroy"
+        },
+        {
+          "iat_rva": 118888,
+          "iat_va": 268554344,
+          "hint": 411,
+          "name": "HeapCreate"
+        },
+        {
+          "iat_rva": 118892,
+          "iat_va": 268554348,
+          "hint": 703,
+          "name": "VirtualFree"
+        },
+        {
+          "iat_rva": 118896,
+          "iat_va": 268554352,
+          "hint": 699,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 118900,
+          "iat_va": 268554356,
+          "hint": 418,
+          "name": "HeapReAlloc"
+        },
+        {
+          "iat_rva": 118904,
+          "iat_va": 268554360,
+          "hint": 559,
+          "name": "RtlUnwind"
+        },
+        {
+          "iat_rva": 118908,
+          "iat_va": 268554364,
+          "hint": 250,
+          "name": "GetCurrentThreadId"
+        },
+        {
+          "iat_rva": 118912,
+          "iat_va": 268554368,
+          "hint": 677,
+          "name": "TlsSetValue"
+        },
+        {
+          "iat_rva": 118916,
+          "iat_va": 268554372,
+          "hint": 674,
+          "name": "TlsAlloc"
+        },
+        {
+          "iat_rva": 118920,
+          "iat_va": 268554376,
+          "hint": 125,
+          "name": "ExitProcess"
+        },
+        {
+          "iat_rva": 118924,
+          "iat_va": 268554380,
+          "hint": 625,
+          "name": "SetLastError"
+        },
+        {
+          "iat_rva": 118928,
+          "iat_va": 268554384,
+          "hint": 676,
+          "name": "TlsGetValue"
+        },
+        {
+          "iat_rva": 118932,
+          "iat_va": 268554388,
+          "hint": 178,
+          "name": "FreeEnvironmentStringsA"
+        },
+        {
+          "iat_rva": 118936,
+          "iat_va": 268554392,
+          "hint": 179,
+          "name": "FreeEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 118940,
+          "iat_va": 268554396,
+          "hint": 262,
+          "name": "GetEnvironmentStrings"
+        },
+        {
+          "iat_rva": 118944,
+          "iat_va": 268554400,
+          "hint": 264,
+          "name": "GetEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 118948,
+          "iat_va": 268554404,
+          "hint": 429,
+          "name": "InterlockedDecrement"
+        },
+        {
+          "iat_rva": 118952,
+          "iat_va": 268554408,
+          "hint": 432,
+          "name": "InterlockedIncrement"
+        },
+        {
+          "iat_rva": 118956,
+          "iat_va": 268554412,
+          "hint": 618,
+          "name": "SetFilePointer"
+        },
+        {
+          "iat_rva": 118960,
+          "iat_va": 268554416,
+          "hint": 636,
+          "name": "SetStdHandle"
+        },
+        {
+          "iat_rva": 118964,
+          "iat_va": 268554420,
+          "hint": 484,
+          "name": "MultiByteToWideChar"
+        },
+        {
+          "iat_rva": 118968,
+          "iat_va": 268554424,
+          "hint": 191,
+          "name": "GetCPInfo"
+        },
+        {
+          "iat_rva": 118972,
+          "iat_va": 268554428,
+          "hint": 33,
+          "name": "CompareStringA"
+        },
+        {
+          "iat_rva": 118976,
+          "iat_va": 268554432,
+          "hint": 34,
+          "name": "CompareStringW"
+        },
+        {
+          "iat_rva": 118980,
+          "iat_va": 268554436,
+          "hint": 185,
+          "name": "GetACP"
+        },
+        {
+          "iat_rva": 118984,
+          "iat_va": 268554440,
+          "hint": 305,
+          "name": "GetOEMCP"
+        },
+        {
+          "iat_rva": 118988,
+          "iat_va": 268554444,
+          "hint": 610,
+          "name": "SetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 118992,
+          "iat_va": 268554448,
+          "hint": 450,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 118996,
+          "iat_va": 268554452,
+          "hint": 339,
+          "name": "GetStringTypeA"
+        },
+        {
+          "iat_rva": 119000,
+          "iat_va": 268554456,
+          "hint": 342,
+          "name": "GetStringTypeW"
+        },
+        {
+          "iat_rva": 119004,
+          "iat_va": 268554460,
+          "hint": 447,
+          "name": "LCMapStringA"
+        },
+        {
+          "iat_rva": 119008,
+          "iat_va": 268554464,
+          "hint": 448,
+          "name": "LCMapStringW"
+        },
+        {
+          "iat_rva": 119012,
+          "iat_va": 268554468,
+          "hint": 27,
+          "name": "CloseHandle"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": {
+    "dll_name": "jpegdll.dll",
+    "timestamp": 1034856660,
+    "timestamp_utc": "2002-10-17T12:11:00Z",
+    "version": "0.0",
+    "ordinal_base": 1,
+    "functions": [
+      {
+        "ordinal": 1,
+        "names": [
+          "@WriteJPEGToMemoryRGB@24"
+        ],
+        "rva": 4240,
+        "va": 268439696
+      },
+      {
+        "ordinal": 2,
+        "names": [
+          "@jcopy_block_row@12"
+        ],
+        "rva": 80144,
+        "va": 268515600
+      },
+      {
+        "ordinal": 3,
+        "names": [
+          "@jcopy_sample_rows@24"
+        ],
+        "rva": 80064,
+        "va": 268515520
+      },
+      {
+        "ordinal": 4,
+        "names": [
+          "@jdiv_round_up@8"
+        ],
+        "rva": 80016,
+        "va": 268515472
+      },
+      {
+        "ordinal": 5,
+        "names": [
+          "@jinit_1pass_quantizer@4"
+        ],
+        "rva": 72128,
+        "va": 268507584
+      },
+      {
+        "ordinal": 6,
+        "names": [
+          "@jinit_2pass_quantizer@4"
+        ],
+        "rva": 75120,
+        "va": 268510576
+      },
+      {
+        "ordinal": 7,
+        "names": [
+          "@jinit_c_coef_controller@8"
+        ],
+        "rva": 5856,
+        "va": 268441312
+      },
+      {
+        "ordinal": 8,
+        "names": [
+          "@jinit_c_main_controller@8"
+        ],
+        "rva": 14608,
+        "va": 268450064
+      },
+      {
+        "ordinal": 9,
+        "names": [
+          "@jinit_c_master_control@8"
+        ],
+        "rva": 17040,
+        "va": 268452496
+      },
+      {
+        "ordinal": 10,
+        "names": [
+          "@jinit_c_prep_controller@8"
+        ],
+        "rva": 25376,
+        "va": 268460832
+      },
+      {
+        "ordinal": 11,
+        "names": [
+          "@jinit_color_converter@4"
+        ],
+        "rva": 7840,
+        "va": 268443296
+      },
+      {
+        "ordinal": 12,
+        "names": [
+          "@jinit_color_deconverter@4"
+        ],
+        "rva": 37312,
+        "va": 268472768
+      },
+      {
+        "ordinal": 13,
+        "names": [
+          "@jinit_compress_master@4"
+        ],
+        "rva": 14432,
+        "va": 268449888
+      },
+      {
+        "ordinal": 14,
+        "names": [
+          "@jinit_d_coef_controller@8"
+        ],
+        "rva": 33536,
+        "va": 268468992
+      },
+      {
+        "ordinal": 15,
+        "names": [
+          "@jinit_d_main_controller@8"
+        ],
+        "rva": 43744,
+        "va": 268479200
+      },
+      {
+        "ordinal": 16,
+        "names": [
+          "@jinit_d_post_controller@8"
+        ],
+        "rva": 59024,
+        "va": 268494480
+      },
+      {
+        "ordinal": 17,
+        "names": [
+          "@jinit_downsampler@4"
+        ],
+        "rva": 26816,
+        "va": 268462272
+      },
+      {
+        "ordinal": 18,
+        "names": [
+          "@jinit_forward_dct@4"
+        ],
+        "rva": 9648,
+        "va": 268445104
+      },
+      {
+        "ordinal": 19,
+        "names": [
+          "@jinit_huff_decoder@4"
+        ],
+        "rva": 40720,
+        "va": 268476176
+      },
+      {
+        "ordinal": 20,
+        "names": [
+          "@jinit_huff_encoder@4"
+        ],
+        "rva": 12032,
+        "va": 268447488
+      },
+      {
+        "ordinal": 21,
+        "names": [
+          "@jinit_input_controller@4"
+        ],
+        "rva": 42288,
+        "va": 268477744
+      },
+      {
+        "ordinal": 22,
+        "names": [
+          "@jinit_inverse_dct@4"
+        ],
+        "rva": 38880,
+        "va": 268474336
+      },
+      {
+        "ordinal": 23,
+        "names": [
+          "@jinit_marker_reader@4"
+        ],
+        "rva": 45952,
+        "va": 268481408
+      },
+      {
+        "ordinal": 24,
+        "names": [
+          "@jinit_marker_writer@4"
+        ],
+        "rva": 14976,
+        "va": 268450432
+      },
+      {
+        "ordinal": 25,
+        "names": [
+          "@jinit_master_decompress@4"
+        ],
+        "rva": 53392,
+        "va": 268488848
+      },
+      {
+        "ordinal": 26,
+        "names": [
+          "@jinit_memory_mgr@4"
+        ],
+        "rva": 68960,
+        "va": 268504416
+      },
+      {
+        "ordinal": 27,
+        "names": [
+          "@jinit_merged_upsampler@4"
+        ],
+        "rva": 54352,
+        "va": 268489808
+      },
+      {
+        "ordinal": 28,
+        "names": [
+          "@jinit_phuff_decoder@4"
+        ],
+        "rva": 55856,
+        "va": 268491312
+      },
+      {
+        "ordinal": 29,
+        "names": [
+          "@jinit_phuff_encoder@4"
+        ],
+        "rva": 22448,
+        "va": 268457904
+      },
+      {
+        "ordinal": 30,
+        "names": [
+          "@jinit_upsampler@4"
+        ],
+        "rva": 59840,
+        "va": 268495296
+      },
+      {
+        "ordinal": 31,
+        "names": [
+          "@jpeg_CreateCompress@12"
+        ],
+        "rva": 4496,
+        "va": 268439952
+      },
+      {
+        "ordinal": 32,
+        "names": [
+          "@jpeg_CreateDecompress@12"
+        ],
+        "rva": 30736,
+        "va": 268466192
+      },
+      {
+        "ordinal": 33,
+        "names": [
+          "@jpeg_abort@4"
+        ],
+        "rva": 19872,
+        "va": 268455328
+      },
+      {
+        "ordinal": 34,
+        "names": [
+          "@jpeg_abort_compress@4"
+        ],
+        "rva": 4704,
+        "va": 268440160
+      },
+      {
+        "ordinal": 35,
+        "names": [
+          "@jpeg_abort_decompress@4"
+        ],
+        "rva": 4704,
+        "va": 268440160
+      },
+      {
+        "ordinal": 36,
+        "names": [
+          "@jpeg_add_quant_table@20"
+        ],
+        "rva": 20032,
+        "va": 268455488
+      },
+      {
+        "ordinal": 37,
+        "names": [
+          "@jpeg_alloc_huff_table@4"
+        ],
+        "rva": 20000,
+        "va": 268455456
+      },
+      {
+        "ordinal": 38,
+        "names": [
+          "@jpeg_alloc_quant_table@4"
+        ],
+        "rva": 19968,
+        "va": 268455424
+      },
+      {
+        "ordinal": 39,
+        "names": [
+          "@jpeg_calc_output_dimensions@4"
+        ],
+        "rva": 52592,
+        "va": 268488048
+      },
+      {
+        "ordinal": 40,
+        "names": [
+          "@jpeg_consume_input@4"
+        ],
+        "rva": 31056,
+        "va": 268466512
+      },
+      {
+        "ordinal": 41,
+        "names": [
+          "@jpeg_copy_critical_parameters@8"
+        ],
+        "rva": 29328,
+        "va": 268464784
+      },
+      {
+        "ordinal": 42,
+        "names": [
+          "@jpeg_default_colorspace@4"
+        ],
+        "rva": 20912,
+        "va": 268456368
+      },
+      {
+        "ordinal": 43,
+        "names": [
+          "@jpeg_destroy@4"
+        ],
+        "rva": 19936,
+        "va": 268455392
+      },
+      {
+        "ordinal": 44,
+        "names": [
+          "@jpeg_destroy_compress@4"
+        ],
+        "rva": 4688,
+        "va": 268440144
+      },
+      {
+        "ordinal": 45,
+        "names": [
+          "@jpeg_destroy_decompress@4"
+        ],
+        "rva": 4688,
+        "va": 268440144
+      },
+      {
+        "ordinal": 46,
+        "names": [
+          "@jpeg_fdct_float@4"
+        ],
+        "rva": 62384,
+        "va": 268497840
+      },
+      {
+        "ordinal": 47,
+        "names": [
+          "@jpeg_fdct_ifast@4"
+        ],
+        "rva": 62944,
+        "va": 268498400
+      },
+      {
+        "ordinal": 48,
+        "names": [
+          "@jpeg_fdct_islow@4"
+        ],
+        "rva": 63456,
+        "va": 268498912
+      },
+      {
+        "ordinal": 49,
+        "names": [
+          "@jpeg_fill_bit_buffer@16"
+        ],
+        "rva": 40224,
+        "va": 268475680
+      },
+      {
+        "ordinal": 50,
+        "names": [
+          "@jpeg_finish_compress@4"
+        ],
+        "rva": 4816,
+        "va": 268440272
+      },
+      {
+        "ordinal": 51,
+        "names": [
+          "@jpeg_finish_decompress@4"
+        ],
+        "rva": 31776,
+        "va": 268467232
+      },
+      {
+        "ordinal": 52,
+        "names": [
+          "@jpeg_finish_output@4"
+        ],
+        "rva": 32784,
+        "va": 268468240
+      },
+      {
+        "ordinal": 53,
+        "names": [
+          "@jpeg_free_large@12"
+        ],
+        "rva": 72048,
+        "va": 268507504
+      },
+      {
+        "ordinal": 54,
+        "names": [
+          "@jpeg_free_small@12"
+        ],
+        "rva": 72048,
+        "va": 268507504
+      },
+      {
+        "ordinal": 55,
+        "names": [
+          "@jpeg_gen_optimal_table@12"
+        ],
+        "rva": 11472,
+        "va": 268446928
+      },
+      {
+        "ordinal": 56,
+        "names": [
+          "@jpeg_get_large@8"
+        ],
+        "rva": 72032,
+        "va": 268507488
+      },
+      {
+        "ordinal": 57,
+        "names": [
+          "@jpeg_get_small@8"
+        ],
+        "rva": 72032,
+        "va": 268507488
+      },
+      {
+        "ordinal": 58,
+        "names": [
+          "@jpeg_has_multiple_scans@4"
+        ],
+        "rva": 31696,
+        "va": 268467152
+      },
+      {
+        "ordinal": 59,
+        "names": [
+          "@jpeg_huff_decode@20"
+        ],
+        "rva": 40512,
+        "va": 268475968
+      },
+      {
+        "ordinal": 60,
+        "names": [
+          "@jpeg_idct_1x1@20"
+        ],
+        "rva": 68896,
+        "va": 268504352
+      },
+      {
+        "ordinal": 61,
+        "names": [
+          "@jpeg_idct_2x2@20"
+        ],
+        "rva": 68448,
+        "va": 268503904
+      },
+      {
+        "ordinal": 62,
+        "names": [
+          "@jpeg_idct_4x4@20"
+        ],
+        "rva": 67664,
+        "va": 268503120
+      },
+      {
+        "ordinal": 63,
+        "names": [
+          "@jpeg_idct_float@20"
+        ],
+        "rva": 64272,
+        "va": 268499728
+      },
+      {
+        "ordinal": 64,
+        "names": [
+          "@jpeg_idct_ifast@20"
+        ],
+        "rva": 65344,
+        "va": 268500800
+      },
+      {
+        "ordinal": 65,
+        "names": [
+          "@jpeg_idct_islow@20"
+        ],
+        "rva": 66352,
+        "va": 268501808
+      },
+      {
+        "ordinal": 66,
+        "names": [
+          "@jpeg_input_complete@4"
+        ],
+        "rva": 31616,
+        "va": 268467072
+      },
+      {
+        "ordinal": 67,
+        "names": [
+          "@jpeg_make_c_derived_tbl@16"
+        ],
+        "rva": 10976,
+        "va": 268446432
+      },
+      {
+        "ordinal": 68,
+        "names": [
+          "@jpeg_make_d_derived_tbl@16"
+        ],
+        "rva": 39552,
+        "va": 268475008
+      },
+      {
+        "ordinal": 69,
+        "names": [
+          "@jpeg_mem_available@16"
+        ],
+        "rva": 72064,
+        "va": 268507520
+      },
+      {
+        "ordinal": 70,
+        "names": [
+          "@jpeg_mem_init@4"
+        ],
+        "rva": 72096,
+        "va": 268507552
+      },
+      {
+        "ordinal": 71,
+        "names": [
+          "@jpeg_mem_term@4"
+        ],
+        "rva": 72112,
+        "va": 268507568
+      },
+      {
+        "ordinal": 72,
+        "names": [
+          "@jpeg_memory_dest@12"
+        ],
+        "rva": 4096,
+        "va": 268439552
+      },
+      {
+        "ordinal": 73,
+        "names": [
+          "@jpeg_new_colormap@4"
+        ],
+        "rva": 53280,
+        "va": 268488736
+      },
+      {
+        "ordinal": 74,
+        "names": [
+          "@jpeg_open_backing_store@12"
+        ],
+        "rva": 72080,
+        "va": 268507536
+      },
+      {
+        "ordinal": 75,
+        "names": [
+          "@jpeg_quality_scaling@4"
+        ],
+        "rva": 20320,
+        "va": 268455776
+      },
+      {
+        "ordinal": 76,
+        "names": [
+          "@jpeg_read_coefficients@4"
+        ],
+        "rva": 61632,
+        "va": 268497088
+      },
+      {
+        "ordinal": 77,
+        "names": [
+          "@jpeg_read_header@8"
+        ],
+        "rva": 30944,
+        "va": 268466400
+      },
+      {
+        "ordinal": 78,
+        "names": [
+          "@jpeg_read_raw_data@12"
+        ],
+        "rva": 32512,
+        "va": 268467968
+      },
+      {
+        "ordinal": 79,
+        "names": [
+          "@jpeg_read_scanlines@12"
+        ],
+        "rva": 32352,
+        "va": 268467808
+      },
+      {
+        "ordinal": 80,
+        "names": [
+          "@jpeg_resync_to_restart@8"
+        ],
+        "rva": 45440,
+        "va": 268480896
+      },
+      {
+        "ordinal": 81,
+        "names": [
+          "@jpeg_save_markers@12"
+        ],
+        "rva": 51696,
+        "va": 268487152
+      },
+      {
+        "ordinal": 82,
+        "names": [
+          "@jpeg_set_colorspace@8"
+        ],
+        "rva": 21024,
+        "va": 268456480
+      },
+      {
+        "ordinal": 83,
+        "names": [
+          "@jpeg_set_defaults@4"
+        ],
+        "rva": 20416,
+        "va": 268455872
+      },
+      {
+        "ordinal": 84,
+        "names": [
+          "@jpeg_set_linear_quality@12"
+        ],
+        "rva": 20256,
+        "va": 268455712
+      },
+      {
+        "ordinal": 85,
+        "names": [
+          "@jpeg_set_marker_processor@12"
+        ],
+        "rva": 52512,
+        "va": 268487968
+      },
+      {
+        "ordinal": 86,
+        "names": [
+          "@jpeg_set_quality@12"
+        ],
+        "rva": 20384,
+        "va": 268455840
+      },
+      {
+        "ordinal": 87,
+        "names": [
+          "@jpeg_simple_progression@4"
+        ],
+        "rva": 21760,
+        "va": 268457216
+      },
+      {
+        "ordinal": 88,
+        "names": [
+          "@jpeg_start_compress@8"
+        ],
+        "rva": 5360,
+        "va": 268440816
+      },
+      {
+        "ordinal": 89,
+        "names": [
+          "@jpeg_start_decompress@4"
+        ],
+        "rva": 31952,
+        "va": 268467408
+      },
+      {
+        "ordinal": 90,
+        "names": [
+          "@jpeg_start_output@8"
+        ],
+        "rva": 32688,
+        "va": 268468144
+      },
+      {
+        "ordinal": 91,
+        "names": [
+          "@jpeg_std_error@4"
+        ],
+        "rva": 61984,
+        "va": 268497440
+      },
+      {
+        "ordinal": 92,
+        "names": [
+          "@jpeg_stdio_dest@8"
+        ],
+        "rva": 32928,
+        "va": 268468384
+      },
+      {
+        "ordinal": 93,
+        "names": [
+          "@jpeg_stdio_src@8"
+        ],
+        "rva": 33232,
+        "va": 268468688
+      },
+      {
+        "ordinal": 94,
+        "names": [
+          "@jpeg_suppress_tables@8"
+        ],
+        "rva": 4720,
+        "va": 268440176
+      },
+      {
+        "ordinal": 95,
+        "names": [
+          "@jpeg_write_coefficients@8"
+        ],
+        "rva": 29232,
+        "va": 268464688
+      },
+      {
+        "ordinal": 96,
+        "names": [
+          "@jpeg_write_m_byte@8"
+        ],
+        "rva": 5264,
+        "va": 268440720
+      },
+      {
+        "ordinal": 97,
+        "names": [
+          "@jpeg_write_m_header@12"
+        ],
+        "rva": 5184,
+        "va": 268440640
+      },
+      {
+        "ordinal": 98,
+        "names": [
+          "@jpeg_write_marker@16"
+        ],
+        "rva": 5056,
+        "va": 268440512
+      },
+      {
+        "ordinal": 99,
+        "names": [
+          "@jpeg_write_raw_data@12"
+        ],
+        "rva": 5664,
+        "va": 268441120
+      },
+      {
+        "ordinal": 100,
+        "names": [
+          "@jpeg_write_scanlines@12"
+        ],
+        "rva": 5472,
+        "va": 268440928
+      },
+      {
+        "ordinal": 101,
+        "names": [
+          "@jpeg_write_tables@4"
+        ],
+        "rva": 5280,
+        "va": 268440736
+      },
+      {
+        "ordinal": 102,
+        "names": [
+          "@jround_up@8"
+        ],
+        "rva": 80032,
+        "va": 268515488
+      },
+      {
+        "ordinal": 103,
+        "names": [
+          "@jzero_far@8"
+        ],
+        "rva": 80176,
+        "va": 268515632
+      }
+    ]
+  },
+  "resources": [],
+  "version_info": null,
+  "debug": [],
+  "warnings": []
+}

@@ -1,0 +1,347 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\testapp.exe",
+  "file_name": "testapp.exe",
+  "file_size": 873984,
+  "sha256": "f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 2,
+    "timestamp": 1056463317,
+    "timestamp_utc": "2003-06-24T14:01:57Z",
+    "characteristics": 271,
+    "flags": [
+      "RELOCS_STRIPPED",
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE"
+    ]
+  },
+  "optional": {
+    "linker_version": "6.0",
+    "size_of_code": 2326528,
+    "size_of_initialized_data": 667648,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 4096,
+    "entry_point_va": 4198400,
+    "base_of_code": 4096,
+    "base_of_data": 2330624,
+    "image_base": 4194304,
+    "section_alignment": 4096,
+    "file_alignment": 512,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 3063808,
+    "size_of_headers": 1024,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 893254,
+    "computed": 893254,
+    "matches": true
+  },
+  "data_directories": [
+    {
+      "index": 0,
+      "name": "EXPORT",
+      "rva": 2574176,
+      "size": 38766
+    },
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 3058068,
+      "size": 143
+    },
+    {
+      "index": 2,
+      "name": "RESOURCE",
+      "rva": 2998272,
+      "size": 59412
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 2994176,
+      "raw_pointer": 1024,
+      "raw_size": 808960,
+      "characteristics": 3758096480,
+      "flags": [
+        "CODE",
+        "INITIALIZED_DATA",
+        "EXECUTE",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 7.9998
+    },
+    {
+      "name": ".rsrc",
+      "virtual_address": 2998272,
+      "virtual_size": 65536,
+      "raw_pointer": 809984,
+      "raw_size": 64000,
+      "characteristics": 3758096416,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 3.7604
+    }
+  ],
+  "overlay": null,
+  "rich_header": {
+    "offset": 128,
+    "key": "0x2daf9a17",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 11,
+        "build": 8966,
+        "count": 1
+      },
+      {
+        "prod_id": 12,
+        "build": 7291,
+        "count": 5
+      },
+      {
+        "prod_id": 48,
+        "build": 9044,
+        "count": 36
+      },
+      {
+        "prod_id": 28,
+        "build": 8830,
+        "count": 3
+      },
+      {
+        "prod_id": 37,
+        "build": 8755,
+        "count": 6
+      },
+      {
+        "prod_id": 29,
+        "build": 8830,
+        "count": 1
+      },
+      {
+        "prod_id": 19,
+        "build": 8034,
+        "count": 11
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 161
+      },
+      {
+        "prod_id": 11,
+        "build": 8047,
+        "count": 11
+      },
+      {
+        "prod_id": 14,
+        "build": 7299,
+        "count": 36
+      },
+      {
+        "prod_id": 10,
+        "build": 8047,
+        "count": 127
+      },
+      {
+        "prod_id": 49,
+        "build": 9044,
+        "count": 368
+      },
+      {
+        "prod_id": 6,
+        "build": 1735,
+        "count": 1
+      },
+      {
+        "prod_id": 4,
+        "build": 8447,
+        "count": 3
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "kernel32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 3058048,
+          "iat_va": 7252352,
+          "hint": 0,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 3058052,
+          "iat_va": 7252356,
+          "hint": 0,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 3058056,
+          "iat_va": 7252360,
+          "hint": 0,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 3058060,
+          "iat_va": 7252364,
+          "hint": 0,
+          "name": "VirtualFree"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": null,
+  "resources": [
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 1,
+      "language": 1033,
+      "rva": 2998888,
+      "size": 1384,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 2,
+      "language": 1033,
+      "rva": 3000272,
+      "size": 2216,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 3,
+      "language": 1033,
+      "rva": 3002488,
+      "size": 3752,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 4,
+      "language": 1033,
+      "rva": 3006240,
+      "size": 5672,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 5,
+      "language": 1033,
+      "rva": 3011912,
+      "size": 12840,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 6,
+      "language": 1033,
+      "rva": 3024752,
+      "size": 1128,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 7,
+      "language": 1033,
+      "rva": 3025880,
+      "size": 4264,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 8,
+      "language": 1033,
+      "rva": 3030144,
+      "size": 9640,
+      "codepage": 0
+    },
+    {
+      "type": "ICON",
+      "type_id": 3,
+      "name": 9,
+      "language": 1033,
+      "rva": 3039784,
+      "size": 16936,
+      "codepage": 0
+    },
+    {
+      "type": "GROUP_ICON",
+      "type_id": 14,
+      "name": 104,
+      "language": 1033,
+      "rva": 3056720,
+      "size": 132,
+      "codepage": 0
+    },
+    {
+      "type": "VERSION",
+      "type_id": 16,
+      "name": 1,
+      "language": 1030,
+      "rva": 3056856,
+      "size": 828,
+      "codepage": 0
+    }
+  ],
+  "version_info": {
+    "fixed": {
+      "file_version": "1.0.0.277",
+      "product_version": "1.0.0.277",
+      "file_flags": 0,
+      "file_os": "0x40004",
+      "file_type": 0
+    },
+    "strings": {
+      "000004b0": {
+        "Comments": "",
+        "CompanyName": "IO Interactive",
+        "FileDescription": "",
+        "FileVersion": "1, 0, 0, 277",
+        "InternalName": "",
+        "LegalCopyright": "Copyright \u00a9 2002",
+        "LegalTrademarks": "",
+        "OriginalFilename": "Hitman2.exe",
+        "PrivateBuild": "",
+        "ProductName": "Hitman 2: Silent Assassin",
+        "ProductVersion": "1, 0, 0, 277",
+        "SpecialBuild": ""
+      }
+    }
+  },
+  "debug": [],
+  "warnings": [
+    "exports: export directory: RVA 0x274760 not mapped to file data"
+  ]
+}

@@ -1,0 +1,25 @@
+[       0 ms] === Hitman 2 Enhanced 0.6.0 (d3d8 proxy) attached, process 17388 (E:\Steam\steamapps\common\Hitman 2 Silent Assassin\hitman2.exe) ===
+[       0 ms] config E:\Steam\steamapps\common\Hitman 2 Silent Assassin\h2e.ini: log level 1
+[       0 ms]   fix resolution   ON   (fullscreen keeps the configured Resolution (GB-003))
+[       0 ms]   fix horplus      off  (EXPERIMENTAL Hor+ FOV by projection rescaling - moves the HUD (run-008))
+[       0 ms] patch RenderD3D.dll+0x197F7: applied (base 0x077C0000, sha256 e9aff44931aa6c361fdcc49d1f5969d19777923c8f6c2c2e18e439bfd53c871d)
+[     469 ms] Direct3DCreate8(SDKVersion=120) -> 0C03F510 caller=RenderD3D.dll+0x19F1 (va 0x077C19F1, base 0x077C0000)
+[     469 ms] CreateDevice adapter=0 devType=1 hFocusWindow=004211A0 BehaviorFlags=0x00000040 caller=RenderD3D.dll+0x1DB6 (va 0x077C1DB6, base 0x077C0000)
+[     469 ms] CreateDevice (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[     469 ms]   window 004211A0 rect=(0,0)-(1920,1080) client=1920x1080 style=0x96000000
+[     610 ms] CreateDevice -> hr=0x00000000 device=0C1092D8
+[     610 ms] CreateDevice (out) BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[     610 ms]   window 004211A0 rect=(0,0)-(1920,1080) client=1920x1080 style=0x16000000
+[    6532 ms] Reset (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[    6594 ms] Reset -> hr=0x00000000 caller=RenderD3D.dll+0x38BB (va 0x077C38BB, base 0x077C0000)
+[   13516 ms] Reset (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[   13579 ms] Reset -> hr=0x00000000 caller=RenderD3D.dll+0x38BB (va 0x077C38BB, base 0x077C0000)
+[   16610 ms] Reset (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[   16672 ms] Reset -> hr=0x00000000 caller=RenderD3D.dll+0x38BB (va 0x077C38BB, base 0x077C0000)
+[   28579 ms] Reset (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[   28657 ms] Reset -> hr=0x00000000 caller=RenderD3D.dll+0x38BB (va 0x077C38BB, base 0x077C0000)
+[  100688 ms] Reset (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[  100782 ms] Reset -> hr=0x00000000 caller=RenderD3D.dll+0x38BB (va 0x077C38BB, base 0x077C0000)
+[  119719 ms] Reset (in)  BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[  119782 ms] Reset -> hr=0x00000000 caller=RenderD3D.dll+0x38BB (va 0x077C38BB, base 0x077C0000)
+[  121500 ms] === detach: 0 frames presented, 0 projection SetTransform calls ===

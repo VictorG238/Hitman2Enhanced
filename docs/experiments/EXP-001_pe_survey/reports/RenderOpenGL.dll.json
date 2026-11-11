@@ -1,0 +1,1347 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\RenderOpenGL.dll",
+  "file_name": "RenderOpenGL.dll",
+  "file_size": 319488,
+  "sha256": "d81d5bc9802ca9252d0ca93d080179bdfc0a1058306eeb3524082837e9c65688",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 4,
+    "timestamp": 1056463439,
+    "timestamp_utc": "2003-06-24T14:03:59Z",
+    "characteristics": 8462,
+    "flags": [
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE",
+      "DLL"
+    ]
+  },
+  "optional": {
+    "linker_version": "6.0",
+    "size_of_code": 253952,
+    "size_of_initialized_data": 1048576,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 216150,
+    "entry_point_va": 268651606,
+    "base_of_code": 4096,
+    "base_of_data": 258048,
+    "image_base": 268435456,
+    "section_alignment": 4096,
+    "file_alignment": 4096,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 1306624,
+    "size_of_headers": 4096,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 0,
+    "computed": 348954,
+    "matches": null
+  },
+  "data_directories": [
+    {
+      "index": 0,
+      "name": "EXPORT",
+      "rva": 274560,
+      "size": 74
+    },
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 269932,
+      "size": 120
+    },
+    {
+      "index": 5,
+      "name": "BASERELOC",
+      "rva": 1286144,
+      "size": 12052
+    },
+    {
+      "index": 12,
+      "name": "IAT",
+      "rva": 258048,
+      "size": 760
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 250725,
+      "raw_pointer": 4096,
+      "raw_size": 253952,
+      "characteristics": 1610612768,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ"
+      ],
+      "entropy": 6.4989
+    },
+    {
+      "name": ".rdata",
+      "virtual_address": 258048,
+      "virtual_size": 16586,
+      "raw_pointer": 258048,
+      "raw_size": 20480,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 4.9506
+    },
+    {
+      "name": ".data",
+      "virtual_address": 278528,
+      "virtual_size": 1005184,
+      "raw_pointer": 278528,
+      "raw_size": 20480,
+      "characteristics": 3221225536,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 2.413
+    },
+    {
+      "name": ".reloc",
+      "virtual_address": 1286144,
+      "virtual_size": 18642,
+      "raw_pointer": 299008,
+      "raw_size": 20480,
+      "characteristics": 1107296320,
+      "flags": [
+        "INITIALIZED_DATA",
+        "DISCARDABLE",
+        "READ"
+      ],
+      "entropy": 4.7858
+    }
+  ],
+  "overlay": null,
+  "rich_header": {
+    "offset": 128,
+    "key": "0xfeee27bb",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 12,
+        "build": 7291,
+        "count": 3
+      },
+      {
+        "prod_id": 11,
+        "build": 8047,
+        "count": 11
+      },
+      {
+        "prod_id": 14,
+        "build": 7299,
+        "count": 27
+      },
+      {
+        "prod_id": 10,
+        "build": 8047,
+        "count": 89
+      },
+      {
+        "prod_id": 19,
+        "build": 8034,
+        "count": 9
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 199
+      },
+      {
+        "prod_id": 49,
+        "build": 9044,
+        "count": 33
+      },
+      {
+        "prod_id": 4,
+        "build": 8447,
+        "count": 3
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "USER32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 258552,
+          "iat_va": 268694008,
+          "hint": 515,
+          "name": "ReleaseDC"
+        },
+        {
+          "iat_rva": 258556,
+          "iat_va": 268694012,
+          "hint": 27,
+          "name": "ChangeDisplaySettingsA"
+        },
+        {
+          "iat_rva": 258560,
+          "iat_va": 268694016,
+          "hint": 197,
+          "name": "EnumDisplaySettingsA"
+        },
+        {
+          "iat_rva": 258564,
+          "iat_va": 268694020,
+          "hint": 240,
+          "name": "GetClientRect"
+        },
+        {
+          "iat_rva": 258568,
+          "iat_va": 268694024,
+          "hint": 340,
+          "name": "GetWindowDC"
+        },
+        {
+          "iat_rva": 258572,
+          "iat_va": 268694028,
+          "hint": 614,
+          "name": "ShowCursor"
+        },
+        {
+          "iat_rva": 258576,
+          "iat_va": 268694032,
+          "hint": 410,
+          "name": "LoadCursorA"
+        },
+        {
+          "iat_rva": 258580,
+          "iat_va": 268694036,
+          "hint": 414,
+          "name": "LoadIconA"
+        },
+        {
+          "iat_rva": 258584,
+          "iat_va": 268694040,
+          "hint": 253,
+          "name": "GetDC"
+        },
+        {
+          "iat_rva": 258588,
+          "iat_va": 268694044,
+          "hint": 255,
+          "name": "GetDesktopWindow"
+        },
+        {
+          "iat_rva": 258592,
+          "iat_va": 268694048,
+          "hint": 232,
+          "name": "GetClassInfoExA"
+        },
+        {
+          "iat_rva": 258596,
+          "iat_va": 268694052,
+          "hint": 249,
+          "name": "GetCursor"
+        },
+        {
+          "iat_rva": 258600,
+          "iat_va": 268694056,
+          "hint": 552,
+          "name": "SetCursorPos"
+        },
+        {
+          "iat_rva": 258604,
+          "iat_va": 268694060,
+          "hint": 58,
+          "name": "ClientToScreen"
+        },
+        {
+          "iat_rva": 258608,
+          "iat_va": 268694064,
+          "hint": 550,
+          "name": "SetCursor"
+        },
+        {
+          "iat_rva": 258612,
+          "iat_va": 268694068,
+          "hint": 559,
+          "name": "SetFocus"
+        },
+        {
+          "iat_rva": 258616,
+          "iat_va": 268694072,
+          "hint": 342,
+          "name": "GetWindowLongA"
+        },
+        {
+          "iat_rva": 258620,
+          "iat_va": 268694076,
+          "hint": 132,
+          "name": "DefWindowProcA"
+        },
+        {
+          "iat_rva": 258624,
+          "iat_va": 268694080,
+          "hint": 600,
+          "name": "SetWindowLongA"
+        },
+        {
+          "iat_rva": 258628,
+          "iat_va": 268694084,
+          "hint": 89,
+          "name": "CreateWindowExA"
+        },
+        {
+          "iat_rva": 258632,
+          "iat_va": 268694088,
+          "hint": 499,
+          "name": "RegisterClassExA"
+        },
+        {
+          "iat_rva": 258636,
+          "iat_va": 268694092,
+          "hint": 326,
+          "name": "GetSystemMetrics"
+        },
+        {
+          "iat_rva": 258640,
+          "iat_va": 268694096,
+          "hint": 348,
+          "name": "GetWindowRect"
+        },
+        {
+          "iat_rva": 258644,
+          "iat_va": 268694100,
+          "hint": 2,
+          "name": "AdjustWindowRectEx"
+        },
+        {
+          "iat_rva": 258648,
+          "iat_va": 268694104,
+          "hint": 618,
+          "name": "ShowWindow"
+        },
+        {
+          "iat_rva": 258652,
+          "iat_va": 268694108,
+          "hint": 541,
+          "name": "SetCapture"
+        },
+        {
+          "iat_rva": 258656,
+          "iat_va": 268694112,
+          "hint": 227,
+          "name": "GetAsyncKeyState"
+        },
+        {
+          "iat_rva": 258660,
+          "iat_va": 268694116,
+          "hint": 514,
+          "name": "ReleaseCapture"
+        },
+        {
+          "iat_rva": 258664,
+          "iat_va": 268694120,
+          "hint": 59,
+          "name": "ClipCursor"
+        },
+        {
+          "iat_rva": 258668,
+          "iat_va": 268694124,
+          "hint": 532,
+          "name": "SendMessageA"
+        },
+        {
+          "iat_rva": 258672,
+          "iat_va": 268694128,
+          "hint": 309,
+          "name": "GetParent"
+        },
+        {
+          "iat_rva": 258676,
+          "iat_va": 268694132,
+          "hint": 560,
+          "name": "SetForegroundWindow"
+        },
+        {
+          "iat_rva": 258680,
+          "iat_va": 268694136,
+          "hint": 606,
+          "name": "SetWindowTextA"
+        },
+        {
+          "iat_rva": 258684,
+          "iat_va": 268694140,
+          "hint": 457,
+          "name": "MoveWindow"
+        }
+      ]
+    },
+    {
+      "dll": "GDI32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 258048,
+          "iat_va": 268693504,
+          "hint": 343,
+          "name": "GetPixelFormat"
+        },
+        {
+          "iat_rva": 258052,
+          "iat_va": 268693508,
+          "hint": 351,
+          "name": "GetStockObject"
+        },
+        {
+          "iat_rva": 258056,
+          "iat_va": 268693512,
+          "hint": 516,
+          "name": "SwapBuffers"
+        },
+        {
+          "iat_rva": 258060,
+          "iat_va": 268693516,
+          "hint": 472,
+          "name": "SetDeviceGammaRamp"
+        },
+        {
+          "iat_rva": 258064,
+          "iat_va": 268693520,
+          "hint": 489,
+          "name": "SetPixelFormat"
+        },
+        {
+          "iat_rva": 258068,
+          "iat_va": 268693524,
+          "hint": 84,
+          "name": "DescribePixelFormat"
+        },
+        {
+          "iat_rva": 258072,
+          "iat_va": 268693528,
+          "hint": 293,
+          "name": "GetDeviceCaps"
+        }
+      ]
+    },
+    {
+      "dll": "OPENGL32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 258292,
+          "iat_va": 268693748,
+          "hint": 75,
+          "name": "glDrawElements"
+        },
+        {
+          "iat_rva": 258296,
+          "iat_va": 268693752,
+          "hint": 58,
+          "name": "glColorPointer"
+        },
+        {
+          "iat_rva": 258300,
+          "iat_va": 268693756,
+          "hint": 208,
+          "name": "glPolygonMode"
+        },
+        {
+          "iat_rva": 258304,
+          "iat_va": 268693760,
+          "hint": 72,
+          "name": "glDisableClientState"
+        },
+        {
+          "iat_rva": 258308,
+          "iat_va": 268693764,
+          "hint": 329,
+          "name": "glVertex3fv"
+        },
+        {
+          "iat_rva": 258312,
+          "iat_va": 268693768,
+          "hint": 297,
+          "name": "glTexCoordPointer"
+        },
+        {
+          "iat_rva": 258316,
+          "iat_va": 268693772,
+          "hint": 196,
+          "name": "glNormalPointer"
+        },
+        {
+          "iat_rva": 258320,
+          "iat_va": 268693776,
+          "hint": 44,
+          "name": "glColor4f"
+        },
+        {
+          "iat_rva": 258324,
+          "iat_va": 268693780,
+          "hint": 57,
+          "name": "glColorMaterial"
+        },
+        {
+          "iat_rva": 258328,
+          "iat_va": 268693784,
+          "hint": 328,
+          "name": "glVertex3f"
+        },
+        {
+          "iat_rva": 258332,
+          "iat_va": 268693788,
+          "hint": 158,
+          "name": "glLightf"
+        },
+        {
+          "iat_rva": 258336,
+          "iat_va": 268693792,
+          "hint": 159,
+          "name": "glLightfv"
+        },
+        {
+          "iat_rva": 258340,
+          "iat_va": 268693796,
+          "hint": 67,
+          "name": "glDeleteTextures"
+        },
+        {
+          "iat_rva": 258344,
+          "iat_va": 268693800,
+          "hint": 315,
+          "name": "glTexSubImage2D"
+        },
+        {
+          "iat_rva": 258348,
+          "iat_va": 268693804,
+          "hint": 309,
+          "name": "glTexImage2D"
+        },
+        {
+          "iat_rva": 258352,
+          "iat_va": 268693808,
+          "hint": 106,
+          "name": "glGenTextures"
+        },
+        {
+          "iat_rva": 258356,
+          "iat_va": 268693812,
+          "hint": 300,
+          "name": "glTexEnvi"
+        },
+        {
+          "iat_rva": 258360,
+          "iat_va": 268693816,
+          "hint": 11,
+          "name": "glBegin"
+        },
+        {
+          "iat_rva": 258364,
+          "iat_va": 268693820,
+          "hint": 275,
+          "name": "glTexCoord2f"
+        },
+        {
+          "iat_rva": 258368,
+          "iat_va": 268693824,
+          "hint": 320,
+          "name": "glVertex2f"
+        },
+        {
+          "iat_rva": 258372,
+          "iat_va": 268693828,
+          "hint": 82,
+          "name": "glEnd"
+        },
+        {
+          "iat_rva": 258376,
+          "iat_va": 268693832,
+          "hint": 167,
+          "name": "glLoadMatrixf"
+        },
+        {
+          "iat_rva": 258380,
+          "iat_va": 268693836,
+          "hint": 104,
+          "name": "glFrustum"
+        },
+        {
+          "iat_rva": 258384,
+          "iat_va": 268693840,
+          "hint": 19,
+          "name": "glClearColor"
+        },
+        {
+          "iat_rva": 258388,
+          "iat_va": 268693844,
+          "hint": 17,
+          "name": "glClear"
+        },
+        {
+          "iat_rva": 258392,
+          "iat_va": 268693848,
+          "hint": 343,
+          "name": "glViewport"
+        },
+        {
+          "iat_rva": 258396,
+          "iat_va": 268693852,
+          "hint": 259,
+          "name": "glScissor"
+        },
+        {
+          "iat_rva": 258400,
+          "iat_va": 268693856,
+          "hint": 197,
+          "name": "glOrtho"
+        },
+        {
+          "iat_rva": 258404,
+          "iat_va": 268693860,
+          "hint": 224,
+          "name": "glRasterPos2i"
+        },
+        {
+          "iat_rva": 258408,
+          "iat_va": 268693864,
+          "hint": 76,
+          "name": "glDrawPixels"
+        },
+        {
+          "iat_rva": 258412,
+          "iat_va": 268693868,
+          "hint": 98,
+          "name": "glFlush"
+        },
+        {
+          "iat_rva": 258416,
+          "iat_va": 268693872,
+          "hint": 203,
+          "name": "glPixelStorei"
+        },
+        {
+          "iat_rva": 258420,
+          "iat_va": 268693876,
+          "hint": 97,
+          "name": "glFinish"
+        },
+        {
+          "iat_rva": 258424,
+          "iat_va": 268693880,
+          "hint": 244,
+          "name": "glReadBuffer"
+        },
+        {
+          "iat_rva": 258428,
+          "iat_va": 268693884,
+          "hint": 245,
+          "name": "glReadPixels"
+        },
+        {
+          "iat_rva": 258432,
+          "iat_va": 268693888,
+          "hint": 348,
+          "name": "wglDeleteContext"
+        },
+        {
+          "iat_rva": 258436,
+          "iat_va": 268693892,
+          "hint": 346,
+          "name": "wglCreateContext"
+        },
+        {
+          "iat_rva": 258440,
+          "iat_va": 268693896,
+          "hint": 357,
+          "name": "wglMakeCurrent"
+        },
+        {
+          "iat_rva": 258444,
+          "iat_va": 268693900,
+          "hint": 81,
+          "name": "glEnableClientState"
+        },
+        {
+          "iat_rva": 258448,
+          "iat_va": 268693904,
+          "hint": 261,
+          "name": "glShadeModel"
+        },
+        {
+          "iat_rva": 258452,
+          "iat_va": 268693908,
+          "hint": 74,
+          "name": "glDrawBuffer"
+        },
+        {
+          "iat_rva": 258456,
+          "iat_va": 268693912,
+          "hint": 64,
+          "name": "glCullFace"
+        },
+        {
+          "iat_rva": 258460,
+          "iat_va": 268693916,
+          "hint": 101,
+          "name": "glFogi"
+        },
+        {
+          "iat_rva": 258464,
+          "iat_va": 268693920,
+          "hint": 182,
+          "name": "glMatrixMode"
+        },
+        {
+          "iat_rva": 258468,
+          "iat_va": 268693924,
+          "hint": 165,
+          "name": "glLoadIdentity"
+        },
+        {
+          "iat_rva": 258472,
+          "iat_va": 268693928,
+          "hint": 14,
+          "name": "glBlendFunc"
+        },
+        {
+          "iat_rva": 258476,
+          "iat_va": 268693932,
+          "hint": 80,
+          "name": "glEnable"
+        },
+        {
+          "iat_rva": 258480,
+          "iat_va": 268693936,
+          "hint": 71,
+          "name": "glDisable"
+        },
+        {
+          "iat_rva": 258484,
+          "iat_va": 268693940,
+          "hint": 8,
+          "name": "glAlphaFunc"
+        },
+        {
+          "iat_rva": 258488,
+          "iat_va": 268693944,
+          "hint": 68,
+          "name": "glDepthFunc"
+        },
+        {
+          "iat_rva": 258492,
+          "iat_va": 268693948,
+          "hint": 69,
+          "name": "glDepthMask"
+        },
+        {
+          "iat_rva": 258496,
+          "iat_va": 268693952,
+          "hint": 50,
+          "name": "glColor4ub"
+        },
+        {
+          "iat_rva": 258500,
+          "iat_va": 268693956,
+          "hint": 12,
+          "name": "glBindTexture"
+        },
+        {
+          "iat_rva": 258504,
+          "iat_va": 268693960,
+          "hint": 298,
+          "name": "glTexEnvf"
+        },
+        {
+          "iat_rva": 258508,
+          "iat_va": 268693964,
+          "hint": 100,
+          "name": "glFogfv"
+        },
+        {
+          "iat_rva": 258512,
+          "iat_va": 268693968,
+          "hint": 99,
+          "name": "glFogf"
+        },
+        {
+          "iat_rva": 258516,
+          "iat_va": 268693972,
+          "hint": 312,
+          "name": "glTexParameteri"
+        },
+        {
+          "iat_rva": 258520,
+          "iat_va": 268693976,
+          "hint": 356,
+          "name": "wglGetProcAddress"
+        },
+        {
+          "iat_rva": 258524,
+          "iat_va": 268693980,
+          "hint": 112,
+          "name": "glGetIntegerv"
+        },
+        {
+          "iat_rva": 258528,
+          "iat_va": 268693984,
+          "hint": 125,
+          "name": "glGetString"
+        },
+        {
+          "iat_rva": 258532,
+          "iat_va": 268693988,
+          "hint": 179,
+          "name": "glMaterialfv"
+        },
+        {
+          "iat_rva": 258536,
+          "iat_va": 268693992,
+          "hint": 342,
+          "name": "glVertexPointer"
+        },
+        {
+          "iat_rva": 258540,
+          "iat_va": 268693996,
+          "hint": 155,
+          "name": "glLightModelfv"
+        },
+        {
+          "iat_rva": 258544,
+          "iat_va": 268694000,
+          "hint": 304,
+          "name": "glTexGenf"
+        }
+      ]
+    },
+    {
+      "dll": "hitman2.exe",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 258692,
+          "iat_va": 268694148,
+          "hint": 669,
+          "name": "?g_pSysMem@@3PAVZSysMem@@A"
+        },
+        {
+          "iat_rva": 258696,
+          "iat_va": 268694152,
+          "hint": 668,
+          "name": "?g_pSysInterface@@3PAVZSysInterface@@A"
+        },
+        {
+          "iat_rva": 258700,
+          "iat_va": 268694156,
+          "hint": 661,
+          "name": "?g_pInt3Handler@@3P6IXXZA"
+        },
+        {
+          "iat_rva": 258704,
+          "iat_va": 268694160,
+          "hint": 43,
+          "name": "??6ZSaveGame@@QAEAAV0@AAVLINKSORTREFTAB@@@Z"
+        },
+        {
+          "iat_rva": 258708,
+          "iat_va": 268694164,
+          "hint": 151,
+          "name": "?GeomRefToPtr@ZEngineDataBase@@QAEPAVZGEOM@@I@Z"
+        },
+        {
+          "iat_rva": 258712,
+          "iat_va": 268694168,
+          "hint": 149,
+          "name": "?GeomPtrToRef@ZEngineDataBase@@QAEIPAVZGEOM@@@Z"
+        },
+        {
+          "iat_rva": 258716,
+          "iat_va": 268694172,
+          "hint": 32,
+          "name": "??5ZLoadGame@@QAEAAV0@AAVLINKSORTREFTAB@@@Z"
+        },
+        {
+          "iat_rva": 258720,
+          "iat_va": 268694176,
+          "hint": 51,
+          "name": "??6ZSaveGame@@QAEAAV0@I@Z"
+        },
+        {
+          "iat_rva": 258724,
+          "iat_va": 268694180,
+          "hint": 25,
+          "name": "??5ZLoadGame@@QAEAAV0@AAI@Z"
+        },
+        {
+          "iat_rva": 258728,
+          "iat_va": 268694184,
+          "hint": 154,
+          "name": "?GetAnimBuffer@ZEngineDataBase@@QAEPADXZ"
+        },
+        {
+          "iat_rva": 258732,
+          "iat_va": 268694188,
+          "hint": 50,
+          "name": "??6ZSaveGame@@QAEAAV0@H@Z"
+        },
+        {
+          "iat_rva": 258736,
+          "iat_va": 268694192,
+          "hint": 148,
+          "name": "?GeomPtrToRef@ZEngineDataBase@@QAEIPAVZBaseGeom@@@Z"
+        },
+        {
+          "iat_rva": 258740,
+          "iat_va": 268694196,
+          "hint": 150,
+          "name": "?GeomRefToBasePtr@ZEngineDataBase@@QAEPAVZBaseGeom@@I@Z"
+        },
+        {
+          "iat_rva": 258744,
+          "iat_va": 268694200,
+          "hint": 666,
+          "name": "?g_pSysFile@@3PAVZSysFile@@A"
+        },
+        {
+          "iat_rva": 258748,
+          "iat_va": 268694204,
+          "hint": 673,
+          "name": "?s_fGravity@ConstrainedParticleSystem@@2MA"
+        },
+        {
+          "iat_rva": 258752,
+          "iat_va": 268694208,
+          "hint": 24,
+          "name": "??5ZLoadGame@@QAEAAV0@AAH@Z"
+        },
+        {
+          "iat_rva": 258756,
+          "iat_va": 268694212,
+          "hint": 46,
+          "name": "??6ZSaveGame@@QAEAAV0@AAY02M@Z"
+        },
+        {
+          "iat_rva": 258760,
+          "iat_va": 268694216,
+          "hint": 58,
+          "name": "??6ZSaveGame@@QAEAAV0@_N@Z"
+        },
+        {
+          "iat_rva": 258764,
+          "iat_va": 268694220,
+          "hint": 36,
+          "name": "??5ZLoadGame@@QAEAAV0@AAY02M@Z"
+        },
+        {
+          "iat_rva": 258768,
+          "iat_va": 268694224,
+          "hint": 39,
+          "name": "??5ZLoadGame@@QAEAAV0@AA_N@Z"
+        },
+        {
+          "iat_rva": 258772,
+          "iat_va": 268694228,
+          "hint": 273,
+          "name": "?Save@ConstrainedParticleSystem@@QAE_NPAVZSaveGame@@@Z"
+        },
+        {
+          "iat_rva": 258776,
+          "iat_va": 268694232,
+          "hint": 221,
+          "name": "?InitOkX@ConstrainedParticleSystem@@UAEXXZ"
+        },
+        {
+          "iat_rva": 258780,
+          "iat_va": 268694236,
+          "hint": 218,
+          "name": "?Init@ConstrainedParticleSystem@@UAEXXZ"
+        },
+        {
+          "iat_rva": 258784,
+          "iat_va": 268694240,
+          "hint": 232,
+          "name": "?Load@ConstrainedParticleSystem@@QAE_NPAVZLoadGame@@@Z"
+        },
+        {
+          "iat_rva": 258788,
+          "iat_va": 268694244,
+          "hint": 3,
+          "name": "??0ConstrainedParticleSystem@@QAE@XZ"
+        },
+        {
+          "iat_rva": 258792,
+          "iat_va": 268694248,
+          "hint": 12,
+          "name": "??1ConstrainedParticleSystem@@UAE@XZ"
+        },
+        {
+          "iat_rva": 258796,
+          "iat_va": 268694252,
+          "hint": 270,
+          "name": "?RunTime@ZEngineDataBase@@QAE_NXZ"
+        },
+        {
+          "iat_rva": 258800,
+          "iat_va": 268694256,
+          "hint": 665,
+          "name": "?g_pSysCom@@3PAVZSysCom@@A"
+        }
+      ]
+    },
+    {
+      "dll": "KERNEL32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 258080,
+          "iat_va": 268693536,
+          "hint": 699,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 258084,
+          "iat_va": 268693540,
+          "hint": 125,
+          "name": "ExitProcess"
+        },
+        {
+          "iat_rva": 258088,
+          "iat_va": 268693544,
+          "hint": 670,
+          "name": "TerminateProcess"
+        },
+        {
+          "iat_rva": 258092,
+          "iat_va": 268693548,
+          "hint": 484,
+          "name": "MultiByteToWideChar"
+        },
+        {
+          "iat_rva": 258096,
+          "iat_va": 268693552,
+          "hint": 448,
+          "name": "LCMapStringW"
+        },
+        {
+          "iat_rva": 258100,
+          "iat_va": 268693556,
+          "hint": 447,
+          "name": "LCMapStringA"
+        },
+        {
+          "iat_rva": 258104,
+          "iat_va": 268693560,
+          "hint": 339,
+          "name": "GetStringTypeA"
+        },
+        {
+          "iat_rva": 258108,
+          "iat_va": 268693564,
+          "hint": 185,
+          "name": "GetACP"
+        },
+        {
+          "iat_rva": 258112,
+          "iat_va": 268693568,
+          "hint": 191,
+          "name": "GetCPInfo"
+        },
+        {
+          "iat_rva": 258116,
+          "iat_va": 268693572,
+          "hint": 434,
+          "name": "IsBadCodePtr"
+        },
+        {
+          "iat_rva": 258120,
+          "iat_va": 268693576,
+          "hint": 437,
+          "name": "IsBadReadPtr"
+        },
+        {
+          "iat_rva": 258124,
+          "iat_va": 268693580,
+          "hint": 419,
+          "name": "HeapSize"
+        },
+        {
+          "iat_rva": 258128,
+          "iat_va": 268693584,
+          "hint": 735,
+          "name": "WriteFile"
+        },
+        {
+          "iat_rva": 258132,
+          "iat_va": 268693588,
+          "hint": 93,
+          "name": "DisableThreadLibraryCalls"
+        },
+        {
+          "iat_rva": 258136,
+          "iat_va": 268693592,
+          "hint": 264,
+          "name": "GetEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 258140,
+          "iat_va": 268693596,
+          "hint": 262,
+          "name": "GetEnvironmentStrings"
+        },
+        {
+          "iat_rva": 258144,
+          "iat_va": 268693600,
+          "hint": 722,
+          "name": "WideCharToMultiByte"
+        },
+        {
+          "iat_rva": 258148,
+          "iat_va": 268693604,
+          "hint": 179,
+          "name": "FreeEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 258152,
+          "iat_va": 268693608,
+          "hint": 178,
+          "name": "FreeEnvironmentStringsA"
+        },
+        {
+          "iat_rva": 258156,
+          "iat_va": 268693612,
+          "hint": 336,
+          "name": "GetStartupInfoA"
+        },
+        {
+          "iat_rva": 258160,
+          "iat_va": 268693616,
+          "hint": 277,
+          "name": "GetFileType"
+        },
+        {
+          "iat_rva": 258164,
+          "iat_va": 268693620,
+          "hint": 338,
+          "name": "GetStdHandle"
+        },
+        {
+          "iat_rva": 258168,
+          "iat_va": 268693624,
+          "hint": 621,
+          "name": "SetHandleCount"
+        },
+        {
+          "iat_rva": 258172,
+          "iat_va": 268693628,
+          "hint": 247,
+          "name": "GetCurrentProcess"
+        },
+        {
+          "iat_rva": 258176,
+          "iat_va": 268693632,
+          "hint": 342,
+          "name": "GetStringTypeW"
+        },
+        {
+          "iat_rva": 258180,
+          "iat_va": 268693636,
+          "hint": 618,
+          "name": "SetFilePointer"
+        },
+        {
+          "iat_rva": 258184,
+          "iat_va": 268693640,
+          "hint": 651,
+          "name": "SetUnhandledExceptionFilter"
+        },
+        {
+          "iat_rva": 258188,
+          "iat_va": 268693644,
+          "hint": 440,
+          "name": "IsBadWritePtr"
+        },
+        {
+          "iat_rva": 258192,
+          "iat_va": 268693648,
+          "hint": 418,
+          "name": "HeapReAlloc"
+        },
+        {
+          "iat_rva": 258196,
+          "iat_va": 268693652,
+          "hint": 703,
+          "name": "VirtualFree"
+        },
+        {
+          "iat_rva": 258200,
+          "iat_va": 268693656,
+          "hint": 411,
+          "name": "HeapCreate"
+        },
+        {
+          "iat_rva": 258204,
+          "iat_va": 268693660,
+          "hint": 413,
+          "name": "HeapDestroy"
+        },
+        {
+          "iat_rva": 258208,
+          "iat_va": 268693664,
+          "hint": 373,
+          "name": "GetVersionExA"
+        },
+        {
+          "iat_rva": 258212,
+          "iat_va": 268693668,
+          "hint": 265,
+          "name": "GetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 258216,
+          "iat_va": 268693672,
+          "hint": 292,
+          "name": "GetModuleFileNameA"
+        },
+        {
+          "iat_rva": 258220,
+          "iat_va": 268693676,
+          "hint": 294,
+          "name": "GetModuleHandleA"
+        },
+        {
+          "iat_rva": 258224,
+          "iat_va": 268693680,
+          "hint": 372,
+          "name": "GetVersion"
+        },
+        {
+          "iat_rva": 258228,
+          "iat_va": 268693684,
+          "hint": 202,
+          "name": "GetCommandLineA"
+        },
+        {
+          "iat_rva": 258232,
+          "iat_va": 268693688,
+          "hint": 523,
+          "name": "RaiseException"
+        },
+        {
+          "iat_rva": 258236,
+          "iat_va": 268693692,
+          "hint": 415,
+          "name": "HeapFree"
+        },
+        {
+          "iat_rva": 258240,
+          "iat_va": 268693696,
+          "hint": 559,
+          "name": "RtlUnwind"
+        },
+        {
+          "iat_rva": 258244,
+          "iat_va": 268693700,
+          "hint": 409,
+          "name": "HeapAlloc"
+        },
+        {
+          "iat_rva": 258248,
+          "iat_va": 268693704,
+          "hint": 450,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 258252,
+          "iat_va": 268693708,
+          "hint": 318,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 258256,
+          "iat_va": 268693712,
+          "hint": 282,
+          "name": "GetLastError"
+        },
+        {
+          "iat_rva": 258260,
+          "iat_va": 268693716,
+          "hint": 175,
+          "name": "FormatMessageA"
+        },
+        {
+          "iat_rva": 258264,
+          "iat_va": 268693720,
+          "hint": 460,
+          "name": "LocalFree"
+        },
+        {
+          "iat_rva": 258268,
+          "iat_va": 268693724,
+          "hint": 636,
+          "name": "SetStdHandle"
+        },
+        {
+          "iat_rva": 258272,
+          "iat_va": 268693728,
+          "hint": 170,
+          "name": "FlushFileBuffers"
+        },
+        {
+          "iat_rva": 258276,
+          "iat_va": 268693732,
+          "hint": 27,
+          "name": "CloseHandle"
+        },
+        {
+          "iat_rva": 258280,
+          "iat_va": 268693736,
+          "hint": 536,
+          "name": "ReadFile"
+        },
+        {
+          "iat_rva": 258284,
+          "iat_va": 268693740,
+          "hint": 305,
+          "name": "GetOEMCP"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": {
+    "dll_name": "RenderOpenGL.dll",
+    "timestamp": 1056463439,
+    "timestamp_utc": "2003-06-24T14:03:59Z",
+    "version": "0.0",
+    "ordinal_base": 1,
+    "functions": [
+      {
+        "ordinal": 1,
+        "names": [
+          "Create"
+        ],
+        "rva": 4096,
+        "va": 268439552
+      }
+    ]
+  },
+  "resources": [],
+  "version_info": null,
+  "debug": [],
+  "warnings": []
+}

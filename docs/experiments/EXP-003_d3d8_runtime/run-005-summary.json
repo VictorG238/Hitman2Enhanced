@@ -1,0 +1,679 @@
+{
+ "devices": [
+  "CreateDevice (in) BackBuffer=1920x1080 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=1 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x0"
+ ],
+ "viewports": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 1080,
+   "caller": "RenderD3D.dll+0x3322"
+  },
+  {
+   "x": 671,
+   "y": 351,
+   "w": 310,
+   "h": 156,
+   "caller": "RenderD3D.dll+0x3322"
+  },
+  {
+   "x": 0,
+   "y": 0,
+   "w": 128,
+   "h": 128,
+   "caller": "RenderD3D.dll+0xD8C2"
+  },
+  {
+   "x": 640,
+   "y": 300,
+   "w": 640,
+   "h": 480,
+   "caller": "RenderD3D.dll+0x3322"
+  }
+ ],
+ "projection_callers": {
+  "RenderD3D.dll+0x33DD": 8,
+  "RenderD3D.dll+0xDBCE": 1185
+ },
+ "projection_groups": [
+  {
+   "fovx": 9.457,
+   "fovy": 14.191,
+   "aspect": 0.66453,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 127,
+   "viewports": {
+    "128x128": 127
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.149,
+   "fovy": 14.225,
+   "aspect": 0.64121,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 115,
+   "viewports": {
+    "128x128": 115
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.185,
+   "fovy": 14.1,
+   "aspect": 0.64951,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 96,
+   "viewports": {
+    "128x128": 96
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.136,
+   "fovy": 14.22,
+   "aspect": 0.64049,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 73,
+   "viewports": {
+    "128x128": 73
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.149,
+   "fovy": 14.036,
+   "aspect": 0.64997,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 58,
+   "viewports": {
+    "128x128": 58
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.171,
+   "fovy": 14.057,
+   "aspect": 0.65054,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 57,
+   "viewports": {
+    "128x128": 57
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.118,
+   "fovy": 14.17,
+   "aspect": 0.64152,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 53,
+   "viewports": {
+    "128x128": 53
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.143,
+   "fovy": 14.036,
+   "aspect": 0.64949,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 42,
+   "viewports": {
+    "128x128": 42
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.13,
+   "fovy": 14.146,
+   "aspect": 0.64353,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 33,
+   "viewports": {
+    "128x128": 33
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.121,
+   "fovy": 14.154,
+   "aspect": 0.64252,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 30,
+   "viewports": {
+    "128x128": 30
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.242,
+   "fovy": 14.232,
+   "aspect": 0.64744,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 29,
+   "viewports": {
+    "128x128": 29
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.139,
+   "fovy": 14.137,
+   "aspect": 0.64455,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 28,
+   "viewports": {
+    "128x128": 28
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.451,
+   "fovy": 14.19,
+   "aspect": 0.66414,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 26,
+   "viewports": {
+    "128x128": 26
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.228,
+   "fovy": 14.232,
+   "aspect": 0.64648,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 25,
+   "viewports": {
+    "128x128": 25
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.418,
+   "fovy": 14.193,
+   "aspect": 0.66164,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 21,
+   "viewports": {
+    "128x128": 21
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.43,
+   "fovy": 14.192,
+   "aspect": 0.66253,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 21,
+   "viewports": {
+    "128x128": 21
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.322,
+   "fovy": 14.201,
+   "aspect": 0.65454,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 20,
+   "viewports": {
+    "128x128": 20
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.378,
+   "fovy": 14.198,
+   "aspect": 0.65859,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 20,
+   "viewports": {
+    "128x128": 20
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.309,
+   "fovy": 14.202,
+   "aspect": 0.65356,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 19,
+   "viewports": {
+    "128x128": 19
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.295,
+   "fovy": 14.202,
+   "aspect": 0.65257,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 18,
+   "viewports": {
+    "128x128": 18
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.391,
+   "fovy": 14.196,
+   "aspect": 0.65959,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 18,
+   "viewports": {
+    "128x128": 18
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.404,
+   "fovy": 14.195,
+   "aspect": 0.66056,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 18,
+   "viewports": {
+    "128x128": 18
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.244,
+   "fovy": 14.204,
+   "aspect": 0.64887,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 17,
+   "viewports": {
+    "128x128": 17
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.249,
+   "fovy": 14.232,
+   "aspect": 0.64796,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 17,
+   "viewports": {
+    "128x128": 17
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.364,
+   "fovy": 14.199,
+   "aspect": 0.65754,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 16,
+   "viewports": {
+    "128x128": 16
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.255,
+   "fovy": 14.203,
+   "aspect": 0.64968,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 15,
+   "viewports": {
+    "128x128": 15
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.281,
+   "fovy": 14.203,
+   "aspect": 0.65153,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 15,
+   "viewports": {
+    "128x128": 15
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.147,
+   "fovy": 14.128,
+   "aspect": 0.64553,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 15,
+   "viewports": {
+    "128x128": 15
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.271,
+   "fovy": 14.203,
+   "aspect": 0.65084,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 14,
+   "viewports": {
+    "128x128": 14
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.352,
+   "fovy": 14.2,
+   "aspect": 0.65668,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 13,
+   "viewports": {
+    "128x128": 13
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.443,
+   "fovy": 14.191,
+   "aspect": 0.66356,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 12,
+   "viewports": {
+    "128x128": 12
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.199,
+   "fovy": 14.231,
+   "aspect": 0.64444,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 12,
+   "viewports": {
+    "128x128": 12
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.184,
+   "fovy": 14.23,
+   "aspect": 0.64344,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 12,
+   "viewports": {
+    "128x128": 12
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.168,
+   "fovy": 14.228,
+   "aspect": 0.64246,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 12,
+   "viewports": {
+    "128x128": 12
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.137,
+   "fovy": 14.049,
+   "aspect": 0.64849,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 12,
+   "viewports": {
+    "128x128": 12
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.269,
+   "fovy": 14.229,
+   "aspect": 0.64944,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 11,
+   "viewports": {
+    "128x128": 11
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.214,
+   "fovy": 14.231,
+   "aspect": 0.64548,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 11,
+   "viewports": {
+    "128x128": 11
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.123,
+   "fovy": 14.051,
+   "aspect": 0.64743,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 11,
+   "viewports": {
+    "128x128": 11
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.337,
+   "fovy": 14.201,
+   "aspect": 0.65562,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 9,
+   "viewports": {
+    "128x128": 9
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.358,
+   "fovy": 14.214,
+   "aspect": 0.65648,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 6,
+   "viewports": {
+    "128x128": 6
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.255,
+   "fovy": 14.231,
+   "aspect": 0.64843,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 5,
+   "viewports": {
+    "128x128": 5
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 9.153,
+   "fovy": 14.225,
+   "aspect": 0.64146,
+   "zn": 1.0,
+   "zf": 615.01,
+   "count": 3,
+   "viewports": {
+    "128x128": 3
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 90.0,
+   "fovy": 90.0,
+   "aspect": 1.0,
+   "zn": 0.5,
+   "zf": 10.0,
+   "count": 1,
+   "viewports": {
+    "1920x1080": 1
+   },
+   "aspect_matches_viewport": 0
+  },
+  {
+   "fovx": 45.0,
+   "fovy": 26.231,
+   "aspect": 1.77778,
+   "zn": 5.0,
+   "zf": 3000.08,
+   "count": 1,
+   "viewports": {
+    "1920x1080": 1
+   },
+   "aspect_matches_viewport": 1
+  },
+  {
+   "fovx": 45.0,
+   "fovy": 23.549,
+   "aspect": 1.98718,
+   "zn": 5.0,
+   "zf": 3000.08,
+   "count": 1,
+   "viewports": {
+    "310x156": 1
+   },
+   "aspect_matches_viewport": 1
+  },
+  {
+   "fovx": 65.0,
+   "fovy": 39.43,
+   "aspect": 1.77778,
+   "zn": 5.0,
+   "zf": 3000.08,
+   "count": 1,
+   "viewports": {
+    "1920x1080": 1
+   },
+   "aspect_matches_viewport": 1
+  },
+  {
+   "fovx": 67.4,
+   "fovy": 41.126,
+   "aspect": 1.77778,
+   "zn": 5.0,
+   "zf": 25000.85,
+   "count": 1,
+   "viewports": {
+    "1920x1080": 1
+   },
+   "aspect_matches_viewport": 1
+  },
+  {
+   "fovx": 67.4,
+   "fovy": 41.126,
+   "aspect": 1.77778,
+   "zn": 5.0,
+   "zf": 41943049.0,
+   "count": 1,
+   "viewports": {
+    "1920x1080": 1
+   },
+   "aspect_matches_viewport": 1
+  },
+  {
+   "fovx": 18.181,
+   "fovy": 10.286,
+   "aspect": 1.77778,
+   "zn": 5.0,
+   "zf": 3000.08,
+   "count": 1,
+   "viewports": {
+    "1920x1080": 1
+   },
+   "aspect_matches_viewport": 1
+  },
+  {
+   "fovx": 18.181,
+   "fovy": 13.686,
+   "aspect": 1.33333,
+   "zn": 5.0,
+   "zf": 5000.0,
+   "count": 1,
+   "viewports": {
+    "640x480": 1
+   },
+   "aspect_matches_viewport": 1
+  }
+ ],
+ "projections_logged": 1193,
+ "projections_nonstandard": 0,
+ "screen_space": {},
+ "projection_samples": [
+  {
+   "caller": "RenderD3D.dll+0x33DD",
+   "fovx": 45.0,
+   "fovy": 26.2,
+   "aspect": 1.7778,
+   "viewport": "1920x1080+0+0",
+   "windows": 4
+  },
+  {
+   "caller": "RenderD3D.dll+0xDBCE",
+   "fovx": 9.1,
+   "fovy": 14.0,
+   "aspect": 0.6484,
+   "viewport": "128x128+0+0",
+   "windows": 1
+  },
+  {
+   "caller": "RenderD3D.dll+0xDBCE",
+   "fovx": 9.1,
+   "fovy": 14.1,
+   "aspect": 0.642,
+   "viewport": "128x128+0+0",
+   "windows": 1
+  }
+ ],
+ "render_target_callers": [
+  "RenderD3D.dll+0xE951",
+  "RenderD3D.dll+0xD86A"
+ ],
+ "fps": {
+  "samples": 4,
+  "min": 255.1,
+  "max": 1278.0
+ }
+}

@@ -1,0 +1,8 @@
+# watch_values pid=29772 exe=E:\Steam\steamapps\common\Hitman 2 Silent Assassin\hitman2.exe sha256=f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136 start=2026-11-10T23:15:52.439946-03:00
+# chains: width=0x6A6C5C>+0x64, height=0x6A6C5C>+0x68
+[      1.4 ms] width=None height=None
+[   2534.4 ms] width=640 height=480  new modules: hitman2.exe, ntdll.dll, KERNEL32.DLL, KERNELBASE.dll, gameoverlayrenderer.dll, USER32.dll, win32u.dll, GDI32.dll, gdi32full.dll, msvcp_win.dll, ucrtbase.dll, ADVAPI32.dll, msvcrt.dll, sechost.dll, RPCRT4.dll, ole32.dll, combase.dll, OLEAUT32.dll, IMM32.dll, PSAPI.DLL, CFGMGR32.dll, WINMM.dll, shell32.DLL, DINPUT8.dll, inputhost.dll, CoreMessaging.dll, EAX.DLL, DSOUND.dll, winmmbase.dll, shcore.dll, ResampleDmo.DLL, powrprof.dll, msdmo.dll, UMPDC.dll, steam.dll, WS2_32.dll, bcryptPrimitives.dll, MSWSOCK.dll, bcrypt.dll, CRYPTBASE.DLL, kernel.appcore.dll, uxtheme.dll, MSCTF.dll
+[   2699.8 ms] width=1280 height=720  new modules: HID.DLL, SETUPAPI.DLL, DEVOBJ.dll, WINTRUST.dll, CRYPT32.dll, MSASN1.dll
+[   2755.2 ms] width=1280 height=1024  new modules: RenderD3D.dll, d3d8.dll, d3d8thk.dll, dwmapi.dll, dxcore.dll
+[  12552.7 ms] width=None height=None  new modules: textinputframework.dll, CoreUIComponents.dll, wintypes.dll, VERSION.dll, cryptnet.dll, wldp.dll, drvstore.dll, imagehlp.dll, CRYPTSP.dll, rsaenh.dll, windows.storage.dll, shlwapi.dll, nvspcap.dll, profapi.dll, gpapi.dll, nvppe.dll, clbcatq.dll, MMDevApi.dll, AUDIOSES.DLL, Windows.UI.dll, resourcepolicyclient.dll, IPHLPAPI.DLL, WINNSI.DLL, NSI.dll, mscms.dll, Windows.Internal.Graphics.Display.DisplayColorManagement.dll
+# process exited

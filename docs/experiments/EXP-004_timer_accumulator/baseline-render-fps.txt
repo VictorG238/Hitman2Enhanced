@@ -1,0 +1,13 @@
+[    5656 ms] Present: 9815 frames in 5.00s = 1963.0 fps (total 9815); projection calls 19156; viewport now 19
+[   10656 ms] Present: 7228 frames in 5.00s = 1445.6 fps (total 17043); projection calls 31155; viewport now 1
+[   15656 ms] Present: 2517 frames in 5.00s = 503.4 fps (total 19560); projection calls 12585; viewport now 19
+[   23328 ms] Present: 1842 frames in 7.67s = 240.1 fps (total 21402); projection calls 9542; viewport now 192
+[   34015 ms] Present: 896 frames in 10.69s = 83.8 fps (total 22298); projection calls 6272; viewport now 1920
+[   46375 ms] Present: 243 frames in 12.36s = 19.7 fps (total 22541); projection calls 1315; viewport now 1920
+[   51375 ms] Present: 150 frames in 5.00s = 30.0 fps (total 22691); projection calls 768; viewport now 1920x1
+[   56375 ms] Present: 150 frames in 5.00s = 30.0 fps (total 22841); projection calls 750; viewport now 1920x1
+[   64265 ms] Present: 89 frames in 7.89s = 11.3 fps (total 22930); projection calls 469; viewport now 1920x10
+[   69265 ms] Present: 719 frames in 5.00s = 143.8 fps (total 23649); projection calls 3719; viewport now 1920
+[   74265 ms] Present: 720 frames in 5.00s = 144.0 fps (total 24369); projection calls 3600; viewport now 1920
+[   79265 ms] Present: 721 frames in 5.00s = 144.2 fps (total 25090); projection calls 3605; viewport now 1920
+[   85703 ms] Present: 538 frames in 6.44s = 83.6 fps (total 25628); projection calls 3023; viewport now 1920x

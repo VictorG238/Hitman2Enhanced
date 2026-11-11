@@ -1,0 +1,854 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\xmlparse.dll",
+  "file_name": "xmlparse.dll",
+  "file_size": 131072,
+  "sha256": "d48c3494dc1f1f876c363225ece3927513f8980addbdee82f261fbd27cf7ffb9",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 4,
+    "timestamp": 1034856671,
+    "timestamp_utc": "2002-10-17T12:11:11Z",
+    "characteristics": 8462,
+    "flags": [
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE",
+      "DLL"
+    ]
+  },
+  "optional": {
+    "linker_version": "6.0",
+    "size_of_code": 94208,
+    "size_of_initialized_data": 32768,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 83501,
+    "entry_point_va": 268518957,
+    "base_of_code": 4096,
+    "base_of_data": 98304,
+    "image_base": 268435456,
+    "section_alignment": 4096,
+    "file_alignment": 4096,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 131072,
+    "size_of_headers": 4096,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 0,
+    "computed": 131421,
+    "matches": null
+  },
+  "data_directories": [
+    {
+      "index": 0,
+      "name": "EXPORT",
+      "rva": 107520,
+      "size": 2064
+    },
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 106676,
+      "size": 40
+    },
+    {
+      "index": 5,
+      "name": "BASERELOC",
+      "rva": 122880,
+      "size": 5388
+    },
+    {
+      "index": 12,
+      "name": "IAT",
+      "rva": 98304,
+      "size": 152
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 92494,
+      "raw_pointer": 4096,
+      "raw_size": 94208,
+      "characteristics": 1610612768,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ"
+      ],
+      "entropy": 6.4454
+    },
+    {
+      "name": ".rdata",
+      "virtual_address": 98304,
+      "virtual_size": 11280,
+      "raw_pointer": 98304,
+      "raw_size": 12288,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 5.0244
+    },
+    {
+      "name": ".data",
+      "virtual_address": 110592,
+      "virtual_size": 11844,
+      "raw_pointer": 110592,
+      "raw_size": 12288,
+      "characteristics": 3221225536,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 1.2472
+    },
+    {
+      "name": ".reloc",
+      "virtual_address": 122880,
+      "virtual_size": 5628,
+      "raw_pointer": 122880,
+      "raw_size": 8192,
+      "characteristics": 1107296320,
+      "flags": [
+        "INITIALIZED_DATA",
+        "DISCARDABLE",
+        "READ"
+      ],
+      "entropy": 5.0533
+    }
+  ],
+  "overlay": null,
+  "rich_header": {
+    "offset": 128,
+    "key": "0xdb9004cc",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 11,
+        "build": 8047,
+        "count": 1
+      },
+      {
+        "prod_id": 10,
+        "build": 8047,
+        "count": 24
+      },
+      {
+        "prod_id": 14,
+        "build": 7299,
+        "count": 12
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 38
+      },
+      {
+        "prod_id": 19,
+        "build": 8034,
+        "count": 3
+      },
+      {
+        "prod_id": 48,
+        "build": 9044,
+        "count": 3
+      },
+      {
+        "prod_id": 4,
+        "build": 8447,
+        "count": 1
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 98304,
+          "iat_va": 268533760,
+          "hint": 277,
+          "name": "GetFileType"
+        },
+        {
+          "iat_rva": 98308,
+          "iat_va": 268533764,
+          "hint": 418,
+          "name": "HeapReAlloc"
+        },
+        {
+          "iat_rva": 98312,
+          "iat_va": 268533768,
+          "hint": 409,
+          "name": "HeapAlloc"
+        },
+        {
+          "iat_rva": 98316,
+          "iat_va": 268533772,
+          "hint": 202,
+          "name": "GetCommandLineA"
+        },
+        {
+          "iat_rva": 98320,
+          "iat_va": 268533776,
+          "hint": 372,
+          "name": "GetVersion"
+        },
+        {
+          "iat_rva": 98324,
+          "iat_va": 268533780,
+          "hint": 294,
+          "name": "GetModuleHandleA"
+        },
+        {
+          "iat_rva": 98328,
+          "iat_va": 268533784,
+          "hint": 292,
+          "name": "GetModuleFileNameA"
+        },
+        {
+          "iat_rva": 98332,
+          "iat_va": 268533788,
+          "hint": 265,
+          "name": "GetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 98336,
+          "iat_va": 268533792,
+          "hint": 373,
+          "name": "GetVersionExA"
+        },
+        {
+          "iat_rva": 98340,
+          "iat_va": 268533796,
+          "hint": 413,
+          "name": "HeapDestroy"
+        },
+        {
+          "iat_rva": 98344,
+          "iat_va": 268533800,
+          "hint": 411,
+          "name": "HeapCreate"
+        },
+        {
+          "iat_rva": 98348,
+          "iat_va": 268533804,
+          "hint": 703,
+          "name": "VirtualFree"
+        },
+        {
+          "iat_rva": 98352,
+          "iat_va": 268533808,
+          "hint": 699,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 98356,
+          "iat_va": 268533812,
+          "hint": 125,
+          "name": "ExitProcess"
+        },
+        {
+          "iat_rva": 98360,
+          "iat_va": 268533816,
+          "hint": 670,
+          "name": "TerminateProcess"
+        },
+        {
+          "iat_rva": 98364,
+          "iat_va": 268533820,
+          "hint": 247,
+          "name": "GetCurrentProcess"
+        },
+        {
+          "iat_rva": 98368,
+          "iat_va": 268533824,
+          "hint": 621,
+          "name": "SetHandleCount"
+        },
+        {
+          "iat_rva": 98372,
+          "iat_va": 268533828,
+          "hint": 338,
+          "name": "GetStdHandle"
+        },
+        {
+          "iat_rva": 98376,
+          "iat_va": 268533832,
+          "hint": 415,
+          "name": "HeapFree"
+        },
+        {
+          "iat_rva": 98380,
+          "iat_va": 268533836,
+          "hint": 336,
+          "name": "GetStartupInfoA"
+        },
+        {
+          "iat_rva": 98384,
+          "iat_va": 268533840,
+          "hint": 178,
+          "name": "FreeEnvironmentStringsA"
+        },
+        {
+          "iat_rva": 98388,
+          "iat_va": 268533844,
+          "hint": 179,
+          "name": "FreeEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 98392,
+          "iat_va": 268533848,
+          "hint": 722,
+          "name": "WideCharToMultiByte"
+        },
+        {
+          "iat_rva": 98396,
+          "iat_va": 268533852,
+          "hint": 262,
+          "name": "GetEnvironmentStrings"
+        },
+        {
+          "iat_rva": 98400,
+          "iat_va": 268533856,
+          "hint": 264,
+          "name": "GetEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 98404,
+          "iat_va": 268533860,
+          "hint": 735,
+          "name": "WriteFile"
+        },
+        {
+          "iat_rva": 98408,
+          "iat_va": 268533864,
+          "hint": 191,
+          "name": "GetCPInfo"
+        },
+        {
+          "iat_rva": 98412,
+          "iat_va": 268533868,
+          "hint": 185,
+          "name": "GetACP"
+        },
+        {
+          "iat_rva": 98416,
+          "iat_va": 268533872,
+          "hint": 305,
+          "name": "GetOEMCP"
+        },
+        {
+          "iat_rva": 98420,
+          "iat_va": 268533876,
+          "hint": 318,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 98424,
+          "iat_va": 268533880,
+          "hint": 450,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 98428,
+          "iat_va": 268533884,
+          "hint": 484,
+          "name": "MultiByteToWideChar"
+        },
+        {
+          "iat_rva": 98432,
+          "iat_va": 268533888,
+          "hint": 447,
+          "name": "LCMapStringA"
+        },
+        {
+          "iat_rva": 98436,
+          "iat_va": 268533892,
+          "hint": 448,
+          "name": "LCMapStringW"
+        },
+        {
+          "iat_rva": 98440,
+          "iat_va": 268533896,
+          "hint": 339,
+          "name": "GetStringTypeA"
+        },
+        {
+          "iat_rva": 98444,
+          "iat_va": 268533900,
+          "hint": 342,
+          "name": "GetStringTypeW"
+        },
+        {
+          "iat_rva": 98448,
+          "iat_va": 268533904,
+          "hint": 559,
+          "name": "RtlUnwind"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": {
+    "dll_name": "xmlparse.dll",
+    "timestamp": 1034856671,
+    "timestamp_utc": "2002-10-17T12:11:11Z",
+    "version": "0.0",
+    "ordinal_base": 1,
+    "functions": [
+      {
+        "ordinal": 1,
+        "names": [
+          "@XML_ErrorString@4"
+        ],
+        "rva": 7424,
+        "va": 268442880
+      },
+      {
+        "ordinal": 2,
+        "names": [
+          "@XML_ExpatVersion@0"
+        ],
+        "rva": 7456,
+        "va": 268442912
+      },
+      {
+        "ordinal": 3,
+        "names": [
+          "@XML_ExpatVersionInfo@0"
+        ],
+        "rva": 7472,
+        "va": 268442928
+      },
+      {
+        "ordinal": 4,
+        "names": [
+          "@XML_ExternalEntityParserCreate@12"
+        ],
+        "rva": 4944,
+        "va": 268440400
+      },
+      {
+        "ordinal": 5,
+        "names": [
+          "@XML_GetBase@4"
+        ],
+        "rva": 6032,
+        "va": 268441488
+      },
+      {
+        "ordinal": 6,
+        "names": [
+          "@XML_GetBuffer@8"
+        ],
+        "rva": 6832,
+        "va": 268442288
+      },
+      {
+        "ordinal": 7,
+        "names": [
+          "@XML_GetCurrentByteCount@4"
+        ],
+        "rva": 7200,
+        "va": 268442656
+      },
+      {
+        "ordinal": 8,
+        "names": [
+          "@XML_GetCurrentByteIndex@4"
+        ],
+        "rva": 7168,
+        "va": 268442624
+      },
+      {
+        "ordinal": 9,
+        "names": [
+          "@XML_GetCurrentColumnNumber@4"
+        ],
+        "rva": 7360,
+        "va": 268442816
+      },
+      {
+        "ordinal": 10,
+        "names": [
+          "@XML_GetCurrentLineNumber@4"
+        ],
+        "rva": 7296,
+        "va": 268442752
+      },
+      {
+        "ordinal": 11,
+        "names": [
+          "@XML_GetErrorCode@4"
+        ],
+        "rva": 7152,
+        "va": 268442608
+      },
+      {
+        "ordinal": 12,
+        "names": [
+          "@XML_GetIdAttributeIndex@4"
+        ],
+        "rva": 6064,
+        "va": 268441520
+      },
+      {
+        "ordinal": 13,
+        "names": [
+          "@XML_GetInputContext@12"
+        ],
+        "rva": 7232,
+        "va": 268442688
+      },
+      {
+        "ordinal": 14,
+        "names": [
+          "@XML_GetSpecifiedAttributeCount@4"
+        ],
+        "rva": 6048,
+        "va": 268441504
+      },
+      {
+        "ordinal": 15,
+        "names": [
+          "@XML_Parse@16"
+        ],
+        "rva": 6528,
+        "va": 268441984
+      },
+      {
+        "ordinal": 16,
+        "names": [
+          "@XML_ParseBuffer@12"
+        ],
+        "rva": 6688,
+        "va": 268442144
+      },
+      {
+        "ordinal": 17,
+        "names": [
+          "@XML_ParserCreate2@16"
+        ],
+        "rva": 4112,
+        "va": 268439568
+      },
+      {
+        "ordinal": 18,
+        "names": [
+          "@XML_ParserCreate@4"
+        ],
+        "rva": 4160,
+        "va": 268439616
+      },
+      {
+        "ordinal": 19,
+        "names": [
+          "@XML_ParserCreateNS@8"
+        ],
+        "rva": 4176,
+        "va": 268439632
+      },
+      {
+        "ordinal": 20,
+        "names": [
+          "@XML_ParserCreate_MM@12"
+        ],
+        "rva": 4208,
+        "va": 268439664
+      },
+      {
+        "ordinal": 21,
+        "names": [
+          "@XML_ParserFree@4"
+        ],
+        "rva": 5568,
+        "va": 268441024
+      },
+      {
+        "ordinal": 22,
+        "names": [
+          "@XML_SetAttlistDeclHandler@8"
+        ],
+        "rva": 6464,
+        "va": 268441920
+      },
+      {
+        "ordinal": 23,
+        "names": [
+          "@XML_SetBase@8"
+        ],
+        "rva": 5968,
+        "va": 268441424
+      },
+      {
+        "ordinal": 24,
+        "names": [
+          "@XML_SetCdataSectionHandler@12"
+        ],
+        "rva": 6176,
+        "va": 268441632
+      },
+      {
+        "ordinal": 25,
+        "names": [
+          "@XML_SetCharacterDataHandler@8"
+        ],
+        "rva": 6128,
+        "va": 268441584
+      },
+      {
+        "ordinal": 26,
+        "names": [
+          "@XML_SetCommentHandler@8"
+        ],
+        "rva": 6160,
+        "va": 268441616
+      },
+      {
+        "ordinal": 27,
+        "names": [
+          "@XML_SetDefaultHandler@8"
+        ],
+        "rva": 6224,
+        "va": 268441680
+      },
+      {
+        "ordinal": 28,
+        "names": [
+          "@XML_SetDefaultHandlerExpand@8"
+        ],
+        "rva": 6240,
+        "va": 268441696
+      },
+      {
+        "ordinal": 29,
+        "names": [
+          "@XML_SetDoctypeDeclHandler@12"
+        ],
+        "rva": 6256,
+        "va": 268441712
+      },
+      {
+        "ordinal": 30,
+        "names": [
+          "@XML_SetElementDeclHandler@8"
+        ],
+        "rva": 6448,
+        "va": 268441904
+      },
+      {
+        "ordinal": 31,
+        "names": [
+          "@XML_SetElementHandler@12"
+        ],
+        "rva": 6080,
+        "va": 268441536
+      },
+      {
+        "ordinal": 32,
+        "names": [
+          "@XML_SetEncoding@8"
+        ],
+        "rva": 4896,
+        "va": 268440352
+      },
+      {
+        "ordinal": 33,
+        "names": [
+          "@XML_SetEndCdataSectionHandler@8"
+        ],
+        "rva": 6208,
+        "va": 268441664
+      },
+      {
+        "ordinal": 34,
+        "names": [
+          "@XML_SetEndDoctypeDeclHandler@8"
+        ],
+        "rva": 6288,
+        "va": 268441744
+      },
+      {
+        "ordinal": 35,
+        "names": [
+          "@XML_SetEndElementHandler@8"
+        ],
+        "rva": 6112,
+        "va": 268441568
+      },
+      {
+        "ordinal": 36,
+        "names": [
+          "@XML_SetEndNamespaceDeclHandler@8"
+        ],
+        "rva": 6368,
+        "va": 268441824
+      },
+      {
+        "ordinal": 37,
+        "names": [
+          "@XML_SetEntityDeclHandler@8"
+        ],
+        "rva": 6480,
+        "va": 268441936
+      },
+      {
+        "ordinal": 38,
+        "names": [
+          "@XML_SetExternalEntityRefHandler@8"
+        ],
+        "rva": 6400,
+        "va": 268441856
+      },
+      {
+        "ordinal": 39,
+        "names": [
+          "@XML_SetExternalEntityRefHandlerArg@8"
+        ],
+        "rva": 6416,
+        "va": 268441872
+      },
+      {
+        "ordinal": 40,
+        "names": [
+          "@XML_SetNamespaceDeclHandler@12"
+        ],
+        "rva": 6336,
+        "va": 268441792
+      },
+      {
+        "ordinal": 41,
+        "names": [
+          "@XML_SetNotStandaloneHandler@8"
+        ],
+        "rva": 6384,
+        "va": 268441840
+      },
+      {
+        "ordinal": 42,
+        "names": [
+          "@XML_SetNotationDeclHandler@8"
+        ],
+        "rva": 6320,
+        "va": 268441776
+      },
+      {
+        "ordinal": 43,
+        "names": [
+          "@XML_SetParamEntityParsing@8"
+        ],
+        "rva": 6512,
+        "va": 268441968
+      },
+      {
+        "ordinal": 44,
+        "names": [
+          "@XML_SetProcessingInstructionHandler@8"
+        ],
+        "rva": 6144,
+        "va": 268441600
+      },
+      {
+        "ordinal": 45,
+        "names": [
+          "@XML_SetReturnNSTriplet@8"
+        ],
+        "rva": 5936,
+        "va": 268441392
+      },
+      {
+        "ordinal": 46,
+        "names": [
+          "@XML_SetStartCdataSectionHandler@8"
+        ],
+        "rva": 6192,
+        "va": 268441648
+      },
+      {
+        "ordinal": 47,
+        "names": [
+          "@XML_SetStartDoctypeDeclHandler@8"
+        ],
+        "rva": 6272,
+        "va": 268441728
+      },
+      {
+        "ordinal": 48,
+        "names": [
+          "@XML_SetStartElementHandler@8"
+        ],
+        "rva": 6096,
+        "va": 268441552
+      },
+      {
+        "ordinal": 49,
+        "names": [
+          "@XML_SetStartNamespaceDeclHandler@8"
+        ],
+        "rva": 6352,
+        "va": 268441808
+      },
+      {
+        "ordinal": 50,
+        "names": [
+          "@XML_SetUnknownEncodingHandler@12"
+        ],
+        "rva": 6432,
+        "va": 268441888
+      },
+      {
+        "ordinal": 51,
+        "names": [
+          "@XML_SetUnparsedEntityDeclHandler@8"
+        ],
+        "rva": 6304,
+        "va": 268441760
+      },
+      {
+        "ordinal": 52,
+        "names": [
+          "@XML_SetUserData@8"
+        ],
+        "rva": 5952,
+        "va": 268441408
+      },
+      {
+        "ordinal": 53,
+        "names": [
+          "@XML_SetXmlDeclHandler@8"
+        ],
+        "rva": 6496,
+        "va": 268441952
+      },
+      {
+        "ordinal": 54,
+        "names": [
+          "@XML_UseParserAsHandlerArg@4"
+        ],
+        "rva": 5920,
+        "va": 268441376
+      }
+    ]
+  },
+  "resources": [],
+  "version_info": null,
+  "debug": [],
+  "warnings": []
+}

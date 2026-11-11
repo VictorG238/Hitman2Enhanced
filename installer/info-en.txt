@@ -1,0 +1,48 @@
+﻿HITMAN 2 ENHANCED - WHAT THIS INSTALLER DOES
+=============================================
+
+Unofficial, open-source fixes for Hitman 2: Silent Assassin (Steam version 1.0.0.277).
+Author: Aquiles / Victor Baeza - https://github.com/VictorG238
+
+WHAT GETS FIXED (you can switch each one on or off on the next page)
+--------------------------------------------------------------------
+* Resolution - fullscreen keeps any resolution (1920x1080, 2560x1440, ...).
+  The original game forces old 4:3/5:4 modes or fails to start above 1600 pixels wide.
+
+* Menu scaling - the main menu, briefing and pause menu fill the screen instead of
+  a small 640x480 box in the middle. The mouse cursor stays inside the menu.
+
+* Frame-rate limit - caps the frame rate at your monitor's refresh rate. Above
+  about 1024 FPS the game breaks (frozen game, broken running animation,
+  cutscenes out of sync).
+
+* Game clock - the game's clock runs at the correct speed at any frame rate
+  (originally it ran up to 1.6 % slow at 144 FPS and stopped at very high FPS).
+
+* Settings page (F10) - an in-game page to choose resolution, display mode,
+  field of view and frame-rate limit, with a help text for every option.
+
+* HD fonts - sharp menu and briefing text. The installer re-renders the game's
+  font pages at 4x from the font inside YOUR game files (takes about 1 minute).
+  Nothing from the game is downloaded or shipped with this installer.
+
+HOW IT WORKS - AND WHAT IT DOES NOT TOUCH
+-----------------------------------------
+* No game file is modified. The fixes run in memory while the game runs, through
+  a d3d8.dll placed next to hitman2.exe (Direct3D 8 proxy).
+* Before changing anything in memory, every fix checks the exact game version
+  (SHA-256). On another version it does nothing.
+* It does not touch Steam or the game's copy protection.
+* Files added to the game folder: d3d8.dll, h2e.ini (settings), h2e_hdfonts.bin
+  (HD fonts, if chosen), and the folder "Hitman 2 Enhanced" (uninstaller, readme,
+  license, font builder). While playing it also writes h2e.log and
+  h2e_settings.ini. The F10 page writes your resolution/display mode choice into
+  Hitman2.ini, the game's own settings file.
+
+UNINSTALL
+---------
+Windows Settings > Apps > Installed apps > Hitman 2 Enhanced. All files listed
+above are removed; the game is back to its original state.
+
+Source code, documentation and the evidence behind every fix (MIT license):
+https://github.com/VictorG238/Hitman2Enhanced

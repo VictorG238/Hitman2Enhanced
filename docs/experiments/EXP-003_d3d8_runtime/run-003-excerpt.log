@@ -1,0 +1,72 @@
+[       0 ms] === h2e d3d8_logger 0.3.0 attached, process 6840 (E:\Steam\steamapps\common\Hitman 2 Silent Assassin\hitman2.exe) ===
+[     469 ms] Direct3DCreate8(SDKVersion=120) -> 03F98F48 caller=RenderD3D.dll+0x19F1 (va 0x077719F1, base 0x07770000)
+[     469 ms] GetAdapterDisplayMode(adapter=0) -> 1920x1080 @144Hz fmt=22(X8R8G8B8)
+[     469 ms] CreateDevice adapter=0 devType=1 hFocusWindow=00550768 BehaviorFlags=0x00000040 caller=RenderD3D.dll+0x1DB6 (va 0x07771DB6, base 0x07770000)
+[     469 ms] CreateDevice (in)  BackBuffer=1920x117156004 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[     469 ms]   window 00550768 rect=(0,0)-(1920,32767) client=1920x32767 style=0x96000000
+[     656 ms] CreateDevice -> hr=0x8876086C device=00000000
+[     656 ms] CreateDevice (out) BackBuffer=1920x117156004 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[    5859 ms] === detach: 0 frames presented, 0 projection SetTransform calls ===
+[       0 ms] === h2e d3d8_logger 0.3.0 attached, process 14832 (E:\Steam\steamapps\common\Hitman 2 Silent Assassin\hitman2.exe) ===
+[     469 ms] Direct3DCreate8(SDKVersion=120) -> 03E89470 caller=RenderD3D.dll+0x19F1 (va 0x079219F1, base 0x07920000)
+[     469 ms] GetAdapterDisplayMode(adapter=0) -> 1920x1080 @144Hz fmt=22(X8R8G8B8)
+[     469 ms] CreateDevice adapter=0 devType=1 hFocusWindow=00100DB6 BehaviorFlags=0x00000040 caller=RenderD3D.dll+0x1DB6 (va 0x07921DB6, base 0x07920000)
+[     469 ms] CreateDevice (in)  BackBuffer=1280x1024 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[     469 ms]   window 00100DB6 rect=(0,0)-(1280,1024) client=1280x1024 style=0x96000000
+[    1141 ms] CreateDevice -> hr=0x00000000 device=0BFC7B18
+[    1141 ms] CreateDevice (out) BackBuffer=1280x1024 fmt=22(X8R8G8B8) count=1 MultiSample=0 SwapEffect=1 hDeviceWindow=00000000 Windowed=0 AutoDepthStencil=1 DepthFmt=77(D24X8) Flags=0x0 RefreshHz=0 PresentInterval=0x1
+[    1141 ms]   window 00100DB6 rect=(0,0)-(1280,1024) client=1280x1024 style=0x16000000
+[    3297 ms] SetViewport x=0 y=0 w=1280 h=1024 minZ=0.000 maxZ=1.000 aspect(w/h)=1.25000 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[    3297 ms] SetTransform(PROJECTION) #1 caller=RenderD3D.dll+0x33DD (va 0x079233DD, base 0x07920000)
+[    3297 ms]   active viewport x=0 y=0 w=1280 h=1024 aspect(w/h)=1.25000
+[    3297 ms]   [ 1.000000  0.000000  0.000000  0.000000]
+[    3297 ms] SetViewport x=0 y=0 w=1280 h=1024 minZ=0.000 maxZ=1.000 aspect(w/h)=1.25000 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[    5875 ms] SetViewport x=351 y=323 w=310 h=156 minZ=0.000 maxZ=1.000 aspect(w/h)=1.98718 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[    9141 ms] SetViewport x=0 y=138 w=1280 h=750 minZ=0.000 maxZ=1.000 aspect(w/h)=1.70667 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[    9141 ms] SetViewport x=0 y=888 w=1280 h=136 minZ=0.000 maxZ=1.000 aspect(w/h)=9.41176 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[    9141 ms] SetViewport x=0 y=0 w=1280 h=138 minZ=0.000 maxZ=1.000 aspect(w/h)=9.27536 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[   47719 ms] SetViewport x=0 y=0 w=128 h=128 minZ=0.000 maxZ=0.000 aspect(w/h)=1.00000 caller=RenderD3D.dll+0xD8C2 (va 0x0792D8C2, base 0x07920000)
+[   84813 ms] SetViewport x=96 y=175 w=1088 h=675 minZ=0.000 maxZ=1.000 aspect(w/h)=1.61185 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[  130172 ms] SetViewport x=320 y=272 w=640 h=480 minZ=0.000 maxZ=1.000 aspect(w/h)=1.33333 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[    3344 ms]   active viewport x=0 y=0 w=1280 h=1024 aspect(w/h)=1.25000
+[    3344 ms]   [ 2.414214  0.000000  0.000000  0.000000]
+[    3344 ms]   [ 0.000000  3.017767  0.000000  0.000000]
+[    3344 ms]   [ 0.000000  0.000000  1.001669  1.000000]
+[    3344 ms]   [ 0.000000  0.000000 -5.008347  0.000000]
+[    3344 ms]   as LH perspective: fovY=36.667 deg fovX=45.000 deg aspect(x/y)=1.25000 zn=5.0000 zf=3000.08 offcenter=(0.0000,0.0000)
+[    5875 ms] SetViewport x=351 y=323 w=310 h=156 minZ=0.000 maxZ=1.000 aspect(w/h)=1.98718 caller=RenderD3D.dll+0x3322 (va 0x07923322, base 0x07920000)
+[    5875 ms] SetTransform(PROJECTION) #12675 caller=RenderD3D.dll+0x33DD (va 0x079233DD, base 0x07920000)
+[    5875 ms]   active viewport x=351 y=323 w=310 h=156 aspect(w/h)=1.98718
+[    5875 ms]   [ 2.414214  0.000000  0.000000  0.000000]
+[    5875 ms]   [ 0.000000  4.797476  0.000000  0.000000]
+[    5875 ms]   [ 0.000000  0.000000  1.001669  1.000000]
+[    5875 ms]   [ 0.000000  0.000000 -5.008347  0.000000]
+[    5875 ms]   as LH perspective: fovY=23.549 deg fovX=45.000 deg aspect(x/y)=1.98718 zn=5.0000 zf=3000.08 offcenter=(0.0000,0.0000)
+[    6188 ms] Present: 6758 frames in 5.00s = 1351.6 fps (total 6758); projection calls 13894; viewport now 1280x1024+0+0; distinct proj=3 vp=2
+[    5859 ms] === detach: 0 frames presented, 0 projection SetTransform calls ===
+[    6188 ms] Present: 6758 frames in 5.00s = 1351.6 fps (total 6758); projection calls 13894; viewport now 1280x1024+0+0; distinct proj=3 vp=2
+[   11188 ms] Present: 5433 frames in 5.00s = 1086.6 fps (total 12191); projection calls 19813; viewport now 1280x1024+0+0; distinct proj=7 vp=5
+[   16188 ms] Present: 3070 frames in 5.00s = 614.0 fps (total 15261); projection calls 12280; viewport now 1280x1024+0+0; distinct proj=7 vp=5
+[   21188 ms] Present: 2520 frames in 5.00s = 504.0 fps (total 17781); projection calls 10080; viewport now 1280x1024+0+0; distinct proj=1500 vp=5
+[   26188 ms] Present: 2124 frames in 5.00s = 424.8 fps (total 19905); projection calls 8496; viewport now 1280x1024+0+0; distinct proj=1500 vp=5
+[   31188 ms] Present: 2056 frames in 5.00s = 411.2 fps (total 21961); projection calls 8224; viewport now 1280x1024+0+0; distinct proj=1500 vp=5
+[   36188 ms] Present: 1891 frames in 5.00s = 378.2 fps (total 23852); projection calls 7564; viewport now 1280x1024+0+0; distinct proj=1500 vp=5
+[   41188 ms] Present: 2480 frames in 5.00s = 496.0 fps (total 26332); projection calls 9920; viewport now 1280x1024+0+0; distinct proj=1500 vp=5
+[   46188 ms] Present: 2296 frames in 5.00s = 459.2 fps (total 28628); projection calls 9184; viewport now 1280x1024+0+0; distinct proj=1500 vp=5
+[   51188 ms] Present: 1997 frames in 5.00s = 399.4 fps (total 30625); projection calls 9233; viewport now 1280x1024+0+0; distinct proj=2745 vp=6
+[   56188 ms] Present: 2096 frames in 5.00s = 419.2 fps (total 32721); projection calls 8384; viewport now 1280x1024+0+0; distinct proj=2745 vp=6
+[   61188 ms] Present: 2604 frames in 5.00s = 520.8 fps (total 35325); projection calls 10733; viewport now 1280x1024+0+0; distinct proj=2745 vp=6
+[   66188 ms] Present: 2948 frames in 5.00s = 589.6 fps (total 38273); projection calls 12795; viewport now 1280x1024+0+0; distinct proj=2745 vp=6
+[   71188 ms] Present: 2236 frames in 5.00s = 447.2 fps (total 40509); projection calls 9165; viewport now 1280x1024+0+0; distinct proj=2966 vp=6
+[   76188 ms] Present: 2065 frames in 5.00s = 413.0 fps (total 42574); projection calls 9811; viewport now 1280x1024+0+0; distinct proj=3000 vp=6
+[   81188 ms] Present: 4869 frames in 5.00s = 973.8 fps (total 47443); projection calls 15083; viewport now 1280x1024+0+0; distinct proj=3000 vp=6
+[   86188 ms] Present: 4951 frames in 5.00s = 990.2 fps (total 52394); projection calls 17610; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[   91188 ms] Present: 5964 frames in 5.00s = 1192.8 fps (total 58358); projection calls 19336; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[   96188 ms] Present: 2456 frames in 5.00s = 491.2 fps (total 60814); projection calls 10218; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[  101188 ms] Present: 2183 frames in 5.00s = 436.6 fps (total 62997); projection calls 8732; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[  106188 ms] Present: 1959 frames in 5.00s = 391.8 fps (total 64956); projection calls 7836; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[  111188 ms] Present: 2031 frames in 5.00s = 406.2 fps (total 66987); projection calls 8124; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[  116188 ms] Present: 2465 frames in 5.00s = 493.0 fps (total 69452); projection calls 9860; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[  121188 ms] Present: 2232 frames in 5.00s = 446.4 fps (total 71684); projection calls 8928; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[  126188 ms] Present: 1917 frames in 5.00s = 383.4 fps (total 73601); projection calls 7688; viewport now 1280x1024+0+0; distinct proj=3000 vp=7
+[  131422 ms] === detach: 77757 frames presented, 291458 projection SetTransform calls ===

@@ -1,0 +1,739 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\eax.dll",
+  "file_name": "eax.dll",
+  "file_size": 135168,
+  "sha256": "e56ee2d67bfeebbbcaa154b61e0ef248b0a25d6a1e65450f0ed86231d1768e1c",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 5,
+    "timestamp": 1008103943,
+    "timestamp_utc": "2001-12-11T20:52:23Z",
+    "characteristics": 8462,
+    "flags": [
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE",
+      "DLL"
+    ]
+  },
+  "optional": {
+    "linker_version": "6.0",
+    "size_of_code": 90112,
+    "size_of_initialized_data": 40960,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 58875,
+    "entry_point_va": 268494331,
+    "base_of_code": 4096,
+    "base_of_data": 94208,
+    "image_base": 268435456,
+    "section_alignment": 4096,
+    "file_alignment": 4096,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 135168,
+    "size_of_headers": 4096,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 0,
+    "computed": 192829,
+    "matches": null
+  },
+  "data_directories": [
+    {
+      "index": 0,
+      "name": "EXPORT",
+      "rva": 100640,
+      "size": 251
+    },
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 99012,
+      "size": 100
+    },
+    {
+      "index": 2,
+      "name": "RESOURCE",
+      "rva": 122880,
+      "size": 936
+    },
+    {
+      "index": 5,
+      "name": "BASERELOC",
+      "rva": 126976,
+      "size": 3728
+    },
+    {
+      "index": 12,
+      "name": "IAT",
+      "rva": 94208,
+      "size": 284
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 87541,
+      "raw_pointer": 4096,
+      "raw_size": 90112,
+      "characteristics": 1610612768,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ"
+      ],
+      "entropy": 6.4278
+    },
+    {
+      "name": ".rdata",
+      "virtual_address": 94208,
+      "virtual_size": 6683,
+      "raw_pointer": 94208,
+      "raw_size": 8192,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 5.4094
+    },
+    {
+      "name": ".data",
+      "virtual_address": 102400,
+      "virtual_size": 18244,
+      "raw_pointer": 102400,
+      "raw_size": 20480,
+      "characteristics": 3221225536,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 1.8914
+    },
+    {
+      "name": ".rsrc",
+      "virtual_address": 122880,
+      "virtual_size": 936,
+      "raw_pointer": 122880,
+      "raw_size": 4096,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 0.9743
+    },
+    {
+      "name": ".reloc",
+      "virtual_address": 126976,
+      "virtual_size": 5710,
+      "raw_pointer": 126976,
+      "raw_size": 8192,
+      "characteristics": 1107296320,
+      "flags": [
+        "INITIALIZED_DATA",
+        "DISCARDABLE",
+        "READ"
+      ],
+      "entropy": 3.859
+    }
+  ],
+  "overlay": null,
+  "rich_header": {
+    "offset": 128,
+    "key": "0x60bd39bd",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 11,
+        "build": 8047,
+        "count": 8
+      },
+      {
+        "prod_id": 14,
+        "build": 7299,
+        "count": 28
+      },
+      {
+        "prod_id": 10,
+        "build": 8047,
+        "count": 85
+      },
+      {
+        "prod_id": 0,
+        "build": 0,
+        "count": 2
+      },
+      {
+        "prod_id": 19,
+        "build": 8034,
+        "count": 9
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 82
+      },
+      {
+        "prod_id": 49,
+        "build": 9044,
+        "count": 11
+      },
+      {
+        "prod_id": 6,
+        "build": 1735,
+        "count": 1
+      },
+      {
+        "prod_id": 4,
+        "build": 8447,
+        "count": 1
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 94236,
+          "iat_va": 268529692,
+          "hint": 429,
+          "name": "InterlockedDecrement"
+        },
+        {
+          "iat_rva": 94240,
+          "iat_va": 268529696,
+          "hint": 292,
+          "name": "GetModuleFileNameA"
+        },
+        {
+          "iat_rva": 94244,
+          "iat_va": 268529700,
+          "hint": 670,
+          "name": "TerminateProcess"
+        },
+        {
+          "iat_rva": 94248,
+          "iat_va": 268529704,
+          "hint": 336,
+          "name": "GetStartupInfoA"
+        },
+        {
+          "iat_rva": 94252,
+          "iat_va": 268529708,
+          "hint": 178,
+          "name": "FreeEnvironmentStringsA"
+        },
+        {
+          "iat_rva": 94256,
+          "iat_va": 268529712,
+          "hint": 338,
+          "name": "GetStdHandle"
+        },
+        {
+          "iat_rva": 94260,
+          "iat_va": 268529716,
+          "hint": 559,
+          "name": "RtlUnwind"
+        },
+        {
+          "iat_rva": 94264,
+          "iat_va": 268529720,
+          "hint": 282,
+          "name": "GetLastError"
+        },
+        {
+          "iat_rva": 94268,
+          "iat_va": 268529724,
+          "hint": 722,
+          "name": "WideCharToMultiByte"
+        },
+        {
+          "iat_rva": 94272,
+          "iat_va": 268529728,
+          "hint": 202,
+          "name": "GetCommandLineA"
+        },
+        {
+          "iat_rva": 94276,
+          "iat_va": 268529732,
+          "hint": 372,
+          "name": "GetVersion"
+        },
+        {
+          "iat_rva": 94280,
+          "iat_va": 268529736,
+          "hint": 415,
+          "name": "HeapFree"
+        },
+        {
+          "iat_rva": 94284,
+          "iat_va": 268529740,
+          "hint": 409,
+          "name": "HeapAlloc"
+        },
+        {
+          "iat_rva": 94288,
+          "iat_va": 268529744,
+          "hint": 250,
+          "name": "GetCurrentThreadId"
+        },
+        {
+          "iat_rva": 94292,
+          "iat_va": 268529748,
+          "hint": 677,
+          "name": "TlsSetValue"
+        },
+        {
+          "iat_rva": 94296,
+          "iat_va": 268529752,
+          "hint": 674,
+          "name": "TlsAlloc"
+        },
+        {
+          "iat_rva": 94300,
+          "iat_va": 268529756,
+          "hint": 675,
+          "name": "TlsFree"
+        },
+        {
+          "iat_rva": 94304,
+          "iat_va": 268529760,
+          "hint": 625,
+          "name": "SetLastError"
+        },
+        {
+          "iat_rva": 94308,
+          "iat_va": 268529764,
+          "hint": 676,
+          "name": "TlsGetValue"
+        },
+        {
+          "iat_rva": 94312,
+          "iat_va": 268529768,
+          "hint": 318,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 94316,
+          "iat_va": 268529772,
+          "hint": 294,
+          "name": "GetModuleHandleA"
+        },
+        {
+          "iat_rva": 94320,
+          "iat_va": 268529776,
+          "hint": 426,
+          "name": "InitializeCriticalSection"
+        },
+        {
+          "iat_rva": 94324,
+          "iat_va": 268529780,
+          "hint": 85,
+          "name": "DeleteCriticalSection"
+        },
+        {
+          "iat_rva": 94328,
+          "iat_va": 268529784,
+          "hint": 102,
+          "name": "EnterCriticalSection"
+        },
+        {
+          "iat_rva": 94332,
+          "iat_va": 268529788,
+          "hint": 449,
+          "name": "LeaveCriticalSection"
+        },
+        {
+          "iat_rva": 94336,
+          "iat_va": 268529792,
+          "hint": 125,
+          "name": "ExitProcess"
+        },
+        {
+          "iat_rva": 94340,
+          "iat_va": 268529796,
+          "hint": 432,
+          "name": "InterlockedIncrement"
+        },
+        {
+          "iat_rva": 94344,
+          "iat_va": 268529800,
+          "hint": 247,
+          "name": "GetCurrentProcess"
+        },
+        {
+          "iat_rva": 94348,
+          "iat_va": 268529804,
+          "hint": 621,
+          "name": "SetHandleCount"
+        },
+        {
+          "iat_rva": 94352,
+          "iat_va": 268529808,
+          "hint": 447,
+          "name": "LCMapStringA"
+        },
+        {
+          "iat_rva": 94356,
+          "iat_va": 268529812,
+          "hint": 277,
+          "name": "GetFileType"
+        },
+        {
+          "iat_rva": 94360,
+          "iat_va": 268529816,
+          "hint": 448,
+          "name": "LCMapStringW"
+        },
+        {
+          "iat_rva": 94364,
+          "iat_va": 268529820,
+          "hint": 179,
+          "name": "FreeEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 94368,
+          "iat_va": 268529824,
+          "hint": 262,
+          "name": "GetEnvironmentStrings"
+        },
+        {
+          "iat_rva": 94372,
+          "iat_va": 268529828,
+          "hint": 264,
+          "name": "GetEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 94376,
+          "iat_va": 268529832,
+          "hint": 265,
+          "name": "GetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 94380,
+          "iat_va": 268529836,
+          "hint": 373,
+          "name": "GetVersionExA"
+        },
+        {
+          "iat_rva": 94384,
+          "iat_va": 268529840,
+          "hint": 413,
+          "name": "HeapDestroy"
+        },
+        {
+          "iat_rva": 94388,
+          "iat_va": 268529844,
+          "hint": 411,
+          "name": "HeapCreate"
+        },
+        {
+          "iat_rva": 94392,
+          "iat_va": 268529848,
+          "hint": 703,
+          "name": "VirtualFree"
+        },
+        {
+          "iat_rva": 94396,
+          "iat_va": 268529852,
+          "hint": 735,
+          "name": "WriteFile"
+        },
+        {
+          "iat_rva": 94400,
+          "iat_va": 268529856,
+          "hint": 523,
+          "name": "RaiseException"
+        },
+        {
+          "iat_rva": 94404,
+          "iat_va": 268529860,
+          "hint": 699,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 94408,
+          "iat_va": 268529864,
+          "hint": 418,
+          "name": "HeapReAlloc"
+        },
+        {
+          "iat_rva": 94412,
+          "iat_va": 268529868,
+          "hint": 440,
+          "name": "IsBadWritePtr"
+        },
+        {
+          "iat_rva": 94416,
+          "iat_va": 268529872,
+          "hint": 651,
+          "name": "SetUnhandledExceptionFilter"
+        },
+        {
+          "iat_rva": 94420,
+          "iat_va": 268529876,
+          "hint": 437,
+          "name": "IsBadReadPtr"
+        },
+        {
+          "iat_rva": 94424,
+          "iat_va": 268529880,
+          "hint": 434,
+          "name": "IsBadCodePtr"
+        },
+        {
+          "iat_rva": 94428,
+          "iat_va": 268529884,
+          "hint": 191,
+          "name": "GetCPInfo"
+        },
+        {
+          "iat_rva": 94432,
+          "iat_va": 268529888,
+          "hint": 185,
+          "name": "GetACP"
+        },
+        {
+          "iat_rva": 94436,
+          "iat_va": 268529892,
+          "hint": 305,
+          "name": "GetOEMCP"
+        },
+        {
+          "iat_rva": 94440,
+          "iat_va": 268529896,
+          "hint": 450,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 94444,
+          "iat_va": 268529900,
+          "hint": 484,
+          "name": "MultiByteToWideChar"
+        },
+        {
+          "iat_rva": 94448,
+          "iat_va": 268529904,
+          "hint": 339,
+          "name": "GetStringTypeA"
+        },
+        {
+          "iat_rva": 94452,
+          "iat_va": 268529908,
+          "hint": 342,
+          "name": "GetStringTypeW"
+        }
+      ]
+    },
+    {
+      "dll": "USER32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 94460,
+          "iat_va": 268529916,
+          "hint": 255,
+          "name": "GetDesktopWindow"
+        }
+      ]
+    },
+    {
+      "dll": "ADVAPI32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 94208,
+          "iat_va": 268529664,
+          "hint": 351,
+          "name": "RegCreateKeyExA"
+        },
+        {
+          "iat_rva": 94212,
+          "iat_va": 268529668,
+          "hint": 390,
+          "name": "RegSetValueExA"
+        },
+        {
+          "iat_rva": 94216,
+          "iat_va": 268529672,
+          "hint": 359,
+          "name": "RegEnumKeyExA"
+        },
+        {
+          "iat_rva": 94220,
+          "iat_va": 268529676,
+          "hint": 347,
+          "name": "RegCloseKey"
+        },
+        {
+          "iat_rva": 94224,
+          "iat_va": 268529680,
+          "hint": 354,
+          "name": "RegDeleteKeyA"
+        },
+        {
+          "iat_rva": 94228,
+          "iat_va": 268529684,
+          "hint": 370,
+          "name": "RegOpenKeyExA"
+        }
+      ]
+    },
+    {
+      "dll": "ole32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 94468,
+          "iat_va": 268529924,
+          "hint": 268,
+          "name": "StringFromCLSID"
+        },
+        {
+          "iat_rva": 94472,
+          "iat_va": 268529928,
+          "hint": 79,
+          "name": "CoTaskMemFree"
+        },
+        {
+          "iat_rva": 94476,
+          "iat_va": 268529932,
+          "hint": 45,
+          "name": "CoInitialize"
+        },
+        {
+          "iat_rva": 94480,
+          "iat_va": 268529936,
+          "hint": 13,
+          "name": "CoCreateInstance"
+        },
+        {
+          "iat_rva": 94484,
+          "iat_va": 268529940,
+          "hint": 83,
+          "name": "CoUninitialize"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": {
+    "dll_name": "EAX.DLL",
+    "timestamp": 1008103943,
+    "timestamp_utc": "2001-12-11T20:52:23Z",
+    "version": "0.0",
+    "ordinal_base": 1,
+    "functions": [
+      {
+        "ordinal": 1,
+        "names": [
+          "DllCanUnloadNow"
+        ],
+        "rva": 20032,
+        "va": 268455488
+      },
+      {
+        "ordinal": 2,
+        "names": [
+          "DllGetClassObject"
+        ],
+        "rva": 19856,
+        "va": 268455312
+      },
+      {
+        "ordinal": 3,
+        "names": [
+          "DllRegisterServer"
+        ],
+        "rva": 20064,
+        "va": 268455520
+      },
+      {
+        "ordinal": 4,
+        "names": [
+          "DllUnregisterServer"
+        ],
+        "rva": 20144,
+        "va": 268455600
+      },
+      {
+        "ordinal": 5,
+        "names": [
+          "EAXDirectSoundCreate"
+        ],
+        "rva": 4096,
+        "va": 268439552
+      },
+      {
+        "ordinal": 6,
+        "names": [
+          "EAXDirectSoundCreate8"
+        ],
+        "rva": 4368,
+        "va": 268439824
+      },
+      {
+        "ordinal": 7,
+        "names": [
+          "GetCurrentVersion"
+        ],
+        "rva": 20208,
+        "va": 268455664
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "VERSION",
+      "type_id": 16,
+      "name": 1,
+      "language": 1033,
+      "rva": 122976,
+      "size": 840,
+      "codepage": 0
+    }
+  ],
+  "version_info": {
+    "fixed": {
+      "file_version": "3.0.1.0",
+      "product_version": "3.0.1.0",
+      "file_flags": 40,
+      "file_os": "0x40004",
+      "file_type": 2
+    },
+    "strings": {
+      "040904b0": {
+        "Comments": " ",
+        "CompanyName": "Creative Technology Ltd",
+        "FileDescription": "EAX Unified",
+        "FileVersion": "3.01",
+        "InternalName": "EAX Unified",
+        "LegalCopyright": "Copyright \u00a9 2001",
+        "LegalTrademarks": " ",
+        "OriginalFilename": "eax.dll",
+        "PrivateBuild": " ",
+        "ProductName": "EAX Unified",
+        "ProductVersion": "3.01",
+        "SpecialBuild": " "
+      }
+    }
+  },
+  "debug": [],
+  "warnings": []
+}

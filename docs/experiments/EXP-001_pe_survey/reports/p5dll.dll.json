@@ -1,0 +1,971 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\p5dll.dll",
+  "file_name": "p5dll.dll",
+  "file_size": 90112,
+  "sha256": "2b4720e74e4d7c61e67f1fc13d44e33b3954e2369236b3d3caa86dc0a4312d0a",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 5,
+    "timestamp": 1020910791,
+    "timestamp_utc": "2002-05-09T02:19:51Z",
+    "characteristics": 8462,
+    "flags": [
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE",
+      "DLL"
+    ]
+  },
+  "optional": {
+    "linker_version": "6.0",
+    "size_of_code": 49152,
+    "size_of_initialized_data": 40960,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 21188,
+    "entry_point_va": 268456644,
+    "base_of_code": 4096,
+    "base_of_data": 53248,
+    "image_base": 268435456,
+    "section_alignment": 4096,
+    "file_alignment": 4096,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 94208,
+    "size_of_headers": 4096,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 0,
+    "computed": 154920,
+    "matches": null
+  },
+  "data_directories": [
+    {
+      "index": 0,
+      "name": "EXPORT",
+      "rva": 58080,
+      "size": 1084
+    },
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 55900,
+      "size": 100
+    },
+    {
+      "index": 2,
+      "name": "RESOURCE",
+      "rva": 81920,
+      "size": 1040
+    },
+    {
+      "index": 5,
+      "name": "BASERELOC",
+      "rva": 86016,
+      "size": 2564
+    },
+    {
+      "index": 12,
+      "name": "IAT",
+      "rva": 53248,
+      "size": 364
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 48538,
+      "raw_pointer": 4096,
+      "raw_size": 49152,
+      "characteristics": 1610612768,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ"
+      ],
+      "entropy": 6.7058
+    },
+    {
+      "name": ".rdata",
+      "virtual_address": 53248,
+      "virtual_size": 5916,
+      "raw_pointer": 53248,
+      "raw_size": 8192,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 4.6015
+    },
+    {
+      "name": ".data",
+      "virtual_address": 61440,
+      "virtual_size": 18960,
+      "raw_pointer": 61440,
+      "raw_size": 16384,
+      "characteristics": 3221225536,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 1.199
+    },
+    {
+      "name": ".rsrc",
+      "virtual_address": 81920,
+      "virtual_size": 1040,
+      "raw_pointer": 77824,
+      "raw_size": 4096,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 1.0946
+    },
+    {
+      "name": ".reloc",
+      "virtual_address": 86016,
+      "virtual_size": 4544,
+      "raw_pointer": 81920,
+      "raw_size": 8192,
+      "characteristics": 1107296320,
+      "flags": [
+        "INITIALIZED_DATA",
+        "DISCARDABLE",
+        "READ"
+      ],
+      "entropy": 2.8922
+    }
+  ],
+  "overlay": null,
+  "rich_header": {
+    "offset": 128,
+    "key": "0xb2e415e9",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 11,
+        "build": 8047,
+        "count": 1
+      },
+      {
+        "prod_id": 14,
+        "build": 7299,
+        "count": 25
+      },
+      {
+        "prod_id": 10,
+        "build": 8047,
+        "count": 111
+      },
+      {
+        "prod_id": 0,
+        "build": 0,
+        "count": 26
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 85
+      },
+      {
+        "prod_id": 19,
+        "build": 8034,
+        "count": 7
+      },
+      {
+        "prod_id": 11,
+        "build": 8966,
+        "count": 8
+      },
+      {
+        "prod_id": 6,
+        "build": 1735,
+        "count": 1
+      },
+      {
+        "prod_id": 4,
+        "build": 8447,
+        "count": 1
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 53308,
+          "iat_va": 268488764,
+          "hint": 536,
+          "name": "ReadFile"
+        },
+        {
+          "iat_rva": 53312,
+          "iat_va": 268488768,
+          "hint": 647,
+          "name": "SetThreadPriority"
+        },
+        {
+          "iat_rva": 53316,
+          "iat_va": 268488772,
+          "hint": 662,
+          "name": "Sleep"
+        },
+        {
+          "iat_rva": 53320,
+          "iat_va": 268488776,
+          "hint": 27,
+          "name": "CloseHandle"
+        },
+        {
+          "iat_rva": 53324,
+          "iat_va": 268488780,
+          "hint": 52,
+          "name": "CreateFileA"
+        },
+        {
+          "iat_rva": 53328,
+          "iat_va": 268488784,
+          "hint": 282,
+          "name": "GetLastError"
+        },
+        {
+          "iat_rva": 53332,
+          "iat_va": 268488788,
+          "hint": 718,
+          "name": "WaitForSingleObject"
+        },
+        {
+          "iat_rva": 53336,
+          "iat_va": 268488792,
+          "hint": 671,
+          "name": "TerminateThread"
+        },
+        {
+          "iat_rva": 53340,
+          "iat_va": 268488796,
+          "hint": 460,
+          "name": "LocalFree"
+        },
+        {
+          "iat_rva": 53344,
+          "iat_va": 268488800,
+          "hint": 456,
+          "name": "LocalAlloc"
+        },
+        {
+          "iat_rva": 53348,
+          "iat_va": 268488804,
+          "hint": 699,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 53352,
+          "iat_va": 268488808,
+          "hint": 625,
+          "name": "SetLastError"
+        },
+        {
+          "iat_rva": 53356,
+          "iat_va": 268488812,
+          "hint": 676,
+          "name": "TlsGetValue"
+        },
+        {
+          "iat_rva": 53360,
+          "iat_va": 268488816,
+          "hint": 675,
+          "name": "TlsFree"
+        },
+        {
+          "iat_rva": 53364,
+          "iat_va": 268488820,
+          "hint": 409,
+          "name": "HeapAlloc"
+        },
+        {
+          "iat_rva": 53368,
+          "iat_va": 268488824,
+          "hint": 418,
+          "name": "HeapReAlloc"
+        },
+        {
+          "iat_rva": 53372,
+          "iat_va": 268488828,
+          "hint": 415,
+          "name": "HeapFree"
+        },
+        {
+          "iat_rva": 53376,
+          "iat_va": 268488832,
+          "hint": 556,
+          "name": "ResumeThread"
+        },
+        {
+          "iat_rva": 53380,
+          "iat_va": 268488836,
+          "hint": 74,
+          "name": "CreateThread"
+        },
+        {
+          "iat_rva": 53384,
+          "iat_va": 268488840,
+          "hint": 677,
+          "name": "TlsSetValue"
+        },
+        {
+          "iat_rva": 53388,
+          "iat_va": 268488844,
+          "hint": 126,
+          "name": "ExitThread"
+        },
+        {
+          "iat_rva": 53392,
+          "iat_va": 268488848,
+          "hint": 202,
+          "name": "GetCommandLineA"
+        },
+        {
+          "iat_rva": 53396,
+          "iat_va": 268488852,
+          "hint": 372,
+          "name": "GetVersion"
+        },
+        {
+          "iat_rva": 53400,
+          "iat_va": 268488856,
+          "hint": 318,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 53404,
+          "iat_va": 268488860,
+          "hint": 294,
+          "name": "GetModuleHandleA"
+        },
+        {
+          "iat_rva": 53408,
+          "iat_va": 268488864,
+          "hint": 292,
+          "name": "GetModuleFileNameA"
+        },
+        {
+          "iat_rva": 53412,
+          "iat_va": 268488868,
+          "hint": 265,
+          "name": "GetEnvironmentVariableA"
+        },
+        {
+          "iat_rva": 53416,
+          "iat_va": 268488872,
+          "hint": 373,
+          "name": "GetVersionExA"
+        },
+        {
+          "iat_rva": 53420,
+          "iat_va": 268488876,
+          "hint": 413,
+          "name": "HeapDestroy"
+        },
+        {
+          "iat_rva": 53424,
+          "iat_va": 268488880,
+          "hint": 411,
+          "name": "HeapCreate"
+        },
+        {
+          "iat_rva": 53428,
+          "iat_va": 268488884,
+          "hint": 703,
+          "name": "VirtualFree"
+        },
+        {
+          "iat_rva": 53432,
+          "iat_va": 268488888,
+          "hint": 426,
+          "name": "InitializeCriticalSection"
+        },
+        {
+          "iat_rva": 53436,
+          "iat_va": 268488892,
+          "hint": 85,
+          "name": "DeleteCriticalSection"
+        },
+        {
+          "iat_rva": 53440,
+          "iat_va": 268488896,
+          "hint": 102,
+          "name": "EnterCriticalSection"
+        },
+        {
+          "iat_rva": 53444,
+          "iat_va": 268488900,
+          "hint": 449,
+          "name": "LeaveCriticalSection"
+        },
+        {
+          "iat_rva": 53448,
+          "iat_va": 268488904,
+          "hint": 125,
+          "name": "ExitProcess"
+        },
+        {
+          "iat_rva": 53452,
+          "iat_va": 268488908,
+          "hint": 559,
+          "name": "RtlUnwind"
+        },
+        {
+          "iat_rva": 53456,
+          "iat_va": 268488912,
+          "hint": 670,
+          "name": "TerminateProcess"
+        },
+        {
+          "iat_rva": 53460,
+          "iat_va": 268488916,
+          "hint": 247,
+          "name": "GetCurrentProcess"
+        },
+        {
+          "iat_rva": 53464,
+          "iat_va": 268488920,
+          "hint": 419,
+          "name": "HeapSize"
+        },
+        {
+          "iat_rva": 53468,
+          "iat_va": 268488924,
+          "hint": 250,
+          "name": "GetCurrentThreadId"
+        },
+        {
+          "iat_rva": 53472,
+          "iat_va": 268488928,
+          "hint": 674,
+          "name": "TlsAlloc"
+        },
+        {
+          "iat_rva": 53476,
+          "iat_va": 268488932,
+          "hint": 618,
+          "name": "SetFilePointer"
+        },
+        {
+          "iat_rva": 53480,
+          "iat_va": 268488936,
+          "hint": 432,
+          "name": "InterlockedIncrement"
+        },
+        {
+          "iat_rva": 53484,
+          "iat_va": 268488940,
+          "hint": 685,
+          "name": "UnhandledExceptionFilter"
+        },
+        {
+          "iat_rva": 53488,
+          "iat_va": 268488944,
+          "hint": 523,
+          "name": "RaiseException"
+        },
+        {
+          "iat_rva": 53492,
+          "iat_va": 268488948,
+          "hint": 621,
+          "name": "SetHandleCount"
+        },
+        {
+          "iat_rva": 53496,
+          "iat_va": 268488952,
+          "hint": 338,
+          "name": "GetStdHandle"
+        },
+        {
+          "iat_rva": 53500,
+          "iat_va": 268488956,
+          "hint": 277,
+          "name": "GetFileType"
+        },
+        {
+          "iat_rva": 53504,
+          "iat_va": 268488960,
+          "hint": 336,
+          "name": "GetStartupInfoA"
+        },
+        {
+          "iat_rva": 53508,
+          "iat_va": 268488964,
+          "hint": 178,
+          "name": "FreeEnvironmentStringsA"
+        },
+        {
+          "iat_rva": 53512,
+          "iat_va": 268488968,
+          "hint": 179,
+          "name": "FreeEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 53516,
+          "iat_va": 268488972,
+          "hint": 722,
+          "name": "WideCharToMultiByte"
+        },
+        {
+          "iat_rva": 53520,
+          "iat_va": 268488976,
+          "hint": 262,
+          "name": "GetEnvironmentStrings"
+        },
+        {
+          "iat_rva": 53524,
+          "iat_va": 268488980,
+          "hint": 264,
+          "name": "GetEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 53528,
+          "iat_va": 268488984,
+          "hint": 735,
+          "name": "WriteFile"
+        },
+        {
+          "iat_rva": 53532,
+          "iat_va": 268488988,
+          "hint": 429,
+          "name": "InterlockedDecrement"
+        },
+        {
+          "iat_rva": 53536,
+          "iat_va": 268488992,
+          "hint": 636,
+          "name": "SetStdHandle"
+        },
+        {
+          "iat_rva": 53540,
+          "iat_va": 268488996,
+          "hint": 170,
+          "name": "FlushFileBuffers"
+        },
+        {
+          "iat_rva": 53544,
+          "iat_va": 268489000,
+          "hint": 191,
+          "name": "GetCPInfo"
+        },
+        {
+          "iat_rva": 53548,
+          "iat_va": 268489004,
+          "hint": 185,
+          "name": "GetACP"
+        },
+        {
+          "iat_rva": 53552,
+          "iat_va": 268489008,
+          "hint": 305,
+          "name": "GetOEMCP"
+        },
+        {
+          "iat_rva": 53556,
+          "iat_va": 268489012,
+          "hint": 450,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 53560,
+          "iat_va": 268489016,
+          "hint": 484,
+          "name": "MultiByteToWideChar"
+        },
+        {
+          "iat_rva": 53564,
+          "iat_va": 268489020,
+          "hint": 339,
+          "name": "GetStringTypeA"
+        },
+        {
+          "iat_rva": 53568,
+          "iat_va": 268489024,
+          "hint": 342,
+          "name": "GetStringTypeW"
+        },
+        {
+          "iat_rva": 53572,
+          "iat_va": 268489028,
+          "hint": 447,
+          "name": "LCMapStringA"
+        },
+        {
+          "iat_rva": 53576,
+          "iat_va": 268489032,
+          "hint": 448,
+          "name": "LCMapStringW"
+        }
+      ]
+    },
+    {
+      "dll": "USER32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 53604,
+          "iat_va": 268489060,
+          "hint": 446,
+          "name": "MessageBoxA"
+        }
+      ]
+    },
+    {
+      "dll": "SETUPAPI.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 53584,
+          "iat_va": 268489040,
+          "hint": 125,
+          "name": "SetupDiGetClassDevsA"
+        },
+        {
+          "iat_rva": 53588,
+          "iat_va": 268489044,
+          "hint": 109,
+          "name": "SetupDiDestroyDeviceInfoList"
+        },
+        {
+          "iat_rva": 53592,
+          "iat_va": 268489048,
+          "hint": 113,
+          "name": "SetupDiEnumDeviceInterfaces"
+        },
+        {
+          "iat_rva": 53596,
+          "iat_va": 268489052,
+          "hint": 143,
+          "name": "SetupDiGetDeviceInterfaceDetailA"
+        }
+      ]
+    },
+    {
+      "dll": "HID.DLL",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 53248,
+          "iat_va": 268488704,
+          "hint": 11,
+          "name": "HidD_GetProductString"
+        },
+        {
+          "iat_rva": 53252,
+          "iat_va": 268488708,
+          "hint": 4,
+          "name": "HidD_GetFeature"
+        },
+        {
+          "iat_rva": 53256,
+          "iat_va": 268488712,
+          "hint": 15,
+          "name": "HidD_SetFeature"
+        },
+        {
+          "iat_rva": 53260,
+          "iat_va": 268488716,
+          "hint": 0,
+          "name": "HidD_FlushQueue"
+        },
+        {
+          "iat_rva": 53264,
+          "iat_va": 268488720,
+          "hint": 10,
+          "name": "HidD_GetPreparsedData"
+        },
+        {
+          "iat_rva": 53268,
+          "iat_va": 268488724,
+          "hint": 2,
+          "name": "HidD_GetAttributes"
+        },
+        {
+          "iat_rva": 53272,
+          "iat_va": 268488728,
+          "hint": 1,
+          "name": "HidD_FreePreparsedData"
+        },
+        {
+          "iat_rva": 53276,
+          "iat_va": 268488732,
+          "hint": 18,
+          "name": "HidP_GetCaps"
+        },
+        {
+          "iat_rva": 53280,
+          "iat_va": 268488736,
+          "hint": 22,
+          "name": "HidP_GetSpecificButtonCaps"
+        },
+        {
+          "iat_rva": 53284,
+          "iat_va": 268488740,
+          "hint": 23,
+          "name": "HidP_GetSpecificValueCaps"
+        },
+        {
+          "iat_rva": 53288,
+          "iat_va": 268488744,
+          "hint": 7,
+          "name": "HidD_GetManufacturerString"
+        },
+        {
+          "iat_rva": 53292,
+          "iat_va": 268488748,
+          "hint": 12,
+          "name": "HidD_GetSerialNumberString"
+        },
+        {
+          "iat_rva": 53296,
+          "iat_va": 268488752,
+          "hint": 5,
+          "name": "HidD_GetHidGuid"
+        },
+        {
+          "iat_rva": 53300,
+          "iat_va": 268488756,
+          "hint": 30,
+          "name": "HidP_MaxUsageListLength"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": {
+    "dll_name": "P5DLL.dll",
+    "timestamp": 1020910791,
+    "timestamp_utc": "2002-05-09T02:19:51Z",
+    "version": "0.0",
+    "ordinal_base": 1,
+    "functions": [
+      {
+        "ordinal": 1,
+        "names": [
+          "??0CP5DLL@@QAE@XZ"
+        ],
+        "rva": 15520,
+        "va": 268450976
+      },
+      {
+        "ordinal": 2,
+        "names": [
+          "??1CP5DLL@@QAE@XZ"
+        ],
+        "rva": 15536,
+        "va": 268450992
+      },
+      {
+        "ordinal": 3,
+        "names": [
+          "??4CEnumerator@@QAEAAV0@ABV0@@Z"
+        ],
+        "rva": 4096,
+        "va": 268439552
+      },
+      {
+        "ordinal": 4,
+        "names": [
+          "??4CP5DLL@@QAEAAV0@ABV0@@Z"
+        ],
+        "rva": 4112,
+        "va": 268439568
+      },
+      {
+        "ordinal": 5,
+        "names": [
+          "?CloseHidDevice@CEnumerator@@QAEXPAU_HID_DEVICE@@@Z"
+        ],
+        "rva": 14960,
+        "va": 268450416
+      },
+      {
+        "ordinal": 6,
+        "names": [
+          "?FindHidDevice@CEnumerator@@QAE_NPAPAU_HID_DEVICE@@PAK@Z"
+        ],
+        "rva": 13280,
+        "va": 268448736
+      },
+      {
+        "ordinal": 7,
+        "names": [
+          "?OpenHidDevice@CEnumerator@@AAEEPAXPAU_SP_DEVICE_INTERFACE_DATA@@PAU_HID_DEVICE@@@Z"
+        ],
+        "rva": 13536,
+        "va": 268448992
+      },
+      {
+        "ordinal": 8,
+        "names": [
+          "?P5_CalibrateBendSensors@CP5DLL@@QAEXH@Z"
+        ],
+        "rva": 15712,
+        "va": 268451168
+      },
+      {
+        "ordinal": 9,
+        "names": [
+          "?P5_CalibratePositionData@CP5DLL@@QAEXH@Z"
+        ],
+        "rva": 15744,
+        "va": 268451200
+      },
+      {
+        "ordinal": 10,
+        "names": [
+          "?P5_Close@CP5DLL@@QAEXXZ"
+        ],
+        "rva": 15536,
+        "va": 268450992
+      },
+      {
+        "ordinal": 11,
+        "names": [
+          "?P5_GetClickSensitivity@CP5DLL@@QAEXHPAH00@Z"
+        ],
+        "rva": 15632,
+        "va": 268451088
+      },
+      {
+        "ordinal": 12,
+        "names": [
+          "?P5_GetLastError@CP5DLL@@QAEIPAH0@Z"
+        ],
+        "rva": 15984,
+        "va": 268451440
+      },
+      {
+        "ordinal": 13,
+        "names": [
+          "?P5_GetMouseButtonAllocation@CP5DLL@@QAEXHPAH00@Z"
+        ],
+        "rva": 15888,
+        "va": 268451344
+      },
+      {
+        "ordinal": 14,
+        "names": [
+          "?P5_GetMouseState@CP5DLL@@QAEIH@Z"
+        ],
+        "rva": 15568,
+        "va": 268451024
+      },
+      {
+        "ordinal": 15,
+        "names": [
+          "?P5_GetMouseStickTime@CP5DLL@@QAEHH@Z"
+        ],
+        "rva": 15856,
+        "va": 268451312
+      },
+      {
+        "ordinal": 16,
+        "names": [
+          "?P5_Init@CP5DLL@@QAEIXZ"
+        ],
+        "rva": 15552,
+        "va": 268451008
+      },
+      {
+        "ordinal": 17,
+        "names": [
+          "?P5_SaveBendSensors@CP5DLL@@QAEXH@Z"
+        ],
+        "rva": 15680,
+        "va": 268451136
+      },
+      {
+        "ordinal": 18,
+        "names": [
+          "?P5_SetClickSensitivity@CP5DLL@@QAEXHEEE@Z"
+        ],
+        "rva": 15776,
+        "va": 268451232
+      },
+      {
+        "ordinal": 19,
+        "names": [
+          "?P5_SetMouseButtonAllocation@CP5DLL@@QAEXHHHH@Z"
+        ],
+        "rva": 15936,
+        "va": 268451392
+      },
+      {
+        "ordinal": 20,
+        "names": [
+          "?P5_SetMouseState@CP5DLL@@QAEXHI@Z"
+        ],
+        "rva": 15600,
+        "va": 268451056
+      },
+      {
+        "ordinal": 21,
+        "names": [
+          "?P5_SetMouseStickTime@CP5DLL@@QAEXHE@Z"
+        ],
+        "rva": 15824,
+        "va": 268451280
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "VERSION",
+      "type_id": 16,
+      "name": 1,
+      "language": 1033,
+      "rva": 82016,
+      "size": 940,
+      "codepage": 0
+    }
+  ],
+  "version_info": {
+    "fixed": {
+      "file_version": "4.6.25.7",
+      "product_version": "4.6.25.7",
+      "file_flags": 8,
+      "file_os": "0x40004",
+      "file_type": 2
+    },
+    "strings": {
+      "040904b0": {
+        "Comments": "New Lenses",
+        "CompanyName": "VRYAD Development Group",
+        "FileDescription": "Interface to P5Device",
+        "FileVersion": "1, 0, 24, 7",
+        "InternalName": "P5DLL.dll",
+        "LegalCopyright": "Copyright \u00a9 Essential Reality 2002",
+        "LegalTrademarks": "",
+        "OriginalFilename": "P5DLL.dll",
+        "PrivateBuild": "",
+        "ProductName": "Virtual Glove P5",
+        "ProductVersion": "1, 0, 24, 7",
+        "SpecialBuild": ""
+      }
+    }
+  },
+  "debug": [],
+  "warnings": []
+}

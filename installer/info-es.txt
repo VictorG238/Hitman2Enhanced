@@ -1,0 +1,54 @@
+﻿HITMAN 2 ENHANCED - QUÉ HACE ESTE INSTALADOR
+=============================================
+
+Arreglos no oficiales y de código abierto para Hitman 2: Silent Assassin
+(versión de Steam 1.0.0.277).
+Autor: Aquiles / Victor Baeza - https://github.com/VictorG238
+
+QUÉ SE ARREGLA (en la página siguiente puedes activar o desactivar cada uno)
+---------------------------------------------------------------------------
+* Resolución - la pantalla completa mantiene cualquier resolución (1920x1080,
+  2560x1440...). El juego original fuerza modos antiguos 4:3/5:4 o no arranca
+  por encima de 1600 píxeles de ancho.
+
+* Escalado de menús - el menú principal, el briefing y el menú de pausa llenan
+  la pantalla en vez de un recuadro pequeño de 640x480 en el centro. El cursor
+  se queda dentro del menú.
+
+* Límite de FPS - limita los FPS a la frecuencia de tu monitor. Por encima de
+  unos 1024 FPS el juego se rompe (se congela, la animación de correr falla,
+  las cinemáticas se desincronizan).
+
+* Reloj del juego - el reloj del juego va a la velocidad correcta con cualquier
+  cantidad de FPS (antes iba hasta un 1,6 % más lento a 144 FPS y se detenía con
+  FPS muy altos).
+
+* Página de ajustes (F10) - una página dentro del juego para elegir resolución,
+  modo de pantalla, campo de visión y límite de FPS, con un texto de ayuda en
+  cada opción.
+
+* Fuentes HD - textos nítidos en menús y briefing. El instalador vuelve a dibujar
+  las fuentes del juego a 4x a partir de la fuente que hay en TUS archivos del
+  juego (tarda alrededor de 1 minuto). No se descarga ni se incluye nada del juego.
+
+CÓMO FUNCIONA - Y QUÉ NO TOCA
+-----------------------------
+* No se modifica ningún archivo del juego. Los arreglos funcionan en memoria
+  mientras juegas, mediante un d3d8.dll colocado junto a hitman2.exe.
+* Antes de cambiar nada en memoria, cada arreglo comprueba la versión exacta del
+  juego (SHA-256). En otra versión no hace nada.
+* No toca Steam ni la protección anticopia del juego.
+* Archivos que se añaden a la carpeta del juego: d3d8.dll, h2e.ini (ajustes),
+  h2e_hdfonts.bin (fuentes HD, si las eliges) y la carpeta "Hitman 2 Enhanced"
+  (desinstalador, léeme, licencia, generador de fuentes). Mientras juegas también
+  escribe h2e.log y h2e_settings.ini. La página F10 guarda la resolución y el modo
+  de pantalla que elijas en Hitman2.ini, el archivo de ajustes del propio juego.
+
+DESINSTALAR
+-----------
+Configuración de Windows > Aplicaciones > Aplicaciones instaladas > Hitman 2
+Enhanced. Se borran todos los archivos de la lista anterior y el juego queda
+como estaba.
+
+Código fuente, documentación y las pruebas de cada arreglo (licencia MIT):
+https://github.com/VictorG238/Hitman2Enhanced

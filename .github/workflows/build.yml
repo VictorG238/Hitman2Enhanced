@@ -1,0 +1,98 @@
+# Build, test and package Hitman 2 Enhanced. A tag vX.Y.Z (matching src/version.h) also publishes a GitHub release
+# with the zip and the installer.
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Python tests
+        run: python -m unittest discover -s tests
+
+      - name: Configure (Win32 - the game is 32-bit)
+        run: cmake -S . -B build -A Win32
+
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Native tests
+        run: ctest --test-dir build -C Release --output-on-failure -E "_smoke$"
+
+      # These create a real Direct3D 8 device; hosted runners have no GPU, so a failure here is reported but does
+      # not block the build (they run on developer machines).
+      - name: Device smoke tests (best effort)
+        continue-on-error: true
+        run: ctest --test-dir build -C Release --output-on-failure -R "_smoke$"
+
+      - name: Package zip
+        id: pkg
+        shell: pwsh
+        run: |
+          python -I tools/package_release.py
+          $version = (Get-Content dist/version.txt -Raw).Trim()
+          "version=$version" >> $env:GITHUB_OUTPUT
+          if ($env:GITHUB_REF -like 'refs/tags/v*' -and $env:GITHUB_REF_NAME -ne "v$version") {
+            throw "tag $env:GITHUB_REF_NAME does not match src/version.h ($version)"
+          }
+
+      # The installer builds the HD font pack on the player's PC from their own game files; players have no Python,
+      # so the stdlib-only builder is frozen into one exe (build-time dependency only).
+      - name: Freeze the font-pack builder
+        run: |
+          python -m pip install pyinstaller==6.16.0
+          python -m PyInstaller --onefile --console --noconfirm --name hdfonts_build --distpath dist/payload --workpath build/pyinstaller/work --specpath build/pyinstaller tools/hdfonts_build.py
+
+      - name: Build installer (Inno Setup 6)
+        shell: pwsh
+        run: |
+          $iscc = @("${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe", "$env:ProgramFiles\Inno Setup 6\ISCC.exe") |
+            Where-Object { Test-Path $_ } | Select-Object -First 1
+          if (-not $iscc) {
+            choco install innosetup -y --no-progress
+            $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          }
+          & $iscc "/DAppVersion=${{ steps.pkg.outputs.version }}" installer/Hitman2Enhanced.iss
+          if ($LASTEXITCODE -ne 0) { throw "ISCC failed ($LASTEXITCODE)" }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Hitman2Enhanced-${{ steps.pkg.outputs.version }}
+          path: |
+            dist/Hitman2Enhanced-*.zip
+            dist/Hitman2Enhanced-Setup-*.exe
+          if-no-files-found: error
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/Hitman2Enhanced-*.zip
+            artifacts/Hitman2Enhanced-Setup-*.exe
+          generate_release_notes: true

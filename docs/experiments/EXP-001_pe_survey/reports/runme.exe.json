@@ -1,0 +1,528 @@
+{
+  "tool": "pe_inspect 0.1.0",
+  "path": "samples\\local\\snapshot-20261110\\runme.exe",
+  "file_name": "runme.exe",
+  "file_size": 40960,
+  "sha256": "e07f112452240049472ced6c4487b5d9b53ad567b3e7cc7603b2e2740a22bafd",
+  "format": "PE32",
+  "coff": {
+    "machine": "i386",
+    "number_of_sections": 3,
+    "timestamp": 1131159009,
+    "timestamp_utc": "2005-11-05T02:50:09Z",
+    "characteristics": 271,
+    "flags": [
+      "RELOCS_STRIPPED",
+      "EXECUTABLE_IMAGE",
+      "LINE_NUMS_STRIPPED",
+      "LOCAL_SYMS_STRIPPED",
+      "32BIT_MACHINE"
+    ]
+  },
+  "optional": {
+    "linker_version": "7.10",
+    "size_of_code": 24576,
+    "size_of_initialized_data": 16384,
+    "size_of_uninitialized_data": 0,
+    "entry_point_rva": 5284,
+    "entry_point_va": 4199588,
+    "base_of_code": 4096,
+    "base_of_data": 28672,
+    "image_base": 4194304,
+    "section_alignment": 4096,
+    "file_alignment": 4096,
+    "os_version": "4.0",
+    "image_version": "0.0",
+    "subsystem_version": "4.0",
+    "size_of_image": 45056,
+    "size_of_headers": 4096,
+    "subsystem": "WINDOWS_GUI",
+    "dll_characteristics": 0,
+    "dll_flags": [],
+    "stack_reserve": 1048576,
+    "stack_commit": 4096,
+    "heap_reserve": 1048576,
+    "heap_commit": 4096
+  },
+  "checksum": {
+    "stored": 0,
+    "computed": 93713,
+    "matches": null
+  },
+  "data_directories": [
+    {
+      "index": 1,
+      "name": "IMPORT",
+      "rva": 32168,
+      "size": 40
+    },
+    {
+      "index": 6,
+      "name": "DEBUG",
+      "rva": 28912,
+      "size": 28
+    },
+    {
+      "index": 10,
+      "name": "LOAD_CONFIG",
+      "rva": 31992,
+      "size": 72
+    },
+    {
+      "index": 12,
+      "name": "IAT",
+      "rva": 28672,
+      "size": 232
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "virtual_address": 4096,
+      "virtual_size": 20792,
+      "raw_pointer": 4096,
+      "raw_size": 24576,
+      "characteristics": 1610612768,
+      "flags": [
+        "CODE",
+        "EXECUTE",
+        "READ"
+      ],
+      "entropy": 5.9834
+    },
+    {
+      "name": ".rdata",
+      "virtual_address": 28672,
+      "virtual_size": 4788,
+      "raw_pointer": 28672,
+      "raw_size": 8192,
+      "characteristics": 1073741888,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ"
+      ],
+      "entropy": 3.2831
+    },
+    {
+      "name": ".data",
+      "virtual_address": 36864,
+      "virtual_size": 7256,
+      "raw_pointer": 36864,
+      "raw_size": 4096,
+      "characteristics": 3221225536,
+      "flags": [
+        "INITIALIZED_DATA",
+        "READ",
+        "WRITE"
+      ],
+      "entropy": 0.9352
+    }
+  ],
+  "overlay": null,
+  "rich_header": {
+    "offset": 128,
+    "key": "0x4763df6c",
+    "checksum_valid": true,
+    "entries": [
+      {
+        "prod_id": 95,
+        "build": 3077,
+        "count": 62
+      },
+      {
+        "prod_id": 15,
+        "build": 3077,
+        "count": 11
+      },
+      {
+        "prod_id": 93,
+        "build": 2179,
+        "count": 3
+      },
+      {
+        "prod_id": 1,
+        "build": 0,
+        "count": 58
+      },
+      {
+        "prod_id": 96,
+        "build": 3077,
+        "count": 3
+      },
+      {
+        "prod_id": 90,
+        "build": 3077,
+        "count": 1
+      }
+    ]
+  },
+  "imports": [
+    {
+      "dll": "KERNEL32.dll",
+      "bound": false,
+      "functions": [
+        {
+          "iat_rva": 28672,
+          "iat_va": 4222976,
+          "hint": 46,
+          "name": "CloseHandle"
+        },
+        {
+          "iat_rva": 28676,
+          "iat_va": 4222980,
+          "hint": 899,
+          "name": "WaitForSingleObject"
+        },
+        {
+          "iat_rva": 28680,
+          "iat_va": 4222984,
+          "hint": 96,
+          "name": "CreateProcessA"
+        },
+        {
+          "iat_rva": 28684,
+          "iat_va": 4222988,
+          "hint": 175,
+          "name": "ExitProcess"
+        },
+        {
+          "iat_rva": 28688,
+          "iat_va": 4222992,
+          "hint": 375,
+          "name": "GetModuleHandleA"
+        },
+        {
+          "iat_rva": 28692,
+          "iat_va": 4222996,
+          "hint": 431,
+          "name": "GetStartupInfoA"
+        },
+        {
+          "iat_rva": 28696,
+          "iat_va": 4223000,
+          "hint": 264,
+          "name": "GetCommandLineA"
+        },
+        {
+          "iat_rva": 28700,
+          "iat_va": 4223004,
+          "hint": 479,
+          "name": "GetVersionExA"
+        },
+        {
+          "iat_rva": 28704,
+          "iat_va": 4223008,
+          "hint": 524,
+          "name": "HeapFree"
+        },
+        {
+          "iat_rva": 28708,
+          "iat_va": 4223012,
+          "hint": 361,
+          "name": "GetLastError"
+        },
+        {
+          "iat_rva": 28712,
+          "iat_va": 4223016,
+          "hint": 681,
+          "name": "ReadFile"
+        },
+        {
+          "iat_rva": 28716,
+          "iat_va": 4223020,
+          "hint": 408,
+          "name": "GetProcAddress"
+        },
+        {
+          "iat_rva": 28720,
+          "iat_va": 4223024,
+          "hint": 847,
+          "name": "TerminateProcess"
+        },
+        {
+          "iat_rva": 28724,
+          "iat_va": 4223028,
+          "hint": 314,
+          "name": "GetCurrentProcess"
+        },
+        {
+          "iat_rva": 28728,
+          "iat_va": 4223032,
+          "hint": 663,
+          "name": "QueryPerformanceCounter"
+        },
+        {
+          "iat_rva": 28732,
+          "iat_va": 4223036,
+          "hint": 469,
+          "name": "GetTickCount"
+        },
+        {
+          "iat_rva": 28736,
+          "iat_va": 4223040,
+          "hint": 318,
+          "name": "GetCurrentThreadId"
+        },
+        {
+          "iat_rva": 28740,
+          "iat_va": 4223044,
+          "hint": 315,
+          "name": "GetCurrentProcessId"
+        },
+        {
+          "iat_rva": 28744,
+          "iat_va": 4223048,
+          "hint": 448,
+          "name": "GetSystemTimeAsFileTime"
+        },
+        {
+          "iat_rva": 28748,
+          "iat_va": 4223052,
+          "hint": 373,
+          "name": "GetModuleFileNameA"
+        },
+        {
+          "iat_rva": 28752,
+          "iat_va": 4223056,
+          "hint": 916,
+          "name": "WriteFile"
+        },
+        {
+          "iat_rva": 28756,
+          "iat_va": 4223060,
+          "hint": 433,
+          "name": "GetStdHandle"
+        },
+        {
+          "iat_rva": 28760,
+          "iat_va": 4223064,
+          "hint": 864,
+          "name": "UnhandledExceptionFilter"
+        },
+        {
+          "iat_rva": 28764,
+          "iat_va": 4223068,
+          "hint": 237,
+          "name": "FreeEnvironmentStringsA"
+        },
+        {
+          "iat_rva": 28768,
+          "iat_va": 4223072,
+          "hint": 333,
+          "name": "GetEnvironmentStrings"
+        },
+        {
+          "iat_rva": 28772,
+          "iat_va": 4223076,
+          "hint": 238,
+          "name": "FreeEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 28776,
+          "iat_va": 4223080,
+          "hint": 903,
+          "name": "WideCharToMultiByte"
+        },
+        {
+          "iat_rva": 28780,
+          "iat_va": 4223084,
+          "hint": 335,
+          "name": "GetEnvironmentStringsW"
+        },
+        {
+          "iat_rva": 28784,
+          "iat_va": 4223088,
+          "hint": 791,
+          "name": "SetHandleCount"
+        },
+        {
+          "iat_rva": 28788,
+          "iat_va": 4223092,
+          "hint": 350,
+          "name": "GetFileType"
+        },
+        {
+          "iat_rva": 28792,
+          "iat_va": 4223096,
+          "hint": 522,
+          "name": "HeapDestroy"
+        },
+        {
+          "iat_rva": 28796,
+          "iat_va": 4223100,
+          "hint": 520,
+          "name": "HeapCreate"
+        },
+        {
+          "iat_rva": 28800,
+          "iat_va": 4223104,
+          "hint": 886,
+          "name": "VirtualFree"
+        },
+        {
+          "iat_rva": 28804,
+          "iat_va": 4223108,
+          "hint": 518,
+          "name": "HeapAlloc"
+        },
+        {
+          "iat_rva": 28808,
+          "iat_va": 4223112,
+          "hint": 883,
+          "name": "VirtualAlloc"
+        },
+        {
+          "iat_rva": 28812,
+          "iat_va": 4223116,
+          "hint": 528,
+          "name": "HeapReAlloc"
+        },
+        {
+          "iat_rva": 28816,
+          "iat_va": 4223120,
+          "hint": 810,
+          "name": "SetStdHandle"
+        },
+        {
+          "iat_rva": 28820,
+          "iat_va": 4223124,
+          "hint": 229,
+          "name": "FlushFileBuffers"
+        },
+        {
+          "iat_rva": 28824,
+          "iat_va": 4223128,
+          "hint": 782,
+          "name": "SetFilePointer"
+        },
+        {
+          "iat_rva": 28828,
+          "iat_va": 4223132,
+          "hint": 77,
+          "name": "CreateFileA"
+        },
+        {
+          "iat_rva": 28832,
+          "iat_va": 4223136,
+          "hint": 584,
+          "name": "LoadLibraryA"
+        },
+        {
+          "iat_rva": 28836,
+          "iat_va": 4223140,
+          "hint": 714,
+          "name": "RtlUnwind"
+        },
+        {
+          "iat_rva": 28840,
+          "iat_va": 4223144,
+          "hint": 543,
+          "name": "InterlockedExchange"
+        },
+        {
+          "iat_rva": 28844,
+          "iat_va": 4223148,
+          "hint": 891,
+          "name": "VirtualQuery"
+        },
+        {
+          "iat_rva": 28848,
+          "iat_va": 4223152,
+          "hint": 245,
+          "name": "GetACP"
+        },
+        {
+          "iat_rva": 28852,
+          "iat_va": 4223156,
+          "hint": 395,
+          "name": "GetOEMCP"
+        },
+        {
+          "iat_rva": 28856,
+          "iat_va": 4223160,
+          "hint": 252,
+          "name": "GetCPInfo"
+        },
+        {
+          "iat_rva": 28860,
+          "iat_va": 4223164,
+          "hint": 771,
+          "name": "SetEndOfFile"
+        },
+        {
+          "iat_rva": 28864,
+          "iat_va": 4223168,
+          "hint": 530,
+          "name": "HeapSize"
+        },
+        {
+          "iat_rva": 28868,
+          "iat_va": 4223172,
+          "hint": 570,
+          "name": "LCMapStringA"
+        },
+        {
+          "iat_rva": 28872,
+          "iat_va": 4223176,
+          "hint": 619,
+          "name": "MultiByteToWideChar"
+        },
+        {
+          "iat_rva": 28876,
+          "iat_va": 4223180,
+          "hint": 571,
+          "name": "LCMapStringW"
+        },
+        {
+          "iat_rva": 28880,
+          "iat_va": 4223184,
+          "hint": 434,
+          "name": "GetStringTypeA"
+        },
+        {
+          "iat_rva": 28884,
+          "iat_va": 4223188,
+          "hint": 437,
+          "name": "GetStringTypeW"
+        },
+        {
+          "iat_rva": 28888,
+          "iat_va": 4223192,
+          "hint": 364,
+          "name": "GetLocaleInfoA"
+        },
+        {
+          "iat_rva": 28892,
+          "iat_va": 4223196,
+          "hint": 889,
+          "name": "VirtualProtect"
+        },
+        {
+          "iat_rva": 28896,
+          "iat_va": 4223200,
+          "hint": 443,
+          "name": "GetSystemInfo"
+        }
+      ]
+    }
+  ],
+  "delay_imports": [],
+  "exports": null,
+  "resources": [],
+  "version_info": null,
+  "debug": [
+    {
+      "type": "CODEVIEW",
+      "timestamp": 1131159009,
+      "timestamp_utc": "2005-11-05T02:50:09Z",
+      "size": 72,
+      "codeview": {
+        "format": "RSDS",
+        "guid": "c7544c2248d9184a80ff336ec6d4a6f9",
+        "age": 5,
+        "pdb_path": "u:\\valve_main\\src\\utils\\runme\\Release\\runme.pdb"
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,45 @@
+    2.54-    7.56 s  clock rate 0.5071  predicted 0.0  fps(dt) 2045.2  
+    7.56-   12.57 s  clock rate None  predicted 0.0  fps(dt) 1856.5  reset
+   12.57-   17.59 s  clock rate None  predicted 0.0754  fps(dt) 1836.6  reset
+   17.59-   22.60 s  clock rate None  predicted 0.7544  fps(dt) 328.2  reset
+   22.60-   27.62 s  clock rate 1.0  predicted 0.6046  fps(dt) 614.9  
+   27.62-   32.64 s  clock rate 1.0003  predicted 0.6425  fps(dt) 769.2  
+   32.64-   37.66 s  clock rate 0.9997  predicted 0.676  fps(dt) 680.4  
+   37.66-   42.67 s  clock rate 1.0003  predicted 0.7652  fps(dt) 772.0  
+   42.67-   47.69 s  clock rate 1.0  predicted 0.8359  fps(dt) 854.1  
+   47.69-   52.70 s  clock rate 0.9998  predicted 0.7014  fps(dt) 702.7  
+   52.70-   57.72 s  clock rate 0.9999  predicted 0.6718  fps(dt) 686.7  
+   57.72-   62.74 s  clock rate 1.0001  predicted 0.6686  fps(dt) 683.6  
+   62.74-   67.76 s  clock rate 0.9999  predicted 0.6797  fps(dt) 693.8  
+   67.76-   72.77 s  clock rate 1.0002  predicted 0.6683  fps(dt) 682.9  
+   72.77-   77.79 s  clock rate 0.9998  predicted 0.6714  fps(dt) 686.3  
+   77.79-   82.80 s  clock rate 1.0001  predicted 0.6606  fps(dt) 674.4  
+   82.80-   87.82 s  clock rate 0.9684  predicted 0.6728  fps(dt) 687.7  
+   87.82-   92.83 s  clock rate 0.1331  predicted 0.7071  fps(dt) 262.7  
+   92.83-   97.85 s  clock rate 0.2548  predicted 0.9838  fps(dt) 143.9  
+   97.85-  102.87 s  clock rate 0.6587  predicted 0.9913  fps(dt) 73.6  
+  102.87-  107.88 s  clock rate 1.0006  predicted 0.9962  fps(dt) 60.0  
+  107.88-  112.90 s  clock rate 1.0  predicted 0.9962  fps(dt) 60.0  
+  112.90-  117.91 s  clock rate 1.0005  predicted 0.9962  fps(dt) 60.0  
+  117.91-  122.92 s  clock rate 1.0009  predicted 0.9962  fps(dt) 60.0  
+  122.92-  127.94 s  clock rate 0.9974  predicted 0.9961  fps(dt) 60.0  
+  127.94-  132.95 s  clock rate 1.0004  predicted 0.9961  fps(dt) 60.0  
+  132.95-  137.99 s  clock rate 1.0022  predicted 0.9961  fps(dt) 60.0  
+  137.99-  143.01 s  clock rate 0.9992  predicted 0.9961  fps(dt) 60.0  
+  143.01-  148.02 s  clock rate 1.0007  predicted 0.9961  fps(dt) 60.0  
+  148.02-  153.04 s  clock rate 0.9974  predicted 0.9961  fps(dt) 60.0  
+  153.04-  158.05 s  clock rate 0.382  predicted 0.9958  fps(dt) 60.0  
+  158.05-  163.07 s  clock rate 0.8944  predicted 0.9958  fps(dt) 32.6  
+  163.07-  168.08 s  clock rate 0.9971  predicted 0.9964  fps(dt) 30.0  
+  168.08-  173.10 s  clock rate 1.0036  predicted 0.996  fps(dt) 30.0  
+  173.10-  178.12 s  clock rate 0.9962  predicted 0.9958  fps(dt) 30.0  
+  178.12-  183.13 s  clock rate 1.0039  predicted 0.9959  fps(dt) 30.0  
+  183.13-  188.15 s  clock rate 0.9967  predicted 0.9959  fps(dt) 30.0  
+  188.15-  193.16 s  clock rate 0.9973  predicted 0.996  fps(dt) 30.0  
+  193.16-  198.18 s  clock rate 1.0036  predicted 0.9961  fps(dt) 30.0  
+  198.18-  203.19 s  clock rate 0.9966  predicted 0.9962  fps(dt) 30.0  
+  203.19-  208.21 s  clock rate 1.0038  predicted 0.9961  fps(dt) 30.0  
+  208.21-  213.22 s  clock rate 0.9967  predicted 0.9961  fps(dt) 30.0  
+  213.22-  218.24 s  clock rate 1.0028  predicted 0.9962  fps(dt) 30.0  
+  218.24-  223.26 s  clock rate None  predicted 0.9953  fps(dt) 29.8  reset
+  223.26-  224.26 s  clock rate 1.0096  predicted 0.9899  fps(dt) 29.0  
