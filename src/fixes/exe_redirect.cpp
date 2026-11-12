@@ -5,7 +5,8 @@
 #include <cstring>
 
 #include "../common/code_patch.h"
-#include "timer.h"  // kHitman2Sha256, kHitman2Base
+#include "game_build.h"
+#include "timer.h"  // kHitman2Base
 
 namespace h2e {
 
@@ -38,16 +39,20 @@ bool RedirectExeCall(const FixContext& ctx, uintptr_t caller, const ExeCallSite&
         return false;
     }
     char hex[65] = "";
-    if (!ModuleFileSha256(exe, hex) || std::strcmp(hex, kHitman2Sha256) != 0) {
-        log("%s: hitman2.exe SHA-256 %s is not the pinned build - not applied", fix, hex);
+    const ExeBuild* build = ModuleFileSha256(exe, hex) ? FindExeBuild(hex) : nullptr;
+    if (!build || std::strcmp(build->sha256, site.buildSha256) != 0) {
+        log("%s: hitman2.exe SHA-256 %s is not a known build - not applied", fix, hex);
         return false;
     }
-    // 3. Memory: committed image page of hitman2.exe, executable, covering the whole context.
+    // 3. Memory: committed image page of hitman2.exe covering the whole context. Executable in the Steam build; the
+    // retail 1.0.0.265 exe has its section headers rewritten to data (READWRITE), so the loader maps the code as
+    // WRITECOPY and it runs only because the process has no DEP - accepted too (the context bytes are still checked).
     MEMORY_BASIC_INFORMATION mbi{};
     auto* context = reinterpret_cast<uint8_t*>(site.contextVa);
     if (!VirtualQuery(context, &mbi, sizeof mbi) || mbi.State != MEM_COMMIT || mbi.Type != MEM_IMAGE ||
         mbi.AllocationBase != exe ||
-        !(mbi.Protect & (PAGE_EXECUTE | PAGE_EXECUTE_READ | PAGE_EXECUTE_READWRITE | PAGE_EXECUTE_WRITECOPY)) ||
+        !(mbi.Protect & (PAGE_EXECUTE | PAGE_EXECUTE_READ | PAGE_EXECUTE_READWRITE | PAGE_EXECUTE_WRITECOPY |
+                         PAGE_READWRITE | PAGE_WRITECOPY)) ||
         reinterpret_cast<uintptr_t>(mbi.BaseAddress) + mbi.RegionSize < site.contextVa + site.contextSize) {
         log("%s: unexpected memory at 0x%08X (state 0x%lX type 0x%lX protect 0x%lX) - not applied", fix,
             static_cast<unsigned>(site.contextVa), mbi.State, mbi.Type, mbi.Protect);
@@ -74,7 +79,7 @@ bool RedirectExeCall(const FixContext& ctx, uintptr_t caller, const ExeCallSite&
     size_t threads = freeze.count(), inExe = 0, inFunction = 0;
     for (size_t i = 0; i < threads; ++i) {
         const uintptr_t eip = freeze.eip(i);
-        if (eip >= kHitman2Base + 0x1000 && eip < 0x639000) ++inExe;
+        if (eip >= kHitman2Base + 0x1000 && eip < build->codeEnd) ++inExe;
         if (eip >= site.functionLo && eip < site.functionHi) ++inFunction;
     }
     freeze.Resume();
@@ -83,8 +88,9 @@ bool RedirectExeCall(const FixContext& ctx, uintptr_t caller, const ExeCallSite&
         site.functionName);
     const uintptr_t siteVa = site.contextVa + site.callOffset;
     if (result == RedirectResult::Applied || result == RedirectResult::AlreadyApplied) {
-        log("%s: call at 0x%08X redirected to %s 0x%08X (%s; sha256 %s)", fix, static_cast<unsigned>(siteVa),
-            site.stubName, static_cast<unsigned>(reinterpret_cast<uintptr_t>(stub)), ToString(result), hex);
+        log("%s: call at 0x%08X redirected to %s 0x%08X (%s; hitman2.exe %s, sha256 %s)", fix,
+            static_cast<unsigned>(siteVa), site.stubName, static_cast<unsigned>(reinterpret_cast<uintptr_t>(stub)),
+            ToString(result), build->label, hex);
         return true;
     }
     log("%s: %s - not applied", fix, ToString(result));

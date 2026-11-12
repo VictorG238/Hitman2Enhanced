@@ -10,7 +10,7 @@ de.TaskHdFonts=HD-Schriften: scharfe Menütexte, erzeugt aus Ihren eigenen Spiel
 de.BuildingFonts=HD-Schriften werden aus Ihren Spieldateien erzeugt (ca. 1 Minute)...
 de.NoGame=In diesem Ordner wurde keine hitman2.exe gefunden.%n%nWählen Sie den Ordner von Hitman 2: Silent Assassin (Steam: Rechtsklick auf das Spiel > Verwalten > Lokale Dateien durchsuchen).
 de.ForeignDll=Dieser Ordner enthält bereits eine d3d8.dll, die zu einer anderen Mod gehört.%n%nEntfernen Sie zuerst diese Mod; Hitman 2 Enhanced überschreibt sie nicht.
-de.UnknownExe=Diese hitman2.exe ist nicht die Steam-Version 1.0.0.277, für die die Korrekturen erstellt wurden.%n%nDie Korrekturen prüfen die Spielversion und bleiben bei anderen Versionen inaktiv. Trotzdem installieren?
+de.UnknownExe=Diese hitman2.exe ist keine der Versionen, für die die Korrekturen erstellt wurden (Steam 1.0.0.277, Disc-/Handelsversion 1.0.0.265).%n%nDie Korrekturen prüfen die Spielversion und bleiben bei anderen Versionen inaktiv (nur die Bildratenbegrenzung und die Einstellungsseite funktionieren). Trotzdem installieren?
 de.ProjectPage=Projektseite und Quellcode:
 de.NotWritable=In diesen Ordner können ohne Administratorrechte keine Dateien geschrieben werden.%n%nSchließen Sie dieses Installationsprogramm und starten Sie es erneut mit Rechtsklick > Als Administrator ausführen.
 

@@ -147,7 +147,9 @@ Type: dirifempty; Name: "{app}\{#SubDir}"
 const
   GameExe = 'hitman2.exe';
   SteamAppKey = 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 6850';
+  // hitman2.exe builds with all fixes (src/fixes/game_build.cpp): Steam 1.0.0.277, retail 1.0.0.265.
   KnownExeSha256 = 'f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136';
+  KnownExeSha256Retail = '0d7742c85e328886e91152036ae6615ca4c98bbb97c7a36d8f9e150235e57560';
   ProxyMarker = 'Hitman 2 Enhanced';
 
 function IsGameDir(const Dir: String): Boolean;
@@ -201,7 +203,7 @@ end;
 
 function NextButtonClick(CurPageID: Integer): Boolean;
 var
-  Dir: String;
+  Dir, Hash: String;
 begin
   Result := True;
   if CurPageID <> wpSelectDir then
@@ -222,7 +224,8 @@ begin
     Result := False;
     exit;
   end;
-  if GetSHA256OfFile(Dir + GameExe) <> KnownExeSha256 then
+  Hash := GetSHA256OfFile(Dir + GameExe);
+  if (Hash <> KnownExeSha256) and (Hash <> KnownExeSha256Retail) then
     Result := MsgBox(CustomMessage('UnknownExe'), mbConfirmation, MB_YESNO) = IDYES;
 end;
 

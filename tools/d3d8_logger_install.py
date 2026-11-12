@@ -33,7 +33,8 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-KNOWN_EXE = {"f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136": "hitman2.exe 1.0.0.277 (Steam)"}
+KNOWN_EXE = {"f85765f1b36734165fc22122050ca39ca1b8873f9b2d430b50a8271cde5d5136": "hitman2.exe 1.0.0.277 (Steam)",
+             "0d7742c85e328886e91152036ae6615ca4c98bbb97c7a36d8f9e150235e57560": "hitman2.exe 1.0.0.265 (retail)"}
 MARKER = "h2e.installed.json"
 LOG = "h2e.log"
 CONFIG = "h2e.ini"

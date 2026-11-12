@@ -4,6 +4,21 @@ All notable changes to Hitman 2 Enhanced. Versions follow [semantic versioning](
 version is 0.x, any release may change the configuration format. The version lives in `src/version.h` (and
 `CMakeLists.txt`); every release adds a section here before `tools/package_release.py` is run.
 
+## 0.8.1 — 2026-11-11
+
+- **Retail/disc version 1.0.0.265 supported** (hitman2.exe `0d7742c8…7560`, RenderD3D.dll `803c32e4…567a`): new
+  build table `src/fixes/game_build.{h,cpp}` selected by the files' SHA-256; `resolution`, `timer`, `menuscale`
+  (cursor hook, ZWINDOWS probe), `settings` FOV and `horplus` use it. Addresses ported by matching the Steam code with
+  absolute operands masked, each verified against the file (EXECUTABLE_ANALYSIS.md "Retail 1.0.0.265").
+- `RedirectCall`: the call may start up to 3 bytes into its aligned qword (retail timer call at 0x4183C2); still one
+  `lock cmpxchg8b`. Test with the call at qword+2/+3 (applied) and +4 (refused).
+- Installer: accepts both versions; texts updated in all languages (GOG: untested, should work if its files match).
+- `menuscale`: the in-game briefing (key B) photos are scaled too - a paused game (`ZEngineDataBase::IsPaused`,
+  byte `[[g_pSysInterface+0x98]+0xB9C]`) counts as a menu frame unless the in-game map is open.
+- `exe_redirect` accepts the retail exe's code pages (mapped WRITECOPY: section headers without EXECUTE, no DEP), so
+  the timer and the menu cursor hook apply on 1.0.0.265.
+- Proxy: first-chance exception logger in `h2e.log` (up to 24 entries) to diagnose load crashes (GB-012).
+
 ## 0.8.0 — 2026-11-11
 
 First public release.

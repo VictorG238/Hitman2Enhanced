@@ -1,7 +1,8 @@
 ﻿HITMAN 2 ENHANCED - 本安裝程式會做什麼
 =======================================
 
-適用於 Hitman 2: Silent Assassin（Steam 版 1.0.0.277）的非官方開放原始碼修正。
+適用於 Hitman 2: Silent Assassin（Steam 版 1.0.0.277 和光碟版 1.0.0.265）的非官方開放原始碼修正。
+GOG 版尚未測試，但如果其檔案與上述版本之一相同，應該可以正常運作；否則修正會自動停用。
 作者：Aquiles / Victor Baeza - https://github.com/VictorG238
 
 修正內容（每一項都可以在下一頁啟用或關閉）

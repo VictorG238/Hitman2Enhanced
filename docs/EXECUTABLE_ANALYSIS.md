@@ -27,6 +27,41 @@ All are PE32 i386, subsystem WINDOWS_GUI. `CONFIRMED` (pe_inspect, cross-checked
 Linker 6.0 on every game binary plus valid Rich headers ⇒ `INFERRED`: built with the Visual C++ 6.0
 toolchain. Rich `prod_id` values are recorded raw in the JSON reports, not interpreted.
 
+### Retail 1.0.0.265 (second supported build, 2026-11-11)
+
+Owner's disc/retail install (`E:\...\Hitman 2 Silent Assassin 1.0`), read-only analysis of the files on disk.
+
+| File | Size | SHA-256 | Notes |
+|---|---:|---|---|
+| hitman2.exe | 3452367 | `0d7742c85e328886e91152036ae6615ca4c98bbb97c7a36d8f9e150235e57560` | VERSIONINFO 1.0.0.265; **not** packed (sections `.text` raw==va, plus `.cms_t`/`.cms_d`); PE timestamp 2012 (header rewritten) |
+| RenderD3D.dll | 327680 | `803c32e44e9441e2a430356f1fad8dd043dec67f81f4d6ba6070be0f52c7567a` | timestamp 2002-09-18 |
+
+Addresses ported from the Steam build (`src/fixes/game_build.cpp`). Method: the Steam bytes (analysis image
+`f59d353e…05266a`) with rel32 operands and absolute addresses in 0x401000..0x700000 masked are searched in the
+1.0 file; every hit was unique and then read back from the file (`CONFIRMED`, static). Same instruction sequences,
+shifted code; object layouts match where compared (ZWINDOWS ctor fields +0x5F6/+0x5F2/+0x1D4/+0x94, GeomDb `+0x98`,
+cursor fields +0x70/+0x78/+0x90, raw cursor `+0x7E4/+0x7E8`, DirectInput flag `+0x62`, IngameMap ctor).
+
+| Item | Steam 1.0.0.277 | Retail 1.0.0.265 |
+|---|---|---|
+| `g_pSysInterface` | 0x6A6C5C | 0x69F054 |
+| Timer `call _ftol` (context start) | 0x417B40 (0x417B32) | 0x4183C2 (0x4183B4); time scale field 0x18B8 instead of 0x193C |
+| Timer function | 0x4179F0..0x417C60 | 0x418250..0x4184F0 |
+| `_ftol` | 0x5A01AC | 0x59DD9C |
+| Menu cursor call / GetMouseDelta | 0x40F830 / 0x40F9D0 | 0x40FAA0 / 0x40FC40 |
+| Input frame function | 0x40F7C0..0x40F906 | 0x40FA30..0x40FB76 |
+| ZWINDOWS vtable (setter/getter at +0x2E8/+0x2EC) | 0x64DBA8 | 0x646928 (0x4BA5B0 / 0x4BA590) |
+| ZWINDOW_IngameMap vtable | 0x659058 | 0x651DD8 |
+| RenderD3D width-snap `jz` (fix `resolution`) | RVA 0x197F7 | RVA 0x18767 (same 40 context bytes) |
+| RenderD3D camera SetTransform return | RVA 0x33DD | RVA 0x349D |
+
+`CONFIRMED` (owner run 2026-11-11): the ZWINDOWS open-window list (+0xE0/+0xE4) works the same - menus scaled.
+`OPEN`: the IngameMap open flag (+0x20) in game.
+
+The 1.0.0.265 exe's section headers are rewritten (all `INITIALIZED_DATA|READ|WRITE`, no `EXECUTE`) and it has no
+NX-compat flag, so its code is mapped `PAGE_WRITECOPY` and runs without DEP. `exe_redirect` therefore accepts
+`READWRITE`/`WRITECOPY` image pages besides executable ones (first run refused the timer and cursor hooks).
+
 ### Files changed during session 1 — resolved (installation repair)
 
 `CONFIRMED`: on 2026-11-09 at 23:55:41 (-03) six files were rewritten: `RenderD3D.dll`,

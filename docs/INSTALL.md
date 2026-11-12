@@ -1,7 +1,7 @@
 Hitman 2 Enhanced - installation
 ================================
 
-Unofficial fixes for Hitman 2: Silent Assassin (Steam version 1.0.0.277). Nothing in the game is
+Unofficial fixes for Hitman 2: Silent Assassin (Steam version 1.0.0.277 and retail/disc version 1.0.0.265). Nothing in the game is
 modified on disk: the fixes run in memory while the game is running.
 
 Easiest: run Hitman2Enhanced-Setup-<version>.exe (it finds the game and can be uninstalled from

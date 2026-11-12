@@ -28,6 +28,21 @@ addresses below are from the runtime capture (`main.analysis.img`).
 | 0x410E10 | `ZSysInputWintel::Update` (vtbl+0x24) | Polls devices, then calls 0x40F7C0; called by the main loop 0x416810 | CONFIRMED (static) | RENDERING "Menu cursor" |
 | 0x40F7C0 | `ZSysInput::UpdateCursor?` | Cursor `[this+0x18/+0x1C]` += mouse delta, clamped to 0..W/H (renderer vtbl 0xB0/0xB4) | CONFIRMED (static); name provisional | RENDERING "Menu cursor" |
 | 0x40F830 | call site | `call 0x40F9D0` (mouse delta); redirected by `menuscale` while a menu is scaled | CONFIRMED (bytes) | FIXES `menuscale` |
+| 0x4014C0 | `ZEngineDataBase::IsPaused` (export) | `mov al,[ecx+0xB9C]`; db = `[g_pSysInterface+0x98]` (main loop 0x4169E4 reads it so); `menuscale` scales paused frames | CONFIRMED (static) | FIXES `menuscale` v5 |
+
+## hitman2.exe retail 1.0.0.265 — SHA-256 `0d7742c85e328886e91152036ae6615ca4c98bbb97c7a36d8f9e150235e57560`
+
+Not packed; file offset == RVA for `.text`/`.rdata`/`.data`. Ported from the Steam build by masked-signature matching,
+each read back from the file (`src/fixes/game_build.cpp`, EXECUTABLE_ANALYSIS.md "Retail 1.0.0.265").
+
+| VA | Name | Description | Tag | Source |
+|---|---|---|---|---|
+| 0x69F054 | `g_pSysInterface` (export) | Same role as Steam 0x6A6C5C | CONFIRMED | EXECUTABLE_ANALYSIS |
+| 0x4183C2 | call site | `call _ftol` (0x59DD9C) in the frame timer 0x418250..0x4184F0; redirected by `timer` (call at qword+2) | CONFIRMED (bytes) | FIXES `timer` |
+| 0x40FAA0 | call site | `call 0x40FC40` (mouse delta) in the input frame function 0x40FA30; redirected by `menuscale` | CONFIRMED (bytes) | FIXES `menuscale` |
+| 0x646928 | `ZWINDOWS` vtable | Setter/getter 0x4BA5B0/0x4BA590 at +0x2E8/+0x2EC | CONFIRMED (static) | EXECUTABLE_ANALYSIS |
+| 0x651DD8 | `ZWINDOW_IngameMap` vtable | Constructor 0x53B930 | CONFIRMED (static) | EXECUTABLE_ANALYSIS |
+| 0x4015C0 | `ZEngineDataBase::IsPaused` (export) | `mov al,[ecx+0xB9C]`, as Steam | CONFIRMED (static) | FIXES `menuscale` v5 |
 | 0x40F9D0 | `ZSysInput::GetMouseDelta?` | thiscall (device index), returns `float*` {dx, dy, dz} or 0 | CONFIRMED (static) | RENDERING "Menu cursor" |
 | 0x411680 | `WintelMouse::WintelMouse` | Vtable 0x639CA4 | CONFIRMED (static) | RENDERING "Menu cursor" |
 | 0x411810 | `WintelMouse::Update` | DirectInput GetDeviceState(0x14); deltas to `+0x3A..`, `g_pSysInterface+0x7E4/+0x7F0` | CONFIRMED (static) | RENDERING "Menu cursor" |

@@ -94,8 +94,13 @@ float ZWindowsRawTarget(float raw, float last, float pos, float k, double scale,
 // Menu decision with the ZWINDOWS probe. listCount: open windows (-1: no ZWINDOWS instance known - load screens,
 // logos: never scaled). A menu is an open window that is not the in-game map, or a ZWINDOWS screen without any 3D
 // scene: the briefing shows its photos and text with an empty window list (owner 2026-11-11: photos were enlarged
-// for ~1 s while a transient window was listed, then shrank back).
-bool ProbeSaysMenu(int listCount, bool mapOpen, bool noSceneCamera);
+// for ~1 s while a transient window was listed, then shrank back), or a paused game: the in-game briefing (key B)
+// shows its photos over the mission scene with an empty list too (owner 2026-11-11, both builds).
+bool ProbeSaysMenu(int listCount, bool mapOpen, bool noSceneCamera, bool paused = false);
+
+// ZEngineDataBase::IsPaused (Steam 0x4014C0, retail 0x4015C0, same code): byte [db+0xB9C], db = [g_pSysInterface+0x98]
+// (main loop 0x4169E4 reads it the same way). CONFIRMED static, both builds.
+constexpr uint32_t kSysEngineDb = 0x98, kEngineDbPaused = 0xB9C;
 
 // True while menuscale runs (fix enabled, ZWINDOWS probe active) and the last frame was a menu frame. Used by the
 // settings page for its "F10" hint.

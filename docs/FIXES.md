@@ -2,7 +2,10 @@
 
 One entry per fix in `src/fixes/` (framework: D-009, `src/fixes/fix.h`). The id is the `h2e.ini` section.
 Status: `CONFIRMED` = tested in a mission; `EXPERIMENTAL` = built, not working or not yet verified.
-All binary addresses refer to RenderD3D.dll SHA-256 `e9aff44931aa6c361fdcc49d1f5969d19777923c8f6c2c2e18e439bfd53c871d`.
+Binary addresses below refer to the Steam build (hitman2.exe 1.0.0.277, RenderD3D.dll SHA-256
+`e9aff44931aa6c361fdcc49d1f5969d19777923c8f6c2c2e18e439bfd53c871d`); the retail 1.0.0.265 equivalents are in
+`src/fixes/game_build.cpp` and EXECUTABLE_ANALYSIS.md "Retail 1.0.0.265". Every fix that needs an engine address
+looks up the running build by file SHA-256 and stays off on an unknown one.
 
 | Id | Problem | Status | Default in release |
 |---|---|---|---|
@@ -141,6 +144,11 @@ All binary addresses refer to RenderD3D.dll SHA-256 `e9aff44931aa6c361fdcc49d1f5
   map is open. Rule now (`ProbeSaysMenu`): scale when ZWINDOWS is known, the map is not open, and the list is not
   empty **or** no scene camera was seen in the last 3 frames. Load screens (no ZWINDOWS) are still not scaled.
   In game (owner, same day): photos fill the screen; log shows no unscaled briefing span and no scaled load screen.
+- **Detection v5 (in-game briefing, key B)**: owner 2026-11-11, both builds: the briefing opened during a mission
+  shows its photos small - the same empty window list, but over the mission's scene camera. A paused game now also
+  counts (`ZEngineDataBase::IsPaused` = byte `[[g_pSysInterface+0x98]+0xB9C]`, Steam 0x4014C0 / retail 0x4015C0, read
+  the same way by the main loop at 0x4169E4; `CONFIRMED` static). The map open flag still wins. `HYPOTHESIS`: the
+  B briefing pauses the game while a photo is shown - pause transitions are logged ("game paused/running").
 - **Crashes GB-009** (two, while loading a save from the main menu) with the 8a7e5b5 probe build: see KNOWN_ISSUES.md;
   the scans now read 64 KB chunks into a static buffer (bfa1e78); three later runs were clean.
 - **Previous attempt**: viewport-only scaling (`uiscale`, reverted) enlarged only the sub-panels.

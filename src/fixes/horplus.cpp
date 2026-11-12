@@ -1,6 +1,7 @@
 #include "horplus.h"
 
 #include "fix.h"
+#include "game_build.h"
 
 namespace h2e {
 
@@ -26,7 +27,7 @@ namespace {
 
 bool OnProjection(const FixContext& ctx, uintptr_t returnAddress, d3d8::Matrix& m, const d3d8::Viewport& vp,
                   unsigned bbWidth, unsigned bbHeight) {
-    if (!ctx.renderD3DBase || returnAddress != ctx.renderD3DBase + kSceneProjectionRetRva) return false;
+    if (!IsCameraProjectionCall(ctx.renderD3DBase, returnAddress)) return false;
     return ApplyHorPlus(m, vp, bbWidth, bbHeight);
 }
 

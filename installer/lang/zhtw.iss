@@ -10,7 +10,7 @@ zhtw.TaskHdFonts=高畫質字型：由您自己的遊戲檔案產生清晰的選
 zhtw.BuildingFonts=正在由您的遊戲檔案產生高畫質字型（約 1 分鐘）...
 zhtw.NoGame=此資料夾中找不到 hitman2.exe。%n%n請選擇 Hitman 2: Silent Assassin 的資料夾（Steam：在遊戲上按右鍵 > 管理 > 瀏覽本機檔案）。
 zhtw.ForeignDll=此資料夾中已有屬於其他模組的 d3d8.dll。%n%n請先移除該模組；Hitman 2 Enhanced 不會覆寫它。
-zhtw.UnknownExe=此 hitman2.exe 不是這些修正所針對的 Steam 版本 1.0.0.277。%n%n修正會檢查遊戲版本，在其他版本上不會生效。仍要安裝嗎？
+zhtw.UnknownExe=此 hitman2.exe 不是這些修正所針對的版本（Steam 版 1.0.0.277、光碟版 1.0.0.265）。%n%n修正會檢查遊戲版本，在其他版本上不會生效（只有畫面更新率限制和設定頁面可用）。仍要安裝嗎？
 zhtw.ProjectPage=專案頁面與原始碼：
 zhtw.NotWritable=沒有系統管理員權限，無法將檔案寫入此資料夾。%n%n請關閉此安裝程式，然後按右鍵 > 以系統管理員身分執行，重新啟動它。
 

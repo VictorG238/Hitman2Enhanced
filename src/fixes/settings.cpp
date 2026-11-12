@@ -12,7 +12,8 @@
 
 #include "fix.h"
 #include "framelimit.h"
-#include "horplus.h"    // kSceneProjectionRetRva, kMinSceneFarPlane
+#include "game_build.h"  // IsCameraProjectionCall
+#include "horplus.h"     // kMinSceneFarPlane
 #include "menuscale.h"  // MenuScaleMenuOpen
 #include "../version.h"  // version and author shown on the page
 
@@ -979,7 +980,7 @@ void OnDirect3DCreate(const FixContext& ctx, uintptr_t) { HookDirectInput(ctx); 
 
 bool OnProjection(const FixContext& ctx, uintptr_t returnAddress, d3d8::Matrix& m, const d3d8::Viewport&, unsigned,
                   unsigned) {
-    if (!ctx.renderD3DBase || returnAddress != ctx.renderD3DBase + kSceneProjectionRetRva) return false;
+    if (!IsCameraProjectionCall(ctx.renderD3DBase, returnAddress)) return false;
     // Diagnostics (owner 2026-11-11: "FOV changes nothing"): scene-site projections seen / changed, logged at close.
     ++g_projSeen;
     const bool changed = ApplyFov(m, g_fov);

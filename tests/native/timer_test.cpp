@@ -38,12 +38,13 @@ struct Harness {
     uint8_t expected[30] = {};
     uint8_t obj[0x2000] = {};
 
-    bool Init() {
+    // lead: bytes between the aligned qword start and the call (Steam build 0, retail 1.0.0.265 2).
+    bool Init(size_t lead = 0) {
         page = static_cast<uint8_t*>(VirtualAlloc(nullptr, 0x2000, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE));
         if (!page) return false;
         ftol = page + 0x800;
         std::memcpy(ftol, h2e::kFtolCode, sizeof h2e::kFtolCode);
-        seq = page + 0x102;  // 0x102 + 14 = 0x110
+        seq = page + 0x102 + lead;  // 0x102 + 14 = 0x110
         std::memcpy(expected, h2e::kTimerContext, sizeof expected);
         const auto constAddr = static_cast<uint32_t>(reinterpret_cast<uintptr_t>(&k1024));
         std::memcpy(expected + 8, &constAddr, 4);
@@ -272,6 +273,25 @@ int main() {
     Check(after.Protect == before.Protect, "page protection restored");
     Check(std::memcmp(h.seq + 19, h.expected + 19, 11) == 0 && std::memcmp(h.seq, h.expected, 14) == 0,
           "only the rel32 changed");
+
+    // --- 3b. Retail 1.0.0.265 layout: the call starts 2 bytes into its aligned qword (0x4183C2); 3 still fits,
+    // 4 does not (the rel32 would cross the qword).
+    {
+        Harness r;
+        Check(r.Init(2), "harness with the call at qword+2");
+        Check(h2e::RedirectCall(r.Site(), &h2e_TimerTickStub) == h2e::RedirectResult::Applied,
+              "call at qword+2 redirected");
+        Check(std::memcmp(r.seq, r.expected, 15) == 0 && std::memcmp(r.seq + 19, r.expected + 19, 11) == 0,
+              "call at qword+2: only the rel32 changed");
+        r.SetClock(0);
+        Check(std::fabs(static_cast<double>(Run(r, 3000.0, 5.0)) - 5120.0) <= 52.0,
+              "call at qword+2: clock advances at 3000 fps after the redirect");
+        Harness r3, r4;
+        Check(r3.Init(3) && h2e::RedirectCall(r3.Site(), &h2e_TimerTickStub) == h2e::RedirectResult::Applied,
+              "call at qword+3 redirected");
+        Check(r4.Init(4) && h2e::RedirectCall(r4.Site(), &h2e_TimerTickStub) == h2e::RedirectResult::Misaligned,
+              "call at qword+4 refused");
+    }
 
     // --- 4. Patched: exact clock at any frame rate, same dt store, ABI preserved.
     h.SetClock(0);

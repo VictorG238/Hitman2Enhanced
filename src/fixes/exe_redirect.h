@@ -11,10 +11,11 @@ namespace h2e {
 
 struct ExeCallSite {
     const char* fix;                // log prefix, e.g. "timer"
+    const char* buildSha256;        // hitman2.exe build the addresses belong to (game_build.h)
     uintptr_t contextVa;            // verified context (must contain the call)
     const uint8_t* context;         // expected bytes, including the original rel32
     size_t contextSize;
-    size_t callOffset;              // offset of the E8 opcode inside the context (call must be 8-byte aligned)
+    size_t callOffset;              // offset of the E8 opcode inside the context (5 bytes within one aligned qword)
     const uint8_t* targetPrologue;  // expected first bytes of the original call target
     size_t targetPrologueSize;
     uintptr_t functionLo, functionHi;  // enclosing engine function, reported in the thread inventory
@@ -22,8 +23,8 @@ struct ExeCallSite {
     const char* stubName;              // e.g. "the accumulator stub"
 };
 
-// Checks, in order: the caller is RenderD3D.dll, hitman2.exe is mapped at 0x400000 with the pinned SHA-256
-// (kHitman2Sha256), the context lies in committed executable image memory of hitman2.exe; pins the proxy DLL;
+// Checks, in order: the caller is RenderD3D.dll, hitman2.exe is mapped at 0x400000 and its file SHA-256 is the
+// known build `site.buildSha256` (game_build.h), the context lies in committed executable image memory of hitman2.exe; pins the proxy DLL;
 // freezes every other thread (refusing if one executes the context); then RedirectCall. Every outcome is logged;
 // any failure leaves the game untouched. True if the call now goes to `stub`.
 bool RedirectExeCall(const FixContext& ctx, uintptr_t caller, const ExeCallSite& site, const void* stub);

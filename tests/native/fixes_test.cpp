@@ -15,6 +15,7 @@
 #include "../../src/fixes/fix.h"
 #include "../../src/fixes/horplus.h"
 #include "../../src/fixes/framelimit.h"
+#include "../../src/fixes/game_build.h"
 #include "../../src/fixes/hdfonts.h"
 #include "../../src/fixes/menuscale.h"
 #include "../../src/fixes/resolution.h"
@@ -259,6 +260,57 @@ int main() {
               callVa % 8 == 0 && callVa == 0x40F830,
           "cursor context: aligned call 0x40F9D0 at 0x40F830");
 
+    // Known game builds: every table entry is self-consistent (call targets, enclosing functions, distinct hashes).
+    for (size_t i = 0; i < h2e::kExeBuildCount; ++i) {
+        const h2e::ExeBuild& b = h2e::kExeBuilds[i];
+        char what[128];
+        int32_t crel = 0;
+        std::memcpy(&crel, b.cursorContext + b.cursorCallOffset + 1, 4);
+        const uintptr_t ccall = b.cursorContextVa + b.cursorCallOffset;
+        std::snprintf(what, sizeof what, "%s: cursor call targets GetMouseDelta inside the input function", b.label);
+        Check(b.cursorContext[b.cursorCallOffset] == 0xE8 && ccall + 5 + crel == b.mouseDeltaVa &&
+                  ccall >= b.inputFnLo && ccall < b.inputFnHi && b.cursorContextSize == 34,
+              what);
+        const uintptr_t tcall = b.timerContextVa + b.timerCallOffset;
+        std::snprintf(what, sizeof what, "%s: timer call inside the timer function, within one aligned qword", b.label);
+        Check(b.timerContext[b.timerCallOffset] == 0xE8 && tcall >= b.timerFnLo && tcall < b.timerFnHi &&
+                  (tcall & 7) <= 3 && (tcall & ~uintptr_t(7)) >= b.timerContextVa &&
+                  (tcall & ~uintptr_t(7)) + 8 <= b.timerContextVa + b.timerContextSize,
+              what);
+        std::snprintf(what, sizeof what, "%s: found by its hash", b.label);
+        Check(h2e::FindExeBuild(b.sha256) == &b && std::strlen(b.sha256) == 64, what);
+    }
+    Check(h2e::FindExeBuild("0000") == nullptr && h2e::kExeBuildCount == 2, "unknown exe hash: no build");
+    Check(h2e::FindRenderBuild(h2e::kRenderD3DSha256) == &h2e::kRenderBuilds[0] && h2e::kRenderBuildCount == 2 &&
+              h2e::kRenderBuilds[0].sceneProjectionRet == h2e::kSceneProjectionRetRva &&
+              std::strcmp(h2e::kRenderBuilds[0].sha256, h2e::kRenderBuilds[1].sha256) != 0,
+          "RenderD3D builds");
+
+    // Guard pages: ReadU32 must not touch them (GB-012 suspect, ruled out: the note below shows what a raw
+    // ReadProcessMemory does on this Windows).
+    {
+        auto* g = static_cast<uint8_t*>(VirtualAlloc(nullptr, 0x3000, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE));
+        DWORD old = 0;
+        VirtualProtect(g + 0x1000, 0x1000, PAGE_READWRITE | PAGE_GUARD, &old);
+        VirtualProtect(g + 0x2000, 0x1000, PAGE_READWRITE | PAGE_GUARD, &old);
+        uint32_t v = 0;
+        const auto guardBits = [&](uint8_t* p) {
+            MEMORY_BASIC_INFORMATION mbi{};
+            VirtualQuery(p, &mbi, sizeof mbi);
+            return (mbi.Protect & PAGE_GUARD) != 0;
+        };
+        Check(!h2e::ReadU32(reinterpret_cast<uintptr_t>(g + 0x1010), &v) && guardBits(g + 0x1000),
+              "ReadU32 refuses a guard page and leaves the guard in place");
+        Check(!h2e::ReadU32(reinterpret_cast<uintptr_t>(g + 0xFFE), &v) && guardBits(g + 0x1000),
+              "ReadU32 refuses a read that crosses into a guard page");
+        Check(h2e::ReadU32(reinterpret_cast<uintptr_t>(g + 0x10), &v), "ReadU32 reads a normal page");
+        SIZE_T n = 0;
+        ReadProcessMemory(GetCurrentProcess(), g + 0x2010, &v, 4, &n);
+        std::printf("  note: raw ReadProcessMemory on a guard page: %s, guard %s\n", n == 4 ? "read" : "failed",
+                    guardBits(g + 0x2000) ? "kept" : "CONSUMED");
+        VirtualFree(g, 0, MEM_RELEASE);
+    }
+
     h2e::MenuDetector det;
     Check(det.InMenu(), "menu mode before any scene camera");
     det.SceneCameraSeen();
@@ -272,6 +324,9 @@ int main() {
     Check(!h2e::ProbeSaysMenu(1, true, true), "in-game map open: not scaled");
     Check(h2e::ProbeSaysMenu(0, false, true), "empty list without scene camera (briefing photos): menu");
     Check(!h2e::ProbeSaysMenu(0, false, false), "empty list with a scene camera (gameplay HUD): not a menu");
+    Check(h2e::ProbeSaysMenu(0, false, false, true), "paused, empty list over the scene (in-game briefing photo): menu");
+    Check(!h2e::ProbeSaysMenu(1, true, false, true), "paused with the in-game map open: not scaled");
+    Check(!h2e::ProbeSaysMenu(-1, false, false, true), "paused without ZWINDOWS (load screen): not a menu");
 
     // ZWINDOWS probe: a fake instance on the heap is found by its vtable + self-cache; a decoy without the
     // self-cache is rejected.

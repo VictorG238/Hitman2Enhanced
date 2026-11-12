@@ -10,7 +10,7 @@ fr.TaskHdFonts=Polices HD : textes de menu nets, générés à partir de vos pro
 fr.BuildingFonts=Génération des polices HD à partir de vos fichiers du jeu (environ 1 minute)...
 fr.NoGame=hitman2.exe est introuvable dans ce dossier.%n%nChoisissez le dossier de Hitman 2: Silent Assassin (Steam : clic droit sur le jeu > Gérer > Parcourir les fichiers locaux).
 fr.ForeignDll=Ce dossier contient déjà un d3d8.dll appartenant à un autre mod.%n%nSupprimez d'abord ce mod ; Hitman 2 Enhanced ne l'écrasera pas.
-fr.UnknownExe=Ce hitman2.exe n'est pas la version Steam 1.0.0.277 pour laquelle les correctifs ont été conçus.%n%nLes correctifs vérifient la version du jeu et restent inactifs sur les autres versions. Installer quand même ?
+fr.UnknownExe=Ce hitman2.exe n'est pas l'une des versions pour lesquelles les correctifs ont été conçus (Steam 1.0.0.277, version disque/boîte 1.0.0.265).%n%nLes correctifs vérifient la version du jeu et restent inactifs sur les autres versions (seules la limite de FPS et la page de réglages fonctionnent). Installer quand même ?
 fr.ProjectPage=Page du projet et code source :
 fr.NotWritable=Impossible d'écrire des fichiers dans ce dossier sans droits d'administrateur.%n%nFermez ce programme d'installation et relancez-le avec clic droit > Exécuter en tant qu'administrateur.
 

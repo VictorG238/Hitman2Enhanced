@@ -1,7 +1,9 @@
 ﻿HITMAN 2 ENHANCED - WHAT THIS INSTALLER DOES
 =============================================
 
-Unofficial, open-source fixes for Hitman 2: Silent Assassin (Steam version 1.0.0.277).
+Unofficial, open-source fixes for Hitman 2: Silent Assassin (Steam version 1.0.0.277 and
+retail/disc version 1.0.0.265). The GOG version has not been tested but should work if its
+files match one of these versions; otherwise the fixes switch themselves off.
 Author: Aquiles / Victor Baeza - https://github.com/VictorG238
 
 WHAT GETS FIXED (you can switch each one on or off on the next page)

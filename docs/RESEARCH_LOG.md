@@ -2,6 +2,17 @@
 
 Newest first. Each entry links to the experiment/document holding the details.
 
+## 2026-11-11 — Session 2m: retail 1.0.0.265 support, in-game briefing photos (0.8.1)
+
+- Retail/disc 1.0.0.265 (owner's install): hashes, unpacked exe with section headers rewritten to data; every engine
+  address the fixes use ported from the Steam build by masked-signature matching ([EXECUTABLE_ANALYSIS.md](EXECUTABLE_ANALYSIS.md)
+  "Retail 1.0.0.265", [FUNCTION_REGISTRY.md](FUNCTION_REGISTRY.md)); build table `src/fixes/game_build.{h,cpp}`.
+  In game (owner): resolution 1920x1080 fullscreen, menus scaled, cursor confined, HD fonts, F10, timer - all work.
+- Load crash on 1.0 (GB-012, [KNOWN_ISSUES.md](KNOWN_ISSUES.md)): isolation runs point at `framelimit`, but a repeat
+  with the new first-chance exception logger did not crash - intermittent, cause `OPEN`.
+- In-game briefing (key B) photos stayed small in both builds: paused frames now count as menus
+  (`ZEngineDataBase::IsPaused`, [FIXES.md](FIXES.md) `menuscale` v5). Owner: fixed on 1.0 and Steam.
+
 ## 2026-11-11 — Session 2l: menu cursor under `menuscale`
 
 - Static (REA/Ghidra + llvm-objdump, image `f59d353e…05266a`): cursor = `g_pSysInput+0x18/+0x1C` floats, advanced by

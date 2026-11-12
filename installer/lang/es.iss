@@ -10,7 +10,7 @@ es.TaskHdFonts=Fuentes HD: textos nítidos, generados a partir de tus archivos d
 es.BuildingFonts=Generando las fuentes HD a partir de tus archivos del juego (alrededor de 1 minuto)...
 es.NoGame=No se encontró hitman2.exe en esta carpeta.%n%nElige la carpeta de Hitman 2: Silent Assassin (Steam: clic derecho en el juego > Administrar > Ver archivos locales).
 es.ForeignDll=Esta carpeta ya tiene un d3d8.dll de otro mod.%n%nQuita ese mod primero; Hitman 2 Enhanced no lo sobrescribirá.
-es.UnknownExe=Este hitman2.exe no es la versión de Steam 1.0.0.277 para la que se hicieron los arreglos.%n%nLos arreglos comprueban la versión y quedan inactivos en otras versiones. ¿Instalar de todos modos?
+es.UnknownExe=Este hitman2.exe no es una de las versiones para las que se hicieron los arreglos (Steam 1.0.0.277, disco/retail 1.0.0.265).%n%nLos arreglos comprueban la versión y quedan inactivos en otras versiones (solo funcionan el límite de FPS y la página de ajustes). ¿Instalar de todos modos?
 es.ProjectPage=Página del proyecto y código fuente:
 es.NotWritable=No se pueden escribir archivos en esta carpeta sin permisos de administrador.%n%nCierra este instalador y vuelve a abrirlo con clic derecho > Ejecutar como administrador.
 

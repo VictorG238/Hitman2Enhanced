@@ -5,16 +5,42 @@
 
 namespace h2e {
 
+namespace {
+// A page that may be read without side effects: committed, not PAGE_GUARD / PAGE_NOACCESS. The window-list values
+// probed here are often not pointers (retail 1.0), so arbitrary addresses are checked first. (Suspected for the
+// retail 1.0 load crash GB-012 and ruled out: on Windows 11 a ReadProcessMemory of a guard page fails and keeps the
+// guard - fixes_test.)
+bool ReadablePage(uintptr_t addr) {
+    MEMORY_BASIC_INFORMATION mbi{};
+    if (!VirtualQuery(reinterpret_cast<const void*>(addr), &mbi, sizeof mbi)) return false;
+    const DWORD p = mbi.Protect;
+    return mbi.State == MEM_COMMIT && p != 0 && !(p & (PAGE_GUARD | PAGE_NOACCESS));
+}
+}  // namespace
+
 bool ReadU32(uintptr_t addr, uint32_t* value) {
+    if (addr < 0x10000 || addr > 0x7FFEFFFC || !ReadablePage(addr) ||
+        ((addr & 0xFFF) > 0xFFC && !ReadablePage(addr + 3)))
+        return false;
     SIZE_T n = 0;
     return ReadProcessMemory(GetCurrentProcess(), reinterpret_cast<const void*>(addr), value, sizeof *value, &n) &&
            n == sizeof *value;
 }
 
+namespace {
+// Build-specific (game_build.h); default Steam 1.0.0.277.
+uint32_t g_zwVtable = kZWindowsVtable;
+uintptr_t g_sysPtr = 0x6A6C5C;
+}  // namespace
+
+void SetZWindowsBuild(uint32_t zwindowsVtable, uintptr_t sysInterfacePtr) {
+    g_zwVtable = zwindowsVtable;
+    g_sysPtr = sysInterfacePtr;
+}
+
 bool IsZWindows(uintptr_t p) {
     uint32_t vtbl = 0, self = 0;
-    return p && ReadU32(p, &vtbl) && vtbl == kZWindowsVtable && ReadU32(p + kZWinObjWindowsCache, &self) &&
-           self == p;
+    return p && ReadU32(p, &vtbl) && vtbl == g_zwVtable && ReadU32(p + kZWinObjWindowsCache, &self) && self == p;
 }
 
 namespace {
@@ -100,7 +126,7 @@ uintptr_t IncrementalFinder::Step(size_t budgetBytes) {
         done += want;
         if (!ReadProcessMemory(GetCurrentProcess(), reinterpret_cast<const void*>(at), g_chunk, want, &n)) continue;
         for (size_t i = 0; i < n / 4; ++i)
-            if (g_chunk[i] == kZWindowsVtable && IsZWindows(at + i * 4)) return at + i * 4;
+            if (g_chunk[i] == g_zwVtable && IsZWindows(at + i * 4)) return at + i * 4;
     }
     return 0;
 }
@@ -109,7 +135,7 @@ uintptr_t FindZWindowsInRegion(uintptr_t hint) {
     MEMORY_BASIC_INFORMATION mbi{};
     if (!VirtualQuery(reinterpret_cast<void*>(hint), &mbi, sizeof mbi)) return 0;
     uintptr_t found = 0;
-    ScanRegionFor(mbi, kZWindowsVtable, [&](uintptr_t p) { return IsZWindows(p) ? (found = p, true) : false; });
+    ScanRegionFor(mbi, g_zwVtable, [&](uintptr_t p) { return IsZWindows(p) ? (found = p, true) : false; });
     return found;
 }
 
@@ -122,7 +148,7 @@ uintptr_t FindZWindows(unsigned* count, uintptr_t hint) {
         }
     }
     uintptr_t found = 0;
-    ScanAllFor(kZWindowsVtable, [&](uintptr_t p) {
+    ScanAllFor(g_zwVtable, [&](uintptr_t p) {
         if (IsZWindows(p)) {
             ++*count;
             if (!found) found = p;
@@ -141,7 +167,7 @@ uint32_t ResolveGeom(uint32_t value) {
     if (value >= 0x10000 && ReadU32(value, &vt) && InExeImage(vt)) return value;
     if (!value) return 0;
     uint32_t sys = 0, db = 0, table = 0, mask = 0, arr = 0, entry = 0, obj = 0;
-    if (!ReadU32(0x6A6C5C, &sys) || !ReadU32(sys + 0x98, &db)) return 0;
+    if (!ReadU32(g_sysPtr, &sys) || !ReadU32(sys + 0x98, &db)) return 0;
     if (value & 0x40000000) {
         // Static refs: entry = [[db+0x14]+4] + (ref & 0x3FFFFFFF); object = [entry+0x54] (0x426B9B-0x426BB5).
         uint32_t pool = 0, base = 0;

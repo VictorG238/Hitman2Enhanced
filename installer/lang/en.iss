@@ -10,7 +10,7 @@ en.TaskHdFonts=HD fonts: sharp menu text, built from your own game files (about 
 en.BuildingFonts=Building HD fonts from your game files (about 1 minute)...
 en.NoGame=hitman2.exe was not found in this folder.%n%nChoose the Hitman 2: Silent Assassin folder (Steam: right-click the game > Manage > Browse local files).
 en.ForeignDll=This folder already contains a d3d8.dll that belongs to another mod.%n%nRemove that mod first; Hitman 2 Enhanced will not overwrite it.
-en.UnknownExe=This hitman2.exe is not the Steam version 1.0.0.277 the fixes were made for.%n%nThe fixes check the game version and stay inactive on other versions. Install anyway?
+en.UnknownExe=This hitman2.exe is not one of the versions the fixes were made for (Steam 1.0.0.277, retail/disc 1.0.0.265).%n%nThe fixes check the game version and stay inactive on other versions (only the frame-rate limit and the settings page work). Install anyway?
 en.ProjectPage=Project page and source code:
 en.NotWritable=Files cannot be written to this folder without administrator rights.%n%nClose this installer and start it again with right-click > Run as administrator.
 

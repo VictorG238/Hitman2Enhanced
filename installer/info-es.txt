@@ -2,7 +2,9 @@
 =============================================
 
 Arreglos no oficiales y de código abierto para Hitman 2: Silent Assassin
-(versión de Steam 1.0.0.277).
+(versión de Steam 1.0.0.277 y versión en disco/retail 1.0.0.265). La versión de GOG no se ha
+probado, pero debería funcionar si sus archivos son iguales a una de estas versiones; si no, los
+arreglos se desactivan solos.
 Autor: Aquiles / Victor Baeza - https://github.com/VictorG238
 
 QUÉ SE ARREGLA (en la página siguiente puedes activar o desactivar cada uno)

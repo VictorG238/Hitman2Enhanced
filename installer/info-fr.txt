@@ -1,7 +1,9 @@
 ﻿HITMAN 2 ENHANCED - CE QUE FAIT CE PROGRAMME D'INSTALLATION
 ==========================================================
 
-Correctifs non officiels et open source pour Hitman 2: Silent Assassin (version Steam 1.0.0.277).
+Correctifs non officiels et open source pour Hitman 2: Silent Assassin (version Steam 1.0.0.277 et version disque/boîte 1.0.0.265). La version GOG n'a pas été testée mais
+devrait fonctionner si ses fichiers correspondent à l'une de ces versions ; sinon, les correctifs se
+désactivent d'eux-mêmes.
 Auteur : Aquiles / Victor Baeza - https://github.com/VictorG238
 
 CE QUI EST CORRIGÉ (chaque correctif peut être activé ou désactivé à la page suivante)

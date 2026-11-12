@@ -7,6 +7,7 @@
 
 #include "exe_redirect.h"
 #include "fix.h"
+#include "game_build.h"
 
 namespace h2e {
 
@@ -90,12 +91,17 @@ extern "C" __declspec(naked) void h2e_TimerTickStub() {
 
 namespace {
 
-// The call _ftol at 0x417B40 inside the frame timer update 0x4179F0 (next known function 0x417C60, vtable 0xEC).
-// Every check logs its outcome; any failure leaves the game untouched (exe_redirect.h).
+// The call _ftol in the frame timer update (Steam: 0x417B40 in 0x4179F0; retail 1.0.0.265: 0x4183C2 in 0x418250;
+// game_build.h). Every check logs its outcome; any failure leaves the game untouched (exe_redirect.h).
 void OnDirect3DCreate(const FixContext& ctx, uintptr_t caller) {
-    const ExeCallSite site = {"timer",           kHitman2Base + kTimerContextRva, kTimerContext, sizeof kTimerContext,
-                              kTimerCallOffset,  kFtolCode,  18,  0x4179F0,  0x417C60,
-                              "timer function 0x4179F0", "the accumulator stub"};
+    const ExeBuild* b = RunningExeBuild();
+    if (!b) {
+        ctx.log("timer: unknown hitman2.exe build - not applied");
+        return;
+    }
+    const ExeCallSite site = {"timer",          b->sha256,          b->timerContextVa, b->timerContext,
+                              b->timerContextSize, b->timerCallOffset, kFtolCode, 18,  b->timerFnLo,
+                              b->timerFnHi,     "timer function",   "the accumulator stub"};
     RedirectExeCall(ctx, caller, site, reinterpret_cast<const void*>(&h2e_TimerTickStub));
 }
 

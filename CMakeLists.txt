@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(Hitman2Enhanced VERSION 0.8.0 LANGUAGES CXX)  # keep in sync with src/version.h
+project(Hitman2Enhanced VERSION 0.8.1 LANGUAGES CXX)  # keep in sync with src/version.h
 
 # The game is a 32-bit process: native components must be built for Win32.
 #   cmake -S . -B build -G "Visual Studio 18 2026" -A Win32
@@ -21,7 +21,7 @@ add_compile_options(/W4 /permissive- /Oy-)
 add_library(h2e_common STATIC src/common/sha256.cpp src/common/code_patch.cpp)
 add_library(h2e_fixes STATIC src/fixes/registry.cpp src/fixes/resolution.cpp src/fixes/horplus.cpp
             src/fixes/timer.cpp src/fixes/menuscale.cpp src/fixes/framelimit.cpp src/fixes/zwindows.cpp
-            src/fixes/hdfonts.cpp src/fixes/exe_redirect.cpp src/fixes/settings.cpp)
+            src/fixes/hdfonts.cpp src/fixes/exe_redirect.cpp src/fixes/settings.cpp src/fixes/game_build.cpp)
 target_link_libraries(h2e_fixes PUBLIC h2e_common)
 
 add_library(h2e_proxy SHARED src/proxy/d3d8_proxy.cpp src/proxy/d3d8.def)

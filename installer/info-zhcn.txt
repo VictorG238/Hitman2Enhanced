@@ -1,7 +1,8 @@
 ﻿HITMAN 2 ENHANCED - 本安装程序会做什么
 =======================================
 
-适用于 Hitman 2: Silent Assassin（Steam 版 1.0.0.277）的非官方开源修复。
+适用于 Hitman 2: Silent Assassin（Steam 版 1.0.0.277 和光盘版 1.0.0.265）的非官方开源修复。
+GOG 版尚未测试，但如果其文件与上述版本之一相同，应该可以正常工作；否则修复会自动停用。
 作者：Aquiles / Victor Baeza - https://github.com/VictorG238
 
 修复内容（每一项都可以在下一页启用或关闭）

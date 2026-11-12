@@ -183,8 +183,11 @@ bool SameExceptRel(const CallRedirect& s) {
 
 RedirectResult RedirectCall(const CallRedirect& s, const void* newTarget) {
     uint8_t* call = s.context + s.callOffset;
-    if (reinterpret_cast<uintptr_t>(call) % 8 != 0 || s.callOffset + 8 > s.contextSize ||
-        s.expected[s.callOffset] != 0xE8)
+    // The 5-byte call must lie inside one aligned qword that is itself inside the verified context, so a single
+    // lock cmpxchg8b replaces it atomically (Steam build: call at the qword start; retail 1.0.0.265: at +2).
+    auto* block = reinterpret_cast<uint8_t*>(reinterpret_cast<uintptr_t>(call) & ~uintptr_t(7));
+    const size_t lead = size_t(call - block);
+    if (lead > 3 || block < s.context || block + 8 > s.context + s.contextSize || s.expected[s.callOffset] != 0xE8)
         return RedirectResult::Misaligned;
     const uintptr_t next = reinterpret_cast<uintptr_t>(call) + 5;
     if (call[0] == 0xE8 && next + static_cast<uintptr_t>(Rel32At(call + 1)) == reinterpret_cast<uintptr_t>(newTarget) &&
@@ -196,22 +199,22 @@ RedirectResult RedirectCall(const CallRedirect& s, const void* newTarget) {
     if (std::memcmp(oldTarget, s.targetPrologue, s.targetPrologueSize) != 0) return RedirectResult::TargetMismatch;
 
     LONGLONG oldQ, newQ;
-    std::memcpy(&oldQ, call, 8);
+    std::memcpy(&oldQ, block, 8);
     uint8_t bytes[8];
-    std::memcpy(bytes, call, 8);
+    std::memcpy(bytes, block, 8);
     const auto newRel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(newTarget) - next);
-    std::memcpy(bytes + 1, &newRel, 4);
+    std::memcpy(bytes + lead + 1, &newRel, 4);
     std::memcpy(&newQ, bytes, 8);
 
     DWORD oldProtect = 0;
-    if (!VirtualProtect(call, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) return RedirectResult::ProtectFailed;
-    const LONGLONG seen = InterlockedCompareExchange64(reinterpret_cast<volatile LONGLONG*>(call), newQ, oldQ);
+    if (!VirtualProtect(block, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) return RedirectResult::ProtectFailed;
+    const LONGLONG seen = InterlockedCompareExchange64(reinterpret_cast<volatile LONGLONG*>(block), newQ, oldQ);
     DWORD ignored = 0;
-    VirtualProtect(call, 8, oldProtect, &ignored);
-    FlushInstructionCache(GetCurrentProcess(), call, 8);
+    VirtualProtect(block, 8, oldProtect, &ignored);
+    FlushInstructionCache(GetCurrentProcess(), block, 8);
     if (seen != oldQ) return RedirectResult::ExchangeFailed;
     LONGLONG now;
-    std::memcpy(&now, call, 8);
+    std::memcpy(&now, block, 8);
     return now == newQ ? RedirectResult::Applied : RedirectResult::VerifyFailed;
 }
 

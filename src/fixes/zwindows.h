@@ -18,6 +18,10 @@ constexpr uint32_t kZWindowsVtable = 0x0064DBA8;
 constexpr uint32_t kZWinObjWindowsCache = 0x5C;
 constexpr uint32_t kZWindowsFocus = 0x1D4;
 
+// The vtable above and g_pSysInterface 0x6A6C5C are the Steam build's; another known build sets its own
+// (game_build.h; menuscale OnAttach). The object layouts are the same in both builds.
+void SetZWindowsBuild(uint32_t zwindowsVtable, uintptr_t sysInterfacePtr);
+
 // True if [addr] reads 4 bytes into *value.
 bool ReadU32(uintptr_t addr, uint32_t* value);
 

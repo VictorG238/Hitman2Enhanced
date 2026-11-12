@@ -10,8 +10,7 @@
 #include "../common/code_patch.h"  // ModuleFileSha256
 #include "exe_redirect.h"
 #include "fix.h"
-#include "horplus.h"  // kSceneProjectionRetRva
-#include "timer.h"    // kHitman2Sha256
+#include "game_build.h"
 #include "zwindows.h"
 
 namespace h2e {
@@ -96,9 +95,9 @@ float ZWindowsRawTarget(float raw, float last, float pos, float k, double scale,
     return float(double(last) + (target - pos) / k);
 }
 
-bool ProbeSaysMenu(int listCount, bool mapOpen, bool noSceneCamera) {
+bool ProbeSaysMenu(int listCount, bool mapOpen, bool noSceneCamera, bool paused) {
     if (listCount < 0 || mapOpen) return false;
-    return listCount > 0 || noSceneCamera;
+    return listCount > 0 || noSceneCamera || paused;
 }
 
 namespace {
@@ -111,6 +110,9 @@ CursorBounds g_cursorBounds{};
 float g_cursorOut[3] = {};
 uint32_t g_cursorCalls = 0, g_cursorAdjusted = 0, g_zwAdjusted = 0, g_zwSkipped = 0;
 uintptr_t g_cursorWindows = 0;  // ZWINDOWS instance from the last Present (0: none known)
+// Build-specific addresses (game_build.h), set in OnAttach / OnDirect3DCreate before the hook can run.
+uintptr_t g_mouseDeltaVa = kMouseDeltaVa, g_sysInterfacePtr = kSysInterfacePtr;
+uint32_t g_ingameMapVtable = kIngameMapVtable;
 
 bool ReadF32(uintptr_t addr, float* value) {
     uint32_t bits = 0;
@@ -125,7 +127,7 @@ bool ReadF32(uintptr_t addr, float* value) {
 void AdjustZWindowsCursor() {
     uint32_t sys = 0, flag = 0;
     const uintptr_t zw = g_cursorWindows;
-    if (!zw || !IsZWindows(zw) || !ReadU32(kSysInterfacePtr, &sys) || !sys ||
+    if (!zw || !IsZWindows(zw) || !ReadU32(g_sysInterfacePtr, &sys) || !sys ||
         !ReadU32(sys + kDirectInputMouseFlag, &flag) || (flag & 0xFF) == 0) {
         ++g_zwSkipped;
         return;
@@ -166,7 +168,7 @@ unsigned g_bbWidth = 0, g_bbHeight = 0;
 using MouseDeltaFn = const float*(__fastcall*)(void* self, void* edx, int device);  // = thiscall, ret 4
 
 extern "C" const float* __cdecl h2e_MenuCursorDelta(uint8_t* self, int device) {
-    const float* d = reinterpret_cast<MouseDeltaFn>(kMouseDeltaVa)(self, nullptr, device);
+    const float* d = reinterpret_cast<MouseDeltaFn>(g_mouseDeltaVa)(self, nullptr, device);
     ++g_cursorCalls;
     if (device != 0 || !(g_cursorScale > 1.0)) return d;
     AdjustZWindowsCursor();
@@ -276,6 +278,19 @@ uint32_t g_mapNextScan = 0, g_mapTries = 0, g_mapLines = 0;
 constexpr uint32_t kMapScanTries = 3;
 constexpr uint32_t kMaxMapLines = 200;
 bool g_mapOpen = false;
+bool g_paused = false;  // ZEngineDataBase::IsPaused, read once per frame with the probe
+uint32_t g_pauseLines = 0;
+
+void ProbePaused(const FixContext& ctx) {
+    uint32_t sys = 0, db = 0, v = 0;
+    const bool paused = ReadU32(g_sysInterfacePtr, &sys) && sys && ReadU32(sys + kSysEngineDb, &db) && db &&
+                        ReadU32(db + kEngineDbPaused, &v) && (v & 0xFF) != 0;
+    if (paused != g_paused && g_pauseLines < kMaxMapLines) {
+        ++g_pauseLines;
+        ctx.log("menuscale: frame %u game %s", g_frameNo, paused ? "paused" : "running");
+    }
+    g_paused = paused;
+}
 
 // Menu frame decision: with the probe, "a window is open" (list not empty) and it is not the in-game map - covers
 // the main menu and the pause menu, which draw over a 3D scene - or a ZWINDOWS screen without a scene camera (the
@@ -284,7 +299,7 @@ bool g_mapOpen = false;
 // already fill the screen (owner 2026-11-11: "super zoomed in" when scaled; their progress bar sits at the bottom of
 // the screen). Without the probe (unknown hitman2.exe), the old rule (no scene camera in the last frames).
 bool InMenuNow() {
-    if (g_listCount >= 0) return ProbeSaysMenu(g_listCount, g_mapOpen, g_detector.InMenu());
+    if (g_listCount >= 0) return ProbeSaysMenu(g_listCount, g_mapOpen, g_detector.InMenu(), g_paused);
     return g_probeOk ? false : g_detector.InMenu();
 }
 
@@ -298,7 +313,7 @@ void ProbeIngameMap(const FixContext& ctx) {
         g_mapOpen = false;
     }
     uint32_t vt = 0;
-    if (g_map && !(ReadU32(g_map, &vt) && vt == kIngameMapVtable)) {
+    if (g_map && !(ReadU32(g_map, &vt) && vt == g_ingameMapVtable)) {
         g_map = 0;
         g_mapOpen = false;
     }
@@ -308,7 +323,7 @@ void ProbeIngameMap(const FixContext& ctx) {
         g_mapNextScan = g_frameNo + kScanEveryFrames;
         ++g_mapTries;
         WindowObjectScan info;
-        g_map = FindWindowObject(kIngameMapVtable, g_windows, &info);
+        g_map = FindWindowObject(g_ingameMapVtable, g_windows, &info);
         if (canLog && (g_map || info.matches)) {
             ctx.log("menuscale: IngameMap scan %u: %u heap match(es) -> %s 0x%08X", g_mapTries, info.matches,
                     g_map ? "using" : "not found", unsigned(g_map));
@@ -357,6 +372,7 @@ void ProbeWindows(const FixContext& ctx) {
     }
     g_listCount = int(list.count);
     ProbeIngameMap(ctx);
+    ProbePaused(ctx);
     if (g_probeLines >= kMaxProbeLines) return;
     if (g_haveList && list.count == g_lastList.count && list.complete == g_lastList.complete &&
         std::memcmp(list.vtable, g_lastList.vtable, sizeof list.vtable) == 0 &&
@@ -376,16 +392,20 @@ void ProbeWindows(const FixContext& ctx) {
 void OnAttach(const FixContext& ctx) {
     g_configured = GetPrivateProfileIntA("menuscale", "ScalePercent", 0, ctx.iniPath) / 100.0;
     ctx.log("menuscale: %s", g_configured > 0.0 ? "scale from ScalePercent" : "scale fits the screen");
-    HMODULE exe = GetModuleHandleA(nullptr);
-    char hex[65] = "";
-    g_probeOk = reinterpret_cast<uintptr_t>(exe) == 0x400000 && ModuleFileSha256(exe, hex) &&
-                std::strcmp(hex, kHitman2Sha256) == 0;
-    ctx.log("menuscale: ZWINDOWS probe %s", g_probeOk ? "enabled (read-only)" : "disabled (unknown hitman2.exe)");
+    const ExeBuild* b = RunningExeBuild();
+    g_probeOk = b != nullptr;
+    if (b) {
+        g_sysInterfacePtr = b->sysInterfacePtr;
+        g_ingameMapVtable = b->ingameMapVtable;
+        SetZWindowsBuild(b->zwindowsVtable, b->sysInterfacePtr);
+    }
+    ctx.log("menuscale: ZWINDOWS probe %s%s", g_probeOk ? "enabled (read-only), hitman2.exe " : "disabled",
+            b ? b->label : " (unknown hitman2.exe)");
 }
 
 bool OnProjection(const FixContext& ctx, uintptr_t returnAddress, d3d8::Matrix& m, const d3d8::Viewport& vp,
                   unsigned bbWidth, unsigned bbHeight) {
-    if (!ctx.renderD3DBase || returnAddress != ctx.renderD3DBase + kSceneProjectionRetRva) return false;
+    if (!IsCameraProjectionCall(ctx.renderD3DBase, returnAddress)) return false;
     g_projScaled = false;
     if (IsSceneCamera(m)) {
         g_detector.SceneCameraSeen();
@@ -440,16 +460,23 @@ void UpdateCursor(const FixContext& ctx) {
 void OnDirect3DCreate(const FixContext& ctx, uintptr_t caller) {
 #if defined(_M_IX86)
     if (g_cursorHooked) return;
+    const ExeBuild* b = RunningExeBuild();
+    if (!b) {
+        ctx.log("menuscale: unknown hitman2.exe build - menu cursor not confined");
+        return;
+    }
+    g_mouseDeltaVa = b->mouseDeltaVa;
     const ExeCallSite site = {"menuscale",
-                              kCursorContextVa,
-                              kCursorContext,
-                              sizeof kCursorContext,
-                              kCursorCallOffset,
+                              b->sha256,
+                              b->cursorContextVa,
+                              b->cursorContext,
+                              b->cursorContextSize,
+                              b->cursorCallOffset,
                               kMouseDeltaPrologue,
                               sizeof kMouseDeltaPrologue,
-                              kInputFrameVa,
-                              kInputFrameEnd,
-                              "input frame function 0x40F7C0",
+                              b->inputFnLo,
+                              b->inputFnHi,
+                              "input frame function",
                               "the menu cursor stub"};
     g_cursorHooked = RedirectExeCall(ctx, caller, site, reinterpret_cast<const void*>(&h2e_MenuCursorStub));
     if (!g_cursorHooked) ctx.log("menuscale: menu cursor not confined (menus are still scaled)");

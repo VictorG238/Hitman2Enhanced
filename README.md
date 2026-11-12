@@ -3,7 +3,7 @@
 By **Aquiles / Victor Baeza** ([@VictorG238](https://github.com/VictorG238)).
 
 **Hitman 2 Enhanced** is a free, open-source fix pack for **Hitman 2: Silent Assassin** (2002, IO Interactive,
-Glacier engine) on modern Windows 10/11 PCs — Steam version 1.0.0.277. It makes the game run at **1080p, 1440p,
+Glacier engine) on modern Windows 10/11 PCs — Steam version 1.0.0.277 and retail/disc version 1.0.0.265. It makes the game run at **1080p, 1440p,
 4K and widescreen (16:9, 16:10) resolutions in fullscreen**, scales the tiny **menus, briefing and pause menu** to
 the screen, fixes the **high frame rate (FPS) bugs** (frozen game, broken animations, cutscenes out of sync), keeps
 the **game speed correct** at any FPS, adds **sharp HD menu fonts** and an **in-game settings page (F10)** for
@@ -56,8 +56,17 @@ rounding that breaks above about 1024 FPS. `framelimit` caps the frame rate at y
 
 **Can I change the field of view (FOV)?** Yes, in the F10 page (70-130 %), in missions.
 
-**Does it work with the GOG or disc version?** It is made for the Steam version 1.0.0.277; on other versions the
-fixes detect the different `hitman2.exe` and stay inactive.
+**The menu text looks a bit soft.** Set Options > Graphics > Texture filter to Trilinear (in `Hitman2.ini`:
+`DisableTrilinearFiltering 0`); with it off the sharp HD font pages are sampled from their smaller copies.
+
+**The arrow keys do nothing.** That comes from the game's own `keyboard.cfg` (some installs map the arrows only to
+zoom); rebind them in Options > Controls.
+
+**Does it work with the GOG or disc version?** Supported and tested: Steam 1.0.0.277 and the retail/disc 1.0.0.265.
+**The GOG version has not been tested**, but it should work: GOG ships the 1.0 game, and if its `hitman2.exe` and
+`RenderD3D.dll` are the same files as one of the supported versions, every fix applies. If they differ, the fixes
+detect it and stay inactive (safe), except the frame-rate limit and the settings page; `h2e.log` in the game folder
+says which version was detected. Reports from GOG players are welcome (open an issue with your `h2e.log`).
 
 **Is it safe? Does it touch Steam or the copy protection?** No game file is changed and Steam's DRM is not
 touched; everything runs in memory and is removed by the uninstaller. The source and the research behind every fix

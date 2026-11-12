@@ -10,7 +10,7 @@ zhcn.TaskHdFonts=高清字体：由你自己的游戏文件生成清晰的菜单
 zhcn.BuildingFonts=正在由你的游戏文件生成高清字体（约 1 分钟）...
 zhcn.NoGame=此文件夹中找不到 hitman2.exe。%n%n请选择 Hitman 2: Silent Assassin 的文件夹（Steam：右键单击游戏 > 管理 > 浏览本地文件）。
 zhcn.ForeignDll=此文件夹中已有属于其他模组的 d3d8.dll。%n%n请先移除该模组；Hitman 2 Enhanced 不会覆盖它。
-zhcn.UnknownExe=此 hitman2.exe 不是这些修复所针对的 Steam 版本 1.0.0.277。%n%n修复会检查游戏版本，在其他版本上不会生效。仍要安装吗？
+zhcn.UnknownExe=此 hitman2.exe 不是这些修复所针对的版本（Steam 版 1.0.0.277、光盘版 1.0.0.265）。%n%n修复会检查游戏版本，在其他版本上不会生效（只有帧率限制和设置页面可用）。仍要安装吗？
 zhcn.ProjectPage=项目主页和源代码：
 zhcn.NotWritable=没有管理员权限，无法向此文件夹写入文件。%n%n请关闭此安装程序，然后右键单击 > 以管理员身份运行，重新启动它。
 

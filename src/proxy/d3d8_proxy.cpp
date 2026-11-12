@@ -252,6 +252,51 @@ void Caller(void* immediate, char* out, size_t n) {
     }
 }
 
+// Exception diagnostics (GB-012, load crashes): a vectored handler logs the first exceptions of the process with the
+// faulting address and code-looking stack values, so a crash that Windows reports only as an ntdll status can be
+// traced to its first fault. Observes only (EXCEPTION_CONTINUE_SEARCH); never blocks on the log lock.
+LONG g_exceptionsLogged = 0;
+void* g_vectoredHandler = nullptr;
+constexpr LONG kMaxExceptionLines = 24;
+
+bool InSomeModule(uint32_t v) {
+    HMODULE mod = nullptr;
+    return v >= 0x10000 &&
+           GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+                              reinterpret_cast<LPCSTR>(static_cast<uintptr_t>(v)), &mod);
+}
+
+LONG CALLBACK ExceptionLogger(EXCEPTION_POINTERS* ep) {
+    const DWORD code = ep->ExceptionRecord->ExceptionCode;
+    // Benign, frequent: debugger strings, thread naming, C++ throw, breakpoints are still logged.
+    if (code == 0x40010006 || code == 0x4001000A || code == 0x406D1388 || code == 0xE06D7363) return EXCEPTION_CONTINUE_SEARCH;
+    if (!g_log || InterlockedIncrement(&g_exceptionsLogged) > kMaxExceptionLines) return EXCEPTION_CONTINUE_SEARCH;
+    if (!TryEnterCriticalSection(&g_lock)) return EXCEPTION_CONTINUE_SEARCH;
+    char where[160];
+    Describe(ep->ExceptionRecord->ExceptionAddress, where, sizeof where);
+    const CONTEXT* c = ep->ContextRecord;
+    fprintf(g_log, "[%8llu ms] EXCEPTION 0x%08lX at %s thread %lu (esp 0x%08lX ebp 0x%08lX; info %lu: 0x%08lX 0x%08lX)\n",
+            GetTickCount64() - g_t0, code, where, GetCurrentThreadId(), c->Esp, c->Ebp,
+            ep->ExceptionRecord->NumberParameters,
+            static_cast<unsigned long>(ep->ExceptionRecord->NumberParameters > 0 ? ep->ExceptionRecord->ExceptionInformation[0] : 0),
+            static_cast<unsigned long>(ep->ExceptionRecord->NumberParameters > 1 ? ep->ExceptionRecord->ExceptionInformation[1] : 0));
+    // Return addresses on the stack: the first module-owned values of the 64 dwords above esp.
+    unsigned shown = 0;
+    for (unsigned i = 0; i < 64 && shown < 8; ++i) {
+        uint32_t v = 0;
+        SIZE_T n = 0;
+        if (!ReadProcessMemory(GetCurrentProcess(), reinterpret_cast<const void*>(c->Esp + 4 * i), &v, 4, &n) || n != 4)
+            break;
+        if (!InSomeModule(v)) continue;
+        Describe(reinterpret_cast<void*>(static_cast<uintptr_t>(v)), where, sizeof where);
+        fprintf(g_log, "             [esp+0x%03X] %s\n", 4 * i, where);
+        ++shown;
+    }
+    fflush(g_log);
+    LeaveCriticalSection(&g_lock);
+    return EXCEPTION_CONTINUE_SEARCH;
+}
+
 void* Patch(void* obj, int slot, void* hook) {
     void** vtbl = *static_cast<void***>(obj);
     void* orig = vtbl[slot];
@@ -865,9 +910,11 @@ BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID) {
         // RenderD3D imports this DLL, so it is mapped but none of its code has run yet: patch now.
         g_ctx.log = &Log;
         g_ctx.renderD3DBase = reinterpret_cast<uintptr_t>(GetModuleHandleA("RenderD3D.dll"));
+        if (g_log) g_vectoredHandler = AddVectoredExceptionHandler(1, &ExceptionLogger);
         for (size_t i = 0; i < h2e::kFixCount; ++i)
             if (g_fixEnabled[i] && h2e::kFixes[i]->onAttach) h2e::kFixes[i]->onAttach(g_ctx);
     } else if (reason == DLL_PROCESS_DETACH) {
+        if (g_vectoredHandler) RemoveVectoredExceptionHandler(g_vectoredHandler);
         if (g_enabled)
             for (size_t i = 0; i < h2e::kFixCount; ++i)
                 if (g_fixEnabled[i] && h2e::kFixes[i]->onDetach) h2e::kFixes[i]->onDetach(g_ctx);
