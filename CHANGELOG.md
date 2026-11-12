@@ -4,6 +4,14 @@ All notable changes to Hitman 2 Enhanced. Versions follow [semantic versioning](
 version is 0.x, any release may change the configuration format. The version lives in `src/version.h` (and
 `CMakeLists.txt`); every release adds a section here before `tools/package_release.py` is run.
 
+## 0.8.2 — 2026-11-12
+
+- **Fix (regression in 0.8.1)**: the weapon/inventory menu was drawn 2.25x too large (a giant weapon model in the
+  middle of the screen), in both builds. 0.8.1 scaled every paused frame; the inventory pauses the game with no window
+  open. Now a pause counts as a menu only if a window other than the in-game map was open during it (the in-game
+  briefing, key B, still scales its photos).
+- Installer: the social-preview artwork generator (`installer/make_art.ps1`) also writes the GitHub social preview.
+
 ## 0.8.1 — 2026-11-11
 
 - **Retail/disc version 1.0.0.265 supported** (hitman2.exe `0d7742c8…7560`, RenderD3D.dll `803c32e4…567a`): new

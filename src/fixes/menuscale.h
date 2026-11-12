@@ -94,9 +94,22 @@ float ZWindowsRawTarget(float raw, float last, float pos, float k, double scale,
 // Menu decision with the ZWINDOWS probe. listCount: open windows (-1: no ZWINDOWS instance known - load screens,
 // logos: never scaled). A menu is an open window that is not the in-game map, or a ZWINDOWS screen without any 3D
 // scene: the briefing shows its photos and text with an empty window list (owner 2026-11-11: photos were enlarged
-// for ~1 s while a transient window was listed, then shrank back), or a paused game: the in-game briefing (key B)
-// shows its photos over the mission scene with an empty list too (owner 2026-11-11, both builds).
-bool ProbeSaysMenu(int listCount, bool mapOpen, bool noSceneCamera, bool paused = false);
+// for ~1 s while a transient window was listed, then shrank back), or a paused menu (PausedMenu below): the in-game
+// briefing (key B) shows its photos over the mission scene with an empty list too (owner 2026-11-11, both builds).
+bool ProbeSaysMenu(int listCount, bool mapOpen, bool noSceneCamera, bool pausedMenu = false);
+
+// "Paused menu": the game is paused and a window other than the in-game map was open at some point of this pause.
+// The in-game briefing (key B) opens a window, then empties the list while a photo is shown; the weapon/inventory
+// menu pauses the game with an empty list throughout and must not be scaled (0.8.1 regression: the weapon model was
+// drawn 2.25x, owner 2026-11-12, Steam log frames 12453-13442).
+struct PausedMenu {
+    bool active = false;
+    bool Update(bool paused, int listCount, bool mapOpen) {
+        if (!paused) active = false;
+        else if (listCount > 0 && !mapOpen) active = true;
+        return active;
+    }
+};
 
 // ZEngineDataBase::IsPaused (Steam 0x4014C0, retail 0x4015C0, same code): byte [db+0xB9C], db = [g_pSysInterface+0x98]
 // (main loop 0x4169E4 reads it the same way). CONFIRMED static, both builds.

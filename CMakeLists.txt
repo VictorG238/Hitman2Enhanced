@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(Hitman2Enhanced VERSION 0.8.1 LANGUAGES CXX)  # keep in sync with src/version.h
+project(Hitman2Enhanced VERSION 0.8.2 LANGUAGES CXX)  # keep in sync with src/version.h
 
 # The game is a 32-bit process: native components must be built for Win32.
 #   cmake -S . -B build -G "Visual Studio 18 2026" -A Win32

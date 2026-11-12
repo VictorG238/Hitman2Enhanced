@@ -2,6 +2,13 @@
 
 Newest first. Each entry links to the experiment/document holding the details.
 
+## 2026-11-12 — Weapon inventory regression (0.8.2)
+
+- Owner: the weapon/inventory menu showed a giant weapon model in both builds. Cause: 0.8.1 scaled every paused frame
+  and the inventory pauses with an empty window list (GB-013, [KNOWN_ISSUES.md](KNOWN_ISSUES.md)). 0.8.2 `PausedMenu`:
+  a pause counts as a menu only if a non-map window was open during it. Clean reinstall of both folders with the 0.8.2
+  installer; owner confirmed inventory, B-briefing photos, menus and map in both builds.
+
 ## 2026-11-11 — Session 2m: retail 1.0.0.265 support, in-game briefing photos (0.8.1)
 
 - Retail/disc 1.0.0.265 (owner's install): hashes, unpacked exe with section headers rewritten to data; every engine

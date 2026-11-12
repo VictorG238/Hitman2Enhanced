@@ -19,6 +19,7 @@
 
 | ID | Observation | Evidence |
 |---|---|---|
+| GB-013 | Weapon/inventory menu drawn greatly enlarged (a giant weapon model mid-screen) at 1920x1080 in both builds with proxy 0.8.1. **RESOLVED in 0.8.2**: 0.8.1's `menuscale` v5 treated every paused frame as a menu, and the inventory pauses the game with an empty window list (Steam log frames 12453-13442: `scaled=1 windows=0` between "game paused"/"running"). 0.8.2 counts a pause only if a non-map window was open during it (`PausedMenu`); owner confirmed both builds after a clean reinstall. Correction: an earlier note here said the capture `samples/local/logs/h2e-20261112-inventory-highres.log` had `menuscale` off - that log shows `menuscale ON` (0.8.1). | Owner report and screenshot 2026-11-12; Steam logs |
 | GB-001 | Frame rate is uncapped (menu 1194–5282 fps, in-game 509–1969 fps) although VSync interval 0x1 is requested. At very high frame rates the game freezes / ignores Esc / desyncs cutscenes. Likely cause: the integer game clock adds `trunc(dt*1024)` per frame, i.e. 0 above 1024 fps (TIMING_AND_FPS.md "Frame timer", INFERRED). | EXP-003 run-001/002, 2026-11-11 static |
 | GB-004 | Windowed mode centres the window on the whole virtual desktop, so with two monitors it straddles them. Workaround: `StartUpperPos 0,0` in `Hitman2.ini`. | EXP-003 run-005 |
 | GB-005 | At 1920x1080 the map screen's mouse hit areas are offset from the drawn labels, and the map content can appear offset/zoomed against its frame (also without any fix). Cause OPEN (engine input mapping). | EXP-003 run-006, run-009 |

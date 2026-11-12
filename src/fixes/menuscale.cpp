@@ -279,6 +279,7 @@ constexpr uint32_t kMapScanTries = 3;
 constexpr uint32_t kMaxMapLines = 200;
 bool g_mapOpen = false;
 bool g_paused = false;  // ZEngineDataBase::IsPaused, read once per frame with the probe
+PausedMenu g_pausedMenu;  // paused AND a (non-map) window was open during this pause: in-game briefing, not inventory
 uint32_t g_pauseLines = 0;
 
 void ProbePaused(const FixContext& ctx) {
@@ -290,6 +291,7 @@ void ProbePaused(const FixContext& ctx) {
         ctx.log("menuscale: frame %u game %s", g_frameNo, paused ? "paused" : "running");
     }
     g_paused = paused;
+    g_pausedMenu.Update(paused, g_listCount, g_mapOpen);
 }
 
 // Menu frame decision: with the probe, "a window is open" (list not empty) and it is not the in-game map - covers
@@ -299,7 +301,7 @@ void ProbePaused(const FixContext& ctx) {
 // already fill the screen (owner 2026-11-11: "super zoomed in" when scaled; their progress bar sits at the bottom of
 // the screen). Without the probe (unknown hitman2.exe), the old rule (no scene camera in the last frames).
 bool InMenuNow() {
-    if (g_listCount >= 0) return ProbeSaysMenu(g_listCount, g_mapOpen, g_detector.InMenu(), g_paused);
+    if (g_listCount >= 0) return ProbeSaysMenu(g_listCount, g_mapOpen, g_detector.InMenu(), g_pausedMenu.active);
     return g_probeOk ? false : g_detector.InMenu();
 }
 

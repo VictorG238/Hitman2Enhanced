@@ -324,7 +324,15 @@ int main() {
     Check(!h2e::ProbeSaysMenu(1, true, true), "in-game map open: not scaled");
     Check(h2e::ProbeSaysMenu(0, false, true), "empty list without scene camera (briefing photos): menu");
     Check(!h2e::ProbeSaysMenu(0, false, false), "empty list with a scene camera (gameplay HUD): not a menu");
-    Check(h2e::ProbeSaysMenu(0, false, false, true), "paused, empty list over the scene (in-game briefing photo): menu");
+    Check(h2e::ProbeSaysMenu(0, false, false, true), "paused menu, empty list over the scene (in-game briefing photo): menu");
+    {
+        h2e::PausedMenu pm;
+        Check(!pm.Update(true, 0, false) && !pm.Update(true, 0, false), "inventory: paused, list always empty - not a menu");
+        Check(!pm.Update(false, 0, false), "inventory closed");
+        Check(pm.Update(true, 1, false) && pm.Update(true, 0, false), "B briefing: window opened, then photo with an empty list");
+        Check(!pm.Update(false, 0, false) && !pm.Update(true, 0, false), "after the pause ends, the next pause starts clean");
+        Check(!pm.Update(true, 1, true) && !pm.Update(true, 0, false), "the in-game map window does not make a paused menu");
+    }
     Check(!h2e::ProbeSaysMenu(1, true, false, true), "paused with the in-game map open: not scaled");
     Check(!h2e::ProbeSaysMenu(-1, false, false, true), "paused without ZWINDOWS (load screen): not a menu");
 

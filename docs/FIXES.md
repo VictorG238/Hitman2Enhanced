@@ -148,7 +148,10 @@ looks up the running build by file SHA-256 and stays off on an unknown one.
   shows its photos small - the same empty window list, but over the mission's scene camera. A paused game now also
   counts (`ZEngineDataBase::IsPaused` = byte `[[g_pSysInterface+0x98]+0xB9C]`, Steam 0x4014C0 / retail 0x4015C0, read
   the same way by the main loop at 0x4169E4; `CONFIRMED` static). The map open flag still wins. `HYPOTHESIS`: the
-  B briefing pauses the game while a photo is shown - pause transitions are logged ("game paused/running").
+  B briefing pauses the game while a photo is shown - pause transitions are logged ("game paused/running"). Owner:
+  fixed on 1.0 and Steam. **Regression** (owner 2026-11-12, both builds): the weapon/inventory menu also pauses the
+  game, with an empty window list throughout (Steam log frames 12453-13442, `scaled=1 windows=0`), and was drawn 2.25x.
+  0.8.2 (`PausedMenu`): a pause counts only if a non-map window was open during it.
 - **Crashes GB-009** (two, while loading a save from the main menu) with the 8a7e5b5 probe build: see KNOWN_ISSUES.md;
   the scans now read 64 KB chunks into a static buffer (bfa1e78); three later runs were clean.
 - **Previous attempt**: viewport-only scaling (`uiscale`, reverted) enlarged only the sub-panels.
