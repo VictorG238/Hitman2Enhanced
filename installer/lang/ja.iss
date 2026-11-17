@@ -14,7 +14,10 @@ ja.UnknownExe=この hitman2.exe は、修正の対象であるバージョン�
 ja.ProjectPage=プロジェクトページとソースコード:
 ja.NotWritable=管理者権限がないため、このフォルダーにファイルを書き込めません。%n%nこのインストーラーを閉じ、右クリック > 管理者として実行 で再度起動してください。
 
+ja.TaskKeyhole=鍵穴をのぞくときにマウスで視点を操作（試験的）
+ja.TaskAxeBreak=マレーシアのミッションで消防斧を使ってモニターと窓を破壊（試験的）
+
 [Messages]
-ja.WelcomeLabel2={#Author} による Hitman 2 Enhanced {#AppVersion} をインストールします。Hitman 2: Silent Assassin（Steam 版）向けの非公式オープンソース修正で、最新の解像度、全画面メニュー、フレームレート制限、正しいゲーム内時計、ゲーム内設定ページ（F10）、HD フォントを提供します。%n%nゲームのファイルは一切変更されず、すべて Windows の設定からアンインストールできます。%n%n次のページで、何が変更されるかを詳しく説明します。
-ja.FinishedLabel=Hitman 2 Enhanced のインストールが完了しました。%n%nSteam からゲームを起動し、メインメニューで F10 を押して、解像度、表示モード、視野角、フレームレート制限を選択してください。解像度と表示モードはゲームの再起動後に反映されます。%n%n作成者: {#Author}
+ja.WelcomeLabel2={#Author} による Hitman 2 Enhanced {#AppVersion} をインストールします。Hitman 2: Silent Assassin（Steam 版とディスク版）向けの非公式オープンソース修正で、最新の解像度、全画面メニュー、フレームレート制限、正しいゲーム内時計、ゲーム内設定ページ（F10）、HD フォントを提供します。%n%nゲームのファイルは一切変更されず、すべて Windows の設定からアンインストールできます。%n%n次のページで、何が変更されるかを詳しく説明します。
+ja.FinishedLabel=Hitman 2 Enhanced のインストールが完了しました。%n%nゲームを通常どおり起動し、メインメニューで F10 を押して、解像度、表示モード、視野角、フレームレート制限を選択してください。解像度と表示モードはゲームの再起動後に反映されます。%n%n作成者: {#Author}
 ja.SelectDirLabel3=Hitman 2: Silent Assassin のフォルダー（hitman2.exe があるフォルダー）を選択してください。

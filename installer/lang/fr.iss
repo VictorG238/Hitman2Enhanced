@@ -14,7 +14,10 @@ fr.UnknownExe=Ce hitman2.exe n'est pas l'une des versions pour lesquelles les co
 fr.ProjectPage=Page du projet et code source :
 fr.NotWritable=Impossible d'écrire des fichiers dans ce dossier sans droits d'administrateur.%n%nFermez ce programme d'installation et relancez-le avec clic droit > Exécuter en tant qu'administrateur.
 
+fr.TaskKeyhole=Contrôler la caméra à la souris en regardant par une serrure (expérimental)
+fr.TaskAxeBreak=Briser le moniteur et les vitres des missions de Malaisie avec la hache de pompier (expérimental)
+
 [Messages]
-fr.WelcomeLabel2=Cet assistant va installer Hitman 2 Enhanced {#AppVersion} de {#Author} : des correctifs non officiels et open source pour Hitman 2: Silent Assassin (Steam) : résolutions modernes, menus en plein écran, limite d'images par seconde, horloge du jeu correcte, page de réglages en jeu (F10) et polices HD.%n%nAucun fichier du jeu n'est modifié, et tout peut être désinstallé depuis les Paramètres de Windows.%n%nLa page suivante explique précisément ce qui est modifié.
-fr.FinishedLabel=Hitman 2 Enhanced est installé.%n%nLancez le jeu depuis Steam et appuyez sur F10 dans le menu principal pour choisir la résolution, le mode d'affichage, le champ de vision et la limite de FPS. La résolution et le mode d'affichage s'appliquent après le redémarrage du jeu.%n%nRéalisé par {#Author}.
+fr.WelcomeLabel2=Cet assistant va installer Hitman 2 Enhanced {#AppVersion} de {#Author} : des correctifs non officiels et open source pour Hitman 2: Silent Assassin (Steam et version sur disque) : résolutions modernes, menus en plein écran, limite d'images par seconde, horloge du jeu correcte, page de réglages en jeu (F10) et polices HD.%n%nAucun fichier du jeu n'est modifié, et tout peut être désinstallé depuis les Paramètres de Windows.%n%nLa page suivante explique précisément ce qui est modifié.
+fr.FinishedLabel=Hitman 2 Enhanced est installé.%n%nLancez le jeu comme d'habitude et appuyez sur F10 dans le menu principal pour choisir la résolution, le mode d'affichage, le champ de vision et la limite de FPS. La résolution et le mode d'affichage s'appliquent après le redémarrage du jeu.%n%nRéalisé par {#Author}.
 fr.SelectDirLabel3=Sélectionnez le dossier de Hitman 2: Silent Assassin (celui qui contient hitman2.exe).

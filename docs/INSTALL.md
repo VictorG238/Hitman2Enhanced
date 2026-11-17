@@ -12,7 +12,7 @@ Install
 1. Open the game folder (Steam: right-click the game > Manage > Browse local files).
 2. Copy d3d8.dll and h2e.ini from this zip into that folder (next to hitman2.exe).
    If a d3d8.dll is already there it belongs to another mod: do not overwrite it.
-3. Start the game from Steam. In the main menu press F10 to open the settings page and pick your
+3. Start the game as usual. In the main menu press F10 to open the settings page and pick your
    resolution, display mode, field of view and frame-rate limit. Resolution and display mode apply
    after restarting the game.
 
@@ -24,6 +24,8 @@ Configure (h2e.ini)
   [timer]      Enabled=1   correct game clock speed at any frame rate
   [settings]   Enabled=1   the F10 settings page
   [hdfonts]    Enabled=0   sharp menu text; needs h2e_hdfonts.bin built from your own game files
+  [keyhole]    Enabled=0   experimental mouse look through keyholes with nearby collision checks
+  [axebreak]   Enabled=0   experimental axe impacts on the Basement Killing monitor and Graveyard Shift windows
   [horplus]    Enabled=0   experimental wider field of view - breaks the HUD
   [log]        Level=1     0 = no log, 1 = short log in h2e.log, 2 = developer logging (large)
 

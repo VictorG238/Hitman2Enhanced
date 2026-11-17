@@ -29,6 +29,15 @@ addresses below are from the runtime capture (`main.analysis.img`).
 | 0x40F7C0 | `ZSysInput::UpdateCursor?` | Cursor `[this+0x18/+0x1C]` += mouse delta, clamped to 0..W/H (renderer vtbl 0xB0/0xB4) | CONFIRMED (static); name provisional | RENDERING "Menu cursor" |
 | 0x40F830 | call site | `call 0x40F9D0` (mouse delta); redirected by `menuscale` while a menu is scaled | CONFIRMED (bytes) | FIXES `menuscale` |
 | 0x4014C0 | `ZEngineDataBase::IsPaused` (export) | `mov al,[ecx+0xB9C]`; db = `[g_pSysInterface+0x98]` (main loop 0x4169E4 reads it so); `menuscale` scales paused frames | CONFIRMED (static) | FIXES `menuscale` v5 |
+| 0x4172D5-0x4172F1 | `Config::ParseUseGameController?` | Queries `UseGameController`; when present writes `1` to `[this+0x60]` | CONFIRMED (bytes); name provisional | EXP-007 |
+| 0x40FA00 | `ZSysInput::GetDeviceState?` | `vtbl+0x2C`; validates a device index and returns that device's state pointer through its `vtbl+0x20` | CONFIRMED (static); name provisional | EXP-007 |
+| 0x411C20 | `WintelGameController::Update?` | Polls 0x110-byte controller state and fills four normalized axis floats from `[this+0x42]` | CONFIRMED (bytes); name provisional | EXP-007 |
+| 0x411EB0 | `WintelGameController::GetState?` | `lea eax,[ecx+0x42]; ret`; vtable 0x639CD8 slot `+0x20` | CONFIRMED (bytes); name provisional | EXP-007 |
+| 0x4EEC00-0x4EED7C | `ZHM2ScopeCamera::Update?` | Dispatches scope modes; mode 3 calls the separate keyhole update at 0x4EEE80 | CONFIRMED (static); name provisional | EXP-007 |
+| 0x4EEE80 | `ZHM2ScopeCamera::UpdateKeyhole?` | Applies two-axis controller rotation only when `[g_pSysInterface+0x60]` (`UseGameController`) is set; otherwise skips to close handling | CONFIRMED (static); name provisional | EXP-007 |
+| 0x55C8A0 | `FUN_0055c8a0` | Reads a statistics-related global block and calculates two fields used by ranking-related UI; field meanings OPEN | CONFIRMED (static); purpose INFERRED | EXP-006 |
+| 0x594A70 | `FUN_00594a70` | Builds `VehicleHit` message including vehicle reference; receiver and role OPEN | CONFIRMED (static) | EXP-006 |
+| 0x505530 | `FUN_00505530` | Updates fields based on two category values and dispatches `ScriptCharacterKilled`; category and attribution OPEN | CONFIRMED (static) | EXP-006 |
 
 ## hitman2.exe retail 1.0.0.265 — SHA-256 `0d7742c85e328886e91152036ae6615ca4c98bbb97c7a36d8f9e150235e57560`
 

@@ -9,10 +9,13 @@
 #include <set>
 #include <sstream>
 #include <string>
+#include <limits>
+#include "../../src/fixes/keyhole.h"
 
 #include "../../src/common/code_patch.h"
 #include "../../src/common/sha256.h"
 #include "../../src/fixes/fix.h"
+#include "../../src/fixes/axebreak.h"
 #include "../../src/fixes/horplus.h"
 #include "../../src/fixes/framelimit.h"
 #include "../../src/fixes/game_build.h"
@@ -58,6 +61,109 @@ d3d8::Matrix GameMatrix(double fovXDeg, double vpAspect, float zn = 5.0f, float 
 }  // namespace
 
 int main() {
+    {
+        h2e::KeyholeLook look, split;
+        look.Add(25, -50);
+        for (int i = 0; i < 5; ++i) split.Add(5, -10);
+        Check(Near(look.axes[1], split.axes[1]) && Near(look.axes[3], split.axes[3]),
+              "keyhole displacement independent of frame subdivision");
+        look.Add(0, 0);
+        Check(Near(look.axes[1], .25) && Near(look.axes[3], -.5), "keyhole no idle drift");
+        look.Add(std::numeric_limits<float>::quiet_NaN(), 5);
+        look.Add(5, std::numeric_limits<float>::infinity());
+        Check(Near(look.axes[1], .25) && Near(look.axes[3], -.5), "keyhole invalid input ignored");
+        look.Add(10000, -10000);
+        Check(Near(look.axes[1] * 180.0 / 14.0, 35) && Near(look.axes[3] * 180.0 / 14.0, -35),
+              "keyhole 35-degree limits");
+        look.Add(-10, 10);
+        Check(Near(look.axes[1], 49.0 / 18.0 - .1) && Near(look.axes[3], -49.0 / 18.0 + .1),
+              "keyhole reverses immediately at limit");
+        look.Reset();
+        Check(look.axes[0] == 0 && look.axes[1] == 0 && look.axes[2] == 0 && look.axes[3] == 0,
+              "keyhole new peek returns to centre");
+
+        h2e::KeyholeLook requested;
+        requested.Add(1000, 0);
+        // Obstacle crossed by a fast sweep even though the endpoint is clear.
+        auto wall = [](void*, float t) { return t >= .35f && t <= .6f; };
+        const float safe = h2e::KeyholeSafeFraction(look, requested, wall, nullptr);
+        Check(safe > .34f && safe < .35f, "keyhole stops before crossing a nearby obstacle");
+        auto open = [](void*, float) { return false; };
+        Check(h2e::KeyholeSafeFraction(look, requested, open, nullptr) == 1,
+              "keyhole retains full sweep when clear");
+        // A moving obstacle can overlap the whole path. It should not trap
+        // the player looking to one side when they move back toward center.
+        auto overlap = [](void*, float) { return true; };
+        h2e::KeyholeLook retreat = requested;
+        retreat.Add(-180, 0);
+        Check(h2e::KeyholeSafeFraction(requested, retreat, overlap, nullptr) == 1,
+              "keyhole permits retreat from an existing overlap");
+        Check(h2e::KeyholeSafeFraction(look, requested, overlap, nullptr) == 0,
+              "keyhole blocks turning farther into an overlap");
+
+        h2e::KeyholeLook neutral, diagonal;
+        diagonal.axes[1] = diagonal.axes[3] = 1;
+        auto sideWall = [](void*, const h2e::KeyholeLook& pose) { return pose.axes[1] >= .5f; };
+        auto ceiling = [](void*, const h2e::KeyholeLook& pose) { return pose.axes[3] >= .5f; };
+        auto corner = [](void*, const h2e::KeyholeLook& pose) {
+            return pose.axes[1] >= .5f || pose.axes[3] >= .5f;
+        };
+        auto slide = h2e::SlideKeyholeLook(neutral, diagonal, sideWall, nullptr);
+        Check(slide.axes[1] > .4f && slide.axes[1] < .5f && slide.axes[3] == 1,
+              "keyhole follows vertical input along a side wall");
+        slide = h2e::SlideKeyholeLook(neutral, diagonal, ceiling, nullptr);
+        Check(slide.axes[1] == 1 && slide.axes[3] > .4f && slide.axes[3] < .5f,
+              "keyhole follows horizontal input under a ceiling");
+        slide = h2e::SlideKeyholeLook(neutral, diagonal, corner, nullptr);
+        Check(slide.axes[1] < .5f && slide.axes[3] < .5f, "keyhole stops both axes at an obstructed corner");
+
+        h2e::KeyholeLook overlapping, pitch;
+        overlapping.axes[1] = .52f;
+        pitch = overlapping;
+        pitch.axes[3] = 1;
+        slide = h2e::SlideKeyholeLook(overlapping, pitch, sideWall, nullptr);
+        Check(slide.axes[1] < .5f && slide.axes[3] == 1,
+              "keyhole clears a shallow side overlap when the user only moves vertically");
+        overlapping.axes[1] = pitch.axes[1] = .8f;
+        slide = h2e::SlideKeyholeLook(overlapping, pitch, sideWall, nullptr);
+        Check(slide.axes[1] == .8f && slide.axes[3] == 0, "keyhole stays blocked by a deeper overlap");
+    }
+    {
+        using h2e::AxeBreakScene;
+        const auto basement = h2e::GetAxeBreakScene("C4-1\\C4-1__MAIN");
+        const auto graveyard = h2e::GetAxeBreakScene("Scenes/c4-2/c4-2__main.gms");
+        Check(basement == AxeBreakScene::Basement && graveyard == AxeBreakScene::Graveyard,
+              "axe break recognizes the two main scenes");
+        Check(h2e::GetAxeBreakScene("C4-2\\C4-2_Briefing") == AxeBreakScene::Other &&
+              h2e::GetAxeBreakScene("") == AxeBreakScene::Other, "axe break excludes other scenes");
+        Check(h2e::AxeBreakTarget(basement, 0x6bb8fe, 0x1438), "axe break accepts the surveillance monitor");
+        Check(h2e::AxeBreakTarget(graveyard, 0x754d4, 0x392) &&
+              h2e::AxeBreakTarget(graveyard, 0x7ddf4, 0x396) &&
+              h2e::AxeBreakTarget(graveyard, 0x7dca4, 0x394), "axe break accepts all three escape panes");
+        Check(!h2e::AxeBreakTarget(graveyard, 0x754d4, 0x394) &&
+              !h2e::AxeBreakTarget(graveyard, 0, 0x392) &&
+              !h2e::AxeBreakTarget(graveyard, 0x6bb8fe, 0x1438) &&
+              !h2e::AxeBreakTarget(AxeBreakScene::Other, 0x754d4, 0x392),
+              "axe break requires matching scene, model and scene tag");
+
+        const auto offsets = h2e::AxeSweepOffsets({-18, 195, -72}, {34, 15, -103}, {8, 0, 0}, 40);
+        Check(offsets[0].x == 0 && offsets[0].z == 0, "axe break tries the original segment first");
+        Check(Near(offsets[1].x, -20) && Near(offsets[2].x, 20), "axe break samples both sides of the segment");
+        Check(Near(offsets[3].z, 20) && Near(offsets[6].z, 40), "axe break samples closer to the actor");
+        for (const auto& offset : offsets)
+            Check(offset.y == 0 && std::hypot(offset.x, offset.z) <= 40, "axe break samples the native radius");
+        const auto invalid = h2e::AxeSweepOffsets({0, 10, 0}, {0, 20, 0}, {}, 40);
+        Check(invalid[1].x == 0 && invalid[1].z == 0, "axe break keeps only the center without a heading");
+        const auto monitor = h2e::AxeMonitorSegments({-18, 195, -72}, {34, 15, -103}, {8, 0, 0}, offsets.back());
+        Check(Near(monitor[0].origin.y, 105) && Near(monitor[3].origin.y, 135) &&
+              Near(monitor[6].origin.y, 75), "monitor can be reached at several heights");
+        Check(Near(monitor[1].origin.x, -12) && Near(monitor[2].origin.x, 28),
+              "monitor sweep covers a lane on each side");
+        for (const auto& segment : monitor) {
+            Check(Near(segment.origin.z, -32) && Near(segment.origin.z + segment.displacement.z, -103) &&
+                  segment.displacement.y == 0, "monitor sweep stays within the original forward depth");
+        }
+    }
     // --- registry: unique ids, every fix has at least one callback
     std::set<std::string> ids;
     for (size_t i = 0; i < h2e::kFixCount; ++i) {
@@ -69,6 +175,7 @@ int main() {
     }
     Check(ids.count("resolution") == 1 && ids.count("horplus") == 1 && ids.count("timer") == 1,
           "resolution, horplus and timer registered");
+    Check(ids.count("axebreak") == 1, "axe break registered");
 
     // --- resolution patch definition
     const h2e::BytePatch& rp = h2e::kSnapBranchPatch;

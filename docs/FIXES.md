@@ -201,6 +201,51 @@ looks up the running build by file SHA-256 and stays off on an unknown one.
   only upscaled (smooth, not sharper). Art tiles (logo, Agent 47) are not covered.
 - **Code/tests**: `src/fixes/hdfonts.{h,cpp}`, `tools/hdfonts_build.py`; tests above.
 
+## `keyhole`
+
+- **CONFIRMED (static)**: the Steam keyhole camera skips rotation when controller mode is off (EXP-007).
+- **Change**: accumulate mouse deltas into bounded stick deflections and reuse the engine's original
+  camera/exit code. Recenter on entry; keep the original controller path when controller mode is enabled.
+- **Config**: `[keyhole] Enabled=1`. Experimental, off by default and excluded from release defaults.
+- **Nearby geometry**: reuse the Steam camera's collision query against a small
+  volume around the keyhole. On mouse input, check short segments through the
+  center and corners of the near plane along the requested turn, then stop before
+  the first blocked sample. After a blocked diagonal, sweep the remaining
+  vertical and horizontal movement independently. A shallow overlap can use
+  up to one degree of inward correction if it clears the edge and frees the
+  requested axis. Retreat is allowed from an existing overlap. The
+  limiter uses collision triangles and samples the sweep, so visual-only surfaces
+  and sufficiently thin obstacles may escape detection. In-game coverage and
+  frame cost remain OPEN. See EXP-007.
+- **Top strip**: the PC scene began 15% down the screen while the mask opened above it.
+  Set the mode-3 camera viewport to full height at native setup. This lets the scene fill
+  the upper opening and can change the vertical framing. Collision sampling accepts the
+  new viewport and still checks the actual back buffer. `keyhole_surface_test` verifies
+  viewport coverage on D3D8. Owner gameplay confirmation is pending.
+- **Safety**: Steam and retail 1.0.0.265 executable SHA-256 gates, original update-body hashes, validated dispatcher bytes,
+  atomic E9 redirect with other threads suspended. No game executable is written.
+- **Tests**: `fixes_test` covers accumulation, clamp, reset and invalid deltas; `keyhole_test` exercises
+  the production bridge stack/register contract and executes an E9 redirect in an isolated process.
+- **OPEN**: in-game direction, door-side clipping, reentry, controller behavior and sensitivity feel.
+  Sensitivity is fixed at 100 mouse counts per ~12.86 degrees, with an expanded mouse limit of
+  approximately +/-35 degrees per axis (272 counts from center);
+  this prototype does not yet inherit the normal camera's sensitivity/inversion settings.
+- **Code**: `src/fixes/keyhole.{h,cpp}`. Build and runtime evidence: EXP-007.
+
+## `axebreak`
+
+- **Implementation**: only the fire-axe action on Steam and retail 1.0.0.265 can send a native scene
+  impact to the Basement Killing surveillance monitor or one of The Graveyard
+  Shift's three escape panes. A character hit takes the original melee path.
+  First-hit queries sample the native sweep segment and its sides and near
+  edge within the native radius. The original prop routines handle the impact.
+  Basement Killing also samples forward at several heights for the monitor.
+- **Config**: `[axebreak] Enabled=1`. Experimental and off by default.
+- **Verification**: the owner confirmed breakage in both missions with the
+  initial centerline build. `fixes_test` covers scene and target selection
+  and the sweep offsets. Wider-sweep gameplay and All Zeroes remain **OPEN**.
+- **Code**: `src/fixes/axebreak.{h,cpp}`. Static evidence: EXP-006.
+
 ## `horplus`
 
 - **Problem**: horizontal FOV is fixed, vertical FOV shrinks at wider aspect (gameplay 41.1 deg vs 53.1 deg at 4:3).

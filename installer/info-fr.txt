@@ -34,6 +34,12 @@ CE QUI EST CORRIGÉ (chaque correctif peut être activé ou désactivé à la pa
   contenue dans VOS fichiers du jeu (environ 1 minute). Rien du jeu n'est
   téléchargé ni fourni avec ce programme d'installation.
 
+* Vue par les serrures (expérimental). Déplacez la caméra à la souris pendant
+  que vous regardez par une serrure.
+
+* Hache de pompier (expérimental). Brisez le moniteur de Basement Killing et
+  les vitres de sortie de Graveyard Shift à la hache.
+
 COMMENT ÇA FONCTIONNE - ET CE QUI N'EST PAS TOUCHÉ
 --------------------------------------------------
 * Aucun fichier du jeu n'est modifié. Les correctifs fonctionnent en mémoire

@@ -49,6 +49,8 @@ Facts to know first:
 | [EXP-003](experiments/EXP-003_d3d8_runtime/README.md) | D3D8 runtime: device parameters, viewports, projection, frame rate, resolution handling | run-001..009 done |
 | [EXP-004](experiments/EXP-004_timer_accumulator/README.md) | Frame-rate independent game clock: root cause (integer clock truncation), patch design, risks, test plan | root cause confirmed (baseline); `timer` fix (0.7.0, off by default) live test 1: clock rate ≈ 1.00 at 30/60/uncapped; gameplay tests pending |
 | [EXP-005](experiments/EXP-005_hd_fonts/README.md) | HD UI fonts: TEX/PRM/ZGF formats, texture upload path, 4x font pages re-rendered from the embedded TrueType font, fix `hdfonts` | done; in game: menus/Load/briefing sharp (run 1); subtitles + full mission pending |
+| [EXP-006](experiments/EXP-006_mission_statistics/README.md) | Mission statistics, Hidden Valley truck reports and C4 axe impacts | experimental axe fix; gameplay verification open |
+| [EXP-007](experiments/EXP-007_keyhole_camera/README.md) | PC door-keyhole camera steering and controller-only input gate | experimental mouse prototype implemented; in-game validation pending |
 
 ## Tools
 
@@ -64,6 +66,7 @@ Facts to know first:
 | `tools/hdfonts_build.py` | Reads scene ZIPs in memory (TEX, PRM font tables, ZGF fonts) and builds the `hdfonts` pack (4x font pages); `--preview` PNGs (EXP-005) | `test_hdfonts_build.py`, native `hdfonts_smoke` |
 | `src/` (CMake): `common/`, `fixes/`, `proxy/` | `d3d8.dll` hosting the fixes and the research logger (D-009); fix catalog [FIXES.md](FIXES.md) | `ctest` → `tests/native/proxy_smoke.cpp`, `fixes_test.cpp`; `tests/test_fix_registry.py` |
 | `tools/package_release.py` | Release zip (DLL, default `h2e.ini`, [INSTALL.md](INSTALL.md), [CHANGELOG](../CHANGELOG.md)) | `test_fix_registry.py` |
+| `tools/hidden_valley_map.py` | Experimental local 3D view of candidate waypoint and TruckSpline data; transform and routes unverified | `test_hidden_valley_map.py` |
 
 ## AI agent skills
 

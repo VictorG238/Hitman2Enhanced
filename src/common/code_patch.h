@@ -31,10 +31,10 @@ enum class PatchResult { Applied, AlreadyApplied, ModuleNotLoaded, FileUnreadabl
 // Checks the module file hash and the bytes, then writes the patch. Logs the outcome through `log`.
 PatchResult ApplyBytePatch(const BytePatch& patch, LogFn log);
 
-// Redirection of one `call rel32` to new code, done as safely as x86 allows (EXP-004):
+// Redirection of one `call rel32` or tail `jmp rel32` to new code (EXP-004/007):
 //   - the caller-supplied context bytes around the call must match memory exactly (including the original rel32),
 //   - the original call target must start with the expected prologue,
-//   - the call must sit at an 8-byte aligned address so the 5 bytes are replaced together with the next 3 by ONE
+//   - the instruction must fit within one aligned 8-byte block, replaced by ONE
 //     aligned 8-byte `lock cmpxchg8b`: another processor sees either the old or the new instruction, never a mix;
 //     the exchange fails (nothing written) if memory changed since it was verified,
 //   - page protection is changed only for those 8 bytes' page(s) and restored afterwards, the instruction cache is
@@ -46,7 +46,7 @@ struct CallRedirect {
     uint8_t* context;              // address of the verified context
     const uint8_t* expected;       // expected context bytes
     size_t contextSize;
-    size_t callOffset;             // offset of the E8 opcode inside the context
+    size_t callOffset;             // offset of the E8/E9 opcode inside the context
     const uint8_t* targetPrologue; // expected first bytes of the original call target
     size_t targetPrologueSize;
 };

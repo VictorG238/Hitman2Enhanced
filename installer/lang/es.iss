@@ -14,7 +14,10 @@ es.UnknownExe=Este hitman2.exe no es una de las versiones para las que se hicier
 es.ProjectPage=Página del proyecto y código fuente:
 es.NotWritable=No se pueden escribir archivos en esta carpeta sin permisos de administrador.%n%nCierra este instalador y vuelve a abrirlo con clic derecho > Ejecutar como administrador.
 
+es.TaskKeyhole=Control con ratón al mirar por las cerraduras (experimental)
+es.TaskAxeBreak=Romper el monitor y los ventanales de las misiones de Malasia con el hacha (experimental)
+
 [Messages]
-es.WelcomeLabel2=Se instalará Hitman 2 Enhanced {#AppVersion}, de {#Author}: arreglos no oficiales y de código abierto para Hitman 2: Silent Assassin (Steam): resoluciones modernas, menús a pantalla completa, límite de FPS, reloj del juego correcto, una página de ajustes en el juego (F10) y fuentes HD.%n%nNo se modifica ningún archivo del juego, y todo se puede desinstalar desde la Configuración de Windows.%n%nLa página siguiente explica exactamente qué se cambia.
-es.FinishedLabel=Hitman 2 Enhanced está instalado.%n%nInicia el juego desde Steam y pulsa F10 en el menú principal para elegir la resolución, el modo de pantalla, el campo de visión y el límite de FPS. La resolución y el modo de pantalla se aplican al reiniciar el juego.%n%nHecho por {#Author}.
+es.WelcomeLabel2=Se instalará Hitman 2 Enhanced {#AppVersion}, de {#Author}: arreglos no oficiales y de código abierto para Hitman 2: Silent Assassin (Steam y versión en disco): resoluciones modernas, menús a pantalla completa, límite de FPS, reloj del juego correcto, una página de ajustes en el juego (F10) y fuentes HD.%n%nNo se modifica ningún archivo del juego, y todo se puede desinstalar desde la Configuración de Windows.%n%nLa página siguiente explica exactamente qué se cambia.
+es.FinishedLabel=Hitman 2 Enhanced está instalado.%n%nInicia el juego como de costumbre y pulsa F10 en el menú principal para elegir la resolución, el modo de pantalla, el campo de visión y el límite de FPS. La resolución y el modo de pantalla se aplican al reiniciar el juego.%n%nHecho por {#Author}.
 es.SelectDirLabel3=Selecciona la carpeta de Hitman 2: Silent Assassin (la que contiene hitman2.exe).

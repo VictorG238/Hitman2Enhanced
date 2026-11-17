@@ -14,7 +14,10 @@ en.UnknownExe=This hitman2.exe is not one of the versions the fixes were made fo
 en.ProjectPage=Project page and source code:
 en.NotWritable=Files cannot be written to this folder without administrator rights.%n%nClose this installer and start it again with right-click > Run as administrator.
 
+en.TaskKeyhole=Mouse control while looking through keyholes (experimental)
+en.TaskAxeBreak=Break the Malaysia mission monitor and windows with the fire axe (experimental)
+
 [Messages]
-en.WelcomeLabel2=This installs Hitman 2 Enhanced {#AppVersion} by {#Author}, unofficial open-source fixes for Hitman 2: Silent Assassin (Steam): modern resolutions, full-screen menus, a frame-rate limit, a correct game clock, an in-game settings page (F10) and HD fonts.%n%nNo game file is modified, and everything can be uninstalled from Windows Settings.%n%nThe next page explains exactly what is changed.
-en.FinishedLabel=Hitman 2 Enhanced is installed.%n%nStart the game from Steam and press F10 in the main menu to choose your resolution, display mode, field of view and frame-rate limit. Resolution and display mode apply after restarting the game.%n%nMade by {#Author}.
+en.WelcomeLabel2=This installs Hitman 2 Enhanced {#AppVersion} by {#Author}, unofficial open-source fixes for Hitman 2: Silent Assassin (Steam and retail): modern resolutions, full-screen menus, a frame-rate limit, a correct game clock, an in-game settings page (F10) and HD fonts.%n%nNo game file is modified, and everything can be uninstalled from Windows Settings.%n%nThe next page explains exactly what is changed.
+en.FinishedLabel=Hitman 2 Enhanced is installed.%n%nStart the game as usual and press F10 in the main menu to choose your resolution, display mode, field of view and frame-rate limit. Resolution and display mode apply after restarting the game.%n%nMade by {#Author}.
 en.SelectDirLabel3=Select the Hitman 2: Silent Assassin folder (the one that contains hitman2.exe).

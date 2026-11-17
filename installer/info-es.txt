@@ -33,6 +33,12 @@ QUÉ SE ARREGLA (en la página siguiente puedes activar o desactivar cada uno)
   las fuentes del juego a 4x a partir de la fuente que hay en TUS archivos del
   juego (tarda alrededor de 1 minuto). No se descarga ni se incluye nada del juego.
 
+* Mirilla con ratón (experimental). Mueve la cámara con el ratón al mirar
+  por una cerradura. La geometría cercana limita el giro.
+
+* Hacha (experimental). Rompe de un hachazo el monitor de Basement Killing
+  y los ventanales de escape de Graveyard Shift.
+
 CÓMO FUNCIONA - Y QUÉ NO TOCA
 -----------------------------
 * No se modifica ningún archivo del juego. Los arreglos funcionan en memoria

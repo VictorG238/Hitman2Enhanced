@@ -187,10 +187,11 @@ RedirectResult RedirectCall(const CallRedirect& s, const void* newTarget) {
     // lock cmpxchg8b replaces it atomically (Steam build: call at the qword start; retail 1.0.0.265: at +2).
     auto* block = reinterpret_cast<uint8_t*>(reinterpret_cast<uintptr_t>(call) & ~uintptr_t(7));
     const size_t lead = size_t(call - block);
-    if (lead > 3 || block < s.context || block + 8 > s.context + s.contextSize || s.expected[s.callOffset] != 0xE8)
+    if (lead > 3 || block < s.context || block + 8 > s.context + s.contextSize ||
+        (s.expected[s.callOffset] != 0xE8 && s.expected[s.callOffset] != 0xE9))
         return RedirectResult::Misaligned;
     const uintptr_t next = reinterpret_cast<uintptr_t>(call) + 5;
-    if (call[0] == 0xE8 && next + static_cast<uintptr_t>(Rel32At(call + 1)) == reinterpret_cast<uintptr_t>(newTarget) &&
+    if (call[0] == s.expected[s.callOffset] && next + static_cast<uintptr_t>(Rel32At(call + 1)) == reinterpret_cast<uintptr_t>(newTarget) &&
         SameExceptRel(s))
         return RedirectResult::AlreadyApplied;
     if (std::memcmp(s.context, s.expected, s.contextSize) != 0) return RedirectResult::ContextMismatch;

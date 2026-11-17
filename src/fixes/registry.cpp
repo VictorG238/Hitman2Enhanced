@@ -10,10 +10,12 @@ extern const Fix kMenuScaleFix;
 extern const Fix kFrameLimitFix;
 extern const Fix kHdFontsFix;
 extern const Fix kSettingsFix;
+extern const Fix kKeyholeFix;
+extern const Fix kAxeBreakFix;
 
 // settings stays after framelimit: its saved frame limit overrides h2e.ini [framelimit] MaxFps at attach.
 const Fix* const kFixes[] = {&kResolutionFix, &kHorPlusFix, &kTimerFix,   &kMenuScaleFix,
-                             &kFrameLimitFix, &kHdFontsFix, &kSettingsFix};
+                             &kFrameLimitFix, &kHdFontsFix, &kSettingsFix, &kKeyholeFix, &kAxeBreakFix};
 const size_t kFixCount = sizeof(kFixes) / sizeof(kFixes[0]);
 
 }  // namespace h2e

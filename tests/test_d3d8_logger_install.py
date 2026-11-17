@@ -45,6 +45,36 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(len(moved), 1)
         self.assertEqual(moved[0].read_text(), "log line\n")
 
+    def test_upgrade_manual_proxy_with_backup(self):
+        (self.game / "d3d8.dll").write_bytes(b"old proxy")
+        (self.game / inst.CONFIG).write_bytes(b"old config")
+        (self.game / inst.HDFONTS_PACK).write_bytes(b"font pack")
+        (self.game / inst.USER_SETTINGS).write_bytes(b"user choices")
+        backup = Path(self.tmp.name) / "backup"
+        with mock.patch.dict(inst.KNOWN_EXE, self.known, clear=True):
+            inst.upgrade(self.game, self.dll, backup, ["hdfonts", "keyhole"])
+        self.assertEqual((backup / "d3d8.dll").read_bytes(), b"old proxy")
+        self.assertEqual((backup / inst.CONFIG).read_bytes(), b"old config")
+        self.assertEqual((self.game / "d3d8.dll").read_bytes(), self.dll.read_bytes())
+        self.assertEqual((self.game / inst.HDFONTS_PACK).read_bytes(), b"font pack")
+        self.assertEqual((self.game / inst.USER_SETTINGS).read_bytes(), b"user choices")
+        self.assertIn("[keyhole]\nEnabled=1", (self.game / inst.CONFIG).read_text())
+        self.assertIn("proxy installed", inst.status(self.game))
+
+    def test_upgrade_restores_old_files_on_failure(self):
+        (self.game / "d3d8.dll").write_bytes(b"old proxy")
+        (self.game / inst.CONFIG).write_bytes(b"old config")
+        before = {p.name: p.read_bytes() for p in self.game.iterdir()}
+        def partial_install(*args):
+            (self.game / "d3d8.dll").write_bytes(b"partial")
+            (self.game / inst.MARKER).write_bytes(b"partial marker")
+            raise OSError("simulated write failure")
+        with mock.patch.dict(inst.KNOWN_EXE, self.known, clear=True), \
+                mock.patch.object(inst, "install", side_effect=partial_install):
+            with self.assertRaises(OSError):
+                inst.upgrade(self.game, self.dll, Path(self.tmp.name) / "backup", ["keyhole"])
+        self.assertEqual({p.name: p.read_bytes() for p in self.game.iterdir()}, before)
+
     def test_fixes_write_config_and_uninstall_removes_it(self):
         before = sorted(p.name for p in self.game.iterdir())
         with mock.patch.dict(inst.KNOWN_EXE, self.known, clear=True):

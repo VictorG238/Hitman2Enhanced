@@ -14,7 +14,10 @@ de.UnknownExe=Diese hitman2.exe ist keine der Versionen, für die die Korrekture
 de.ProjectPage=Projektseite und Quellcode:
 de.NotWritable=In diesen Ordner können ohne Administratorrechte keine Dateien geschrieben werden.%n%nSchließen Sie dieses Installationsprogramm und starten Sie es erneut mit Rechtsklick > Als Administrator ausführen.
 
+de.TaskKeyhole=Maussteuerung beim Blick durchs Schlüsselloch (experimentell)
+de.TaskAxeBreak=Monitor und Fensterscheiben der Malaysia-Missionen mit der Feueraxt zerstören (experimentell)
+
 [Messages]
-de.WelcomeLabel2=Hiermit wird Hitman 2 Enhanced {#AppVersion} von {#Author} installiert: inoffizielle Open-Source-Korrekturen für Hitman 2: Silent Assassin (Steam): moderne Auflösungen, Menüs im Vollbild, eine Bildratenbegrenzung, eine korrekte Spieluhr, eine Einstellungsseite im Spiel (F10) und HD-Schriften.%n%nKeine Spieldatei wird verändert, und alles kann über die Windows-Einstellungen wieder deinstalliert werden.%n%nDie nächste Seite erklärt genau, was geändert wird.
-de.FinishedLabel=Hitman 2 Enhanced ist installiert.%n%nStarten Sie das Spiel über Steam und drücken Sie im Hauptmenü F10, um Auflösung, Anzeigemodus, Sichtfeld und Bildratenbegrenzung zu wählen. Auflösung und Anzeigemodus werden nach einem Neustart des Spiels übernommen.%n%nErstellt von {#Author}.
+de.WelcomeLabel2=Hiermit wird Hitman 2 Enhanced {#AppVersion} von {#Author} installiert: inoffizielle Open-Source-Korrekturen für Hitman 2: Silent Assassin (Steam und Disc-Version): moderne Auflösungen, Menüs im Vollbild, eine Bildratenbegrenzung, eine korrekte Spieluhr, eine Einstellungsseite im Spiel (F10) und HD-Schriften.%n%nKeine Spieldatei wird verändert, und alles kann über die Windows-Einstellungen wieder deinstalliert werden.%n%nDie nächste Seite erklärt genau, was geändert wird.
+de.FinishedLabel=Hitman 2 Enhanced ist installiert.%n%nStarten Sie das Spiel wie gewohnt und drücken Sie im Hauptmenü F10, um Auflösung, Anzeigemodus, Sichtfeld und Bildratenbegrenzung zu wählen. Auflösung und Anzeigemodus werden nach einem Neustart des Spiels übernommen.%n%nErstellt von {#Author}.
 de.SelectDirLabel3=Wählen Sie den Ordner von Hitman 2: Silent Assassin (den Ordner mit der hitman2.exe).

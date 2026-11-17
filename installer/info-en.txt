@@ -28,6 +28,12 @@ WHAT GETS FIXED (you can switch each one on or off on the next page)
   font pages at 4x from the font inside YOUR game files (takes about 1 minute).
   Nothing from the game is downloaded or shipped with this installer.
 
+* Mouse look through keyholes (experimental). Move the camera with the mouse
+  while peeking. Nearby collision geometry limits the turn.
+
+* Fire axe (experimental). Break the surveillance monitor in Basement Killing
+  and the escape windows in Graveyard Shift with a hit from the axe.
+
 HOW IT WORKS - AND WHAT IT DOES NOT TOUCH
 -----------------------------------------
 * No game file is modified. The fixes run in memory while the game runs, through

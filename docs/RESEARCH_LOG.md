@@ -2,6 +2,91 @@
 
 Newest first. Each entry links to the experiment/document holding the details.
 
+## 2026-11-17 - Retail compatibility shim
+
+- The owner's retail run logged both new options enabled, but each redirect
+  rejected the immediate return address in `apphelp.dll`. The same log
+  identified `RenderD3D.dll` as the underlying caller. The proxy now passes
+  that resolved address to startup fixes and uses the same resolution for
+  projection fixes when creation went through a shim. See KI-008.
+- `CONFIRMED` The corrected retail installation loaded and applied both
+  redirects, enabled the full-height viewport and geometry limiter, and
+  created the Direct3D device. The controlled startup called the proxy
+  directly from the renderer. Revalidation through the owner's shimmed
+  launch path and gameplay remain OPEN.
+
+## 2026-11-17 - Retail 1.0.0.265 ports
+
+- Ported `keyhole` and `axebreak` using verified retail addresses and
+  shared gameplay logic. The four C4 scene targets retain the same identity
+  pairs. See EXP-006 and EXP-007. Retail gameplay verification is OPEN.
+
+## 2026-11-17 - Malaysia All Zeroes
+
+- Identified the surveillance monitor and three window panes in C4-1/C4-2.
+  Implemented the experimental `axebreak` option using the native scene
+  collision query and original prop impact handlers. In-game breakage and
+  All Zeroes remain OPEN. See
+  [EXP-006](experiments/EXP-006_mission_statistics/README.md).
+
+## 2026-11-17 - PC keyhole camera steering
+
+- Replaced the black strip with full-height scene rendering. Runtime logs and
+  screenshots place the seam at the start of the original cropped viewport.
+  The fix changes the native mode-3 viewport height at setup. See EXP-007.
+
+- Added a sampled collision limit using the native normal-camera query.
+  Win32 tests passed and the build was installed on Steam. Door coverage and
+  performance remain OPEN. See [EXP-007](experiments/EXP-007_keyhole_camera/README.md).
+
+- Implemented experimental `keyhole` mouse bridge with original camera math,
+  executable/body hash gates and an atomic dispatcher tail-jump redirect.
+  Isolated ABI/input tests added; runtime validation remains OPEN. Existing
+  unmanaged installed proxy preserved. See EXP-007 for limitations and test steps.
+- The mode-3 `ZHM2ScopeCamera` update already contains two-axis rotation, but
+  skips it unless the global `UseGameController` flag is enabled. The mouse
+  path has no equivalent fallback. A keyhole-only mouse hook is feasible;
+  global controller mode is not a safe fix. Static cause and remaining runtime
+  checks are recorded in [EXP-007](experiments/EXP-007_keyhole_camera/README.md).
+
+## 2026-11-16 — Mission statistics reports
+
+- Static Steam vehicle stop handler treats payload float -1 as about 1e38 and
+  has a separate continue branch; update code decrements the stop field. The
+  checkpoint script's actual stop/continue messages and jam cause remain OPEN.
+- Recovered candidate one-based references linking five van configurations to
+  ten splines and four checkpoint ninjas to examine/end points. Shared vehicle
+  stop and hit code uses a three-axis spatial check; cause of the jam OPEN.
+  Updated the exploratory 3D view and EXP-006 with transform limitations.
+- Built a local 3D candidate view of 72 Arrow positions and ten TruckSpline
+  mesh vertex sets. Two competing transforms give different layouts; paths,
+  extents and timing are not verified, so no collision is claimed. EXP-006.
+- Continued Hidden Valley without a user playthrough: traced vehicle-hit and
+  level-control character-killed message entry points in the Steam capture;
+  their connection, categories and attribution are OPEN. See EXP-006.
+- Owner tested Graveyard Shift: axe did not break the necessary window; a shot
+  did. The level was not completed, so final statistics remain unobserved.
+- Owner's Steam Basement Killing test: axe did not break the monitor; a shot
+  did, and the resulting screen showed Silent Assassin, one shot and one close
+  encounter. Read-only watcher captured result globals; see EXP-006 run 1.
+- Owner clarified that melee can also affect the zero-stat objective and recalled
+  a ninja patrol crossing a truck path. Screenshot shows Silent Assassin with
+  two shots; ranking table confirmed statically, field meanings OPEN. EXP-006.
+- Inspected copied Malaysia scene archives for the computer/window question and
+  distinguished the all-zero challenge from Silent Assassin rank; specific
+  damage behavior remains OPEN. See [EXP-006](experiments/EXP-006_mission_statistics/README.md).
+- Both mission GMS files contain common statistics UI paths. REA and bounded
+  disassembly locate shared executable-side ranking-related processing and an
+  incoming data copy; counter meanings and their producers remain OPEN. See
+  [EXP-006](experiments/EXP-006_mission_statistics/README.md).
+- Inspected verified copies of the C3 scene ZIPs: identified checkpoint ninja
+  and truck script references in C3-2a and the Hayamoto record in C3-3. Their
+  executable behavior and relationship to the statistics remain OPEN; see
+  [EXP-006](experiments/EXP-006_mission_statistics/README.md).
+- Preliminary investigation of the Hayamoto and Hidden Valley reports; neither
+  root cause nor the claimed 1.02 change has been verified. REA searches on the
+  existing Steam capture did not finish. See [EXP-006](experiments/EXP-006_mission_statistics/README.md).
+
 ## 2026-11-12 — Weapon inventory regression (0.8.2)
 
 - Owner: the weapon/inventory menu showed a giant weapon model in both builds. Cause: 0.8.1 scaled every paused frame

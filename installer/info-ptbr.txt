@@ -1,0 +1,27 @@
+﻿HITMAN 2 ENHANCED — GUIA DE INSTALAÇÃO
+
+Correções não oficiais e de código aberto para Hitman 2: Silent Assassin.
+Versões compatíveis: Steam 1.0.0.277 e disco 1.0.0.265.
+Autor: Aquiles / Victor Baeza
+
+CORREÇÕES DISPONÍVEIS
+
+* Resolução. Mantém a resolução escolhida em tela cheia.
+* Menus. Ajusta o menu principal, o briefing e o menu de pausa à tela.
+* Limite de FPS. Limita a taxa de quadros à taxa de atualização do monitor.
+* Relógio do jogo. Mantém a velocidade correta em qualquer taxa de quadros.
+* Configurações (F10). Permite escolher a resolução, o modo de tela, o campo de visão e o limite de FPS.
+* Fontes HD. Gera textos mais nítidos a partir dos arquivos do jogo em cerca de um minuto.
+* Câmera da fechadura (experimental). Use o mouse para mover a câmera ao espiar pela fechadura. A geometria próxima limita a rotação.
+* Machado (experimental). Use o machado para quebrar o monitor de vigilância em Basement Killing e as janelas de saída em Graveyard Shift.
+
+INSTALAÇÃO
+
+O assistente coloca d3d8.dll e h2e.ini ao lado de hitman2.exe. Se você escolher as fontes HD, ele também gera h2e_hdfonts.bin. A documentação e o desinstalador ficam na pasta “Hitman 2 Enhanced”.
+
+Você pode alterar as correções em h2e.ini. Durante o jogo, o mod grava h2e.log e h2e_settings.ini. A página F10 salva a resolução e o modo de tela em Hitman2.ini.
+
+Para remover o mod, abra Configurações do Windows > Aplicativos > Aplicativos instalados e selecione Hitman 2 Enhanced.
+
+Código-fonte e documentação (licença MIT)
+https://github.com/VictorG238/Hitman2Enhanced

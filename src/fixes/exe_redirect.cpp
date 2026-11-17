@@ -88,7 +88,7 @@ bool RedirectExeCall(const FixContext& ctx, uintptr_t caller, const ExeCallSite&
         site.functionName);
     const uintptr_t siteVa = site.contextVa + site.callOffset;
     if (result == RedirectResult::Applied || result == RedirectResult::AlreadyApplied) {
-        log("%s: call at 0x%08X redirected to %s 0x%08X (%s; hitman2.exe %s, sha256 %s)", fix,
+        log("%s: branch at 0x%08X redirected to %s 0x%08X (%s; hitman2.exe %s, sha256 %s)", fix,
             static_cast<unsigned>(siteVa), site.stubName, static_cast<unsigned>(reinterpret_cast<uintptr_t>(stub)),
             ToString(result), build->label, hex);
         return true;

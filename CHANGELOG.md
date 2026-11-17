@@ -4,6 +4,41 @@ All notable changes to Hitman 2 Enhanced. Versions follow [semantic versioning](
 version is 0.x, any release may change the configuration format. The version lives in `src/version.h` (and
 `CMakeLists.txt`); every release adds a section here before `tools/package_release.py` is run.
 
+## 0.9.0 — 2026-11-17
+
+- Installer language selection includes Portuguese for Portugal and Brazil.
+- The installer offers experimental `keyhole` and `axebreak` options.
+  Both start unchecked on new installations.
+
+- Resolve the renderer caller through Windows compatibility shims before
+  activating engine patches or classifying scene projections.
+
+- Port `keyhole` and `axebreak` to retail 1.0.0.265 with build-specific engine
+  addresses. Both experimental fixes keep their Steam support.
+
+- `keyhole`: let mouse movement continue along a collision edge when only
+  one axis is blocked. A small inward correction can free a shallow overlap.
+
+- Experimental `axebreak` fix for the surveillance monitor in Basement Killing
+  and the escape panes in The Graveyard Shift. Off by default pending gameplay
+  verification (EXP-006).
+- `axebreak`: sample the sides and near edge of the axe sweep to make contact
+  easier at close range and from off-center angles.
+- `axebreak`: sample multiple heights specifically for the Basement Killing
+  monitor so the diagonal swing is easier to line up.
+
+- `keyhole`: limit mouse turns when nearby collision geometry intersects the
+  visible near plane. The full 35-degree sweep remains available at clear doors.
+- `keyhole`: render the scene behind the upper part of the mask by removing
+  the PC keyhole camera's vertical crop. Replaces the earlier black strip.
+- `keyhole`: expanded mouse sweep from approximately +/-12.86 to +/-35 degrees per axis
+  (reduced from the experimental 45-degree build after reported door clipping);
+  sensitivity and position retention unchanged. Wider-angle gameplay validation pending.
+- Developer installer: explicit `upgrade` with verified backups and rollback for
+  replacing an existing manual installation while retaining user settings.
+- Experimental `keyhole` fix: mouse steering through door keyholes on Steam, using the original
+  controller camera math and angular range. Off by default; in-game validation pending (EXP-007).
+
 ## 0.8.2 — 2026-11-12
 
 - **Fix (regression in 0.8.1)**: the weapon/inventory menu was drawn 2.25x too large (a giant weapon model in the

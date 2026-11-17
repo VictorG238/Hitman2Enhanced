@@ -22,6 +22,8 @@ while the game is running.
 | `timer` | The game clock runs at the correct speed at any frame rate (it ran slow at high FPS) |
 | `settings` | In-game settings page (**F10**): resolution, display mode, field of view, frame-rate limit |
 | `hdfonts` | Sharp menu text; the installer builds the font pack from your own game files (nothing from the game is shipped) |
+| `keyhole` | Experimental mouse control through keyholes with collision limits |
+| `axebreak` | Experimental fire axe support for the Basement Killing monitor and Graveyard Shift escape windows |
 
 Status of each fix and the evidence behind it: [docs/FIXES.md](docs/FIXES.md). Known problems:
 [docs/KNOWN_ISSUES.md](docs/KNOWN_ISSUES.md).
@@ -29,10 +31,11 @@ Status of each fix and the evidence behind it: [docs/FIXES.md](docs/FIXES.md). K
 ## Install (players)
 
 1. Download `Hitman2Enhanced-Setup-<version>.exe` from the [Releases](../../releases) page.
-2. Run it. It explains what it changes, lets you choose the fixes, finds the Steam install of Hitman 2 by itself
+2. Run it and choose a language, including Portuguese for Portugal or Brazil. It explains what it changes,
+   lets you choose the fixes, finds the Steam install of Hitman 2 by itself
    (or lets you pick the folder that contains `hitman2.exe`), copies `d3d8.dll` and `h2e.ini` there and, if chosen,
    builds the HD fonts from your own game files (about a minute).
-3. Start the game from Steam and press **F10** in the main menu to choose your resolution and frame-rate limit.
+3. Start the game as usual and press **F10** in the main menu to choose your resolution and frame-rate limit.
    Resolution and display mode apply after restarting the game.
 
 Uninstall from Windows "Installed apps" (Hitman 2 Enhanced), or delete `d3d8.dll`, `h2e.ini`, `h2e.log` and

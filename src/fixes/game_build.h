@@ -14,6 +14,8 @@
 
 namespace h2e {
 
+inline constexpr char kRetailExeSha256[] = "0d7742c85e328886e91152036ae6615ca4c98bbb97c7a36d8f9e150235e57560";
+
 struct ExeBuild {
     const char* label;   // for the log, e.g. "Steam 1.0.0.277"
     const char* sha256;  // of hitman2.exe on disk

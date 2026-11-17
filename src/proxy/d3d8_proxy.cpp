@@ -148,6 +148,7 @@ bool g_fixEnabled[16] = {};  // indexed like h2e::kFixes
 bool g_anyProjectionFix = false;
 bool g_anyViewportFix = false;
 bool g_anyPresentFix = false;
+bool g_d3dCreateThroughShim = false;
 char g_iniPath[MAX_PATH] = {};
 h2e::FixContext g_ctx{nullptr, 0, g_iniPath, nullptr, nullptr};
 bool g_anyTextureFix = false;
@@ -228,20 +229,17 @@ bool IsShimOrSelf(void* addr) {
     return _stricmp(base, "apphelp.dll") == 0 || _strnicmp(base, "Ac", 2) == 0;
 }
 
-// Caller description: first stack frame outside this DLL and the shim layer,
-// plus the raw chain of up to 4 frames for verification.
-void Caller(void* immediate, char* out, size_t n) {
+// First caller outside the proxy and the compatibility shim layer.
+void* ResolveCaller(void* immediate) {
+    if (!IsShimOrSelf(immediate)) return immediate;
     void* frames[8] = {};
-    USHORT got = RtlCaptureStackBackTrace(1, 8, frames, nullptr);
-    void* best = immediate;
-    if (IsShimOrSelf(immediate)) {
-        for (USHORT i = 0; i < got; ++i) {
-            if (!IsShimOrSelf(frames[i])) {
-                best = frames[i];
-                break;
-            }
-        }
-    }
+    const USHORT got = RtlCaptureStackBackTrace(1, 8, frames, nullptr);
+    for (USHORT i = 0; i < got; ++i)
+        if (!IsShimOrSelf(frames[i])) return frames[i];
+    return immediate;
+}
+
+void DescribeCaller(void* immediate, void* best, char* out, size_t n) {
     char a[160];
     Describe(best, a, sizeof a);
     size_t used = static_cast<size_t>(snprintf(out, n, "%s", a));
@@ -250,6 +248,10 @@ void Caller(void* immediate, char* out, size_t n) {
         Describe(immediate, b, sizeof b);
         snprintf(out + used, n - used, " [via %s]", b);
     }
+}
+
+void Caller(void* immediate, char* out, size_t n) {
+    DescribeCaller(immediate, ResolveCaller(immediate), out, n);
 }
 
 // Exception diagnostics (GB-012, load crashes): a vectored handler logs the first exceptions of the process with the
@@ -582,7 +584,8 @@ HRESULT WINAPI H_SetTransform(void* self, DWORD state, const d3d8::Matrix* m) {
         const d3d8::Viewport vp = g_curVp;
         const UINT w = g_bbWidth, h = g_bbHeight;
         LeaveCriticalSection(&g_lock);
-        const auto ra = reinterpret_cast<uintptr_t>(_ReturnAddress());
+        void* immediate = _ReturnAddress();
+        const auto ra = reinterpret_cast<uintptr_t>(g_d3dCreateThroughShim ? ResolveCaller(immediate) : immediate);
         d3d8::Matrix fixed = *m;
         bool changed = false;
         for (size_t i = 0; i < h2e::kFixCount; ++i)
@@ -868,14 +871,17 @@ extern "C" void* WINAPI Direct3DCreate8(UINT sdkVersion) {
     }
     void* d3d = g_realCreate(sdkVersion);
     if (!g_enabled) return d3d;
+    void* immediate = _ReturnAddress();
+    void* resolved = ResolveCaller(immediate);
     char who[400];
-    Caller(_ReturnAddress(), who, sizeof who);
+    DescribeCaller(immediate, resolved, who, sizeof who);
     Log("Direct3DCreate8(SDKVersion=%u) -> %p caller=%s", sdkVersion, d3d, who);
     static bool first = true;
     if (first) {  // outside the loader lock, on the engine thread that sets up the renderer
         first = false;
         if (!g_ctx.renderD3DBase) g_ctx.renderD3DBase = reinterpret_cast<uintptr_t>(GetModuleHandleA("RenderD3D.dll"));
-        const auto caller = reinterpret_cast<uintptr_t>(_ReturnAddress());
+        g_d3dCreateThroughShim = resolved != immediate;
+        const auto caller = reinterpret_cast<uintptr_t>(resolved);
         for (size_t i = 0; i < h2e::kFixCount; ++i)
             if (g_fixEnabled[i] && h2e::kFixes[i]->onDirect3DCreate) h2e::kFixes[i]->onDirect3DCreate(g_ctx, caller);
     }

@@ -37,7 +37,7 @@ const ExeBuild kExeBuilds[] = {
      kHitman2Base + kTimerContextRva, kTimerContext, sizeof kTimerContext, kTimerCallOffset, 0x4179F0, 0x417C60,
      kCursorContextVa, kCursorContext, sizeof kCursorContext, kCursorCallOffset, kMouseDeltaVa, kInputFrameVa,
      kInputFrameEnd, kZWindowsVtable, kIngameMapVtable},
-    {"retail 1.0.0.265", "0d7742c85e328886e91152036ae6615ca4c98bbb97c7a36d8f9e150235e57560", 0x635000, 0x69F054,
+    {"retail 1.0.0.265", kRetailExeSha256, 0x635000, 0x69F054,
      0x4183B4, kTimerContext265, sizeof kTimerContext265, 14, 0x418250, 0x4184F0,
      0x40FA9C, kCursorContext265, sizeof kCursorContext265, 4, 0x40FC40, 0x40FA30, 0x40FB76,
      0x646928, 0x651DD8},

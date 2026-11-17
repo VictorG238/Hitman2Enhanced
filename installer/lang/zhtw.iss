@@ -14,7 +14,10 @@ zhtw.UnknownExe=此 hitman2.exe 不是這些修正所針對的版本（Steam 版
 zhtw.ProjectPage=專案頁面與原始碼：
 zhtw.NotWritable=沒有系統管理員權限，無法將檔案寫入此資料夾。%n%n請關閉此安裝程式，然後按右鍵 > 以系統管理員身分執行，重新啟動它。
 
+zhtw.TaskKeyhole=透過鑰匙孔觀察時用滑鼠轉動視角（實驗功能）
+zhtw.TaskAxeBreak=用消防斧打破馬來西亞任務中的監視器和窗戶（實驗功能）
+
 [Messages]
-zhtw.WelcomeLabel2=將安裝由 {#Author} 製作的 Hitman 2 Enhanced {#AppVersion}：適用於 Hitman 2: Silent Assassin（Steam 版）的非官方開放原始碼修正，提供現代解析度、全螢幕選單、畫面更新率限制、正確的遊戲時鐘、遊戲內設定頁面（F10）和高畫質字型。%n%n不會修改任何遊戲檔案，所有內容都可以在 Windows 設定中解除安裝。%n%n下一頁將詳細說明會變更哪些內容。
-zhtw.FinishedLabel=Hitman 2 Enhanced 已安裝。%n%n從 Steam 啟動遊戲，在主選單中按 F10 即可選擇解析度、顯示模式、視野和畫面更新率限制。解析度和顯示模式在重新啟動遊戲後生效。%n%n製作者：{#Author}
+zhtw.WelcomeLabel2=將安裝由 {#Author} 製作的 Hitman 2 Enhanced {#AppVersion}：適用於 Hitman 2: Silent Assassin（Steam 版和光碟版）的非官方開放原始碼修正，提供現代解析度、全螢幕選單、畫面更新率限制、正確的遊戲時鐘、遊戲內設定頁面（F10）和高畫質字型。%n%n不會修改任何遊戲檔案，所有內容都可以在 Windows 設定中解除安裝。%n%n下一頁將詳細說明會變更哪些內容。
+zhtw.FinishedLabel=Hitman 2 Enhanced 已安裝。%n%n照常啟動遊戲，在主選單中按 F10 即可選擇解析度、顯示模式、視野和畫面更新率限制。解析度和顯示模式在重新啟動遊戲後生效。%n%n製作者：{#Author}
 zhtw.SelectDirLabel3=請選擇 Hitman 2: Silent Assassin 的資料夾（包含 hitman2.exe 的資料夾）。

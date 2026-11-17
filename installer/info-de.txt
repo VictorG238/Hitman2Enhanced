@@ -30,6 +30,12 @@ WAS KORRIGIERT WIRD (jede Korrektur kann auf der nächsten Seite ein- oder ausge
   IHREN Spieldateien (dauert etwa 1 Minute). Nichts aus dem Spiel wird
   heruntergeladen oder mit diesem Installationsprogramm ausgeliefert.
 
+* Schlüsselloch-Kamera (experimentell). Beim Blick durchs Schlüsselloch
+  lässt sich die Kamera mit der Maus bewegen.
+
+* Feueraxt (experimentell). Damit lassen sich der Überwachungsmonitor in
+  Basement Killing und die Fluchtfenster in Graveyard Shift zerstören.
+
 WIE ES FUNKTIONIERT - UND WAS NICHT ANGEFASST WIRD
 -------------------------------------------------
 * Keine Spieldatei wird verändert. Die Korrekturen laufen während des Spiels im

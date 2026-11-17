@@ -13,6 +13,8 @@ to hitman2.exe while a test runs. This tool makes that reversible and safe:
              and h2e_settings.ini (settings page choices) to LOG_DIR (default samples/local/logs/) with a
              timestamp; remove the marker.
   status     report what is installed.
+  upgrade    explicitly replace an existing proxy after verified backup to --backup-dir;
+             preserve user settings and logs, restore replaced files on failure.
 
 Nothing else in the game folder is touched. Players use the release zip instead (docs/INSTALL.md).
 
@@ -39,7 +41,7 @@ MARKER = "h2e.installed.json"
 LOG = "h2e.log"
 CONFIG = "h2e.ini"
 # Must match the fix ids in src/fixes/registry.cpp (checked by tests/test_fix_registry.py).
-FIX_IDS = ["resolution", "horplus", "timer", "menuscale", "framelimit", "hdfonts", "settings"]
+FIX_IDS = ["resolution", "horplus", "timer", "menuscale", "framelimit", "hdfonts", "settings", "keyhole", "axebreak"]
 # Written by the settings fix at runtime (the player's choices); moved to LOG_DIR on uninstall.
 USER_SETTINGS = "h2e_settings.ini"
 # Data file of the hdfonts fix (built from the player's own game files by tools/hdfonts_build.py, never shipped).
@@ -112,6 +114,46 @@ def install(game: Path, dll: Path, fixes: list[str] | None = None, log_level: in
             + (f", fixes {sorted(fixes)}" if fixes else ", no fixes"))
 
 
+def upgrade(game: Path, dll: Path, backup: Path, fixes: list[str], log_level: int = 1,
+            hdfonts_pack: Path | None = None) -> str:
+    """Explicit, reversible replacement of a managed or manually installed proxy."""
+    _refuse_if_running()
+    game, dll, backup = game.resolve(), dll.resolve(), backup.resolve()
+    names = ("d3d8.dll", CONFIG, HDFONTS_PACK, MARKER)
+    if backup == game or backup.exists():
+        raise SystemExit("refusing: backup must be a new directory")
+    if not (game / "hitman2.exe").is_file() or _sha(game / "hitman2.exe") not in KNOWN_EXE:
+        raise SystemExit("refusing: unknown game executable")
+    if not dll.is_file() or dll.parent == game or set(fixes) - set(FIX_IDS):
+        raise SystemExit("refusing: invalid external DLL source or fixes")
+    pack = hdfonts_pack or (game / HDFONTS_PACK if (game / HDFONTS_PACK).is_file()
+                            else DEFAULT_HDFONTS_PACK)
+    if "hdfonts" in fixes and not pack.is_file():
+        raise SystemExit("refusing: font pack missing")
+    backup.mkdir(parents=True)
+    existing = [name for name in names if (game / name).exists()]
+    # Complete and verify every backup before changing any installed file.
+    for name in existing + [n for n in (USER_SETTINGS, LOG) if (game / n).exists()]:
+        shutil.copy2(game / name, backup / name)
+        if _sha(game / name) != _sha(backup / name):
+            raise SystemExit(f"backup verification failed: {name}")
+    if pack.resolve() == game / HDFONTS_PACK:
+        pack = backup / HDFONTS_PACK
+    try:
+        _refuse_if_running()
+        for name in existing:
+            (game / name).unlink()
+        result = install(game, dll, fixes, log_level, pack)
+    except BaseException:
+        for name in names:
+            if name in existing:
+                shutil.copy2(backup / name, game / name)
+            elif (game / name).exists():
+                (game / name).unlink()
+        raise
+    return result + f"; previous installation backed up to {backup}"
+
+
 def uninstall(game: Path, log_dir: Path) -> str:
     _refuse_if_running()
     target, marker = game / "d3d8.dll", game / MARKER
@@ -170,7 +212,8 @@ def status(game: Path) -> str:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Install/remove the Hitman 2 Enhanced proxy (developer tool)")
-    ap.add_argument("action", choices=["install", "uninstall", "status"])
+    ap.add_argument("action", choices=["install", "upgrade", "uninstall", "status"])
+    ap.add_argument("--backup-dir", type=Path, help="required new backup directory for upgrade")
     ap.add_argument("game_dir", type=Path)
     ap.add_argument("--dll", type=Path, default=REPO / "build" / "Release" / "d3d8.dll")
     ap.add_argument("--log-dir", type=Path, default=REPO / "samples" / "local" / "logs")
@@ -179,7 +222,11 @@ def main(argv=None) -> int:
     ap.add_argument("--hdfonts-pack", type=Path, default=None,
                     help=f"pack copied as {HDFONTS_PACK} with --fix hdfonts (default samples/local/{HDFONTS_PACK})")
     args = ap.parse_args(argv)
-    if args.action == "install":
+    if args.action == "upgrade":
+        if args.backup_dir is None:
+            ap.error("upgrade requires --backup-dir")
+        print(upgrade(args.game_dir, args.dll, args.backup_dir, args.fix, args.log_level, args.hdfonts_pack))
+    elif args.action == "install":
         print(install(args.game_dir, args.dll, args.fix, args.log_level, args.hdfonts_pack))
     elif args.action == "uninstall":
         print(uninstall(args.game_dir, args.log_dir))

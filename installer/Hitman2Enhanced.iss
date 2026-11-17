@@ -38,7 +38,7 @@ AppPublisherURL={#AuthorUrl}
 AppSupportURL={#RepoUrl}/issues
 AppUpdatesURL={#RepoUrl}/releases
 AppCopyright=Copyright (c) 2026 {#Author} - MIT License
-AppComments=Unofficial fixes for Hitman 2: Silent Assassin (Steam)
+AppComments=Unofficial fixes for Hitman 2: Silent Assassin (Steam and retail)
 VersionInfoVersion={#AppVersion}
 VersionInfoCompany={#Author}
 VersionInfoDescription=Hitman 2 Enhanced installer
@@ -66,8 +66,8 @@ WizardSmallImageFile=art\small-55.bmp,art\small-110.bmp
 WizardImageStretch=no
 WizardImageBackColor=$100E0E
 
-; The language follows the Windows UI language; the selection dialog appears only when no language matches.
-ShowLanguageDialog=auto
+; Suggest the Windows UI language and allow a different choice.
+ShowLanguageDialog=yes
 LanguageDetectionMethod=uilanguage
 
 [Languages]
@@ -76,6 +76,8 @@ LanguageDetectionMethod=uilanguage
 ; translations repository (installer/languages/, see README there) and are used when present.
 Name: "en"; MessagesFile: "compiler:Default.isl"; InfoBeforeFile: "info-en.txt"
 Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"; InfoBeforeFile: "info-es.txt"
+Name: "pt"; MessagesFile: "compiler:Languages\Portuguese.isl"; InfoBeforeFile: "info-pt.txt"
+Name: "ptbr"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"; InfoBeforeFile: "info-ptbr.txt"
 Name: "de"; MessagesFile: "compiler:Languages\German.isl"; InfoBeforeFile: "info-de.txt"
 Name: "fr"; MessagesFile: "compiler:Languages\French.isl"; InfoBeforeFile: "info-fr.txt"
 Name: "ru"; MessagesFile: "compiler:Languages\Russian.isl"; InfoBeforeFile: "info-ru.txt"
@@ -101,10 +103,14 @@ Name: "framelimit"; Description: "{cm:TaskFrameLimit}"; GroupDescription: "{cm:G
 Name: "timer"; Description: "{cm:TaskTimer}"; GroupDescription: "{cm:GroupFixes}"
 Name: "settings"; Description: "{cm:TaskSettings}"; GroupDescription: "{cm:GroupFixes}"
 Name: "hdfonts"; Description: "{cm:TaskHdFonts}"; GroupDescription: "{cm:GroupFixes}"
+Name: "keyhole"; Description: "{cm:TaskKeyhole}"; GroupDescription: "{cm:GroupFixes}"; Flags: unchecked
+Name: "axebreak"; Description: "{cm:TaskAxeBreak}"; GroupDescription: "{cm:GroupFixes}"; Flags: unchecked
 
 ; Texts of each language (custom messages + the standard messages we override).
 #include "lang\en.iss"
 #include "lang\es.iss"
+#include "lang\pt.iss"
+#include "lang\ptbr.iss"
 #include "lang\de.iss"
 #include "lang\fr.iss"
 #include "lang\ru.iss"
@@ -290,5 +296,7 @@ begin
     SetFix('timer');
     SetFix('settings');
     SetFix('hdfonts');
+    SetFix('keyhole');
+    SetFix('axebreak');
   end;
 end;
