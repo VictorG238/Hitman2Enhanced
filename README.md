@@ -1,5 +1,7 @@
 # Hitman 2 Enhanced — widescreen, high-FPS and menu fix for Hitman 2: Silent Assassin (PC)
 
+<a href="https://www.moddb.com/mods/hitman-2-enhanced" title="View HITMAN 2 ENHANCED on ModDB" target="_blank"><img src="https://button.moddb.com/rating/medium/mods/74395.png" alt="HITMAN 2 ENHANCED" /></a>
+
 By **Aquiles / Victor Baeza** ([@VictorG238](https://github.com/VictorG238)).
 
 **Hitman 2 Enhanced** is a free, open-source fix pack for **Hitman 2: Silent Assassin** (2002, IO Interactive,
